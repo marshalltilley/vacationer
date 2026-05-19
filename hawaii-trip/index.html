@@ -1133,33 +1133,34 @@ body {
   .meta-item .label { font-size: 9px; margin-bottom: 4px; }
   .meta-item .value { font-size: 14px; }
 
-  /* TAB NAV - horizontal scroll preserved */
+  /* TAB NAV - wrap to rows on mobile (matches Amsterdam pattern) */
   .tabs {
     grid-template-columns: none;
     display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    margin: 0 -14px 28px;
-    padding: 0;
-    scrollbar-width: none;
+    flex-wrap: wrap;
+    gap: 0;
+    margin: 0 0 28px;
+    overflow: visible;
+    position: static;
   }
-  .tabs::-webkit-scrollbar { display: none; }
   .tab {
-    flex: 0 0 auto;
-    min-width: 150px;
-    scroll-snap-align: start;
+    flex: 1 1 auto;
+    min-width: 0;
     padding: 12px 14px;
+    border-bottom: 1px solid var(--rule);
   }
-  .tab-label { font-size: 14px; }
-  .tab-sub { font-size: 9px; }
+  .tab.active { border-bottom-color: var(--ink); }
+  .tab-label { font-size: 13px; }
+  .tab-sub { display: none; }
   .print-btn {
-    flex: 0 0 auto;
-    min-width: 56px;
-    padding: 0 16px;
-    border-left: 1px solid var(--ink);
+    flex: 1 1 100%;
+    width: 100%;
+    margin-top: 8px;
+    padding: 12px 14px;
+    border-left: none;
+    justify-content: center;
   }
-  .print-btn-label { display: none; }
+  .print-btn-label { display: inline; }
 
   /* SECTIONS - tighter */
   .section { margin-bottom: 36px; }
@@ -1360,7 +1361,14 @@ body {
 }
 
 @media print {
-  body { padding: 0; background: white; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    padding: 0;
+    background: white;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    orphans: 3;
+    widows: 3;
+  }
   .wrap { max-width: 100%; }
 
   /* Hide all screen chrome */
@@ -1370,15 +1378,43 @@ body {
   .tab-panel[hidden] { display: none !important; }
   .tab-panel { animation: none; }
 
-  /* One section per page */
-  .section { margin: 0 0 0 0 !important; break-inside: avoid; }
-  .tab-panel > .section { break-after: page; }
-  .tab-panel > .section:last-child { break-after: auto; }
+  /* One section per page; allow long sections to break naturally */
+  .section { margin: 0 0 0 0 !important; }
+  .tab-panel > .section { break-after: page; page-break-after: always; }
+  .tab-panel > .section:last-child { break-after: auto; page-break-after: auto; }
 
-  /* Compress section heads in print */
-  .section-head { margin-bottom: 18px; padding-bottom: 10px; }
+  /* CRITICAL: keep section heads with the content that follows them */
+  .section-head {
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
   .section-title { font-size: 22pt; }
   .section-num { font-size: 24pt; }
+
+  /* Sub-heads inside sections — keep with their following block too */
+  .tv-eyebrow,
+  .tv-title,
+  .res-subhead,
+  .bi-day-num,
+  .bi-day-date,
+  .bi-day-title,
+  .activity-cat,
+  .activity-title,
+  .phase-num,
+  .phase-name,
+  .rest-region-name,
+  .rest-cat,
+  .log-label,
+  .scope-legend {
+    break-after: avoid;
+    page-break-after: avoid;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
 
   /* Big Island section: force light treatment so it prints cleanly */
   .bigisland { color: var(--ink) !important; background: var(--paper-2) !important; padding: 24px !important; }
@@ -1413,8 +1449,14 @@ body {
   .tl-implications { margin-top: 12px; padding-top: 10px; }
 
   /* Avoid breaks inside critical blocks */
-  .cal-wrap, .timeline, .activity-grid, .rest-grid, .res-grid, .logistics, .bi-days { break-inside: avoid; }
-  .locked-row, .phase, .bi-day, .res-item, .log-card, .rest-region, .activity-card { break-inside: avoid; }
+  .cal-wrap, .timeline { break-inside: avoid; page-break-inside: avoid; }
+  .locked-row, .phase, .bi-day, .res-item, .log-card, .rest-region, .activity-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  /* Note: deliberately NOT avoiding breaks on .activity-grid, .rest-grid, .res-grid,
+     .logistics, .bi-days — those are long grids that must be allowed to span pages,
+     while their individual cards (above) stay intact. */
 
   /* Print stamp - repeats on every page */
   .print-stamp {
@@ -2387,7 +2429,7 @@ body {
 
 <footer class="footer">
   <span>Hawaii · Summer 2026</span>
-  <span class="footer-mark">v11</span>
+  <span class="footer-mark">v12</span>
   <span>31 days · 6 phases · 2 islands</span>
 </footer>
 
@@ -2430,7 +2472,7 @@ body {
       const dd = String(now.getDate()).padStart(2, '0');
       const activeTab = document.querySelector('.tab.active');
       const tabName = activeTab ? activeTab.querySelector('.tab-label').textContent : '';
-      stamp.textContent = `v11  ·  ${tabName}  ·  printed ${yyyy}-${mm}-${dd}`;
+      stamp.textContent = `v12  ·  ${tabName}  ·  printed ${yyyy}-${mm}-${dd}`;
     }
     if (printBtn) {
       printBtn.addEventListener('click', () => {
