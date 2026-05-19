@@ -1385,15 +1385,15 @@ body {
 
   /* CRITICAL: keep section heads with the content that follows them */
   .section-head {
-    margin-bottom: 18px;
-    padding-bottom: 10px;
+    margin-bottom: 12px;
+    padding-bottom: 7px;
     break-inside: avoid;
     page-break-inside: avoid;
     break-after: avoid;
     page-break-after: avoid;
   }
-  .section-title { font-size: 22pt; }
-  .section-num { font-size: 24pt; }
+  .section-title { font-size: 19pt; }
+  .section-num { font-size: 22pt; }
 
   /* Sub-heads inside sections — keep with their following block too */
   .tv-eyebrow,
@@ -1428,14 +1428,19 @@ body {
   .three-vacations { background: var(--paper-2) !important; color: var(--ink) !important; }
   .three-vacations .tv-title, .three-vacations .tv-name, .three-vacations .tv-desc { color: var(--ink) !important; }
 
-  /* Tighter calendar cells for landscape fit */
-  .cal-day { min-height: 0; aspect-ratio: auto; height: 0.95in; padding: 5px; }
-  .cal-date { font-size: 14pt; }
-  .cal-events { font-size: 7pt; }
-  .cal-event { padding: 1px 4px; }
-  .cal-headers { display: grid !important; }
-  .cal-grid { display: grid !important; grid-template-columns: repeat(7, 1fr) !important; }
+  /* Section 3: Master calendar — fit on one landscape page */
+  .cal-wrap { padding: 12px !important; }
+  .cal-day { min-height: 0; aspect-ratio: auto; height: 0.82in; padding: 4px; }
+  .cal-date { font-size: 12pt; margin-bottom: 1px; }
+  .cal-month { font-size: 7pt; top: 3px; right: 4px; }
+  .cal-events { font-size: 6.5pt; gap: 1px; }
+  .cal-event { padding: 1px 3px; line-height: 1.15; }
+  .cal-headers { display: grid !important; margin-bottom: 2px; }
+  .cal-header { padding: 4px 0; font-size: 9pt; }
+  .cal-grid { display: grid !important; grid-template-columns: repeat(7, 1fr) !important; gap: 2px; }
   .cal-week { display: contents !important; }
+  .cal-legend { font-size: 8.5pt; margin-top: 8px; padding-top: 8px; gap: 4px 14px; }
+  .legend-swatch { width: 10px; height: 10px; }
 
   /* Tighter phase cards */
   .phases { grid-template-columns: repeat(3, 1fr); gap: 10px; }
@@ -1443,10 +1448,25 @@ body {
   .phase-name { font-size: 16pt; }
   .phase-desc { font-size: 10pt; }
 
-  /* Timeline + headcount compact */
-  .timeline { padding: 18px; }
-  .tl-headcount { margin-top: 16px; padding-top: 12px; }
-  .tl-implications { margin-top: 12px; padding-top: 10px; }
+  /* Section 1: Timeline + headcount + implications — fit on one landscape page */
+  .timeline { padding: 14px; }
+  .timeline-grid { gap: 6px 0; }
+  .tl-label { font-size: 9.5pt; line-height: 1.2; padding: 4px 12px 4px 0; }
+  .tl-sub { font-size: 7.5pt; margin-top: 1px; }
+  .tl-bar-wrap { height: 24pt; }
+  .tl-bar { font-size: 8.5pt; padding: 0 7px; }
+  .tl-axis { margin-top: 6px; font-size: 8pt; }
+  .tl-headcount { margin-top: 10px; padding-top: 8px; }
+  .tl-headcount-bars { height: 38px; gap: 2px; }
+  .tl-headcount-label { font-size: 8pt; }
+  .hc-seg { padding: 3px 5px; }
+  .hc-num { font-size: 11pt; }
+  .hc-rng { font-size: 7pt; }
+  .tl-footnote { font-size: 7.5pt; margin-top: 6px; line-height: 1.35; }
+  .tl-implications { margin-top: 8px; padding-top: 8px; }
+  .tl-imp-label { font-size: 8pt; }
+  .tl-imp-list { gap: 5px; }
+  .tl-imp-list span { font-size: 8pt; padding: 2px 7px; }
 
   /* Avoid breaks inside critical blocks */
   .cal-wrap, .timeline { break-inside: avoid; page-break-inside: avoid; }
@@ -2429,7 +2449,7 @@ body {
 
 <footer class="footer">
   <span>Hawaii · Summer 2026</span>
-  <span class="footer-mark">v12</span>
+  <span class="footer-mark">v13</span>
   <span>31 days · 6 phases · 2 islands</span>
 </footer>
 
@@ -2472,7 +2492,7 @@ body {
       const dd = String(now.getDate()).padStart(2, '0');
       const activeTab = document.querySelector('.tab.active');
       const tabName = activeTab ? activeTab.querySelector('.tab-label').textContent : '';
-      stamp.textContent = `v12  ·  ${tabName}  ·  printed ${yyyy}-${mm}-${dd}`;
+      stamp.textContent = `v13  ·  ${tabName}  ·  printed ${yyyy}-${mm}-${dd}`;
     }
     if (printBtn) {
       printBtn.addEventListener('click', () => {
