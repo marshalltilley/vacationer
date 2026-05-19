@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amsterdam — Spring 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Chrome — shared across Vacationer trips */
+  --ink:        #1f3050;
+  --paper:      #faf6ee;
+  --paper-2:    #f3ecdc;
+  --sage-deep:  #506850;
+  --pink:       #c08793;
+  --pink-soft:  #e7c4cb;
+  --muted:      #75695f;
+  --rule:       #c9b8a8;
+  --rule-soft:  #e1d6c7;
+
+  /* Destination palette — Amsterdam */
+  --canal:        #2d5f7d;
+  --canal-2:      #6b94a8;
+  --canal-pale:   #c5d9e3;
+  --brick:        #b85c3e;
+  --brick-pale:   #e6c4b6;
+  --mustard:      #c89530;
+  --mustard-pale: #ead8a8;
+  --tulip:        #c44a5c;
+  --tulip-pale:   #ecc5cb;
+  --bottle:       #4a6650;
+  --bottle-pale:  #b8c9b8;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.5;
+  font-size: 15px;
+  padding: 40px 24px;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 1180px; margin: 0 auto; }
+
+/* ============ HERO ============ */
+.hero {
+  border-top: 1.5px solid var(--ink);
+  border-bottom: 1.5px solid var(--pink);
+  padding: 44px 0 48px;
+  margin-bottom: 56px;
+  position: relative;
+}
+.hero-eyebrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: var(--sage-deep);
+}
+.hero-eyebrow span:last-child { color: var(--muted); font-weight: 500; }
+.hero-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 400;
+  font-size: clamp(52px, 7.5vw, 88px);
+  line-height: 0.95;
+  letter-spacing: -0.018em;
+  font-variation-settings: "opsz" 144;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.hero-dek {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 17px;
+  color: var(--muted);
+  line-height: 1.4;
+  margin-bottom: 32px;
+  font-variation-settings: "opsz" 14;
+}
+.hero-meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+}
+.meta-item .label {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sage-deep);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.meta-item .value {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+/* ============ TABS ============ */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 56px;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0;
+  align-items: stretch;
+}
+.tab {
+  background: transparent;
+  border: none;
+  padding: 14px 20px 16px;
+  cursor: pointer;
+  text-align: left;
+  font-family: 'Manrope', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: border-color 0.18s ease, background 0.18s ease;
+  color: var(--ink);
+}
+.tab:hover { background: rgba(45,95,125,0.04); }
+.tab.active { border-bottom-color: var(--canal); }
+.tab-label {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+}
+.tab.active .tab-label { color: var(--canal); }
+.tab-sub {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--muted);
+}
+.print-btn {
+  margin-left: auto;
+  background: transparent;
+  border: 1px solid var(--rule);
+  padding: 8px 14px;
+  cursor: pointer;
+  font-family: 'Manrope', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--ink);
+  align-self: center;
+  transition: border-color 0.18s ease, background 0.18s ease;
+}
+.print-btn:hover { border-color: var(--ink); background: var(--paper-2); }
+
+.tab-panel { display: block; }
+.tab-panel[hidden] { display: none; }
+
+/* ============ SECTION HEADERS ============ */
+.section { margin-bottom: 72px; }
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  margin-bottom: 32px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--ink);
+}
+.section-num {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 34px;
+  color: var(--canal);
+  letter-spacing: -0.02em;
+}
+.section-title {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 28px;
+  letter-spacing: -0.015em;
+}
+.section-sub {
+  margin-left: auto;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sage-deep);
+  font-weight: 600;
+}
+
+/* ============ DAY STRIP / OVERVIEW ============ */
+.day-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+@media (min-width: 920px) { .day-grid { grid-template-columns: repeat(6, 1fr); } }
+
+.day-card {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 16px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  position: relative;
+  overflow: hidden;
+}
+.day-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--canal);
+}
+.day-card.hotel-arena::before { background: var(--brick); }
+.day-card.hotel-centrum::before { background: var(--canal); }
+.day-card.travel-day::before { background: var(--mustard); }
+
+.day-num {
+  font-family: 'Manrope', sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--sage-deep);
+  margin-bottom: 4px;
+}
+.day-date {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 14px;
+  line-height: 1.1;
+}
+.day-date .dow { display: block; font-size: 11px; font-style: italic; font-weight: 300; color: var(--muted); margin-top: 2px; }
+.day-anchor {
+  font-family: 'Manrope', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  line-height: 1.25;
+}
+.day-notes {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.4;
+  margin-bottom: auto;
+}
+.day-hotel {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--rule-soft);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--sage-deep);
+  display: flex;
+  justify-content: space-between;
+}
+.day-hotel .area { color: var(--muted); font-weight: 500; }
+
+/* ============ BOOKING PULSE ============ */
+.pulse {
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  padding: 24px 28px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.pulse-cell .pulse-num {
+  font-family: 'Fraunces', serif;
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--canal);
+  margin-bottom: 4px;
+}
+.pulse-cell.todo .pulse-num { color: var(--brick); }
+.pulse-cell.flights .pulse-num { color: var(--mustard); }
+.pulse-cell .pulse-label {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--sage-deep);
+  margin-bottom: 4px;
+}
+.pulse-cell .pulse-sub {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* ============ LOCKED EVENTS ============ */
+.events {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--rule);
+}
+.event {
+  display: grid;
+  grid-template-columns: 130px 1fr 100px;
+  gap: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--rule-soft);
+  align-items: baseline;
+}
+.event-when {
+  font-family: 'Fraunces', serif;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.event-when .time {
+  display: block;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.event-body .event-name {
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.event-body .event-sub {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+.event-tag {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 4px 10px;
+  background: var(--canal);
+  color: var(--paper);
+  text-align: center;
+  justify-self: end;
+  align-self: center;
+}
+.event-tag.museum    { background: var(--canal); }
+.event-tag.concert   { background: var(--tulip); }
+.event-tag.dining    { background: var(--brick); }
+.event-tag.landmark  { background: var(--bottle); }
+.event-tag.attraction{ background: var(--mustard); color: var(--ink); }
+.event-tag.flight    { background: var(--ink); }
+
+/* ============ DAY TRIP / OPTIONS ============ */
+.decision {
+  background: var(--canal-pale);
+  border: 1px solid var(--canal-2);
+  padding: 24px 28px;
+  margin-bottom: 36px;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 24px;
+  align-items: center;
+}
+.decision-label {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--canal);
+}
+.decision-label .small {
+  display: block;
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 13px;
+  color: var(--muted);
+  text-transform: none;
+  letter-spacing: 0;
+  margin-top: 6px;
+}
+.decision-rules {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.decision-rule {
+  background: var(--paper);
+  padding: 16px 18px;
+  border-left: 3px solid var(--mustard);
+}
+.decision-rule.warm { border-left-color: var(--brick); }
+.decision-rule .when {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--sage-deep);
+  margin-bottom: 4px;
+}
+.decision-rule .then {
+  font-family: 'Fraunces', serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 820px) { .options-grid { grid-template-columns: 1fr 1fr; } }
+
+.option {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+}
+.option::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--mustard);
+}
+.option.warm::before { background: var(--brick); }
+.option-tag {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--sage-deep);
+  margin-bottom: 8px;
+}
+.option-name {
+  font-family: 'Fraunces', serif;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.0;
+  margin-bottom: 14px;
+}
+.option-name em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--canal);
+}
+.option.warm .option-name em { color: var(--brick); }
+.option-when {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+.option ul {
+  list-style: none;
+  margin-bottom: 20px;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule-soft);
+}
+.option li {
+  font-size: 14px;
+  padding: 4px 0;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.option li::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background: var(--canal);
+  display: inline-block;
+  flex-shrink: 0;
+  border-radius: 50%;
+  transform: translateY(-2px);
+}
+.option.warm li::before { background: var(--brick); }
+.option-why {
+  padding-top: 14px;
+  border-top: 1px solid var(--rule-soft);
+  font-size: 12px;
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* ============ EAT & DO ============ */
+.eatdo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 800px) {
+  .eatdo-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.category {
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  padding: 24px 26px;
+}
+.category-cat {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--sage-deep);
+  margin-bottom: 6px;
+}
+.category-name {
+  font-family: 'Fraunces', serif;
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+.category ul { list-style: none; }
+.category li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--rule-soft);
+  font-size: 14px;
+  line-height: 1.4;
+}
+.category li:last-child { border-bottom: none; }
+.category li .meta {
+  display: block;
+  font-size: 11px;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 2px;
+}
+
+.areas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.areas span {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  color: var(--ink);
+}
+
+/* ============ LOGISTICS ============ */
+.logistics-block { margin-bottom: 40px; }
+.logistics-head {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--sage-deep);
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.hotel-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 700px) { .hotel-grid { grid-template-columns: 1fr 1fr; } }
+.hotel-card {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 20px 22px;
+  position: relative;
+}
+.hotel-card.arena { border-left: 4px solid var(--brick); }
+.hotel-card.centrum { border-left: 4px solid var(--canal); }
+.hotel-card .hotel-nights {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--sage-deep);
+  margin-bottom: 4px;
+}
+.hotel-card .hotel-name {
+  font-family: 'Fraunces', serif;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+.hotel-card .hotel-area {
+  font-size: 13px;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.flight-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+@media (min-width: 700px) { .flight-grid { grid-template-columns: 1fr 1fr; } }
+.flight {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 14px;
+}
+.flight .leg {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--sage-deep);
+  margin-bottom: 4px;
+}
+.flight .when {
+  font-family: 'Fraunces', serif;
+  font-size: 17px;
+  font-weight: 500;
+}
+.flight .note {
+  font-size: 12px;
+  color: var(--muted);
+  font-style: italic;
+  text-align: right;
+}
+
+.bookings {
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--rule);
+}
+.booking {
+  display: grid;
+  grid-template-columns: 28px 1fr 80px;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--rule-soft);
+  align-items: baseline;
+}
+.booking-mark {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  color: var(--bottle);
+  line-height: 1;
+  text-align: center;
+  align-self: center;
+}
+.booking.todo .booking-mark { color: var(--brick); }
+.booking-name {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.booking-sub {
+  font-size: 12px;
+  color: var(--muted);
+}
+.booking-urg {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 4px 8px;
+  text-align: center;
+  justify-self: end;
+  align-self: center;
+}
+.booking-urg.confirmed { background: var(--bottle-pale); color: var(--bottle); }
+.booking-urg.high { background: var(--brick); color: var(--paper); }
+.booking-urg.med { background: var(--mustard); color: var(--ink); }
+
+/* ============ PACKING ============ */
+.packing {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 800px) { .packing { grid-template-columns: 1fr 1fr; } }
+.packing-block {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 20px 22px;
+}
+.packing-block .packing-cat {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--sage-deep);
+  margin-bottom: 6px;
+}
+.packing-block .packing-name {
+  font-family: 'Fraunces', serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+.packing-block ul { list-style: none; }
+.packing-block li {
+  padding: 4px 0;
+  font-size: 13px;
+  border-bottom: 1px solid var(--rule-soft);
+  line-height: 1.4;
+}
+.packing-block li:last-child { border-bottom: none; }
+.packing-block li.note {
+  border-bottom: none;
+  font-size: 12px;
+  font-style: italic;
+  color: var(--muted);
+  padding-top: 8px;
+}
+
+/* ============ FOOTER ============ */
+.footer {
+  margin-top: 80px;
+  padding-top: 28px;
+  border-top: 1.5px solid var(--ink);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+.footer-mark {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 700;
+  color: var(--pink);
+}
+
+/* ============ MOBILE ============ */
+@media (max-width: 768px) {
+  body { padding: 24px 16px; }
+  .hero { padding: 28px 0 32px; margin-bottom: 36px; }
+  .hero-eyebrow { font-size: 9px; letter-spacing: 0.18em; margin-bottom: 16px; }
+  .hero-title { font-size: 44px; line-height: 0.95; margin-bottom: 8px; }
+  .hero-dek { font-size: 15px; margin-bottom: 22px; }
+  .hero-meta { grid-template-columns: 1fr 1fr; gap: 18px; padding-top: 18px; }
+  .tabs { margin-bottom: 36px; }
+  .tab { padding: 10px 14px 12px; }
+  .tab-label { font-size: 13px; }
+  .tab-sub { display: none; }
+  .print-btn { width: 100%; margin: 8px 0 0; }
+  .section { margin-bottom: 48px; }
+  .section-num { font-size: 28px; }
+  .section-title { font-size: 22px; }
+  .section-sub { display: none; }
+  .section-head { gap: 14px; }
+  .pulse { grid-template-columns: 1fr; gap: 18px; }
+  .event { grid-template-columns: 110px 1fr; }
+  .event-tag { grid-column: 1 / 3; justify-self: start; margin-top: 4px; }
+  .decision { grid-template-columns: 1fr; gap: 16px; }
+  .flight { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .flight .note { text-align: left; }
+  .footer { flex-wrap: wrap; gap: 8px; }
+}
+
+/* ============ PRINT ============ */
+@media print {
+  body { padding: 0; background: white; font-size: 11pt; padding: 0.4in; }
+  .tabs, .print-btn, .print-stamp { display: none !important; }
+  .tab-panel { display: block !important; }
+  .tab-panel[hidden] { display: none !important; }
+  .hero { page-break-after: avoid; }
+  .day-card, .event, .option, .hotel-card, .flight, .booking { page-break-inside: avoid; }
+  .section { page-break-inside: auto; }
+  .print-stamp {
+    display: block !important;
+    position: fixed;
+    bottom: 0.2in;
+    left: 0.4in;
+    font-size: 8pt;
+    color: var(--muted);
+  }
+}
+.print-stamp { display: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="hero-eyebrow">
+    <span>Vacationer · No. 01</span>
+    <span>Spring 2026</span>
+  </div>
+  <h1 class="hero-title">Amsterdam.</h1>
+  <p class="hero-dek">Five nights along the canals.</p>
+  <div class="hero-meta">
+    <div class="meta-item">
+      <div class="label">Window</div>
+      <div class="value">May 21 — 26<br>2026</div>
+    </div>
+    <div class="meta-item">
+      <div class="label">Hotels</div>
+      <div class="value">Hampton (3) →<br>TwentySeven (2)</div>
+    </div>
+    <div class="meta-item">
+      <div class="label">Travelers</div>
+      <div class="value">2 · Marshall<br>&amp; Anna</div>
+    </div>
+    <div class="meta-item">
+      <div class="label">Tone</div>
+      <div class="value">European spring —<br>relaxed pace</div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ TABS ============ -->
+<nav class="tabs" role="tablist" aria-label="Itinerary sections">
+  <button class="tab active" role="tab" data-tab="overview">
+    <span class="tab-label">Overview</span>
+    <span class="tab-sub">Days · Pulse</span>
+  </button>
+  <button class="tab" role="tab" data-tab="events">
+    <span class="tab-label">Locked events</span>
+    <span class="tab-sub">Booked anchors</span>
+  </button>
+  <button class="tab" role="tab" data-tab="daytrip">
+    <span class="tab-label">Day trip</span>
+    <span class="tab-sub">May 23 decision</span>
+  </button>
+  <button class="tab" role="tab" data-tab="eatdo">
+    <span class="tab-label">Eat &amp; do</span>
+    <span class="tab-sub">Food · Walks · Activities</span>
+  </button>
+  <button class="tab" role="tab" data-tab="logistics">
+    <span class="tab-label">Logistics</span>
+    <span class="tab-sub">Hotels · Flights · Pack</span>
+  </button>
+  <button class="print-btn" onclick="window.print()">
+    <span>Print this tab</span>
+  </button>
+</nav>
+
+<!-- ============ OVERVIEW ============ -->
+<div class="tab-panel" id="overview" role="tabpanel">
+
+  <section class="section">
+    <div class="section-head">
+      <span class="section-num">01</span>
+      <span class="section-title">Trip at a glance</span>
+      <span class="section-sub">6 days · 2 hotels</span>
+    </div>
+    <div class="day-grid">
+      <div class="day-card hotel-arena">
+        <div class="day-num">Day 1</div>
+        <div class="day-date">May 21<span class="dow">Thursday</span></div>
+        <div class="day-anchor">Arrival + light intro</div>
+        <div class="day-notes">Land 5:40 AM. Drop bags, train into centrum. Jordaan + canal walk, intentionally easy. Early night.</div>
+        <div class="day-hotel"><span>Hampton</span><span class="area">Arena</span></div>
+      </div>
+      <div class="day-card hotel-arena">
+        <div class="day-num">Day 2</div>
+        <div class="day-date">May 22<span class="dow">Friday</span></div>
+        <div class="day-anchor">Museums + Harry Styles</div>
+        <div class="day-notes">Rijks 9 AM, Van Gogh 12 PM. Vondelpark + rest. Concert at Johan Cruijff Arena evening.</div>
+        <div class="day-hotel"><span>Hampton</span><span class="area">Arena</span></div>
+      </div>
+      <div class="day-card hotel-arena">
+        <div class="day-num">Day 3</div>
+        <div class="day-date">May 23<span class="dow">Saturday</span></div>
+        <div class="day-anchor">Day trip · Utrecht or coast</div>
+        <div class="day-notes">Weather-dependent: Utrecht (default) or Haarlem + Zandvoort beach. See Day Trip tab.</div>
+        <div class="day-hotel"><span>Hampton</span><span class="area">Arena</span></div>
+      </div>
+      <div class="day-card travel-day">
+        <div class="day-num">Day 4</div>
+        <div class="day-date">May 24<span class="dow">Sunday</span></div>
+        <div class="day-anchor">Switch + Anne Frank</div>
+        <div class="day-notes">Move to TwentySeven. Dam Square, 9 Straatjes. Spang Makandra 5:15. Anne Frank 7:30.</div>
+        <div class="day-hotel"><span>TwentySeven</span><span class="area">Centrum</span></div>
+      </div>
+      <div class="day-card hotel-centrum">
+        <div class="day-num">Day 5</div>
+        <div class="day-date">May 25<span class="dow">Monday</span></div>
+        <div class="day-anchor">De Pijp + Heineken + cruise</div>
+        <div class="day-notes">Albert Cuyp Market AM. Heineken 2 PM. Canal cruise evening (to book). Relaxed final dinner.</div>
+        <div class="day-hotel"><span>TwentySeven</span><span class="area">Centrum</span></div>
+      </div>
+      <div class="day-card hotel-centrum">
+        <div class="day-num">Day 6</div>
+        <div class="day-date">May 26<span class="dow">Tuesday</span></div>
+        <div class="day-anchor">Departure</div>
+        <div class="day-notes">Light morning walk, breakfast. Leave for Schiphol ~11 AM. Wheels up 2:40 PM.</div>
+        <div class="day-hotel"><span>TwentySeven</span><span class="area">Centrum</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="section-num">02</span>
+      <span class="section-title">Booking pulse</span>
+      <span class="section-sub">Where we stand</span>
+    </div>
+    <div class="pulse">
+      <div class="pulse-cell">
+        <div class="pulse-num">6</div>
+        <div class="pulse-label">Confirmed</div>
+        <div class="pulse-sub">2 museums, 1 concert, 1 landmark, 1 attraction, 1 dinner</div>
+      </div>
+      <div class="pulse-cell todo">
+        <div class="pulse-num">2</div>
+        <div class="pulse-label">Still to book</div>
+        <div class="pulse-sub">Canal cruise (May 25 evening), Pannenkoekhuis lunch (May 24)</div>
+      </div>
+      <div class="pulse-cell flights">
+        <div class="pulse-num">2</div>
+        <div class="pulse-label">Flights</div>
+        <div class="pulse-sub">In May 21 · 5:40 AM. Out May 26 · 2:40 PM.</div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /overview -->
+
+<!-- ============ LOCKED EVENTS ============ -->
+<div class="tab-panel" id="events" role="tabpanel" hidden>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="section-num">03</span>
+      <span class="section-title">Anchored events</span>
+      <span class="section-sub">Chronological</span>
+    </div>
+    <div class="events">
+
+      <div class="event">
+        <div class="event-when">May 21<span class="time">Thursday · 5:40 AM</span></div>
+        <div class="event-body">
+          <div class="event-name">Arrival AMS</div>
+          <div class="event-sub">Early morning landing. Hampton bag drop, then train to Centraal.</div>
+        </div>
+        <div class="event-tag flight">Flight</div>
+      </div>
+
+      <div class="event">
+        <div class="event-when">May 22<span class="time">Friday · 9:00 AM</span></div>
+        <div class="event-body">
+          <div class="event-name">Rijksmuseum</div>
+          <div class="event-sub">Booked entry. Party of 2.</div>
+        </div>
+        <div class="event-tag museum">Museum</div>
+      </div>
+
+      <div class="event">
+        <div class="event-when">May 22<span class="time">Friday · 12:00 PM</span></div>
+        <div class="event-body">
+          <div class="event-name">Van Gogh Museum</div>
+          <div class="event-sub">Booked entry. Plan lunch nearby (Wils Bakery Café) after.</div>
+        </div>
+        <div class="event-tag museum">Museum</div>
+      </div>
+
+      <div class="event">
+        <div class="event-when">May 22<span class="time">Friday · ~7:00 PM</span></div>
+        <div class="event-body">
+          <div class="event-name">Harry Styles concert</div>
+          <div class="event-sub">Johan Cruijff Arena. Hampton is walking distance — convenient.</div>
+        </div>
+        <div class="event-tag concert">Concert</div>
+      </div>
+
+      <div class="event">
+        <div class="event-when">May 24<span class="time">Sunday · 5:15 PM</span></div>
+        <div class="event-body">
+          <div class="event-name">Spang Makandra</div>
+          <div class="event-sub">Early dinner before Anne Frank. Surinamese; small place, reservation locked.</div>
+        </div>
+        <div class="event-tag dining">Dining</div>
+      </div>
+
+      <div class="event">
+        <div class="event-when">May 24<span class="time">Sunday · 7:30 PM</span></div>
+        <div class="event-body">
+          <div class="event-name">Anne Frank House</div>
+          <div class="event-sub">Timed entry. Plan to be early — long emotional weight, don't rush.</div>
+        </div>
+        <div class="event-tag landmark">Landmark</div>
+      </div>
+
+      <div class="event">
+        <div class="event-when">May 25<span class="time">Monday · 2:00 PM</span></div>
+        <div class="event-body">
+          <div class="event-name">Heineken Experience</div>
+          <div class="event-sub">Standard tour. ~1.5 hours.</div>
+        </div>
+        <div class="event-tag attraction">Attraction</div>
+      </div>
+
+      <div class="event">
+        <div class="event-when">May 26<span class="time">Tuesday · 2:40 PM</span></div>
+        <div class="event-body">
+          <div class="event-name">Departure AMS</div>
+          <div class="event-sub">Leave hotel ~11 AM for Schiphol.</div>
+        </div>
+        <div class="event-tag flight">Flight</div>
+      </div>
+
+    </div>
+  </section>
+
+</div><!-- /events -->
+
+<!-- ============ DAY TRIP ============ -->
+<div class="tab-panel" id="daytrip" role="tabpanel" hidden>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="section-num">04</span>
+      <span class="section-title">Day-trip decision</span>
+      <span class="section-sub">May 23 · Saturday</span>
+    </div>
+
+    <div class="decision">
+      <div class="decision-label">
+        Decision rule
+        <span class="small">Pick the morning of, based on forecast.</span>
+      </div>
+      <div class="decision-rules">
+        <div class="decision-rule">
+          <div class="when">If cloudy / mixed</div>
+          <div class="then">→ Utrecht (default)</div>
+        </div>
+        <div class="decision-rule warm">
+          <div class="when">If sunny / warm</div>
+          <div class="then">→ Haarlem + Beach</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="options-grid">
+
+      <div class="option">
+        <div class="option-tag">Option A · Default</div>
+        <h3 class="option-name">Utrecht</h3>
+        <div class="option-when">~25 min train · indoor-friendly</div>
+        <ul>
+          <li>Domplein</li>
+          <li>Dom Tower</li>
+          <li>Oudegracht canal walk</li>
+          <li>Canal-side cafés</li>
+          <li>Shopping + wandering</li>
+        </ul>
+        <div class="option-why">Better in mixed weather. Relaxed atmosphere. Distinctive lowered-canal layout unlike Amsterdam.</div>
+      </div>
+
+      <div class="option warm">
+        <div class="option-tag">Option B · Weather call</div>
+        <h3 class="option-name">Haarlem <em>+ Beach</em></h3>
+        <div class="option-when">2 stops · variety</div>
+        <ul>
+          <li>Grote Markt (Haarlem)</li>
+          <li>Old-town walk &amp; canals</li>
+          <li>Lunch in Haarlem</li>
+          <li>Train to Zandvoort</li>
+          <li>Beach + beach-club afternoon</li>
+        </ul>
+        <div class="option-why">Best if it's sunny and warm. More variety. Coastal scenery is the payoff.</div>
+      </div>
+
+    </div>
+  </section>
+
+</div><!-- /daytrip -->
+
+<!-- ============ EAT & DO ============ -->
+<div class="tab-panel" id="eatdo" role="tabpanel" hidden>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="section-num">05</span>
+      <span class="section-title">Food list</span>
+      <span class="section-sub">Confirmed &amp; trying</span>
+    </div>
+    <div class="eatdo-grid">
+
+      <div class="category">
+        <div class="category-cat">Sit-down · meals</div>
+        <div class="category-name">Restaurants</div>
+        <ul>
+          <li>Wils Bakery Café <span class="meta">Day 2 lunch · near Van Gogh</span></li>
+          <li>Spang Makandra <span class="meta">Day 4 · 5:15 PM · BOOKED · Surinamese</span></li>
+          <li>Upstairs Pannenkoekhuis <span class="meta">Day 4 lunch · ~1 PM · TO BOOK</span></li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <div class="category-cat">Street · snacks</div>
+        <div class="category-name">Bites &amp; takeaway</div>
+        <ul>
+          <li>Vleminckx de Sausmeester <span class="meta">Day 1 · classic frites</span></li>
+          <li>Fabel Friet <span class="meta">Day 4 · 9 Straatjes snack</span></li>
+          <li>Rudi's Original Stroopwafels <span class="meta">Day 1</span></li>
+          <li>Volendammer Vishandel <span class="meta">Day 5 · De Pijp</span></li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <div class="category-cat">Drink · evening</div>
+        <div class="category-name">Bars</div>
+        <ul>
+          <li>Wynand Fockink <span class="meta">Day 4 optional · historic jenever house</span></li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <div class="category-cat">Market · daytime</div>
+        <div class="category-name">Albert Cuyp Market</div>
+        <ul>
+          <li>Day 5 morning · De Pijp</li>
+          <li>Cheese · stroopwafels · stalls · people-watching</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="section-num">06</span>
+      <span class="section-title">Areas &amp; walking</span>
+      <span class="section-sub">Wherever the day lands</span>
+    </div>
+    <div class="areas">
+      <span>Jordaan</span>
+      <span>Canal belt</span>
+      <span>9 Straatjes</span>
+      <span>Dam Square</span>
+      <span>Vondelpark</span>
+      <span>De Pijp</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="section-num">07</span>
+      <span class="section-title">Activities</span>
+      <span class="section-sub">By type</span>
+    </div>
+    <div class="eatdo-grid">
+
+      <div class="category">
+        <div class="category-cat">Museums &amp; landmarks</div>
+        <div class="category-name">Indoors</div>
+        <ul>
+          <li>Rijksmuseum <span class="meta">May 22 · 9 AM · BOOKED</span></li>
+          <li>Van Gogh Museum <span class="meta">May 22 · 12 PM · BOOKED</span></li>
+          <li>Anne Frank House <span class="meta">May 24 · 7:30 PM · BOOKED</span></li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <div class="category-cat">Music &amp; experience</div>
+        <div class="category-name">Live</div>
+        <ul>
+          <li>Harry Styles · Johan Cruijff Arena <span class="meta">May 22 evening · BOOKED</span></li>
+          <li>Heineken Experience <span class="meta">May 25 · 2 PM · BOOKED</span></li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <div class="category-cat">Water</div>
+        <div class="category-name">Canal cruise</div>
+        <ul>
+          <li>Target Day 5 · 7:30–8:00 PM departure <span class="meta">TO BOOK</span></li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <div class="category-cat">Excursion</div>
+        <div class="category-name">Day trip · May 23</div>
+        <ul>
+          <li>Utrecht (default) <span class="meta">Indoor-friendly, distinctive canals</span></li>
+          <li>Haarlem + Zandvoort <span class="meta">Sunny-day pick</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+</div><!-- /eatdo -->
+
+<!-- ============ LOGISTICS ============ -->
+<div class="tab-panel" id="logistics" role="tabpanel" hidden>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="section-num">08</span>
+      <span class="section-title">Hotels</span>
+      <span class="section-sub">2 stays · 1 switch (Day 4 AM)</span>
+    </div>
+    <div class="hotel-grid">
+      <div class="hotel-card arena">
+        <div class="hotel-nights">May 21–23 · 3 nights</div>
+        <div class="hotel-name">Hampton by Hilton Arena Boulevard</div>
+        <div class="hotel-area">Zuidoost / Arena · walking distance to Johan Cruijff</div>
+      </div>
+      <div class="hotel-card centrum">
+        <div class="hotel-nights">May 24–25 · 2 nights</div>
+        <div class="hotel-name">Hotel TwentySeven</div>
+        <div class="hotel-area">Dam Square · centrum</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="section-num">09</span>
+      <span class="section-title">Flights</span>
+      <span class="section-sub">AMS</span>
+    </div>
+    <div class="flight-grid">
+      <div class="flight">
+        <div>
+          <div class="leg">Arrival</div>
+          <div class="when">May 21 · 5:40 AM</div>
+        </div>
+        <div class="note">Early bag drop at Hampton, then train into centrum.</div>
+      </div>
+      <div class="flight">
+        <div>
+          <div class="leg">Departure</div>
+          <div class="when">May 26 · 2:40 PM</div>
+        </div>
+        <div class="note">Leave TwentySeven ~11 AM for Schiphol.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="section-num">10</span>
+      <span class="section-title">Bookings</span>
+      <span class="section-sub">Confirmed · To book</span>
+    </div>
+
+    <div class="logistics-block">
+      <div class="logistics-head">Confirmed</div>
+      <div class="bookings">
+        <div class="booking">
+          <span class="booking-mark">✓</span>
+          <div>
+            <div class="booking-name">Rijksmuseum</div>
+            <div class="booking-sub">May 22 · 9:00 AM · party of 2</div>
+          </div>
+          <span class="booking-urg confirmed">Booked</span>
+        </div>
+        <div class="booking">
+          <span class="booking-mark">✓</span>
+          <div>
+            <div class="booking-name">Van Gogh Museum</div>
+            <div class="booking-sub">May 22 · 12:00 PM · party of 2</div>
+          </div>
+          <span class="booking-urg confirmed">Booked</span>
+        </div>
+        <div class="booking">
+          <span class="booking-mark">✓</span>
+          <div>
+            <div class="booking-name">Harry Styles concert</div>
+            <div class="booking-sub">May 22 · ~7:00 PM · Johan Cruijff Arena</div>
+          </div>
+          <span class="booking-urg confirmed">Booked</span>
+        </div>
+        <div class="booking">
+          <span class="booking-mark">✓</span>
+          <div>
+            <div class="booking-name">Spang Makandra</div>
+            <div class="booking-sub">May 24 · 5:15 PM · party of 2</div>
+          </div>
+          <span class="booking-urg confirmed">Booked</span>
+        </div>
+        <div class="booking">
+          <span class="booking-mark">✓</span>
+          <div>
+            <div class="booking-name">Anne Frank House</div>
+            <div class="booking-sub">May 24 · 7:30 PM · timed entry</div>
+          </div>
+          <span class="booking-urg confirmed">Booked</span>
+        </div>
+        <div class="booking">
+          <span class="booking-mark">✓</span>
+          <div>
+            <div class="booking-name">Heineken Experience</div>
+            <div class="booking-sub">May 25 · 2:00 PM · Standard Tour</div>
+          </div>
+          <span class="booking-urg confirmed">Booked</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="logistics-block">
+      <div class="logistics-head">Still to book</div>
+      <div class="bookings">
+        <div class="booking todo">
+          <span class="booking-mark">○</span>
+          <div>
+            <div class="booking-name">Canal cruise</div>
+            <div class="booking-sub">May 25 evening · target 7:30–8:00 PM departure</div>
+          </div>
+          <span class="booking-urg high">High</span>
+        </div>
+        <div class="booking todo">
+          <span class="booking-mark">○</span>
+          <div>
+            <div class="booking-name">Upstairs Pannenkoekhuis</div>
+            <div class="booking-sub">May 24 lunch · ~1:00 PM target · party of 2</div>
+          </div>
+          <span class="booking-urg med">Med</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="section-num">11</span>
+      <span class="section-title">Packing &amp; style</span>
+      <span class="section-sub">European spring</span>
+    </div>
+
+    <div class="packing">
+      <div class="packing-block">
+        <div class="packing-cat">Weather</div>
+        <div class="packing-name">What to expect</div>
+        <ul>
+          <li>Highs: upper 70s — low 80s °F</li>
+          <li>Lows: mid 50s °F</li>
+          <li>Forecast: sunny outlook</li>
+          <li class="note">Pack one warmer layer for evenings on the water.</li>
+        </ul>
+      </div>
+
+      <div class="packing-block">
+        <div class="packing-cat">Direction</div>
+        <div class="packing-name">Style</div>
+        <ul>
+          <li>European summer casual</li>
+          <li>Linen + relaxed tailoring</li>
+          <li>Sneakers + dresses</li>
+          <li>Lightweight layers</li>
+          <li>Silver jewelry</li>
+          <li>Neutral palette</li>
+        </ul>
+      </div>
+
+      <div class="packing-block">
+        <div class="packing-cat">Footwear</div>
+        <div class="packing-name">Shoes</div>
+        <ul>
+          <li>White fashion sneakers · primary</li>
+          <li>One lighter second shoe · loafers / sandals / flats</li>
+          <li class="note">Cobblestone underfoot — don't bring anything fragile.</li>
+        </ul>
+      </div>
+
+      <div class="packing-block">
+        <div class="packing-cat">Pieces</div>
+        <div class="packing-name">Packing list</div>
+        <ul>
+          <li>Linen button-down</li>
+          <li>Tanks</li>
+          <li>Wide-leg denim</li>
+          <li>Light trousers</li>
+          <li>1–2 dresses</li>
+          <li>Small crossbody bag</li>
+          <li>Sunglasses</li>
+          <li>Light jacket or blazer</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /logistics -->
+
+<footer class="footer">
+  <span>Amsterdam · Spring 2026</span>
+  <span class="footer-mark">v1</span>
+  <span>5 nights · 2 hotels · 2 travelers</span>
+</footer>
+
+</div>
+<!-- Print stamp -->
+<div class="print-stamp" id="printStamp" aria-hidden="true"></div>
+
+<script>
+  (function() {
+    const tabs = document.querySelectorAll('.tab');
+    const panels = document.querySelectorAll('.tab-panel');
+    const stamp = document.getElementById('printStamp');
+
+    function activate(name) {
+      tabs.forEach(t => t.classList.toggle('active', t.dataset.tab === name));
+      panels.forEach(p => p.hidden = (p.id !== name));
+      if (history.replaceState) {
+        history.replaceState(null, '', '#' + name);
+      } else {
+        location.hash = name;
+      }
+    }
+
+    tabs.forEach(t => {
+      t.addEventListener('click', () => activate(t.dataset.tab));
+    });
+
+    // Deep link via URL hash
+    function handleHash() {
+      const hash = (location.hash || '').replace('#', '');
+      if (!hash) return;
+      const target = document.querySelector(`.tab[data-tab="${hash}"]`);
+      if (target) activate(hash);
+    }
+    handleHash();
+    window.addEventListener('hashchange', handleHash);
+
+    // Print stamp: shows on every printed page bottom-left
+    window.addEventListener('beforeprint', () => {
+      const active = document.querySelector('.tab.active');
+      const tabName = active ? active.querySelector('.tab-label').textContent : '';
+      const d = new Date();
+      const yyyy = d.getFullYear();
+      const mm = String(d.getMonth() + 1).padStart(2, '0');
+      const dd = String(d.getDate()).padStart(2, '0');
+      stamp.textContent = `v1  ·  ${tabName}  ·  printed ${yyyy}-${mm}-${dd}`;
+    });
+  })();
+</script>
+
+</body>
+</html>
