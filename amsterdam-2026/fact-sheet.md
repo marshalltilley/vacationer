@@ -35,21 +35,28 @@ Hotel switch is Day 4 morning.
 | May 24 | 5:15 PM | Spang Makandra (early dinner) | Booked |
 | May 24 | 7:30 PM | Anne Frank House | Booked |
 | May 25 | 2:00 PM | Heineken Experience · Standard Tour | Booked |
+| May 25 | 5:00 PM | Upstairs Pannenkoekhuis (early dinner) | Booked |
+| May 25 | 8:00 PM | Captain Jack's canal cruise · meet at Museumbrug 1 | Booked |
 
 ## Still to book
 
-- **Canal Cruise** — May 25 evening, target ~7:30–8:00 PM departure
-- **Upstairs Pannenkoekhuis** — May 24 lunch, target ~1:00 PM
+- None — all anchors confirmed.
 
 ## Day-by-day
 
-### Day 1 — Thu May 21 · Arrival
+### Day 1 — Thu May 21 · Arrival (executed)
 - 5:40 AM arrive AMS
 - Transit to Hampton, drop bags
 - Train to Amsterdam Centraal
 - Jordaan + canal-belt walking intro (intentionally light pace, jet lag)
-- Food stops: Vleminckx de Sausmeester, Rudi's Original Stroopwafels
-- Dinner near Arena, early night
+- **Actual stops, in rough order:**
+  - Moods Coffee Corner (coffee + reset)
+  - Winkel 43 (apple pie)
+  - Rum Baba
+  - Cheese Museum (Prinsengracht)
+  - Vleminckx de Sausmeester (frites)
+  - Kyo (dinner)
+- Early night back to Hampton
 
 ### Day 2 — Fri May 22 · Museums + Concert
 - 9:00 AM Rijksmuseum (BOOKED)
@@ -78,18 +85,19 @@ Sub-trip tab. Choose based on weather + energy.
 ### Day 4 — Sun May 24 · Hotel switch + central
 - Morning: check out Arena, move to Hotel TwentySeven
 - Dam Square, Jordaan, canal wandering
-- Lunch: Upstairs Pannenkoekhuis target ~1:00 PM (still to book)
+- Lunch: open / pick something light in 9 Straatjes
 - Afternoon: 9 Straatjes, snack at Fabel Friet
 - 5:15 PM Spang Makandra (BOOKED)
 - 7:30 PM Anne Frank House (BOOKED)
 - Optional: quiet canal walk, Wynand Fockink
 
-### Day 5 — Mon May 25 · De Pijp + Heineken
+### Day 5 — Mon May 25 · De Pijp + Heineken + cruise
 - Morning: Albert Cuyp Market, explore De Pijp
 - Food: Volendammer Vishandel, market snacks
 - 2:00 PM Heineken Experience (BOOKED)
-- Evening: Canal cruise (still to book, target 7:30–8:00 PM)
-- Relaxed dinner / drinks in centrum
+- 5:00 PM Upstairs Pannenkoekhuis · early dinner (BOOKED)
+- 8:00 PM Captain Jack's canal cruise · meet at **Museumbrug 1, 1073AX Amsterdam** (BOOKED)
+- Optional nightcap in centrum after cruise
 
 ### Day 6 — Tue May 26 · Departure
 - Light morning canal / Dam Square walk
@@ -99,13 +107,21 @@ Sub-trip tab. Choose based on weather + energy.
 
 ## Food list
 
+**Day 1 — executed**
+- Moods Coffee Corner — coffee + reset
+- Winkel 43 — apple pie
+- Rum Baba
+- Vleminckx de Sausmeester — frites
+- Kyo — dinner
+- (Also visited: Cheese Museum — not food, but on the Day 1 walk)
+
+**Confirmed / upcoming**
 - Wils Bakery Café — Day 2 lunch
-- Spang Makandra — Day 4 dinner (BOOKED)
-- Upstairs Pannenkoekhuis — Day 4 lunch target (TO BOOK)
-- Vleminckx de Sausmeester — Day 1 frites
+- Spang Makandra — Day 4 · 5:15 PM (BOOKED)
+- Upstairs Pannenkoekhuis — Day 5 · 5:00 PM (BOOKED)
+- Captain Jack's canal cruise — Day 5 · 8:00 PM · meet Museumbrug 1 (BOOKED)
 - Fabel Friet — Day 4 snack
-- Rudi's Original Stroopwafels — Day 1
-- Volendammer Vishandel — Day 5
+- Volendammer Vishandel — Day 5 (market)
 - Wynand Fockink — Day 4 optional drink
 
 ## Areas / walking
