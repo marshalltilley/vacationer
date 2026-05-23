@@ -505,6 +505,174 @@ body {
   line-height: 1.5;
 }
 
+/* ============ RECOMMENDED STAR ============ */
+.rec-star {
+  display: inline-block;
+  color: var(--mustard);
+  font-size: 13px;
+  margin-left: 6px;
+  line-height: 1;
+  vertical-align: 1px;
+  cursor: help;
+}
+.rec-star.lg { font-size: 16px; vertical-align: 0; }
+.rec-legend {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: -18px;
+  margin-bottom: 28px;
+}
+.rec-legend .rec-star { vertical-align: middle; }
+
+/* ============ DAY TRIP — selected ============ */
+.selected-banner {
+  background: var(--bottle-pale);
+  border: 1px solid var(--bottle);
+  border-left: 6px solid var(--bottle);
+  padding: 20px 26px;
+  margin-bottom: 28px;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 24px;
+  align-items: center;
+}
+.selected-banner .banner-tag {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--bottle);
+}
+.selected-banner .banner-tag .small {
+  display: block;
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 13px;
+  color: var(--muted);
+  text-transform: none;
+  letter-spacing: 0;
+  margin-top: 6px;
+}
+.selected-banner .banner-text {
+  font-family: 'Fraunces', serif;
+  font-size: 16px;
+  line-height: 1.4;
+  color: var(--ink);
+}
+@media (max-width: 768px) {
+  .selected-banner { grid-template-columns: 1fr; gap: 12px; padding: 16px 18px; }
+}
+
+.haarlem-title {
+  font-family: 'Fraunces', serif;
+  font-size: 38px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  margin-bottom: 6px;
+  line-height: 1;
+}
+.haarlem-title em {
+  font-style: italic;
+  font-weight: 300;
+  color: var(--brick);
+}
+.haarlem-sub {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.phases-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+@media (min-width: 820px) {
+  .phases-grid { grid-template-columns: 1fr 1fr; }
+}
+.phase {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 20px 22px;
+  position: relative;
+  overflow: hidden;
+}
+.phase::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--canal-2);
+}
+.phase.anchor::before { background: var(--brick); height: 4px; }
+.phase-when {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--sage-deep);
+  margin-bottom: 4px;
+}
+.phase-name {
+  font-family: 'Fraunces', serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: 10px;
+}
+.phase-name em { font-style: italic; font-weight: 300; color: var(--brick); }
+.phase ul { list-style: none; padding-top: 8px; border-top: 1px solid var(--rule-soft); }
+.phase li {
+  font-size: 13px;
+  padding: 4px 0;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  line-height: 1.4;
+}
+.phase li::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background: var(--canal);
+  display: inline-block;
+  flex-shrink: 0;
+  border-radius: 50%;
+  transform: translateY(-2px);
+}
+.phase .phase-flavor {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--rule-soft);
+  font-size: 12px;
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.alternate-section {
+  margin-top: 12px;
+  padding-top: 28px;
+  border-top: 1px dashed var(--rule);
+  opacity: 0.78;
+}
+.alternate-banner {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+.alternate-section .option { max-width: 540px; }
+.alternate-section .option::before { background: var(--muted); }
+
 /* ============ EAT & DO ============ */
 .eatdo-grid {
   display: grid;
@@ -848,7 +1016,7 @@ body {
   </button>
   <button class="tab" role="tab" data-tab="daytrip">
     <span class="tab-label">Day trip</span>
-    <span class="tab-sub">May 23 decision</span>
+    <span class="tab-sub">May 23 · Haarlem + Beach</span>
   </button>
   <button class="tab" role="tab" data-tab="eatdo">
     <span class="tab-label">Eat &amp; do</span>
@@ -877,21 +1045,21 @@ body {
         <div class="day-num">Day 1 · Done</div>
         <div class="day-date">May 21<span class="dow">Thursday</span></div>
         <div class="day-anchor">Arrival + Jordaan crawl</div>
-        <div class="day-notes">Landed 5:40 AM. Moods · Winkel 43 · Rum Baba · Cheese Museum · Vleminckx · Kyo. Light pace held.</div>
+        <div class="day-notes">Landed 5:40 AM. Moods · Winkel 43 · Rum Baba · Cheese Museum · Vleminckx · Restaurant Kyo · Bierproeflokaal In De Wildeman.</div>
         <div class="day-hotel"><span>Hampton</span><span class="area">Arena</span></div>
       </div>
       <div class="day-card hotel-arena">
-        <div class="day-num">Day 2</div>
+        <div class="day-num">Day 2 · Done</div>
         <div class="day-date">May 22<span class="dow">Friday</span></div>
-        <div class="day-anchor">Museums + Harry Styles</div>
-        <div class="day-notes">Rijks 9 AM, Van Gogh 12 PM. Vondelpark + rest. Concert at Johan Cruijff Arena evening.</div>
+        <div class="day-anchor">Museums · Albert Cuyp · Harry Styles</div>
+        <div class="day-notes">Rijks 9 AM. Van Gogh 12 PM. Wils lunch. Vondelpark. Albert Cuyp (Vlaardingse herring + Rudi's). Concert.</div>
         <div class="day-hotel"><span>Hampton</span><span class="area">Arena</span></div>
       </div>
       <div class="day-card hotel-arena">
         <div class="day-num">Day 3</div>
         <div class="day-date">May 23<span class="dow">Saturday</span></div>
-        <div class="day-anchor">Day trip · Utrecht or coast</div>
-        <div class="day-notes">Weather-dependent: Utrecht (default) or Haarlem + Zandvoort beach. See Day Trip tab.</div>
+        <div class="day-anchor">Haarlem + Zandvoort</div>
+        <div class="day-notes">Weather call locked in: Haarlem wander → bike through dunes → Ubuntu Beach 2:45. Full plan in Day Trip tab.</div>
         <div class="day-hotel"><span>Hampton</span><span class="area">Arena</span></div>
       </div>
       <div class="day-card travel-day">
@@ -905,7 +1073,7 @@ body {
         <div class="day-num">Day 5</div>
         <div class="day-date">May 25<span class="dow">Monday</span></div>
         <div class="day-anchor">Heineken · Pannenkoek · cruise</div>
-        <div class="day-notes">Albert Cuyp AM. Heineken 2 PM. Upstairs Pannenkoekhuis 5 PM. Captain Jack's canal cruise 8 PM @ Museumbrug 1.</div>
+        <div class="day-notes">Morning TBD (decide in-week). Heineken 2 PM. Pannenkoekhuis 5 PM. Captain Jack's cruise 8 PM @ Museumbrug 1.</div>
         <div class="day-hotel"><span>TwentySeven</span><span class="area">Centrum</span></div>
       </div>
       <div class="day-card hotel-centrum">
@@ -986,7 +1154,7 @@ body {
       <div class="event">
         <div class="event-when">May 22<span class="time">Friday · ~7:00 PM</span></div>
         <div class="event-body">
-          <div class="event-name">Harry Styles concert</div>
+          <div class="event-name">Harry Styles concert<span class="rec-star lg" title="Recommended" aria-label="Recommended">★</span></div>
           <div class="event-sub">Johan Cruijff Arena. Hampton is walking distance — convenient.</div>
         </div>
         <div class="event-tag concert">Concert</div>
@@ -1057,31 +1225,131 @@ body {
   <section class="section">
     <div class="section-head">
       <span class="section-num">04</span>
-      <span class="section-title">Day-trip decision</span>
+      <span class="section-title">Day trip · Haarlem + Zandvoort</span>
       <span class="section-sub">May 23 · Saturday</span>
     </div>
 
-    <div class="decision">
-      <div class="decision-label">
-        Decision rule
-        <span class="small">Pick the morning of, based on forecast.</span>
+    <div class="selected-banner">
+      <div class="banner-tag">
+        Selected
+        <span class="small">Sunny + warm — weather call.</span>
       </div>
-      <div class="decision-rules">
-        <div class="decision-rule">
-          <div class="when">If cloudy / mixed</div>
-          <div class="then">→ Utrecht (default)</div>
-        </div>
-        <div class="decision-rule warm">
-          <div class="when">If sunny / warm</div>
-          <div class="then">→ Haarlem + Beach</div>
-        </div>
+      <div class="banner-text">
+        A slower, more local-feeling Dutch day: historic city wandering → dunes ride → beach club. Not aggressive sightseeing. Maximize GVB pass usage and minimize unnecessary transit.
       </div>
     </div>
 
-    <div class="options-grid">
+    <h2 class="haarlem-title">Haarlem <em>+ Zandvoort</em></h2>
+    <div class="haarlem-sub">City wander → bike through the dunes → Ubuntu Beach 2:45 PM → flexible evening</div>
 
+    <div class="phases-grid">
+
+      <div class="phase">
+        <div class="phase-when">~8:00–10:00 AM</div>
+        <div class="phase-name">Transit to Haarlem</div>
+        <ul>
+          <li>Leave Arena Boulevard area 8–9 AM</li>
+          <li>GVB metro/tram with day pass</li>
+          <li>Transfer to regional bus <strong>346 or 356</strong> toward Haarlem</li>
+          <li>Arrive Haarlem ~10:00 AM</li>
+        </ul>
+        <div class="phase-flavor">346/356 are regional and NOT covered by GVB — tap Apple Pay / contactless on board + exit. Bus from Arena beats backtracking to Centraal.</div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-when">Mid-morning</div>
+        <div class="phase-name">Haarlem wander</div>
+        <ul>
+          <li>Grote Markt</li>
+          <li>St. Bavo Church</li>
+          <li>Spaarne river area</li>
+          <li>Kleine Houtstraat</li>
+          <li>Canal side streets</li>
+          <li>Boutique shopping</li>
+        </ul>
+        <div class="phase-flavor">Less touristy than Amsterdam. Wealthy historic Dutch feel, relaxed café culture, very walkable.</div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-when">Coffee / brunch</div>
+        <div class="phase-name">Light stops</div>
+        <ul>
+          <li>Native Haarlem</li>
+          <li>By Lima</li>
+          <li>Mica Coffee Bar</li>
+        </ul>
+        <div class="phase-flavor">Keep food light — bike ride + Ubuntu lunch coming.</div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-when">Late morning</div>
+        <div class="phase-name">Bike rental</div>
+        <ul>
+          <li>Rent a Bike Haarlem · Lange Herenstraat 36</li>
+          <li>Reserve ahead if possible</li>
+          <li>City bikes are sufficient for the route</li>
+        </ul>
+        <div class="phase-flavor">Sat + good weather = busy. Lock it in early if you can.</div>
+      </div>
+
+      <div class="phase anchor">
+        <div class="phase-when">Core of the day · ~1–1.5 hr</div>
+        <div class="phase-name">Bike ride to Zandvoort</div>
+        <ul>
+          <li>Dedicated Dutch bike infrastructure</li>
+          <li>Forest sections → sand dunes → coastal scenery</li>
+          <li>Mostly flat, easy riding</li>
+          <li>Scenic cruise, not a workout</li>
+        </ul>
+        <div class="phase-flavor">One of the trip highlights. Pace is relaxed — stop for photos and wander.</div>
+      </div>
+
+      <div class="phase anchor">
+        <div class="phase-when">2:45 PM · reserved</div>
+        <div class="phase-name">Ubuntu Beach</div>
+        <ul>
+          <li>Arrive early — walk beach, drinks, relax</li>
+          <li>Stylish but relaxed</li>
+          <li>Ibiza / Bali energy</li>
+          <li>Good all-afternoon hangout</li>
+        </ul>
+        <div class="phase-flavor">Reservation locked at 2:45 PM. Plan to be on the beach a bit before.</div>
+      </div>
+
+      <div class="phase">
+        <div class="phase-when">Flexible afternoon / evening</div>
+        <div class="phase-name">After Ubuntu</div>
+        <ul>
+          <li>Stay at beach — Ohana, Far Out, Mango's, Noosa</li>
+          <li>Or: ride back through dunes → return bikes → train to Amsterdam</li>
+          <li>Or: train directly from Zandvoort (easier if tired)</li>
+        </ul>
+        <div class="phase-flavor">Call it in the moment. North Sea wind cools fast after sunset.</div>
+      </div>
+
+    </div>
+
+    <div class="eatdo-grid">
+
+      <div class="category">
+        <div class="category-cat">Packing for the day</div>
+        <div class="category-name">Light kit</div>
+        <ul>
+          <li>Sunglasses</li>
+          <li>Sunscreen</li>
+          <li>Light jacket or overshirt</li>
+          <li>Portable charger</li>
+          <li>Water bottle</li>
+          <li class="note">North Sea wind cools fast after sunset.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="alternate-section">
+      <div class="alternate-banner">Alternate · not selected</div>
       <div class="option">
-        <div class="option-tag">Option A · Default</div>
+        <div class="option-tag">Cloudy-day pick · skipped</div>
         <h3 class="option-name">Utrecht</h3>
         <div class="option-when">~25 min train · indoor-friendly</div>
         <ul>
@@ -1091,24 +1359,10 @@ body {
           <li>Canal-side cafés</li>
           <li>Shopping + wandering</li>
         </ul>
-        <div class="option-why">Better in mixed weather. Relaxed atmosphere. Distinctive lowered-canal layout unlike Amsterdam.</div>
+        <div class="option-why">Would have been the call in mixed weather. Distinctive lowered-canal layout — file away for a future trip.</div>
       </div>
-
-      <div class="option warm">
-        <div class="option-tag">Option B · Weather call</div>
-        <h3 class="option-name">Haarlem <em>+ Beach</em></h3>
-        <div class="option-when">2 stops · variety</div>
-        <ul>
-          <li>Grote Markt (Haarlem)</li>
-          <li>Old-town walk &amp; canals</li>
-          <li>Lunch in Haarlem</li>
-          <li>Train to Zandvoort</li>
-          <li>Beach + beach-club afternoon</li>
-        </ul>
-        <div class="option-why">Best if it's sunny and warm. More variety. Coastal scenery is the payoff.</div>
-      </div>
-
     </div>
+
   </section>
 
 </div><!-- /daytrip -->
@@ -1122,18 +1376,16 @@ body {
       <span class="section-title">Food list</span>
       <span class="section-sub">Confirmed &amp; trying</span>
     </div>
+    <p class="rec-legend"><span class="rec-star" aria-hidden="true">★</span> = personally recommended after visiting.</p>
+
     <div class="eatdo-grid">
 
       <div class="category">
-        <div class="category-cat">Day 1 · executed</div>
-        <div class="category-name">Jordaan crawl</div>
+        <div class="category-cat">Morning · café</div>
+        <div class="category-name">Coffee</div>
         <ul>
-          <li>Moods Coffee Corner <span class="meta">coffee + reset</span></li>
-          <li>Winkel 43 <span class="meta">apple pie</span></li>
-          <li>Rum Baba <span class="meta">snack stop</span></li>
-          <li>Cheese Museum <span class="meta">browse (Prinsengracht)</span></li>
-          <li>Vleminckx de Sausmeester <span class="meta">frites</span></li>
-          <li>Kyo <span class="meta">dinner</span></li>
+          <li>Moods Coffee Corner <span class="meta">Day 1 · coffee + brunch</span></li>
+          <li>Rum Baba <span class="meta">Day 1 · coffee</span></li>
         </ul>
       </div>
 
@@ -1141,7 +1393,8 @@ body {
         <div class="category-cat">Sit-down · meals</div>
         <div class="category-name">Restaurants</div>
         <ul>
-          <li>Wils Bakery Café <span class="meta">Day 2 lunch · near Van Gogh</span></li>
+          <li>Restaurant Kyo <span class="rec-star" title="Recommended" aria-label="Recommended">★</span><span class="meta">Day 1 · dinner</span></li>
+          <li>Wils Bakery Café <span class="rec-star" title="Recommended" aria-label="Recommended">★</span><span class="meta">Day 2 · lunch near Van Gogh</span></li>
           <li>Spang Makandra <span class="meta">Day 4 · 5:15 PM · BOOKED · Surinamese</span></li>
           <li>Upstairs Pannenkoekhuis <span class="meta">Day 5 · 5:00 PM · BOOKED</span></li>
         </ul>
@@ -1151,25 +1404,21 @@ body {
         <div class="category-cat">Street · snacks</div>
         <div class="category-name">Bites &amp; takeaway</div>
         <ul>
+          <li>Winkel 43 <span class="meta">Day 1 · apple pie</span></li>
+          <li>Vleminckx de Sausmeester <span class="meta">Day 1 · frites</span></li>
+          <li>Vlaardingse Haringhandel <span class="meta">Day 2 · herring sandwich · Albert Cuyp</span></li>
+          <li>Rudi's Original Stroopwafels <span class="meta">Day 2 · Albert Cuyp</span></li>
           <li>Fabel Friet <span class="meta">Day 4 · 9 Straatjes snack</span></li>
-          <li>Volendammer Vishandel <span class="meta">Day 5 · De Pijp</span></li>
+          <li>Volendammer Vishandel <span class="meta">Day 5 · De Pijp (if still wanted)</span></li>
         </ul>
       </div>
 
       <div class="category">
-        <div class="category-cat">Drink · evening</div>
+        <div class="category-cat">Drinks · evening</div>
         <div class="category-name">Bars</div>
         <ul>
+          <li>Bierproeflokaal In De Wildeman <span class="meta">Day 1 · walk-in · beer tasting house</span></li>
           <li>Wynand Fockink <span class="meta">Day 4 optional · historic jenever house</span></li>
-        </ul>
-      </div>
-
-      <div class="category">
-        <div class="category-cat">Market · daytime</div>
-        <div class="category-name">Albert Cuyp Market</div>
-        <ul>
-          <li>Day 5 morning · De Pijp</li>
-          <li>Cheese · stroopwafels · stalls · people-watching</li>
         </ul>
       </div>
 
@@ -1207,6 +1456,7 @@ body {
           <li>Rijksmuseum <span class="meta">May 22 · 9 AM · BOOKED</span></li>
           <li>Van Gogh Museum <span class="meta">May 22 · 12 PM · BOOKED</span></li>
           <li>Anne Frank House <span class="meta">May 24 · 7:30 PM · BOOKED</span></li>
+          <li>Cheese Museum <span class="meta">Day 1 · Prinsengracht · walk-in</span></li>
         </ul>
       </div>
 
@@ -1214,7 +1464,7 @@ body {
         <div class="category-cat">Music &amp; experience</div>
         <div class="category-name">Live</div>
         <ul>
-          <li>Harry Styles · Johan Cruijff Arena <span class="meta">May 22 evening · BOOKED</span></li>
+          <li>Harry Styles · Johan Cruijff Arena <span class="rec-star" title="Recommended" aria-label="Recommended">★</span><span class="meta">May 22 evening · BOOKED</span></li>
           <li>Heineken Experience <span class="meta">May 25 · 2 PM · BOOKED</span></li>
         </ul>
       </div>
@@ -1231,8 +1481,8 @@ body {
         <div class="category-cat">Excursion</div>
         <div class="category-name">Day trip · May 23</div>
         <ul>
-          <li>Utrecht (default) <span class="meta">Indoor-friendly, distinctive canals</span></li>
-          <li>Haarlem + Zandvoort <span class="meta">Sunny-day pick</span></li>
+          <li>Haarlem + Zandvoort <span class="meta">SELECTED · weather call · Ubuntu Beach 2:45 PM</span></li>
+          <li>Utrecht <span class="meta">alternate · not selected</span></li>
         </ul>
       </div>
 
@@ -1255,6 +1505,7 @@ body {
         <div class="hotel-nights">May 21–23 · 3 nights</div>
         <div class="hotel-name">Hampton by Hilton Arena Boulevard</div>
         <div class="hotel-area">Zuidoost / Arena · walking distance to Johan Cruijff</div>
+        <div class="hotel-area" style="margin-top:6px;color:var(--bottle);font-style:normal;font-size:12px;font-weight:600;">Continental breakfast included</div>
       </div>
       <div class="hotel-card centrum">
         <div class="hotel-nights">May 24–25 · 2 nights</div>
