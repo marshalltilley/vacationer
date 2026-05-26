@@ -999,7 +999,7 @@ body {
     </div>
     <div class="meta-item">
       <div class="label">Tone</div>
-      <div class="value">European spring —<br>relaxed pace</div>
+      <div class="value">European summer —<br>warm + walkable</div>
     </div>
   </div>
 </header>
@@ -1010,21 +1010,21 @@ body {
     <span class="tab-label">Overview</span>
     <span class="tab-sub">Days · Pulse</span>
   </button>
-  <button class="tab" role="tab" data-tab="events">
-    <span class="tab-label">Locked events</span>
-    <span class="tab-sub">Booked anchors</span>
-  </button>
-  <button class="tab" role="tab" data-tab="daytrip">
-    <span class="tab-label">Day trip</span>
-    <span class="tab-sub">May 23 · Haarlem + Beach</span>
-  </button>
   <button class="tab" role="tab" data-tab="eatdo">
     <span class="tab-label">Eat &amp; do</span>
     <span class="tab-sub">Food · Walks · Activities</span>
   </button>
+  <button class="tab" role="tab" data-tab="events">
+    <span class="tab-label">Locked events</span>
+    <span class="tab-sub">Booked anchors</span>
+  </button>
   <button class="tab" role="tab" data-tab="logistics">
     <span class="tab-label">Logistics</span>
     <span class="tab-sub">Hotels · Flights · Pack</span>
+  </button>
+  <button class="tab" role="tab" data-tab="daytrip">
+    <span class="tab-label">Day trip</span>
+    <span class="tab-sub">May 23 · Haarlem + Beach</span>
   </button>
   <button class="print-btn" onclick="window.print()">
     <span>Print this tab</span>
@@ -1063,24 +1063,24 @@ body {
         <div class="day-hotel"><span>Hampton</span><span class="area">Arena</span></div>
       </div>
       <div class="day-card travel-day">
-        <div class="day-num">Day 4</div>
+        <div class="day-num">Day 4 · Done</div>
         <div class="day-date">May 24<span class="dow">Sunday</span></div>
-        <div class="day-anchor">Switch + Anne Frank</div>
-        <div class="day-notes">Move to TwentySeven. Dam Square, 9 Straatjes, Fabel Friet snack. Spang Makandra 5:15. Anne Frank 7:30.</div>
+        <div class="day-anchor">Shopping + Anne Frank</div>
+        <div class="day-notes">Switch to TwentySeven. 9 Straatjes → Haarlemmerbuurt ★ → Delftware (Heinen). Fabel Friet ★ lunch. Kinnaree Thai dinner. Anne Frank 7:30. Flying Dutchmen Cocktails ★ after.</div>
         <div class="day-hotel"><span>TwentySeven</span><span class="area">Centrum</span></div>
       </div>
       <div class="day-card hotel-centrum">
-        <div class="day-num">Day 5</div>
+        <div class="day-num">Day 5 · Done</div>
         <div class="day-date">May 25<span class="dow">Monday</span></div>
-        <div class="day-anchor">Heineken · Pannenkoek · cruise</div>
-        <div class="day-notes">Morning TBD. Sampurna Singel noon. Heineken 2 PM. Pannenkoekhuis 5 PM. Captain Jack's cruise 8 PM @ Museumbrug 1.</div>
+        <div class="day-anchor">Jewish Quarter · food · cruise</div>
+        <div class="day-notes">Jewish Quarter + Holocaust Memorial. Sampurna lunch. Heineken ★ rooftop. Pannenkoekhuis ★ dinner. Wynand Fockink ★. Captain Jack's ★ 8 PM sunset cruise.</div>
         <div class="day-hotel"><span>TwentySeven</span><span class="area">Centrum</span></div>
       </div>
       <div class="day-card hotel-centrum">
-        <div class="day-num">Day 6</div>
+        <div class="day-num">Day 6 · Done</div>
         <div class="day-date">May 26<span class="dow">Tuesday</span></div>
         <div class="day-anchor">Departure</div>
-        <div class="day-notes">Light morning walk, breakfast. Leave for Schiphol ~11 AM. Wheels up 2:40 PM.</div>
+        <div class="day-notes">Breakfast at TwentySeven (included), then straight to Schiphol. Wheels up 2:40 PM.</div>
         <div class="day-hotel"><span>TwentySeven</span><span class="area">Centrum</span></div>
       </div>
     </div>
@@ -1094,14 +1094,14 @@ body {
     </div>
     <div class="pulse">
       <div class="pulse-cell">
-        <div class="pulse-num">9</div>
-        <div class="pulse-label">Confirmed</div>
-        <div class="pulse-sub">2 museums, 1 concert, 1 landmark, 1 attraction, 1 lunch, 2 dinners, 1 cruise</div>
+        <div class="pulse-num">8</div>
+        <div class="pulse-label">Booked</div>
+        <div class="pulse-sub">2 museums, 1 concert, 1 landmark, 1 attraction, 1 lunch, 1 dinner, 1 cruise — these needed advance booking</div>
       </div>
       <div class="pulse-cell todo">
         <div class="pulse-num">0</div>
         <div class="pulse-label">Still to book</div>
-        <div class="pulse-sub">All anchors locked. Day 1 already executed.</div>
+        <div class="pulse-sub">Trip complete — kept for the booking-tip record.</div>
       </div>
       <div class="pulse-cell flights">
         <div class="pulse-num">2</div>
@@ -1112,8 +1112,150 @@ body {
   </section>
 
 </div><!-- /overview -->
+<div class="tab-panel" id="eatdo" role="tabpanel" hidden>
 
-<!-- ============ LOCKED EVENTS ============ -->
+  <section class="section">
+    <div class="section-head">
+      <span class="section-num">05</span>
+      <span class="section-title">Food list</span>
+      <span class="section-sub">Confirmed &amp; trying</span>
+    </div>
+    <p class="rec-legend"><span class="rec-star" aria-hidden="true">★</span> = personally recommended after visiting.</p>
+
+    <div class="eatdo-grid">
+
+      <div class="category">
+        <div class="category-cat">Morning · café</div>
+        <div class="category-name">Coffee</div>
+        <ul>
+          <li>Moods Coffee Corner <span class="meta">Day 1 · coffee + brunch</span></li>
+          <li>Rum Baba <span class="meta">Day 1 · coffee</span></li>
+          <li>Bini Bakery <span class="meta">Day 4 · matcha</span></li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <div class="category-cat">Sit-down · meals</div>
+        <div class="category-name">Restaurants</div>
+        <ul>
+          <li>Restaurant Kyo <span class="meta">Day 1 · dinner</span></li>
+          <li>Wils Bakery Café <span class="rec-star" title="Recommended" aria-label="Recommended">★</span><span class="meta">Day 2 · lunch near Van Gogh</span></li>
+          <li>Ubuntu Beach <span class="rec-star" title="Recommended" aria-label="Recommended">★</span><span class="meta">Day 3 · Zandvoort · dinner — Mixed Starters + drinks</span></li>
+          <li>Piccolo Forno <span class="meta">Day 3 · Haarlem · pizza</span></li>
+          <li>Kinnaree Thai <span class="meta">Day 4 · dinner · good not memorable</span></li>
+          <li>Sampurna Singel <span class="meta">Day 5 · lunch · Indonesian · rijsttafel</span></li>
+          <li>Upstairs Pannenkoekhuis <span class="rec-star" title="Recommended" aria-label="Recommended">★</span><span class="meta">Day 5 · King Kai + Kai · 4 tables, book ~1 week ahead</span></li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <div class="category-cat">Street · snacks</div>
+        <div class="category-name">Bites &amp; takeaway</div>
+        <ul>
+          <li>Winkel 43 <span class="meta">Day 1 · apple pie</span></li>
+          <li>Vleminckx de Sausmeester <span class="meta">Day 1 · frites</span></li>
+          <li>Vlaardingse Haringhandel <span class="meta">Day 2 · herring sandwich · Albert Cuyp</span></li>
+          <li>Rudi's Original Stroopwafels <span class="meta">Day 2 · Albert Cuyp</span></li>
+          <li>Fabel Friet <span class="rec-star" title="Recommended" aria-label="Recommended">★</span><span class="meta">Day 4 · parmesan truffle fries</span></li>
+          <li>FEBO <span class="meta">Day 5 · pre-cruise snack near docks</span></li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <div class="category-cat">Drinks · evening</div>
+        <div class="category-name">Bars</div>
+        <ul>
+          <li>Bierproeflokaal In De Wildeman <span class="meta">Day 1 · walk-in · beer tasting house</span></li>
+          <li>Flying Dutchmen Cocktails <span class="rec-star" title="Recommended" aria-label="Recommended">★</span><span class="meta">Day 4 · post Anne Frank · one of the coolest bars on the trip</span></li>
+          <li>Wynand Fockink <span class="rec-star" title="Recommended" aria-label="Recommended">★</span><span class="meta">Day 5 · historic jenever house, traditional tasting room</span></li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <div class="category-cat">Shopping · neighborhoods</div>
+        <div class="category-name">Shopping</div>
+        <ul>
+          <li>Haarlemmerbuurt <span class="rec-star" title="Recommended" aria-label="Recommended">★</span><span class="meta">Day 4 · vintage, atmosphere — highlight</span></li>
+          <li>Things I Like Things I Love <span class="rec-star" title="Recommended" aria-label="Recommended">★</span><span class="meta">Haarlemmerbuurt favorite</span></li>
+          <li>WE ARE Labels <span class="rec-star" title="Recommended" aria-label="Recommended">★</span><span class="meta">Haarlemmerbuurt favorite</span></li>
+          <li>9 Straatjes <span class="meta">Day 4 + Day 5 revisit · Sunday stores open 10 AM–noon</span></li>
+          <li>Heinen Delfts Blauw <span class="meta">Delftware · purchased here</span></li>
+          <li>Kunst &amp; Kramer <span class="meta">Delftware · overpriced — skip</span></li>
+          <li>Madame Blue <span class="meta">Delftware · noted as better value (didn't visit)</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="section-num">06</span>
+      <span class="section-title">Areas &amp; walking</span>
+      <span class="section-sub">Wherever the day lands</span>
+    </div>
+    <div class="areas">
+      <span>Jordaan</span>
+      <span>Canal belt</span>
+      <span>9 Straatjes</span>
+      <span>Haarlemmerbuurt</span>
+      <span>Jewish Quarter</span>
+      <span>Dam Square</span>
+      <span>Vondelpark</span>
+      <span>De Pijp</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="section-num">07</span>
+      <span class="section-title">Activities</span>
+      <span class="section-sub">By type</span>
+    </div>
+    <div class="eatdo-grid">
+
+      <div class="category">
+        <div class="category-cat">Museums · landmarks · memorials</div>
+        <div class="category-name">Sites</div>
+        <ul>
+          <li>Rijksmuseum <span class="meta">May 22 · 9 AM · BOOKED</span></li>
+          <li>Van Gogh Museum <span class="meta">May 22 · 12 PM · BOOKED</span></li>
+          <li>Anne Frank House <span class="rec-star" title="Recommended" aria-label="Recommended">★</span><span class="meta">May 24 · 7:30 PM · BOOKED · book ~6 weeks ahead</span></li>
+          <li>Holocaust Memorial / Namenmonument <span class="meta">Day 5 · Jewish Quarter · outdoor monument, victim names · emotional</span></li>
+          <li>Cheese Museum <span class="meta">Day 1 · Prinsengracht · walk-in</span></li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <div class="category-cat">Music &amp; experience</div>
+        <div class="category-name">Live</div>
+        <ul>
+          <li>Harry Styles · Johan Cruijff Arena <span class="rec-star" title="Recommended" aria-label="Recommended">★</span><span class="meta">May 22 evening · BOOKED</span></li>
+          <li>Heineken Experience <span class="rec-star" title="Recommended" aria-label="Recommended">★</span><span class="meta">May 25 · 2 PM · BOOKED · rooftop upgrade worth it</span></li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <div class="category-cat">Water</div>
+        <div class="category-name">Captain Jack's canal cruise <span class="rec-star" title="Recommended" aria-label="Recommended">★</span></div>
+        <ul>
+          <li>Day 5 · 8:00 PM departure <span class="meta">BOOKED · meet Museumbrug 1, 1073AX · late-May 8 PM = sunset cruise</span></li>
+        </ul>
+      </div>
+
+      <div class="category">
+        <div class="category-cat">Excursion</div>
+        <div class="category-name">Day trip · May 23</div>
+        <ul>
+          <li>Haarlem + Zandvoort <span class="meta">SELECTED · weather call · Ubuntu Beach 2:45 PM</span></li>
+          <li>Utrecht <span class="meta">alternate · not selected</span></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+</div><!-- /eatdo -->
 <div class="tab-panel" id="events" role="tabpanel" hidden>
 
   <section class="section">
@@ -1161,19 +1303,10 @@ body {
       </div>
 
       <div class="event">
-        <div class="event-when">May 24<span class="time">Sunday · 5:15 PM</span></div>
-        <div class="event-body">
-          <div class="event-name">Spang Makandra</div>
-          <div class="event-sub">Early dinner before Anne Frank. Surinamese; small place, reservation locked.</div>
-        </div>
-        <div class="event-tag dining">Dining</div>
-      </div>
-
-      <div class="event">
         <div class="event-when">May 24<span class="time">Sunday · 7:30 PM</span></div>
         <div class="event-body">
-          <div class="event-name">Anne Frank House</div>
-          <div class="event-sub">Timed entry. Plan to be early — long emotional weight, don't rush.</div>
+          <div class="event-name">Anne Frank House<span class="rec-star lg" title="Recommended" aria-label="Recommended">★</span></div>
+          <div class="event-sub">Timed entry. Book ~6 weeks ahead — sells out. Worthwhile and impactful.</div>
         </div>
         <div class="event-tag landmark">Landmark</div>
       </div>
@@ -1190,8 +1323,8 @@ body {
       <div class="event">
         <div class="event-when">May 25<span class="time">Monday · 2:00 PM</span></div>
         <div class="event-body">
-          <div class="event-name">Heineken Experience</div>
-          <div class="event-sub">Standard tour. ~1.5 hours.</div>
+          <div class="event-name">Heineken Experience<span class="rec-star lg" title="Recommended" aria-label="Recommended">★</span></div>
+          <div class="event-sub">Rooftop upgrade is worth it. Surprisingly fun. ~1.5 hours.</div>
         </div>
         <div class="event-tag attraction">Attraction</div>
       </div>
@@ -1208,8 +1341,8 @@ body {
       <div class="event">
         <div class="event-when">May 25<span class="time">Monday · 8:00 PM</span></div>
         <div class="event-body">
-          <div class="event-name">Captain Jack's canal cruise</div>
-          <div class="event-sub">Meet at <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Museumbrug+1%2CAmsterdam%2CNorth+Holland%2C1073AX%2CNL&amp;destination_place_id=ChIJTxoGYEMJxkcRM_sVRLb3lxw" target="_blank" rel="noopener">Museumbrug 1, 1073AX Amsterdam</a>. Aim to arrive 10 min early.</div>
+          <div class="event-name">Captain Jack's canal cruise<span class="rec-star lg" title="Recommended" aria-label="Recommended">★</span></div>
+          <div class="event-sub">Meet at <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Museumbrug+1%2CAmsterdam%2CNorth+Holland%2C1073AX%2CNL&amp;destination_place_id=ChIJTxoGYEMJxkcRM_sVRLb3lxw" target="_blank" rel="noopener">Museumbrug 1, 1073AX Amsterdam</a>. Late-May 8 PM slot is the call — sun sets during the cruise, lighter canal traffic, scenic longer route.</div>
         </div>
         <div class="event-tag landmark">Cruise</div>
       </div>
@@ -1227,8 +1360,206 @@ body {
   </section>
 
 </div><!-- /events -->
+<div class="tab-panel" id="logistics" role="tabpanel" hidden>
 
-<!-- ============ DAY TRIP ============ -->
+  <section class="section">
+    <div class="section-head">
+      <span class="section-num">08</span>
+      <span class="section-title">Hotels</span>
+      <span class="section-sub">2 stays · 1 switch (Day 4 AM)</span>
+    </div>
+    <div class="hotel-grid">
+      <div class="hotel-card arena">
+        <div class="hotel-nights">May 21–23 · 3 nights</div>
+        <div class="hotel-name">Hampton by Hilton Arena Boulevard</div>
+        <div class="hotel-area">Zuidoost / Arena · walking distance to Johan Cruijff</div>
+        <div class="hotel-area" style="margin-top:6px;color:var(--bottle);font-style:normal;font-size:12px;font-weight:600;">Continental breakfast included</div>
+      </div>
+      <div class="hotel-card centrum">
+        <div class="hotel-nights">May 24–25 · 2 nights</div>
+        <div class="hotel-name">Hotel TwentySeven</div>
+        <div class="hotel-area">Dam Square · centrum</div>
+        <div class="hotel-area" style="margin-top:6px;color:var(--bottle);font-style:normal;font-size:12px;font-weight:600;">Breakfast included</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="section-num">09</span>
+      <span class="section-title">Flights</span>
+      <span class="section-sub">AMS</span>
+    </div>
+    <div class="flight-grid">
+      <div class="flight">
+        <div>
+          <div class="leg">Arrival</div>
+          <div class="when">May 21 · 5:40 AM</div>
+        </div>
+        <div class="note">Early bag drop at Hampton, then train into centrum.</div>
+      </div>
+      <div class="flight">
+        <div>
+          <div class="leg">Departure</div>
+          <div class="when">May 26 · 2:40 PM</div>
+        </div>
+        <div class="note">Leave TwentySeven ~11 AM for Schiphol.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="section-num">10</span>
+      <span class="section-title">Bookings</span>
+      <span class="section-sub">Confirmed · To book</span>
+    </div>
+
+    <div class="logistics-block">
+      <div class="logistics-head">Confirmed</div>
+      <div class="bookings">
+        <div class="booking">
+          <span class="booking-mark">✓</span>
+          <div>
+            <div class="booking-name">Rijksmuseum</div>
+            <div class="booking-sub">May 22 · 9:00 AM · party of 2</div>
+          </div>
+          <span class="booking-urg confirmed">Booked</span>
+        </div>
+        <div class="booking">
+          <span class="booking-mark">✓</span>
+          <div>
+            <div class="booking-name">Van Gogh Museum</div>
+            <div class="booking-sub">May 22 · 12:00 PM · party of 2</div>
+          </div>
+          <span class="booking-urg confirmed">Booked</span>
+        </div>
+        <div class="booking">
+          <span class="booking-mark">✓</span>
+          <div>
+            <div class="booking-name">Harry Styles concert</div>
+            <div class="booking-sub">May 22 · ~7:00 PM · Johan Cruijff Arena</div>
+          </div>
+          <span class="booking-urg confirmed">Booked</span>
+        </div>
+        <div class="booking">
+          <span class="booking-mark">✓</span>
+          <div>
+            <div class="booking-name">Anne Frank House</div>
+            <div class="booking-sub">May 24 · 7:30 PM · timed entry</div>
+          </div>
+          <span class="booking-urg confirmed">Booked</span>
+        </div>
+        <div class="booking">
+          <span class="booking-mark">✓</span>
+          <div>
+            <div class="booking-name">Sampurna Singel</div>
+            <div class="booking-sub">May 25 · 12:00 PM · Indonesian · party of 2</div>
+          </div>
+          <span class="booking-urg confirmed">Booked</span>
+        </div>
+        <div class="booking">
+          <span class="booking-mark">✓</span>
+          <div>
+            <div class="booking-name">Heineken Experience</div>
+            <div class="booking-sub">May 25 · 2:00 PM · Rooftop upgrade</div>
+          </div>
+          <span class="booking-urg confirmed">Booked</span>
+        </div>
+        <div class="booking">
+          <span class="booking-mark">✓</span>
+          <div>
+            <div class="booking-name">Upstairs Pannenkoekhuis</div>
+            <div class="booking-sub">May 25 · 5:00 PM · party of 2</div>
+          </div>
+          <span class="booking-urg confirmed">Booked</span>
+        </div>
+        <div class="booking">
+          <span class="booking-mark">✓</span>
+          <div>
+            <div class="booking-name">Captain Jack's canal cruise</div>
+            <div class="booking-sub">May 25 · 8:00 PM · meet Museumbrug 1, 1073AX</div>
+          </div>
+          <span class="booking-urg confirmed">Booked</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="logistics-block">
+      <div class="logistics-head">Still to book</div>
+      <div class="bookings">
+        <div class="booking">
+          <span class="booking-mark">—</span>
+          <div>
+            <div class="booking-name">Nothing outstanding</div>
+            <div class="booking-sub">All anchor reservations are locked.</div>
+          </div>
+          <span class="booking-urg confirmed">Clear</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <span class="section-num">11</span>
+      <span class="section-title">Packing &amp; style</span>
+      <span class="section-sub">European summer</span>
+    </div>
+
+    <div class="packing">
+      <div class="packing-block">
+        <div class="packing-cat">Weather</div>
+        <div class="packing-name">What to expect</div>
+        <ul>
+          <li>Highs: upper 70s — low 80s °F</li>
+          <li>Lows: mid 50s °F</li>
+          <li>Forecast: sunny outlook</li>
+          <li class="note">Pack one warmer layer for evenings on the water.</li>
+        </ul>
+      </div>
+
+      <div class="packing-block">
+        <div class="packing-cat">Direction</div>
+        <div class="packing-name">Style</div>
+        <ul>
+          <li>European summer casual</li>
+          <li>Linen + relaxed tailoring</li>
+          <li>Sneakers + dresses</li>
+          <li>Lightweight layers</li>
+          <li>Silver jewelry</li>
+          <li>Neutral palette</li>
+        </ul>
+      </div>
+
+      <div class="packing-block">
+        <div class="packing-cat">Footwear</div>
+        <div class="packing-name">Shoes</div>
+        <ul>
+          <li>White fashion sneakers · primary</li>
+          <li>One lighter second shoe · loafers / sandals / flats</li>
+          <li class="note">Cobblestone underfoot — don't bring anything fragile.</li>
+        </ul>
+      </div>
+
+      <div class="packing-block">
+        <div class="packing-cat">Pieces</div>
+        <div class="packing-name">Packing list</div>
+        <ul>
+          <li>Linen button-down</li>
+          <li>Tanks</li>
+          <li>Wide-leg denim</li>
+          <li>Light trousers</li>
+          <li>1–2 dresses</li>
+          <li>Small crossbody bag</li>
+          <li>Sunglasses</li>
+          <li>Light jacket or blazer</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /logistics -->
 <div class="tab-panel" id="daytrip" role="tabpanel" hidden>
 
   <section class="section">
@@ -1366,345 +1697,9 @@ body {
 
 </div><!-- /daytrip -->
 
-<!-- ============ EAT & DO ============ -->
-<div class="tab-panel" id="eatdo" role="tabpanel" hidden>
-
-  <section class="section">
-    <div class="section-head">
-      <span class="section-num">05</span>
-      <span class="section-title">Food list</span>
-      <span class="section-sub">Confirmed &amp; trying</span>
-    </div>
-    <p class="rec-legend"><span class="rec-star" aria-hidden="true">★</span> = personally recommended after visiting.</p>
-
-    <div class="eatdo-grid">
-
-      <div class="category">
-        <div class="category-cat">Morning · café</div>
-        <div class="category-name">Coffee</div>
-        <ul>
-          <li>Moods Coffee Corner <span class="meta">Day 1 · coffee + brunch</span></li>
-          <li>Rum Baba <span class="meta">Day 1 · coffee</span></li>
-        </ul>
-      </div>
-
-      <div class="category">
-        <div class="category-cat">Sit-down · meals</div>
-        <div class="category-name">Restaurants</div>
-        <ul>
-          <li>Restaurant Kyo <span class="rec-star" title="Recommended" aria-label="Recommended">★</span><span class="meta">Day 1 · dinner</span></li>
-          <li>Wils Bakery Café <span class="rec-star" title="Recommended" aria-label="Recommended">★</span><span class="meta">Day 2 · lunch near Van Gogh</span></li>
-          <li>Ubuntu Beach <span class="rec-star" title="Recommended" aria-label="Recommended">★</span><span class="meta">Day 3 · Zandvoort · dinner — Mixed Starters + drinks</span></li>
-          <li>Piccolo Forno <span class="meta">Day 3 · Haarlem · pizza</span></li>
-          <li>Spang Makandra <span class="meta">Day 4 · 5:15 PM · BOOKED · Surinamese</span></li>
-          <li>Sampurna Singel <span class="meta">Day 5 · 12:00 PM · BOOKED · Indonesian</span></li>
-          <li>Upstairs Pannenkoekhuis <span class="meta">Day 5 · 5:00 PM · BOOKED</span></li>
-        </ul>
-      </div>
-
-      <div class="category">
-        <div class="category-cat">Street · snacks</div>
-        <div class="category-name">Bites &amp; takeaway</div>
-        <ul>
-          <li>Winkel 43 <span class="meta">Day 1 · apple pie</span></li>
-          <li>Vleminckx de Sausmeester <span class="meta">Day 1 · frites</span></li>
-          <li>Vlaardingse Haringhandel <span class="meta">Day 2 · herring sandwich · Albert Cuyp</span></li>
-          <li>Rudi's Original Stroopwafels <span class="meta">Day 2 · Albert Cuyp</span></li>
-          <li>Fabel Friet <span class="meta">Day 4 · 9 Straatjes snack</span></li>
-          <li>Volendammer Vishandel <span class="meta">Day 5 · De Pijp (if still wanted)</span></li>
-        </ul>
-      </div>
-
-      <div class="category">
-        <div class="category-cat">Drinks · evening</div>
-        <div class="category-name">Bars</div>
-        <ul>
-          <li>Bierproeflokaal In De Wildeman <span class="meta">Day 1 · walk-in · beer tasting house</span></li>
-          <li>Wynand Fockink <span class="meta">Day 4 optional · historic jenever house</span></li>
-        </ul>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-head">
-      <span class="section-num">06</span>
-      <span class="section-title">Areas &amp; walking</span>
-      <span class="section-sub">Wherever the day lands</span>
-    </div>
-    <div class="areas">
-      <span>Jordaan</span>
-      <span>Canal belt</span>
-      <span>9 Straatjes</span>
-      <span>Dam Square</span>
-      <span>Vondelpark</span>
-      <span>De Pijp</span>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-head">
-      <span class="section-num">07</span>
-      <span class="section-title">Activities</span>
-      <span class="section-sub">By type</span>
-    </div>
-    <div class="eatdo-grid">
-
-      <div class="category">
-        <div class="category-cat">Museums &amp; landmarks</div>
-        <div class="category-name">Indoors</div>
-        <ul>
-          <li>Rijksmuseum <span class="meta">May 22 · 9 AM · BOOKED</span></li>
-          <li>Van Gogh Museum <span class="meta">May 22 · 12 PM · BOOKED</span></li>
-          <li>Anne Frank House <span class="meta">May 24 · 7:30 PM · BOOKED</span></li>
-          <li>Cheese Museum <span class="meta">Day 1 · Prinsengracht · walk-in</span></li>
-        </ul>
-      </div>
-
-      <div class="category">
-        <div class="category-cat">Music &amp; experience</div>
-        <div class="category-name">Live</div>
-        <ul>
-          <li>Harry Styles · Johan Cruijff Arena <span class="rec-star" title="Recommended" aria-label="Recommended">★</span><span class="meta">May 22 evening · BOOKED</span></li>
-          <li>Heineken Experience <span class="meta">May 25 · 2 PM · BOOKED</span></li>
-        </ul>
-      </div>
-
-      <div class="category">
-        <div class="category-cat">Water</div>
-        <div class="category-name">Captain Jack's canal cruise</div>
-        <ul>
-          <li>Day 5 · 8:00 PM departure <span class="meta">BOOKED · meet Museumbrug 1, 1073AX</span></li>
-        </ul>
-      </div>
-
-      <div class="category">
-        <div class="category-cat">Excursion</div>
-        <div class="category-name">Day trip · May 23</div>
-        <ul>
-          <li>Haarlem + Zandvoort <span class="meta">SELECTED · weather call · Ubuntu Beach 2:45 PM</span></li>
-          <li>Utrecht <span class="meta">alternate · not selected</span></li>
-        </ul>
-      </div>
-
-    </div>
-  </section>
-
-</div><!-- /eatdo -->
-
-<!-- ============ LOGISTICS ============ -->
-<div class="tab-panel" id="logistics" role="tabpanel" hidden>
-
-  <section class="section">
-    <div class="section-head">
-      <span class="section-num">08</span>
-      <span class="section-title">Hotels</span>
-      <span class="section-sub">2 stays · 1 switch (Day 4 AM)</span>
-    </div>
-    <div class="hotel-grid">
-      <div class="hotel-card arena">
-        <div class="hotel-nights">May 21–23 · 3 nights</div>
-        <div class="hotel-name">Hampton by Hilton Arena Boulevard</div>
-        <div class="hotel-area">Zuidoost / Arena · walking distance to Johan Cruijff</div>
-        <div class="hotel-area" style="margin-top:6px;color:var(--bottle);font-style:normal;font-size:12px;font-weight:600;">Continental breakfast included</div>
-      </div>
-      <div class="hotel-card centrum">
-        <div class="hotel-nights">May 24–25 · 2 nights</div>
-        <div class="hotel-name">Hotel TwentySeven</div>
-        <div class="hotel-area">Dam Square · centrum</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-head">
-      <span class="section-num">09</span>
-      <span class="section-title">Flights</span>
-      <span class="section-sub">AMS</span>
-    </div>
-    <div class="flight-grid">
-      <div class="flight">
-        <div>
-          <div class="leg">Arrival</div>
-          <div class="when">May 21 · 5:40 AM</div>
-        </div>
-        <div class="note">Early bag drop at Hampton, then train into centrum.</div>
-      </div>
-      <div class="flight">
-        <div>
-          <div class="leg">Departure</div>
-          <div class="when">May 26 · 2:40 PM</div>
-        </div>
-        <div class="note">Leave TwentySeven ~11 AM for Schiphol.</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-head">
-      <span class="section-num">10</span>
-      <span class="section-title">Bookings</span>
-      <span class="section-sub">Confirmed · To book</span>
-    </div>
-
-    <div class="logistics-block">
-      <div class="logistics-head">Confirmed</div>
-      <div class="bookings">
-        <div class="booking">
-          <span class="booking-mark">✓</span>
-          <div>
-            <div class="booking-name">Rijksmuseum</div>
-            <div class="booking-sub">May 22 · 9:00 AM · party of 2</div>
-          </div>
-          <span class="booking-urg confirmed">Booked</span>
-        </div>
-        <div class="booking">
-          <span class="booking-mark">✓</span>
-          <div>
-            <div class="booking-name">Van Gogh Museum</div>
-            <div class="booking-sub">May 22 · 12:00 PM · party of 2</div>
-          </div>
-          <span class="booking-urg confirmed">Booked</span>
-        </div>
-        <div class="booking">
-          <span class="booking-mark">✓</span>
-          <div>
-            <div class="booking-name">Harry Styles concert</div>
-            <div class="booking-sub">May 22 · ~7:00 PM · Johan Cruijff Arena</div>
-          </div>
-          <span class="booking-urg confirmed">Booked</span>
-        </div>
-        <div class="booking">
-          <span class="booking-mark">✓</span>
-          <div>
-            <div class="booking-name">Spang Makandra</div>
-            <div class="booking-sub">May 24 · 5:15 PM · party of 2</div>
-          </div>
-          <span class="booking-urg confirmed">Booked</span>
-        </div>
-        <div class="booking">
-          <span class="booking-mark">✓</span>
-          <div>
-            <div class="booking-name">Anne Frank House</div>
-            <div class="booking-sub">May 24 · 7:30 PM · timed entry</div>
-          </div>
-          <span class="booking-urg confirmed">Booked</span>
-        </div>
-        <div class="booking">
-          <span class="booking-mark">✓</span>
-          <div>
-            <div class="booking-name">Sampurna Singel</div>
-            <div class="booking-sub">May 25 · 12:00 PM · Indonesian · party of 2</div>
-          </div>
-          <span class="booking-urg confirmed">Booked</span>
-        </div>
-        <div class="booking">
-          <span class="booking-mark">✓</span>
-          <div>
-            <div class="booking-name">Heineken Experience</div>
-            <div class="booking-sub">May 25 · 2:00 PM · Standard Tour</div>
-          </div>
-          <span class="booking-urg confirmed">Booked</span>
-        </div>
-        <div class="booking">
-          <span class="booking-mark">✓</span>
-          <div>
-            <div class="booking-name">Upstairs Pannenkoekhuis</div>
-            <div class="booking-sub">May 25 · 5:00 PM · party of 2</div>
-          </div>
-          <span class="booking-urg confirmed">Booked</span>
-        </div>
-        <div class="booking">
-          <span class="booking-mark">✓</span>
-          <div>
-            <div class="booking-name">Captain Jack's canal cruise</div>
-            <div class="booking-sub">May 25 · 8:00 PM · meet Museumbrug 1, 1073AX</div>
-          </div>
-          <span class="booking-urg confirmed">Booked</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="logistics-block">
-      <div class="logistics-head">Still to book</div>
-      <div class="bookings">
-        <div class="booking">
-          <span class="booking-mark">—</span>
-          <div>
-            <div class="booking-name">Nothing outstanding</div>
-            <div class="booking-sub">All anchor reservations are locked.</div>
-          </div>
-          <span class="booking-urg confirmed">Clear</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-head">
-      <span class="section-num">11</span>
-      <span class="section-title">Packing &amp; style</span>
-      <span class="section-sub">European spring</span>
-    </div>
-
-    <div class="packing">
-      <div class="packing-block">
-        <div class="packing-cat">Weather</div>
-        <div class="packing-name">What to expect</div>
-        <ul>
-          <li>Highs: upper 70s — low 80s °F</li>
-          <li>Lows: mid 50s °F</li>
-          <li>Forecast: sunny outlook</li>
-          <li class="note">Pack one warmer layer for evenings on the water.</li>
-        </ul>
-      </div>
-
-      <div class="packing-block">
-        <div class="packing-cat">Direction</div>
-        <div class="packing-name">Style</div>
-        <ul>
-          <li>European summer casual</li>
-          <li>Linen + relaxed tailoring</li>
-          <li>Sneakers + dresses</li>
-          <li>Lightweight layers</li>
-          <li>Silver jewelry</li>
-          <li>Neutral palette</li>
-        </ul>
-      </div>
-
-      <div class="packing-block">
-        <div class="packing-cat">Footwear</div>
-        <div class="packing-name">Shoes</div>
-        <ul>
-          <li>White fashion sneakers · primary</li>
-          <li>One lighter second shoe · loafers / sandals / flats</li>
-          <li class="note">Cobblestone underfoot — don't bring anything fragile.</li>
-        </ul>
-      </div>
-
-      <div class="packing-block">
-        <div class="packing-cat">Pieces</div>
-        <div class="packing-name">Packing list</div>
-        <ul>
-          <li>Linen button-down</li>
-          <li>Tanks</li>
-          <li>Wide-leg denim</li>
-          <li>Light trousers</li>
-          <li>1–2 dresses</li>
-          <li>Small crossbody bag</li>
-          <li>Sunglasses</li>
-          <li>Light jacket or blazer</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-</div><!-- /logistics -->
-
 <footer class="footer">
   <span>Amsterdam · Spring 2026</span>
-  <span class="footer-mark">v3</span>
+  <span class="footer-mark">v4</span>
   <span>5 nights · 2 hotels · 2 travelers</span>
 </footer>
 
@@ -1750,7 +1745,7 @@ body {
       const yyyy = d.getFullYear();
       const mm = String(d.getMonth() + 1).padStart(2, '0');
       const dd = String(d.getDate()).padStart(2, '0');
-      stamp.textContent = `v3  ·  ${tabName}  ·  printed ${yyyy}-${mm}-${dd}`;
+      stamp.textContent = `v4  ·  ${tabName}  ·  printed ${yyyy}-${mm}-${dd}`;
     });
   })();
 </script>
