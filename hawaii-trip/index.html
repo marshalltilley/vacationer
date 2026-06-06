@@ -676,6 +676,7 @@ body {
 .locked-tag.birthday   { background: var(--coral); color: white; }
 .locked-tag.mustdo     { background: var(--coral); color: white; }
 .locked-tag.pivot      { background: var(--volcanic); color: white; }
+.locked-tag.dining     { background: var(--pink); color: var(--ink); }
 
 /* --- BIG ISLAND --- */
 .bigisland {
@@ -1713,7 +1714,7 @@ body {
       <h3 class="phase-name">Anniversary Week</h3>
       <div class="phase-dates">Jun 23 — 29 · 9 ppl</div>
       <p class="phase-desc">Stan &amp; Sally arrive. 60th wedding anniversary Jun 26 falls on Toa Luau day. Largest household, structured logistics, intergenerational pacing.</p>
-      <div class="phase-tag">Locked: Pearl Harbor, Toa Luau (anniversary), Ko Olina, Ballet</div>
+      <div class="phase-tag">Locked: Pearl Harbor, Toa Luau (anniversary), Ko Olina, Ballet, Buzz's dinner Jun 29</div>
     </div>
     <div class="phase">
       <div class="phase-color" style="background:var(--volcanic);"></div>
@@ -1751,9 +1752,9 @@ body {
   </div>
   <div class="pulse">
     <div class="pulse-cell">
-      <div class="pulse-num">9</div>
+      <div class="pulse-num">11</div>
       <div class="pulse-label">Confirmed</div>
-      <div class="pulse-sub">Arizona Mem, Toa Luau, 3 golf rounds (Ko Olina, Royal Hawaiian, Turtle Bay), Manta, Hilo Bay, Kualoa Zip, Ballet (6 sessions)</div>
+      <div class="pulse-sub">Arizona Mem, Toa Luau, 3 golf rounds (Ko Olina, Royal Hawaiian, Turtle Bay), Manta, Hilo Bay, Kualoa Zip, Ballet (6 sessions), 2 group dinners (Buzz's, Roy's BH)</div>
     </div>
     <div class="pulse-cell todo">
       <div class="pulse-num">6</div>
@@ -1893,7 +1894,10 @@ body {
       <div class="cal-day">
         <div class="cal-phase" style="background:var(--gold);"></div>
         <div class="cal-date">29</div>
-        <div class="cal-events"><span class="cal-event ballet">Ballet 11:30</span></div>
+        <div class="cal-events">
+          <span class="cal-event ballet">Ballet 11:30</span>
+          <span class="cal-event locked">Buzz's 5pm</span>
+        </div>
       </div>
       <div class="cal-day">
         <div class="cal-phase" style="background:var(--volcanic);"></div>
@@ -1941,7 +1945,10 @@ body {
       <div class="cal-day">
         <div class="cal-phase" style="background:var(--ocean-2);"></div>
         <div class="cal-date">5</div>
-        <div class="cal-events"><span class="cal-event locked">Turtle Bay golf 10:30</span></div>
+        <div class="cal-events">
+          <span class="cal-event locked">Turtle Bay golf 10:30</span>
+          <span class="cal-event locked">Roy's BH 5:15</span>
+        </div>
       </div>
       <div class="cal-day">
         <div class="cal-phase" style="background:var(--ocean-2);"></div>
@@ -2083,6 +2090,11 @@ body {
       <div class="locked-tag ballet">Ballet</div>
     </div>
     <div class="locked-row">
+      <div class="locked-date">Jun 29<span class="day">Monday</span><span class="time">5:00 PM</span></div>
+      <div class="locked-event-name">Buzz's Original Steak House<span class="sub">Kailua · group dinner · party of 9 (whole group)</span></div>
+      <div class="locked-tag dining">Dining</div>
+    </div>
+    <div class="locked-row">
       <div class="locked-date">Jun 30<span class="day">Tuesday</span><span class="time">Manta 9:00 PM</span></div>
       <div class="locked-event-name">Stan &amp; Sally depart · M&amp;A → Kona · Manta Ray Snorkel<span class="scope-badge bi">Big Island</span><span class="sub">S&amp;S: HNL → SEA → BZN 11:05 AM · M&amp;A: WN0675 9:45 AM → KOA 10:40 AM · Manta party of 2 · arrive 8:30 PM</span></div>
       <div class="locked-tag pivot">Pivot Day</div>
@@ -2106,6 +2118,11 @@ body {
       <div class="locked-date">Jul 5<span class="day">Sunday</span><span class="time">10:30 AM tee</span></div>
       <div class="locked-event-name">Turtle Bay Golf — Palmer Course<span class="scope-badge golf">Golfers</span><span class="sub">2 players · North Shore round · pair with a North Shore food day</span></div>
       <div class="locked-tag golf">Golf</div>
+    </div>
+    <div class="locked-row">
+      <div class="locked-date">Jul 5<span class="day">Sunday</span><span class="time">5:15 PM</span></div>
+      <div class="locked-event-name">Roy's Beach House — Turtle Bay<span class="sub">North Shore group dinner · party of 8 (whole group) · caps the Turtle Bay golf day</span></div>
+      <div class="locked-tag dining">Dining</div>
     </div>
     <div class="locked-row">
       <div class="locked-date">Jul 7<span class="day">Tuesday</span><span class="time">9:00 AM · 3 hrs</span></div>
@@ -2337,16 +2354,33 @@ body {
         <div class="rest-item locked">Agnes Portuguese Bake Shop</div>
         <div class="rest-item locked">Over Easy</div>
         <div class="rest-item">Moke's Bread &amp; Breakfast</div>
+        <div class="rest-item">Cinnamon's Restaurant · breakfast</div>
+        <div class="rest-item">Donut King · donuts</div>
       </div>
       <div class="rest-tier">
         <div class="rest-tier-label">Casual / dinner</div>
+        <div class="rest-item locked">Buzz's Original Steak House · Jun 29 · 5 PM</div>
         <div class="rest-item">Uahi Island Grill</div>
         <div class="rest-item">Kalapawai Market</div>
-        <div class="rest-item">Buzz's Original Steak House</div>
+        <div class="rest-item">Lanikai Brewing Co · pizza &amp; beer</div>
+        <div class="rest-item">Paia Fish Market · seafood</div>
+        <div class="rest-item">Mala Market · sandwiches</div>
+      </div>
+      <div class="rest-tier">
+        <div class="rest-tier-label">Coffee</div>
+        <div class="rest-item">Cafe Kopi</div>
+        <div class="rest-item">ChadLou's Coffee Roasters</div>
+        <div class="rest-item">Rise &amp; Grind Coffee Bar</div>
+        <div class="rest-item">Ando Coffee Shop</div>
+        <div class="rest-item">The Well Kailua</div>
+        <div class="rest-item">Manoa Cafe</div>
+        <div class="rest-item">Coffee or Tea? · boba</div>
       </div>
       <div class="rest-tier">
         <div class="rest-tier-label">Poke / sweets</div>
         <div class="rest-item locked">Tamura's Fine Wine &amp; Liquors</div>
+        <div class="rest-item">PCA · ice cream</div>
+        <div class="rest-item">Frost · boba</div>
         <div class="rest-item">Island Snow · shave ice</div>
       </div>
     </div>
@@ -2456,7 +2490,7 @@ body {
       <div class="rest-tier">
         <div class="rest-tier-label">Sit-down / scenic</div>
         <div class="rest-item locked">Haleiwa Beach House</div>
-        <div class="rest-item">Beach House by Roy Yamaguchi</div>
+        <div class="rest-item locked">Roy's Beach House (Roy Yamaguchi) · Jul 5 · 5:15 PM</div>
       </div>
       <div class="rest-tier">
         <div class="rest-tier-label">Coffee / sweets</div>
@@ -2544,6 +2578,16 @@ body {
     <div class="res-item confirmed">
       <div class="res-check checked">✓</div>
       <div class="res-name">Ballet Hawaii<span class="sub">6 sessions · all dates locked · Anna</span></div>
+      <span class="res-urgency confirmed">Booked</span>
+    </div>
+    <div class="res-item confirmed">
+      <div class="res-check checked">✓</div>
+      <div class="res-name">Buzz's Original Steak House<span class="sub">Jun 29 · 5:00 PM · party of 9 · Kailua</span></div>
+      <span class="res-urgency confirmed">Booked</span>
+    </div>
+    <div class="res-item confirmed">
+      <div class="res-check checked">✓</div>
+      <div class="res-name">Roy's Beach House<span class="sub">Jul 5 · 5:15 PM · party of 8 · Turtle Bay</span></div>
       <span class="res-urgency confirmed">Booked</span>
     </div>
   </div>
@@ -2687,7 +2731,7 @@ body {
 
 <footer class="footer">
   <span>Hawaii · Summer 2026</span>
-  <span class="footer-mark">v15</span>
+  <span class="footer-mark">v16</span>
   <span>31 days · 6 phases · 2 islands</span>
 </footer>
 

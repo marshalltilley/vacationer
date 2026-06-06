@@ -1,7 +1,7 @@
 # Hawaii — Summer 2026 · Fact Sheet (source of truth)
 
 > Build `index.html` from this file. When a date or booking changes, update here first.
-> HTML version stamp: **v15**
+> HTML version stamp: **v16**
 
 ## Trip frame
 - **Window:** June 13 – July 13, 2026 (31 days / 30 nights)
@@ -34,6 +34,8 @@
 - Hilo Bay Café — Jul 2, 7:30 PM, M&A only (Marshall's 35th)
 - Kualoa Ranch Zipline — Jul 7, 9:00 AM, party of 6 named
 - Ballet Hawaii — 6 sessions (Anna)
+- Buzz's Original Steak House — Jun 29, 5:00 PM, party of 9 (whole group) ✅ new v16
+- Roy's Beach House (Turtle Bay) — Jul 5, 5:15 PM, party of 8 (whole group) ✅ new v16
 
 ## Still to book
 - Hanauma Bay (timed entry, 48 hrs ahead, 7–9 ppl)
@@ -55,14 +57,35 @@
 Source list for the Restaurant Geography section. `★` in HTML = priority pick (⭐ below) or a booked/locked meal.
 
 ## Kailua (base / daily rotation)
+**Bakery / breakfast**
 - Agnes Portuguese Bake Shop ⭐ — Portuguese bakery; malasadas & pastries, low-key local
-- Uahi Island Grill — Hawaiian BBQ; smoked meats & plate lunches
-- Kalapawai Market — deli/market; sandwiches, coffee, easy meals
-- Buzz's Original Steak House — classic steakhouse, relaxed local dinner
 - Over Easy ⭐ — modern brunch, creative & popular
 - Moke's Bread & Breakfast — local café; lilikoi pancakes
-- Island Snow — shave ice; best Kailua option
+- Cinnamon's Restaurant — breakfast; local brunch classic
+- Donut King — donuts
+
+**Casual / dinner**
+- Buzz's Original Steak House ★ — classic steakhouse · BOOKED Jun 29, 5:00 PM, party of 9 (whole group)
+- Uahi Island Grill — Hawaiian BBQ; smoked meats & plate lunches
+- Kalapawai Market — deli/market; sandwiches, coffee, easy meals
+- Lanikai Brewing Company — pizza & beer
+- Paia Fish Market — seafood
+- Mala Market — sandwich shop
+
+**Coffee**
+- Cafe Kopi
+- ChadLou's Coffee Roasters
+- Rise & Grind Coffee Bar
+- Ando Coffee Shop
+- The Well Kailua
+- Manoa Cafe
+- Coffee or Tea? — coffee / boba
+
+**Poke / sweets**
 - Tamura's Fine Wine & Liquors ⭐ — poke; elite and convenient
+- PCA — ice cream
+- Frost — boba
+- Island Snow — shave ice; best Kailua option
 
 ## Kaneohe / Windward
 - Haleiwa Joe's Haiku Gardens ⭐ — scenic garden dining, mountain views
@@ -135,7 +158,7 @@ Source list for the Restaurant Geography section. `★` in HTML = priority pick 
 
 **Sit-down / scenic**
 - Haleiwa Beach House ⭐ — best food + view combo
-- Beach House by Roy Yamaguchi — upscale (scenic)
+- Beach House by Roy Yamaguchi ★ — "Roy's Beach House," Turtle Bay · BOOKED Jul 5, 5:15 PM, party of 8 (whole group, pairs with Turtle Bay golf)
 
 **Coffee / bakery**
 - The Sunrise Shack ⭐ — matcha, smoothies, iconic
