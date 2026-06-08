@@ -1,7 +1,7 @@
 # Hawaii — Summer 2026 · Fact Sheet (source of truth)
 
 > Build `index.html` from this file. When a date or booking changes, update here first.
-> HTML version stamp: **v18**
+> HTML version stamp: **v19**
 
 ## Trip frame
 - **Window:** June 13 – July 13, 2026 (31 days / 30 nights)
@@ -14,7 +14,7 @@
 |---|---|---|
 | Marshall & Anna | 2 | Jun 13 – Jul 13 (full trip) |
 | Trevor pod (Trevor, Kimberly, Claire, Torben) | 4 | Jun 16 – Jul 9 |
-| Naomi (solo) | 1 | Jun 19 – Jul 13 |
+| Naomi (solo) | 1 | Jun 19 – Jul 9 (departs with Trevor pod) |
 | Stan & Sally (grandparents; 60th anniv Jun 26) | 2 | Jun 23 – Jun 30 |
 | Lori (solo; helps with Claire) | 1 | Jul 1 – Jul 8 |
 
