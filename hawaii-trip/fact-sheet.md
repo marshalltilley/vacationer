@@ -1,7 +1,7 @@
 # Hawaii — Summer 2026 · Fact Sheet (source of truth)
 
 > Build `index.html` from this file. When a date or booking changes, update here first.
-> HTML version stamp: **v16**
+> HTML version stamp: **v17**
 
 ## Trip frame
 - **Window:** June 13 – July 13, 2026 (31 days / 30 nights)
@@ -36,10 +36,12 @@
 - Ballet Hawaii — 6 sessions (Anna)
 - Buzz's Original Steak House — Jun 29, 5:00 PM, party of 9 (whole group) ✅ new v16
 - Roy's Beach House (Turtle Bay) — Jul 5, 5:15 PM, party of 8 (whole group) ✅ new v16
+- Restaurant 604 — Jun 24, 1:30 PM lunch, party of 9 (whole group) · pairs with Arizona Memorial morning ✅ new v17
+- Diamond Head morning — Jun 28, 8:00 AM, party of 6 (Marshall, Anna, Trevor, Kimberly, Naomi, Torben) · Koko Head Cafe breakfast after · Leonard's Bakery malasadas brought home for the rest of the group · Diamond Head reservation still to book ✅ new v17
 
 ## Still to book
 - Hanauma Bay (timed entry, 48 hrs ahead, 7–9 ppl)
-- Diamond Head (out-of-state reservation, 7–9 ppl)
+- Diamond Head (out-of-state reservation; now scheduled Jun 28, 8:00 AM, party of 6)
 - Sushi Sho (premium Waikiki)
 - Father's Day dinner — Jun 21, party of 7
 - Other premium dinners
@@ -111,8 +113,8 @@ Source list for the Restaurant Geography section. `★` in HTML = priority pick 
 - Side Street Inn — local comfort, large portions
 
 **Breakfast / brunch**
-- Koko Head Cafe ⭐ — chef-driven brunch
-- Leonard's Bakery ⭐ — iconic malasadas
+- Koko Head Cafe ⭐ — chef-driven brunch · BOOKED Jun 28, breakfast after Diamond Head, party of 6
+- Leonard's Bakery ⭐ — iconic malasadas · Jun 28 stop, malasadas brought home for the rest of the group
 - Orchids — oceanfront brunch (scenic)
 - Guieb Cafe ⭐ — Filipino-Hawaiian, hidden gem
 
@@ -140,7 +142,7 @@ Source list for the Restaurant Geography section. `★` in HTML = priority pick 
 - Kaimana Farm Cafe — healthy, lighter
 
 ## Pearl Harbor / Central Oʻahu
-- Restaurant 604 — waterfront, near Pearl Harbor (scenic)
+- Restaurant 604 ★ — waterfront, near Pearl Harbor (scenic) · BOOKED Jun 24, 1:30 PM lunch, party of 9 (whole group)
 - Guava Smoked — local BBQ
 - Liliha Bakery ⭐ — classic bakery/diner (coco puffs)
 - Nico's Pier 38 ⭐ — fresh seafood near harbor
