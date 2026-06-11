@@ -1,7 +1,7 @@
 # Hawaii — Summer 2026 · Fact Sheet (source of truth)
 
 > Build `index.html` from this file. When a date or booking changes, update here first.
-> HTML version stamp: **v20**
+> HTML version stamp: **v21**
 
 ## Trip frame
 - **Window:** June 13 – July 13, 2026 (31 days / 30 nights)
