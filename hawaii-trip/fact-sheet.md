@@ -1,7 +1,7 @@
 # Hawaii — Summer 2026 · Fact Sheet (source of truth)
 
 > Build `index.html` from this file. When a date or booking changes, update here first.
-> HTML version stamp: **v19**
+> HTML version stamp: **v20**
 
 ## Trip frame
 - **Window:** June 13 – July 13, 2026 (31 days / 30 nights)
@@ -51,6 +51,19 @@
 - Big Island: Toyota 4Runner (Turo), Jun 30 → Jul 3, KOA delivery, $538.23, plate ZLN260
 - Kona lodging (1 night): Kona Garden Studio Ohana, 73-1181 Ahikawa St, $225.81
 - Volcano lodging (2 nights): Hawaii Volcano Coffee Cottage, 16-1538 Uhini Ana Rd, $291.00
+
+## Hike options (Oʻahu) — added v20
+Trail shortlist for the "Hike & Nature" activity card. Distances are round-trip.
+- Diamond Head Crater — 1.5 mi · moderate · BOOKED Jun 28, 8 AM, party of 6
+- Manoa Falls Trail — 1.8 mi · moderate
+- Makapuʻu Point Lighthouse Trail — 2.6 mi · moderate
+- Lanikai Pillbox / Kaiwa Ridge — 1.6 mi · moderate · sunrise (was "Lanikai Pillbox sunrise")
+- Pink Pillbox (Puʻu o Hulu / Maili, west side) — 1.4 mi · moderate
+- Hanauma Bay Ridge Loop — 3.2 mi · moderate
+- Koko Crater Tramway → Koko Head lookout — 1.6 mi · hard (railway-tie stairs)
+- Wiliwilinui Ridge Trail — 4.9 mi · hard
+- Also on the card (no stat): Waimea Valley, Kualoa region, Volcanoes NP trails (Big Island)
+- Dedup note: Diamond Head, Manoa Falls, Makapuʻu, and the Lanikai pillbox were already on the card — stats merged in, not duplicated.
 
 ---
 
