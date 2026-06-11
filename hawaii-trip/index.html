@@ -1553,15 +1553,15 @@ body {
   .locked-event-name .sub { font-size: 8.5pt; margin-top: 2px; line-height: 1.3; }
   .locked-tag { font-size: 6.5pt; padding: 2px 7px; }
 
-  /* Section 5: activity cards — tight 2-up grid */
-  .activity-grid { gap: 12px; }
-  .activity-card { padding: 12px 14px 14px; }
+  /* Section 5: activity cards — all four on one sheet */
+  .activity-grid { gap: 10px; }
+  .activity-card { padding: 10px 12px 12px; }
   .activity-cat { font-size: 7pt; margin-bottom: 2px; }
-  .activity-title { font-size: 14pt; margin-bottom: 8px; }
-  .activity-list { gap: 3px 14px; }
-  .activity-item { font-size: 8.5pt; padding: 3px 0 3px 13px; }
-  .activity-note { font-size: 8pt; margin-top: 8px; padding-top: 8px; line-height: 1.4; }
-  .scope-legend { font-size: 8.5pt; margin: 0 0 12px; padding: 8px 12px; line-height: 1.5; }
+  .activity-title { font-size: 13pt; margin-bottom: 6px; }
+  .activity-list { gap: 2px 14px; }
+  .activity-item { font-size: 8pt; padding: 2.5px 0 2.5px 12px; line-height: 1.3; }
+  .activity-note { font-size: 7.5pt; margin-top: 6px; padding-top: 6px; line-height: 1.35; }
+  .scope-legend { font-size: 8pt; margin: 0 0 9px; padding: 6px 10px; line-height: 1.5; }
 
   /* Section 6: restaurant geography — tight 4-up grid */
   .rest-grid { gap: 10px; }
@@ -1571,6 +1571,11 @@ body {
   .rest-tier { margin-bottom: 8px; break-inside: avoid; page-break-inside: avoid; }
   .rest-tier-label { font-size: 6.5pt; margin-bottom: 3px; }
   .rest-item { font-size: 8.5pt; padding: 1.5px 0; line-height: 1.3; }
+  /* Honolulu hub: flow its tiers into 2 internal columns so the whole
+     home-base row fits on one sheet (no card split across pages) */
+  .rest-region.hub-region { column-count: 2; column-gap: 22px; }
+  .rest-region.hub-region .rest-region-sub,
+  .rest-region.hub-region .rest-region-name { column-span: all; }
 
   /* Section 8: bookings — compact 2-up rows, all on one sheet */
   .res-grid { gap: 5px; }
@@ -2496,7 +2501,7 @@ body {
       </div>
     </div>
 
-    <div class="rest-region" style="grid-column: span 2;">
+    <div class="rest-region hub-region" style="grid-column: span 2;">
       <div class="rest-region-sub">Core food hub</div>
       <div class="rest-region-name">Honolulu / Waikiki</div>
       <div class="rest-tier">
@@ -2837,7 +2842,7 @@ body {
 
 <footer class="footer">
   <span>Hawaii · Summer 2026</span>
-  <span class="footer-mark">v21</span>
+  <span class="footer-mark">v22</span>
   <span>31 days · 6 phases · 2 islands</span>
 </footer>
 
