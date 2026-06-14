@@ -1,12 +1,12 @@
 # Hawaii — Summer 2026 · Fact Sheet (source of truth)
 
 > Build `index.html` from this file. When a date or booking changes, update here first.
-> HTML version stamp: **v22**
+> HTML version stamp: **v23**
 
 ## Trip frame
 - **Window:** June 13 – July 13, 2026 (31 days / 30 nights)
-- **Primary base:** Plantation Beach House, 274 N Kalaheo Ave, Kailua, Oʻahu (Red Awning res 499295, Jun 13 → Jul 13, 9 adults + 1 child)
-- **Travelers:** 10 total — 3 pods + 2 solos
+- **Primary base:** Plantation Beach House, 274 N Kalaheo Ave, Kailua, Oʻahu (Red Awning res 499295, Jun 13 → Jul 13, 7 adults + 1 child)
+- **Travelers:** 8 total — 2 pods + 2 solos
 - **Sub-trip:** Marshall & Anna, Big Island, Jun 30 – Jul 3
 
 ## Travelers / presence
@@ -15,7 +15,6 @@
 | Marshall & Anna | 2 | Jun 13 – Jul 13 (full trip) |
 | Trevor pod (Trevor, Kimberly, Claire, Torben) | 4 | Jun 16 – Jul 9 |
 | Naomi (solo) | 1 | Jun 19 – Jul 9 (departs with Trevor pod) |
-| Stan & Sally (grandparents; 60th anniv Jun 26) | 2 | Jun 23 – Jun 30 |
 | Lori (solo; helps with Claire) | 1 | Jul 1 – Jul 8 |
 
 ## Golf bookings — BOTH CONFIRMED (added v15)
@@ -25,8 +24,8 @@
 - Golf clubs: ship ahead; Royal Hawaiian as possible delivery point.
 
 ## Locked / confirmed bookings
-- Arizona Memorial Tour — Jun 24, 10:00 AM, party of 9
-- Toa Luau VIP (Stan & Sally 60th anniv) — Jun 26, 5:00 PM, conf B21500164277, 6+2+1=9
+- Arizona Memorial Tour — Jun 24, 10:00 AM, party of 7
+- Toa Luau VIP — Jun 26, 5:00 PM, conf B21500164277, 4+2+1=7
 - Ko Olina Golf — Jun 27, 7:30 AM (Trevor + Marshall)
 - Royal Hawaiian Golf — Jun 18, 9:30 AM, 2 players ✅ new
 - Turtle Bay Golf (Palmer) — Jul 5, 10:30 AM, 2 players ✅ new
@@ -34,13 +33,13 @@
 - Hilo Bay Café — Jul 2, 7:30 PM, M&A only (Marshall's 35th)
 - Kualoa Ranch Zipline — Jul 7, 9:00 AM, party of 6 named
 - Ballet Hawaii — 6 sessions (Anna)
-- Buzz's Original Steak House — Jun 29, 5:00 PM, party of 9 (whole group) ✅ new v16
+- Buzz's Original Steak House — Jun 29, 5:00 PM, party of 7 (whole group) ✅ new v16
 - Roy's Beach House (Turtle Bay) — Jul 5, 5:15 PM, party of 8 (whole group) ✅ new v16
-- Restaurant 604 — Jun 24, 1:30 PM lunch, party of 9 (whole group) · pairs with Arizona Memorial morning ✅ new v17
-- Diamond Head hike — Jun 28, 8:00 AM, party of 6 (Marshall, Anna, Trevor, Kimberly, Naomi, Torben) · out-of-state reservation booked · Koko Head Cafe breakfast after · Leonard's Bakery malasadas brought home for the rest of the group ✅ new v17
+- Restaurant 604 — Jun 24, 1:30 PM lunch, party of 7 (whole group) · pairs with Arizona Memorial morning ✅ new v17
+- Diamond Head hike — Jul 6, 8:00 AM, party of 6 (Marshall, Anna, Trevor, Kimberly, Naomi, Torben) · out-of-state reservation booked · Koko Head Cafe breakfast after · Leonard's Bakery malasadas brought home for the rest of the group ✅ new v17 · moved from Jun 28 (v23)
 
 ## Still to book
-- Hanauma Bay (timed entry, 48 hrs ahead, 7–9 ppl)
+- Hanauma Bay (timed entry, 48 hrs ahead, 7–8 ppl)
 - Sushi Sho (premium Waikiki)
 - Father's Day dinner — Jun 21, party of 7
 - Other premium dinners
@@ -54,7 +53,7 @@
 
 ## Hike options (Oʻahu) — added v20
 Trail shortlist for the "Hike & Nature" activity card. Distances are round-trip.
-- Diamond Head Crater — 1.5 mi · moderate · BOOKED Jun 28, 8 AM, party of 6
+- Diamond Head Crater — 1.5 mi · moderate · BOOKED Jul 6, 8 AM, party of 6 (moved from Jun 28)
 - Manoa Falls Trail — 1.8 mi · moderate
 - Makapuʻu Point Lighthouse Trail — 2.6 mi · moderate
 - Lanikai Pillbox / Kaiwa Ridge — 1.6 mi · moderate · sunrise (was "Lanikai Pillbox sunrise")
@@ -79,7 +78,7 @@ Source list for the Restaurant Geography section. `★` in HTML = priority pick 
 - Donut King — donuts
 
 **Casual / dinner**
-- Buzz's Original Steak House ★ — classic steakhouse · BOOKED Jun 29, 5:00 PM, party of 9 (whole group)
+- Buzz's Original Steak House ★ — classic steakhouse · BOOKED Jun 29, 5:00 PM, party of 7 (whole group)
 - Uahi Island Grill — Hawaiian BBQ; smoked meats & plate lunches
 - Kalapawai Market — deli/market; sandwiches, coffee, easy meals
 - Lanikai Brewing Company — pizza & beer
@@ -125,8 +124,8 @@ Source list for the Restaurant Geography section. `★` in HTML = priority pick 
 - Side Street Inn — local comfort, large portions
 
 **Breakfast / brunch**
-- Koko Head Cafe ⭐ — chef-driven brunch · BOOKED Jun 28, breakfast after Diamond Head, party of 6
-- Leonard's Bakery ⭐ — iconic malasadas · Jun 28 stop, malasadas brought home for the rest of the group
+- Koko Head Cafe ⭐ — chef-driven brunch · BOOKED Jul 6, breakfast after Diamond Head, party of 6
+- Leonard's Bakery ⭐ — iconic malasadas · Jul 6 stop, malasadas brought home for the rest of the group
 - Orchids — oceanfront brunch (scenic)
 - Guieb Cafe ⭐ — Filipino-Hawaiian, hidden gem
 
@@ -154,7 +153,7 @@ Source list for the Restaurant Geography section. `★` in HTML = priority pick 
 - Kaimana Farm Cafe — healthy, lighter
 
 ## Pearl Harbor / Central Oʻahu
-- Restaurant 604 ★ — waterfront, near Pearl Harbor (scenic) · BOOKED Jun 24, 1:30 PM lunch, party of 9 (whole group)
+- Restaurant 604 ★ — waterfront, near Pearl Harbor (scenic) · BOOKED Jun 24, 1:30 PM lunch, party of 7 (whole group)
 - Guava Smoked — local BBQ
 - Liliha Bakery ⭐ — classic bakery/diner (coco puffs)
 - Nico's Pier 38 ⭐ — fresh seafood near harbor
