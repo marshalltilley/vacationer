@@ -1,7 +1,7 @@
 # Hawaii — Summer 2026 · Fact Sheet (source of truth)
 
 > Build `index.html` from this file. When a date or booking changes, update here first.
-> HTML version stamp: **v25**
+> HTML version stamp: **v24**
 
 ## Trip frame
 - **Window:** June 13 – July 13, 2026 (31 days / 30 nights)
@@ -120,7 +120,7 @@ Source list for the Restaurant Geography section. `★` in HTML = priority pick 
 - Highway Inn — traditional Hawaiian, polished
 - Marugame Udon ⭐ — fresh udon, fast
 - Side Street Inn — local comfort, large portions
-- Olay's Thai Lao Cuisine ⭐ — authentic Thai/Lao, Chinatown (moved from West Side, v25)
+- Olay's Thai Lao Cuisine ⭐ — authentic Thai/Lao, Chinatown (moved from West Side, v24)
 
 **Breakfast / brunch**
 - Koko Head Cafe ⭐ — chef-driven brunch · BOOKED Jul 6, breakfast after Diamond Head, party of 6
