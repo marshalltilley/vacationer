@@ -1,7 +1,7 @@
 # Hawaii — Summer 2026 · Fact Sheet (source of truth)
 
 > Build `index.html` from this file. When a date or booking changes, update here first.
-> HTML version stamp: **v23**
+> HTML version stamp: **v24**
 
 ## Trip frame
 - **Window:** June 13 – July 13, 2026 (31 days / 30 nights)
@@ -117,7 +117,6 @@ Source list for the Restaurant Geography section. `★` in HTML = priority pick 
 - Pig and the Lady ⭐ — Vietnamese fusion standout
 - Fête ⭐ — consistent New American
 - Tonkatsu Tamafuji ⭐ — elite tonkatsu
-- Ethel's Grill ⭐ — local comfort, authentic
 - Highway Inn — traditional Hawaiian, polished
 - Marugame Udon ⭐ — fresh udon, fast
 - Nami Kaze ⭐ — modern Japanese/Hawaiian fusion
