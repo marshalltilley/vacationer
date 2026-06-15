@@ -1,7 +1,7 @@
 # Hawaii — Summer 2026 · Fact Sheet (source of truth)
 
 > Build `index.html` from this file. When a date or booking changes, update here first.
-> HTML version stamp: **v23**
+> HTML version stamp: **v24**
 
 ## Trip frame
 - **Window:** June 13 – July 13, 2026 (31 days / 30 nights)
@@ -91,7 +91,7 @@ Source list for the Restaurant Geography section. `★` in HTML = priority pick 
 - Rise & Grind Coffee Bar
 - Ando Coffee Shop
 - The Well Kailua
-- Manoa Cafe
+- Mānoa Chocolate Café & Wine Bar — chocolate tasting & wine bar
 - Coffee or Tea? — coffee / boba
 
 **Poke / sweets**
@@ -117,11 +117,10 @@ Source list for the Restaurant Geography section. `★` in HTML = priority pick 
 - Pig and the Lady ⭐ — Vietnamese fusion standout
 - Fête ⭐ — consistent New American
 - Tonkatsu Tamafuji ⭐ — elite tonkatsu
-- Ethel's Grill ⭐ — local comfort, authentic
 - Highway Inn — traditional Hawaiian, polished
 - Marugame Udon ⭐ — fresh udon, fast
-- Nami Kaze ⭐ — modern Japanese/Hawaiian fusion
 - Side Street Inn — local comfort, large portions
+- Olay's Thai Lao Cuisine ⭐ — authentic Thai/Lao, Chinatown (moved from West Side, v24)
 
 **Breakfast / brunch**
 - Koko Head Cafe ⭐ — chef-driven brunch · BOOKED Jul 6, breakfast after Diamond Head, party of 6
@@ -154,20 +153,15 @@ Source list for the Restaurant Geography section. `★` in HTML = priority pick 
 
 ## Pearl Harbor / Central Oʻahu
 - Restaurant 604 ★ — waterfront, near Pearl Harbor (scenic) · BOOKED Jun 24, 1:30 PM lunch, party of 7 (whole group)
-- Guava Smoked — local BBQ
 - Liliha Bakery ⭐ — classic bakery/diner (coco puffs)
 - Nico's Pier 38 ⭐ — fresh seafood near harbor
 - Shige's Saimin Stand — old-school noodle shop
 - Maui Mike's Fire-Roasted Chicken — excellent rotisserie
 
-## West Side (off-path)
-- Olay's Thai Lao Cuisine ⭐ — authentic Thai/Lao, very local
-
 ## North Shore (day trip)
 **Core stops**
 - Giovanni's Shrimp Truck ⭐ — famous garlic shrimp
 - Kahuku Superette ⭐ — poke + hot food, less touristy
-- Fumi's Kahuku Shrimp — alternative shrimp stop
 
 **Sit-down / scenic**
 - Haleiwa Beach House ⭐ — best food + view combo
@@ -175,7 +169,6 @@ Source list for the Restaurant Geography section. `★` in HTML = priority pick 
 
 **Coffee / bakery**
 - The Sunrise Shack ⭐ — matcha, smoothies, iconic
-- Coffee Gallery ⭐ — best true coffee shop in Haleiwa
 - Haleiwa Bowls — açaí bowls, quick
 - Matsumoto Shave Ice — iconic shave ice
 - Ted's Bakery — roadside classic (retained from prior list)
