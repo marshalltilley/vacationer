@@ -162,6 +162,7 @@ Source list for the Restaurant Geography section. `★` in HTML = priority pick 
 **Core stops**
 - Giovanni's Shrimp Truck ⭐ — famous garlic shrimp
 - Kahuku Superette ⭐ — poke + hot food, less touristy
+- Waialua General Store — Waialua town general store / local stop (added v24)
 
 **Sit-down / scenic**
 - Haleiwa Beach House ⭐ — best food + view combo
