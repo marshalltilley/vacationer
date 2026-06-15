@@ -119,7 +119,6 @@ Source list for the Restaurant Geography section. `★` in HTML = priority pick 
 - Tonkatsu Tamafuji ⭐ — elite tonkatsu
 - Highway Inn — traditional Hawaiian, polished
 - Marugame Udon ⭐ — fresh udon, fast
-- Nami Kaze ⭐ — modern Japanese/Hawaiian fusion
 - Side Street Inn — local comfort, large portions
 
 **Breakfast / brunch**
