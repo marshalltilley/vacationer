@@ -293,7 +293,7 @@ The **Do** column (right) of each city in the Eat & do tab. Sights, tours and wi
 Overview · Eat & do · Locked events · Bookings · Logistics · Sub-trips.
 - **Overview** (`#overview`) — modelled on Amsterdam: **Trip at a glance** (day cards) → **Booking pulse** → **Route & pace** (route ribbon of nights per base + transfers + the four city phase cards). No presence map, headcount strip or month calendar — those suit big-group, month-long trips like Hawaii.
 - **Locked events** (`#events`) — booked anchors only.
-- **Eat & do** (`#eatdo`) — one section per city in trip order (Florence, Rome, Amalfi Coast, Naples), each with **Eat** on the left and **Do** on the right; a city jump bar at the top. Stacks Eat-first on phones.
+- **Eat & do** (`#eatdo`) — one section per city in trip order (Florence, Rome, Amalfi Coast, Naples), each with **Eat** on the left and **Do** on the right; a city jump bar at the top. Florence and Rome have long food lists, so their Eat side flows into two columns (Florence's Eat side is also two-thirds wide) to keep both sides about the same height. Stacks Eat-first on phones.
 - **Bookings** (`#bookings`) — Confirmed / Still-to-book grids + "When to book" timeline.
 - **Logistics** (`#logistics`) — getting around, where we sleep, packing.
 Bookings is split out of Logistics for this trip because the list is long (23 items + timeline).
