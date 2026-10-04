@@ -125,6 +125,93 @@ All days are `WORKING_PLAN` (not booked) except flights and lodging.
 - **Tue Jul 13 — Amalfi → Pompeii → Naples.** Checkout. Private car to Pompeii; bags into Pompeii luggage storage. Pompeii ~3–4+ h. Collect bags → Circumvesuviana to Napoli Garibaldi → Metro Line 1 to Toledo → Soul Art Hotel. Evening: Piazza del Plebiscito, Santa Lucia / Castel dell'Ovo / waterfront if America's Cup crowds allow. Pizza at Starita (walk-in, no reservations). If time is tight, protect the pizza and one good walk.
 - **Wed Jul 14 — Fly home.** 5:30 AM private car from Soul Art Hotel. NAP 9:05 AM → ATL 2:31 PM → RDU 9:49 PM. Recheck Cup road closures and airport guidance.
 
+## Day details (Overview › Trip at a glance — click a day)
+Each day in order. **Type:** `anchor` = booked with a fixed time (flights, check-ins, confirmed timed tickets) · `plan` = loose plan, not booked · `option` = only if time or energy allows. When a booking confirms, change its row to `anchor` and put the exact time in *When*. The page's `DAY_DETAIL` data (between the `DAY-DATA` markers) mirrors this table.
+
+| Day | When | Type | What | About |
+|---|---|---|---|---|
+| 1 | 6:10 PM | anchor | Flight RDU → Paris CDG | Delta 8761, overnight; lands 7:55 AM Jul 2 |
+| 2 | 7:55 AM | anchor | Land at Paris CDG | Connect to the Florence flight |
+| 2 | 10:20 AM | anchor | Flight CDG → Florence | Delta 8483 · arrival time not on the booking |
+| 2 | On arrival | plan | T2 tram into the center | Tram from Peretola airport toward Santa Maria Novella, then walk to the apartment |
+| 2 | After 2 PM | anchor | Check in · Piazza Signoria n.1 | Our apartment on Florence's main square |
+| 2 | Afternoon | plan | Piazza della Signoria & historic center | The civic square with its statues and the town-hall fortress (Palazzo Vecchio) — an easy first walk |
+| 2 | If it fits | option | Brunelleschi's Dome climb | Climb inside the cathedral dome to the top; timed, non-refundable ticket — only if today's timing is safe |
+| 2 | Evening | option | Easy dinner near the apartment | Options: Vini e Vecchi Sapori (tiny osteria) or Il Cernacchio (cheap and simple) |
+| 3 | ~8:15 AM | plan | Uffizi Gallery | Florence's great Renaissance art museum — Botticelli's Birth of Venus, Leonardo, Raphael; aim for the first slot |
+| 3 | Midday | plan | Quick lunch + rest | Schiacciata (Tuscan flatbread sandwich) at I Guelfi or Da' Vinattieri, then a break at the apartment |
+| 3 | ~2:30 PM | plan | Galleria dell'Accademia | Small museum built around Michelangelo's David |
+| 3 | If it fits | option | Brunelleschi's Dome climb | If it didn't happen on Jul 2 |
+| 3 | Evening | plan | Oltrarno — food and wine | "Beyond the Arno": the artisan south bank around Santo Spirito; Le Volpi e l'Uva wine bar by Ponte Vecchio |
+| 4 | Morning | plan | Taxi or driver to Torre a Cona | Sunday buses are poor; the estate is in the hills southeast of Florence |
+| 4 | Midday | plan | Fattoria Torre a Cona | Historic villa winery — Chianti Colli Fiorentini, Sangiovese, Vin Santo; the osteria serves lunch on weekends |
+| 4 | Afternoon | plan | Back to Florence, easy evening | No other big museum today |
+| 5 | By 10 AM | anchor | Check out of the Florence apartment |  |
+| 5 | Morning | plan | Fast train Firenze SMN → Roma Termini | About 1 h 25 on Italo or Frecciarossa |
+| 5 | Arrival | anchor | Check in · Palazzo Talìa | Our hotel between Trevi and the Spanish Steps |
+| 5 | Afternoon | plan | Trevi Fountain | Rome's huge Baroque fountain — toss a coin over your shoulder |
+| 5 | Afternoon | plan | Sant'Ignazio | Church whose flat ceiling is painted to look like a dome |
+| 5 | Afternoon | plan | Pantheon | 2,000-year-old Roman temple with an open hole (oculus) in the dome |
+| 5 | Afternoon | plan | San Luigi dei Francesi | Small church holding three Caravaggio paintings |
+| 5 | Evening | plan | Piazza Navona | Long oval Baroque square built on an ancient stadium |
+| 5 | If energy | option | Campo de' Fiori · Supplizio · Il Goccetto | Market square, a supplì (fried rice ball) shop, and an old wine bar |
+| 6 | Early | plan | Vatican Museums & Sistine Chapel | The popes' art collections, ending at Michelangelo's painted ceiling |
+| 6 | Late morning | plan | St. Peter's Basilica & Square | The largest church in Christendom; Michelangelo's Pietà · shoulders and knees covered |
+| 6 | Midday | plan | Walk to Castel Sant'Angelo | Hadrian's tomb turned papal fortress, by the angel-lined bridge over the Tiber |
+| 6 | Afternoon | plan | Rest at the hotel |  |
+| 6 | Sunset | plan | Taxi up the Janiculum (Gianicolo) | The hill with the best sunset view over Rome's domes |
+| 6 | Evening | plan | Walk down into Trastevere for dinner | Cobbled, ivy-covered neighborhood "across the Tiber" |
+| 6 | If it fits | option | Pizzarium · Paciotti | Famous pizza by the slice and an old-school deli, near the Vatican |
+| 7 | Early | plan | Colosseum | The ancient amphitheater; tickets open 30 days ahead (Jun 7) |
+| 7 | Morning | plan | Roman Forum & Palatine Hill | Ruins of ancient Rome's center and the emperors' palace hill |
+| 7 | Late morning | plan | Via di Monte Tarpeo viewpoint | Free terrace looking over the whole Forum |
+| 7 | Midday | plan | Campidoglio | Michelangelo's hilltop piazza on the Capitoline Hill |
+| 7 | Afternoon | plan | Into the Jewish Ghetto | Past the ancient Teatro di Marcello to the Portico d'Ottavia |
+| 7 | Afternoon | plan | Boccione and/or Piperno | A tiny historic Jewish bakery; an old-school Jewish-Roman restaurant |
+| 7 | Evening | plan | Quiet evening | After a big walking day |
+| 8 | Morning | plan | Galleria Borghese | Villa museum of Bernini sculptures and Caravaggios; timed entry |
+| 8 | Late morning | plan | Villa Borghese park → Pincio terrace | Rome's central park; a terrace over Piazza del Popolo |
+| 8 | Midday | plan | Piazza del Popolo & Santa Maria del Popolo | Twin-church square; a church with two Caravaggios |
+| 8 | Lunch | plan | Lunch and a break |  |
+| 8 | Afternoon | plan | Villa Medici guided tour | The French Academy's Renaissance villa and gardens · English tour, non-refundable |
+| 8 | Afternoon | plan | Palazzo Zuccari | The "House of Monsters" — a doorway shaped like a gaping mouth |
+| 8 | Late afternoon | plan | Spanish Steps | The famous stairway up to Trinità dei Monti |
+| 8 | Evening | plan | A great dinner with wine |  |
+| 9 | Morning | plan | Basilica di San Clemente | Three layers: a medieval church on top of an early church on top of a Roman temple |
+| 9 | Late morning | plan | E-bike the Appian Way (~2–2.5 h) | The ancient Roman road out of the city — tombs, aqueducts, countryside |
+| 9 | If it fits | option | Catacombs | Early-Christian underground burial tunnels along the Appian Way |
+| 9 | Afternoon | plan | Mercato di Testaccio | Working food market — Mordi e Vai (Roman sandwiches), CasaManco (pizza by the slice) |
+| 9 | Afternoon | plan | Volpetti | Testaccio's famous deli, open since 1973 |
+| 9 | Late afternoon | plan | Aventine · Orange Garden · Keyhole | Quiet hill, orange-tree terrace, and St. Peter's framed through the Knights of Malta keyhole |
+| 9 | Evening | plan | Rest, then Pizzeria Ostiense | Thin, crisp Roman-style pizza in a neighborhood spot |
+| 10 | Morning | plan | Check out; fast train Rome → Salerno |  |
+| 10 | Midday | plan | Ferry Salerno → Amalfi | Weather permitting; road transfer if the sea is rough |
+| 10 | Arrival | anchor | Check in · Abbraccio Amalfi | Sea-view balcony room |
+| 10 | Afternoon | plan | Amalfi Cathedral & waterfront | Striped Arab-Norman cathedral at the top of a grand staircase |
+| 10 | Afternoon | plan | Beach or hotel downtime |  |
+| 10 | Evening | plan | Walk to Atrani; easy dinner | Tiny fishing village next door · try delizia al limone (lemon-cream cake) |
+| 11 | Morning | plan | Private boat from Amalfi | Small boat with a local skipper · may swap with Jul 12 if the sea is rough |
+| 11 | Morning | plan | Coves, caves and swim stops | Cruising west under the cliffs; Emerald Grotto only if it's on the way |
+| 11 | Midday | plan | Positano ashore (2–4 h) | The pastel cliff town · lunch at Da Adolfo (Laurito beach) or Lo Guarracino |
+| 11 | Late afternoon | plan | Back to Amalfi by sea |  |
+| 11 | Evening | plan | Easy dinner: local fish and a coastal white |  |
+| 12 | 9 or 10 AM | plan | Cantine Marisa Cuomo, Furore | Winery with vineyards on cliff terraces · visits at 9:00 or 10:00 by reservation · may swap with Jul 11 |
+| 12 | Late morning | plan | Fiordo di Furore | A narrow sea inlet under a road bridge |
+| 12 | Afternoon | plan | Ravello · Villa Cimbrone | Hilltop town; gardens ending at the Terrace of Infinity |
+| 12 | If time | option | Villa Rufolo | Medieval tower and terraced gardens in Ravello |
+| 12 | Evening | option | Baglio dinner | Only if the winery wasn't a big meal |
+| 13 | Morning | plan | Check out; private car to Pompeii |  |
+| 13 | Late morning | plan | Bags into Pompeii luggage storage | Bags over 30 × 30 × 15 cm can't go inside the site |
+| 13 | Midday | plan | Pompeii (3–4+ h) | Roman town buried by Vesuvius in AD 79 — streets, houses, frescoes |
+| 13 | Afternoon | plan | Circumvesuviana → Garibaldi → Metro 1 → Toledo | Local train into Naples, then the metro to our stop |
+| 13 | Afternoon | anchor | Check in · Soul Art Hotel | One night near Toledo metro |
+| 13 | Evening | plan | Plebiscito · Santa Lucia · Castel dell'Ovo | Grand square, the seafront quarter and the castle on the bay · America's Cup crowds |
+| 13 | Dinner | plan | Starita a Materdei (walk-in) | Historic pizzeria · no reservations, expect a queue |
+| 13 | Before bed | plan | Reconfirm the 5:30 AM car |  |
+| 14 | 5:30 AM | plan | Private car to Naples airport | Still to book · recheck America's Cup road closures |
+| 14 | 9:05 AM | anchor | Flight Naples → Atlanta | DL0279 · conf HID4A7 |
+| 14 | 8:25 PM | anchor | Flight Atlanta → Raleigh-Durham | DL2017 · home 9:49 PM |
+
 ## Sub-trips (one tab: "Sub-trips")
 1. **Tuscany wine country — Sun Jul 4.** Fattoria Torre a Cona (candidate). Sangiovese-focused, Chianti Colli Fiorentini, Vin Santo; historic villa + vineyards. Osteria serves à la carte Sat/Sun in the July season. Sunday bus service is weak → taxi, arranged transfer or private driver. Booking a Sunday visit moves the Dome to Jul 2 or 3.
 2. **Amalfi Coast swap pair — Jul 11 & 12.** Boat day (primary Jul 11) and Furore + Ravello (primary Jul 12) must be able to swap if sea conditions threaten the boat. Jul 13 is **not** a third backup (Pompeii + Naples before the flight).
@@ -628,7 +715,7 @@ Places, neighborhoods and menu words that are easy to mispronounce, by city.
 
 ## Page structure (tabs)
 Overview · Eat & do · Locked events · Bookings · Logistics · Sub-trips.
-- **Overview** (`#overview`) — modelled on Amsterdam: **Trip at a glance** (day cards) → **Booking pulse** → **Route & pace** (route ribbon of nights per base + transfers + the four city phase cards). No presence map, headcount strip or month calendar — those suit big-group, month-long trips like Hawaii.
+- **Overview** (`#overview`) — click any day card to open that day's ordered detail (see *Day details*). Modelled on Amsterdam: **Trip at a glance** (day cards) → **Booking pulse** → **Route & pace** (route ribbon of nights per base + transfers + the four city phase cards). No presence map, headcount strip or month calendar — those suit big-group, month-long trips like Hawaii.
 - **Maps** (`#maps`) — city map with a city switcher, day filter (that day's booked + planned places shown, other days' places hidden, not-slated places as light outlines; booked pins carry a ring), Eat/Do toggles, and a Drawn / Street mode switch. Places listed by neighborhood beside the map. Data: *Map places* above.
 - **Locked events** (`#events`) — booked anchors only.
 - **Phrases** (`#phrases`, last tab) — key phrases with a say-it guide, plus a city selector for place, neighborhood and menu words. Data: *Phrases* above.

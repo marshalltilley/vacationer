@@ -518,12 +518,11 @@ body {
 .activity-list { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px; }
 .activity-item {
   font-size: 13px;
-  padding: 6px 0 6px 16px;
+  padding: 6px 0;
   border-bottom: 1px dotted var(--rule);
   position: relative;
 }
-.activity-item::before { content: '+'; position: absolute; left: 0; color: var(--rosso); font-weight: 700; }
-.activity-item.locked::before { content: '★'; }
+.activity-item.locked strong::before { content: '★'; color: var(--rosso); margin-right: 5px; font-size: 0.9em; }
 .activity-item strong { font-weight: 700; }
 .activity-item .when {
   font-size: 10px;
@@ -558,7 +557,7 @@ body {
 .rest-item { font-size: 13px; padding: 4px 0; line-height: 1.35; }
 .rest-item .nm { font-weight: 600; }
 .rest-item .desc { display: block; font-size: 12px; color: var(--muted); line-height: 1.4; }
-.rest-item.locked .nm::after { content: '★'; color: var(--rosso); margin-left: 4px; font-size: 11px; }
+.rest-item.locked .nm::before { content: '★'; color: var(--rosso); margin-right: 5px; font-size: 0.9em; }
 
 /* --- RESERVATIONS --- */
 .res-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
@@ -1008,6 +1007,39 @@ body {
 .phr-city.tyrrhenian .phr-card-title { border-bottom-color: var(--tyrrhenian); }
 .phr-city.pompeian .phr-card-title { border-bottom-color: var(--pompeian); }
 
+/* --- DAY DETAIL (Trip at a glance) --- */
+.day-card { cursor: pointer; transition: border-color 0.15s ease, transform 0.15s ease; }
+.day-card:hover { border-color: var(--ink); }
+.day-card:focus-visible { outline: 2px solid var(--rosso); outline-offset: 2px; }
+.day-card.open { border-color: var(--ink); box-shadow: 0 0 0 2px var(--ink); }
+.day-card .day-hotel::after { content: 'Details ›'; float: right; color: var(--rosso); letter-spacing: 0.08em; }
+.day-card.open .day-hotel::after { content: 'Open ▾'; }
+.day-detail { margin-top: 18px; background: var(--paper-2); border: 1px solid var(--ink); padding: 22px 26px; scroll-margin-top: 90px; }
+.dd-head { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; padding-bottom: 12px; border-bottom: 2px solid var(--rosso); margin-bottom: 6px; }
+.dd-date { font-family: var(--serif); font-style: italic; font-size: 30px; line-height: 1; color: var(--rosso); }
+.dd-title { font-family: var(--display); font-size: 24px; line-height: 1.1; }
+.dd-sleep { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; color: var(--sage-deep); }
+.dd-nav { margin-left: auto; display: flex; gap: 6px; }
+.dd-nav button { font-family: var(--sans); font-size: 12px; font-weight: 600; padding: 5px 10px; cursor: pointer; background: var(--paper); border: 1px solid var(--rule); color: var(--ink); }
+.dd-nav button:hover { border-color: var(--ink); }
+.dd-key { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 11px; color: var(--muted); margin: 8px 0 6px; }
+.dd-key span { display: inline-flex; align-items: center; gap: 6px; }
+.dd-steps { list-style: none; counter-reset: step; }
+.dd-step { display: grid; grid-template-columns: 120px 1fr 74px; gap: 16px; align-items: baseline; padding: 10px 0; border-bottom: 1px solid var(--rule-soft); }
+.dd-step:last-child { border-bottom: none; }
+.dd-when { font-size: 12px; font-weight: 600; color: var(--muted); }
+.dd-step.t-anchor .dd-when span { display: inline-block; background: var(--rosso); color: #fff; padding: 2px 8px; font-weight: 700; letter-spacing: 0.02em; }
+.dd-what { font-size: 14.5px; font-weight: 700; line-height: 1.3; }
+.dd-about { display: block; font-size: 12.5px; font-weight: 400; color: var(--muted); margin-top: 2px; line-height: 1.4; }
+.dd-type { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; text-align: right; color: var(--muted); }
+.dd-step.t-anchor .dd-type { color: var(--rosso); }
+.dd-step.t-option { opacity: 0.62; }
+.dd-step.t-option .dd-what { font-weight: 600; font-style: italic; }
+.dd-chip { display: inline-block; font-size: 11px; font-weight: 700; padding: 1px 7px; }
+.dd-chip.t-anchor { background: var(--rosso); color: #fff; }
+.dd-chip.t-plan { border: 1px solid var(--rule); color: var(--ink); background: var(--paper); }
+.dd-chip.t-option { border: 1px dashed var(--rule); color: var(--muted); font-style: italic; }
+
 /* --- FOOTER --- */
 .footer {
   margin-top: 80px;
@@ -1089,6 +1121,10 @@ body {
   .part-nav { margin: -8px 0 24px; }
   .eatdo-pair, .eatdo-pair.eat-wide { grid-template-columns: 1fr; gap: 12px; }
   .map-layout { grid-template-columns: 1fr; }
+  .day-detail { padding: 16px; }
+  .dd-step { grid-template-columns: 1fr; gap: 2px; }
+  .dd-type { text-align: left; }
+  .dd-nav { margin-left: 0; }
   .phr-grid { grid-template-columns: 1fr; }
   .phr-row { grid-template-columns: 1fr 1fr; }
   .phr-en { grid-column: 1 / -1; }
@@ -1142,6 +1178,14 @@ body {
     widows: 3;
   }
   .wrap { max-width: 100%; }
+  .dd-nav, .day-card .day-hotel::after { display: none !important; }
+  .day-detail { margin-top: 8px; padding: 10px 14px; break-inside: avoid; }
+  .dd-date { font-size: 18pt; }
+  .dd-title { font-size: 14pt; }
+  .dd-step { padding: 3px 0; grid-template-columns: 90px 1fr 50px; gap: 10px; }
+  .dd-what { font-size: 9pt; }
+  .dd-about { font-size: 8pt; }
+  .dd-when, .dd-type { font-size: 7.5pt; }
   .phr-cities { display: none !important; }
   .phr-city[hidden] { display: block !important; }
   .phr-city { break-inside: auto; margin-bottom: 10px; }
@@ -1239,7 +1283,7 @@ body {
   /* Eat & do */
   .scope-legend { font-size: 8pt; margin: 0 0 9px; padding: 6px 10px; line-height: 1.5; }
   .activity-list { gap: 1px 14px; }
-  .activity-item { font-size: 8pt; padding: 2px 0 2px 12px; line-height: 1.3; }
+  .activity-item { font-size: 8pt; padding: 2px 0; line-height: 1.3; }
   .activity-note { font-size: 7.5pt; margin-top: 6px; padding-top: 6px; }
   .rest-tier { margin-bottom: 6px; break-inside: avoid; }
   .rest-tier-label { font-size: 6.5pt; margin-bottom: 2px; }
@@ -1383,101 +1427,101 @@ body {
   <div class="section-head">
     <span class="section-num">01</span>
     <h2 class="section-title">Trip at a glance</h2>
-    <span class="section-sub">14 days · day by day</span>
+    <span class="section-sub">Tap a day for details</span>
   </div>
   <div class="day-grid">
-    <div class="day-card">
+    <div class="day-card" data-day="1" role="button" tabindex="0" aria-expanded="false">
       <div class="day-num">Day 1 · Thu</div>
       <div class="day-date">Jul 1<span class="dow">Depart Raleigh</span></div>
       <div class="day-anchor">RDU 6:10 PM → CDG</div>
       <div class="day-notes">Overnight flight. No sightseeing.</div>
       <div class="day-hotel">In the air</div>
     </div>
-    <div class="day-card terracotta">
+    <div class="day-card terracotta" data-day="2" role="button" tabindex="0" aria-expanded="false">
       <div class="day-num">Day 2 · Fri</div>
       <div class="day-date">Jul 2<span class="dow">Arrive Florence</span></div>
       <div class="day-anchor">CDG 10:20 → Florence · check-in 2 PM</div>
       <div class="day-notes">Stay flexible. Signoria wandering. Dome only if the timed slot fits safely.</div>
       <div class="day-hotel">Signoria apt</div>
     </div>
-    <div class="day-card terracotta">
+    <div class="day-card terracotta" data-day="3" role="button" tabindex="0" aria-expanded="false">
       <div class="day-num">Day 3 · Sat</div>
       <div class="day-date">Jul 3<span class="dow">Masterpieces</span></div>
       <div class="day-anchor">Uffizi ~8:15 · Accademia ~2:30</div>
       <div class="day-notes">Lunch and rest between. Evening: Oltrarno, food, wine.</div>
       <div class="day-hotel">Signoria apt</div>
     </div>
-    <div class="day-card terracotta">
+    <div class="day-card terracotta" data-day="4" role="button" tabindex="0" aria-expanded="false">
       <div class="day-num">Day 4 · Sun</div>
       <div class="day-date">Jul 4<span class="dow">Tuscany</span></div>
       <div class="day-anchor">Fattoria Torre a Cona</div>
       <div class="day-notes">Winery + countryside (candidate). No other major museum.</div>
       <div class="day-hotel">Signoria apt</div>
     </div>
-    <div class="day-card ochre">
+    <div class="day-card ochre" data-day="5" role="button" tabindex="0" aria-expanded="false">
       <div class="day-num">Day 5 · Mon</div>
       <div class="day-date">Jul 5<span class="dow">To Rome</span></div>
       <div class="day-anchor">Train SMN → Termini</div>
       <div class="day-notes">Trevi · Sant'Ignazio · Pantheon · San Luigi · Navona. Optional: Supplizio, Il Goccetto.</div>
       <div class="day-hotel">Palazzo Talìa</div>
     </div>
-    <div class="day-card ochre">
+    <div class="day-card ochre" data-day="6" role="button" tabindex="0" aria-expanded="false">
       <div class="day-num">Day 6 · Tue</div>
       <div class="day-date">Jul 6<span class="dow">Vatican day</span></div>
       <div class="day-anchor">Vatican · Sistine · St. Peter's</div>
       <div class="day-notes">Castel Sant'Angelo. Hotel rest. Janiculum sunset, Trastevere dinner.</div>
       <div class="day-hotel">Palazzo Talìa</div>
     </div>
-    <div class="day-card ochre">
+    <div class="day-card ochre" data-day="7" role="button" tabindex="0" aria-expanded="false">
       <div class="day-num">Day 7 · Wed</div>
       <div class="day-date">Jul 7<span class="dow">Ancient Rome</span></div>
       <div class="day-anchor">Colosseum · Forum · Palatine</div>
       <div class="day-notes">Monte Tarpeo view · Campidoglio · Ghetto · Boccione / Piperno. Quiet evening.</div>
       <div class="day-hotel">Palazzo Talìa</div>
     </div>
-    <div class="day-card ochre">
+    <div class="day-card ochre" data-day="8" role="button" tabindex="0" aria-expanded="false">
       <div class="day-num">Day 8 · Thu</div>
       <div class="day-date">Jul 8<span class="dow">Borghese</span></div>
       <div class="day-anchor">Galleria Borghese · Villa Medici</div>
       <div class="day-notes">Pincio · Popolo · Palazzo Zuccari · Spanish Steps. Excellent dinner + wine.</div>
       <div class="day-hotel">Palazzo Talìa</div>
     </div>
-    <div class="day-card ochre">
+    <div class="day-card ochre" data-day="9" role="button" tabindex="0" aria-expanded="false">
       <div class="day-num">Day 9 · Fri</div>
       <div class="day-date">Jul 9<span class="dow">Appian Way</span></div>
       <div class="day-anchor">San Clemente · e-bike ~2 h</div>
       <div class="day-notes">Testaccio market · Volpetti · Aventine · Keyhole. Pizzeria Ostiense.</div>
       <div class="day-hotel">Palazzo Talìa</div>
     </div>
-    <div class="day-card tyrrhenian">
+    <div class="day-card tyrrhenian" data-day="10" role="button" tabindex="0" aria-expanded="false">
       <div class="day-num">Day 10 · Sat</div>
       <div class="day-date">Jul 10<span class="dow">To the coast</span></div>
       <div class="day-anchor">Train → Salerno, ferry → Amalfi</div>
       <div class="day-notes">Cathedral, waterfront, swim. Walk to Atrani. Easy dinner, delizia al limone.</div>
       <div class="day-hotel">Abbraccio</div>
     </div>
-    <div class="day-card tyrrhenian">
+    <div class="day-card tyrrhenian" data-day="11" role="button" tabindex="0" aria-expanded="false">
       <div class="day-num">Day 11 · Sun</div>
       <div class="day-date">Jul 11<span class="dow">Boat day</span></div>
       <div class="day-anchor">Private boat + Positano</div>
       <div class="day-notes">Coves, swim stops, Positano 2–4 h. Fish + coastal white for dinner.</div>
       <div class="day-hotel">Abbraccio</div>
     </div>
-    <div class="day-card tyrrhenian">
+    <div class="day-card tyrrhenian" data-day="12" role="button" tabindex="0" aria-expanded="false">
       <div class="day-num">Day 12 · Mon</div>
       <div class="day-date">Jul 12<span class="dow">Furore + Ravello</span></div>
       <div class="day-anchor">Marisa Cuomo AM · Ravello PM</div>
       <div class="day-notes">Villa Cimbrone + Terrace of Infinity. Villa Rufolo if time.</div>
       <div class="day-hotel">Abbraccio</div>
     </div>
-    <div class="day-card pompeian">
+    <div class="day-card pompeian" data-day="13" role="button" tabindex="0" aria-expanded="false">
       <div class="day-num">Day 13 · Tue</div>
       <div class="day-date">Jul 13<span class="dow">Pompeii → Naples</span></div>
       <div class="day-anchor">Pompeii 3–4 h · Starita (walk-in)</div>
       <div class="day-notes">Car to Pompeii, bags in storage. Circumvesuviana → Garibaldi → Metro 1 → Toledo. Plebiscito, waterfront, Cup buzz.</div>
       <div class="day-hotel">Soul Art Hotel</div>
     </div>
-    <div class="day-card pompeian">
+    <div class="day-card pompeian" data-day="14" role="button" tabindex="0" aria-expanded="false">
       <div class="day-num">Day 14 · Wed</div>
       <div class="day-date">Jul 14<span class="dow">Fly home</span></div>
       <div class="day-anchor">5:30 AM car · NAP 9:05</div>
@@ -1485,6 +1529,8 @@ body {
       <div class="day-hotel">Home</div>
     </div>
   </div>
+  <div class="day-detail" id="day-detail" hidden aria-live="polite"></div>
+
 </section>
 
 <section class="section print-keep-with-next">
@@ -3074,6 +3120,48 @@ body {
       document.querySelectorAll('[data-phr-city]').forEach(x => x.classList.toggle('active', x === b));
       document.querySelectorAll('[data-phr-panel]').forEach(pn => { pn.hidden = pn.dataset.phrPanel !== b.dataset.phrCity; });
     }));
+
+    // ===================== DAY DETAIL (Trip at a glance) =====================
+    /* DAY-DATA:START — generated from fact-sheet.md › Day details; do not hand-edit */
+    const DAY_DETAIL = [{"day":1,"when":"6:10 PM","type":"anchor","what":"Flight RDU → Paris CDG","about":"Delta 8761, overnight; lands 7:55 AM Jul 2"},{"day":2,"when":"7:55 AM","type":"anchor","what":"Land at Paris CDG","about":"Connect to the Florence flight"},{"day":2,"when":"10:20 AM","type":"anchor","what":"Flight CDG → Florence","about":"Delta 8483 · arrival time not on the booking"},{"day":2,"when":"On arrival","type":"plan","what":"T2 tram into the center","about":"Tram from Peretola airport toward Santa Maria Novella, then walk to the apartment"},{"day":2,"when":"After 2 PM","type":"anchor","what":"Check in · Piazza Signoria n.1","about":"Our apartment on Florence's main square"},{"day":2,"when":"Afternoon","type":"plan","what":"Piazza della Signoria & historic center","about":"The civic square with its statues and the town-hall fortress (Palazzo Vecchio) — an easy first walk"},{"day":2,"when":"If it fits","type":"option","what":"Brunelleschi's Dome climb","about":"Climb inside the cathedral dome to the top; timed, non-refundable ticket — only if today's timing is safe"},{"day":2,"when":"Evening","type":"option","what":"Easy dinner near the apartment","about":"Options: Vini e Vecchi Sapori (tiny osteria) or Il Cernacchio (cheap and simple)"},{"day":3,"when":"~8:15 AM","type":"plan","what":"Uffizi Gallery","about":"Florence's great Renaissance art museum — Botticelli's Birth of Venus, Leonardo, Raphael; aim for the first slot"},{"day":3,"when":"Midday","type":"plan","what":"Quick lunch + rest","about":"Schiacciata (Tuscan flatbread sandwich) at I Guelfi or Da' Vinattieri, then a break at the apartment"},{"day":3,"when":"~2:30 PM","type":"plan","what":"Galleria dell'Accademia","about":"Small museum built around Michelangelo's David"},{"day":3,"when":"If it fits","type":"option","what":"Brunelleschi's Dome climb","about":"If it didn't happen on Jul 2"},{"day":3,"when":"Evening","type":"plan","what":"Oltrarno — food and wine","about":"\"Beyond the Arno\": the artisan south bank around Santo Spirito; Le Volpi e l'Uva wine bar by Ponte Vecchio"},{"day":4,"when":"Morning","type":"plan","what":"Taxi or driver to Torre a Cona","about":"Sunday buses are poor; the estate is in the hills southeast of Florence"},{"day":4,"when":"Midday","type":"plan","what":"Fattoria Torre a Cona","about":"Historic villa winery — Chianti Colli Fiorentini, Sangiovese, Vin Santo; the osteria serves lunch on weekends"},{"day":4,"when":"Afternoon","type":"plan","what":"Back to Florence, easy evening","about":"No other big museum today"},{"day":5,"when":"By 10 AM","type":"anchor","what":"Check out of the Florence apartment","about":""},{"day":5,"when":"Morning","type":"plan","what":"Fast train Firenze SMN → Roma Termini","about":"About 1 h 25 on Italo or Frecciarossa"},{"day":5,"when":"Arrival","type":"anchor","what":"Check in · Palazzo Talìa","about":"Our hotel between Trevi and the Spanish Steps"},{"day":5,"when":"Afternoon","type":"plan","what":"Trevi Fountain","about":"Rome's huge Baroque fountain — toss a coin over your shoulder"},{"day":5,"when":"Afternoon","type":"plan","what":"Sant'Ignazio","about":"Church whose flat ceiling is painted to look like a dome"},{"day":5,"when":"Afternoon","type":"plan","what":"Pantheon","about":"2,000-year-old Roman temple with an open hole (oculus) in the dome"},{"day":5,"when":"Afternoon","type":"plan","what":"San Luigi dei Francesi","about":"Small church holding three Caravaggio paintings"},{"day":5,"when":"Evening","type":"plan","what":"Piazza Navona","about":"Long oval Baroque square built on an ancient stadium"},{"day":5,"when":"If energy","type":"option","what":"Campo de' Fiori · Supplizio · Il Goccetto","about":"Market square, a supplì (fried rice ball) shop, and an old wine bar"},{"day":6,"when":"Early","type":"plan","what":"Vatican Museums & Sistine Chapel","about":"The popes' art collections, ending at Michelangelo's painted ceiling"},{"day":6,"when":"Late morning","type":"plan","what":"St. Peter's Basilica & Square","about":"The largest church in Christendom; Michelangelo's Pietà · shoulders and knees covered"},{"day":6,"when":"Midday","type":"plan","what":"Walk to Castel Sant'Angelo","about":"Hadrian's tomb turned papal fortress, by the angel-lined bridge over the Tiber"},{"day":6,"when":"Afternoon","type":"plan","what":"Rest at the hotel","about":""},{"day":6,"when":"Sunset","type":"plan","what":"Taxi up the Janiculum (Gianicolo)","about":"The hill with the best sunset view over Rome's domes"},{"day":6,"when":"Evening","type":"plan","what":"Walk down into Trastevere for dinner","about":"Cobbled, ivy-covered neighborhood \"across the Tiber\""},{"day":6,"when":"If it fits","type":"option","what":"Pizzarium · Paciotti","about":"Famous pizza by the slice and an old-school deli, near the Vatican"},{"day":7,"when":"Early","type":"plan","what":"Colosseum","about":"The ancient amphitheater; tickets open 30 days ahead (Jun 7)"},{"day":7,"when":"Morning","type":"plan","what":"Roman Forum & Palatine Hill","about":"Ruins of ancient Rome's center and the emperors' palace hill"},{"day":7,"when":"Late morning","type":"plan","what":"Via di Monte Tarpeo viewpoint","about":"Free terrace looking over the whole Forum"},{"day":7,"when":"Midday","type":"plan","what":"Campidoglio","about":"Michelangelo's hilltop piazza on the Capitoline Hill"},{"day":7,"when":"Afternoon","type":"plan","what":"Into the Jewish Ghetto","about":"Past the ancient Teatro di Marcello to the Portico d'Ottavia"},{"day":7,"when":"Afternoon","type":"plan","what":"Boccione and/or Piperno","about":"A tiny historic Jewish bakery; an old-school Jewish-Roman restaurant"},{"day":7,"when":"Evening","type":"plan","what":"Quiet evening","about":"After a big walking day"},{"day":8,"when":"Morning","type":"plan","what":"Galleria Borghese","about":"Villa museum of Bernini sculptures and Caravaggios; timed entry"},{"day":8,"when":"Late morning","type":"plan","what":"Villa Borghese park → Pincio terrace","about":"Rome's central park; a terrace over Piazza del Popolo"},{"day":8,"when":"Midday","type":"plan","what":"Piazza del Popolo & Santa Maria del Popolo","about":"Twin-church square; a church with two Caravaggios"},{"day":8,"when":"Lunch","type":"plan","what":"Lunch and a break","about":""},{"day":8,"when":"Afternoon","type":"plan","what":"Villa Medici guided tour","about":"The French Academy's Renaissance villa and gardens · English tour, non-refundable"},{"day":8,"when":"Afternoon","type":"plan","what":"Palazzo Zuccari","about":"The \"House of Monsters\" — a doorway shaped like a gaping mouth"},{"day":8,"when":"Late afternoon","type":"plan","what":"Spanish Steps","about":"The famous stairway up to Trinità dei Monti"},{"day":8,"when":"Evening","type":"plan","what":"A great dinner with wine","about":""},{"day":9,"when":"Morning","type":"plan","what":"Basilica di San Clemente","about":"Three layers: a medieval church on top of an early church on top of a Roman temple"},{"day":9,"when":"Late morning","type":"plan","what":"E-bike the Appian Way (~2–2.5 h)","about":"The ancient Roman road out of the city — tombs, aqueducts, countryside"},{"day":9,"when":"If it fits","type":"option","what":"Catacombs","about":"Early-Christian underground burial tunnels along the Appian Way"},{"day":9,"when":"Afternoon","type":"plan","what":"Mercato di Testaccio","about":"Working food market — Mordi e Vai (Roman sandwiches), CasaManco (pizza by the slice)"},{"day":9,"when":"Afternoon","type":"plan","what":"Volpetti","about":"Testaccio's famous deli, open since 1973"},{"day":9,"when":"Late afternoon","type":"plan","what":"Aventine · Orange Garden · Keyhole","about":"Quiet hill, orange-tree terrace, and St. Peter's framed through the Knights of Malta keyhole"},{"day":9,"when":"Evening","type":"plan","what":"Rest, then Pizzeria Ostiense","about":"Thin, crisp Roman-style pizza in a neighborhood spot"},{"day":10,"when":"Morning","type":"plan","what":"Check out; fast train Rome → Salerno","about":""},{"day":10,"when":"Midday","type":"plan","what":"Ferry Salerno → Amalfi","about":"Weather permitting; road transfer if the sea is rough"},{"day":10,"when":"Arrival","type":"anchor","what":"Check in · Abbraccio Amalfi","about":"Sea-view balcony room"},{"day":10,"when":"Afternoon","type":"plan","what":"Amalfi Cathedral & waterfront","about":"Striped Arab-Norman cathedral at the top of a grand staircase"},{"day":10,"when":"Afternoon","type":"plan","what":"Beach or hotel downtime","about":""},{"day":10,"when":"Evening","type":"plan","what":"Walk to Atrani; easy dinner","about":"Tiny fishing village next door · try delizia al limone (lemon-cream cake)"},{"day":11,"when":"Morning","type":"plan","what":"Private boat from Amalfi","about":"Small boat with a local skipper · may swap with Jul 12 if the sea is rough"},{"day":11,"when":"Morning","type":"plan","what":"Coves, caves and swim stops","about":"Cruising west under the cliffs; Emerald Grotto only if it's on the way"},{"day":11,"when":"Midday","type":"plan","what":"Positano ashore (2–4 h)","about":"The pastel cliff town · lunch at Da Adolfo (Laurito beach) or Lo Guarracino"},{"day":11,"when":"Late afternoon","type":"plan","what":"Back to Amalfi by sea","about":""},{"day":11,"when":"Evening","type":"plan","what":"Easy dinner: local fish and a coastal white","about":""},{"day":12,"when":"9 or 10 AM","type":"plan","what":"Cantine Marisa Cuomo, Furore","about":"Winery with vineyards on cliff terraces · visits at 9:00 or 10:00 by reservation · may swap with Jul 11"},{"day":12,"when":"Late morning","type":"plan","what":"Fiordo di Furore","about":"A narrow sea inlet under a road bridge"},{"day":12,"when":"Afternoon","type":"plan","what":"Ravello · Villa Cimbrone","about":"Hilltop town; gardens ending at the Terrace of Infinity"},{"day":12,"when":"If time","type":"option","what":"Villa Rufolo","about":"Medieval tower and terraced gardens in Ravello"},{"day":12,"when":"Evening","type":"option","what":"Baglio dinner","about":"Only if the winery wasn't a big meal"},{"day":13,"when":"Morning","type":"plan","what":"Check out; private car to Pompeii","about":""},{"day":13,"when":"Late morning","type":"plan","what":"Bags into Pompeii luggage storage","about":"Bags over 30 × 30 × 15 cm can't go inside the site"},{"day":13,"when":"Midday","type":"plan","what":"Pompeii (3–4+ h)","about":"Roman town buried by Vesuvius in AD 79 — streets, houses, frescoes"},{"day":13,"when":"Afternoon","type":"plan","what":"Circumvesuviana → Garibaldi → Metro 1 → Toledo","about":"Local train into Naples, then the metro to our stop"},{"day":13,"when":"Afternoon","type":"anchor","what":"Check in · Soul Art Hotel","about":"One night near Toledo metro"},{"day":13,"when":"Evening","type":"plan","what":"Plebiscito · Santa Lucia · Castel dell'Ovo","about":"Grand square, the seafront quarter and the castle on the bay · America's Cup crowds"},{"day":13,"when":"Dinner","type":"plan","what":"Starita a Materdei (walk-in)","about":"Historic pizzeria · no reservations, expect a queue"},{"day":13,"when":"Before bed","type":"plan","what":"Reconfirm the 5:30 AM car","about":""},{"day":14,"when":"5:30 AM","type":"plan","what":"Private car to Naples airport","about":"Still to book · recheck America's Cup road closures"},{"day":14,"when":"9:05 AM","type":"anchor","what":"Flight Naples → Atlanta","about":"DL0279 · conf HID4A7"},{"day":14,"when":"8:25 PM","type":"anchor","what":"Flight Atlanta → Raleigh-Durham","about":"DL2017 · home 9:49 PM"}];
+    /* DAY-DATA:END */
+    (function () {
+      const panel = document.getElementById('day-detail');
+      const cards = [...document.querySelectorAll('.day-card[data-day]')];
+      const TYPE = { anchor: 'Anchor', plan: 'Plan', option: 'Option' };
+      const esc2 = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+      let open = null;
+      function show(n, scroll) {
+        open = n;
+        cards.forEach(c => { const on = +c.dataset.day === n; c.classList.toggle('open', on); c.setAttribute('aria-expanded', on); });
+        if (!n) { panel.hidden = true; panel.innerHTML = ''; return; }
+        const card = cards[n - 1];
+        const date = card.querySelector('.day-date').firstChild.textContent.trim();
+        const title = card.querySelector('.dow').textContent;
+        const dow = card.querySelector('.day-num').textContent.split('·')[1].trim();
+        const sleep = card.querySelector('.day-hotel').textContent.trim();
+        const steps = DAY_DETAIL.filter(r => r.day === n);
+        panel.innerHTML =
+          `<div class="dd-head"><span class="dd-date">${esc2(date)}</span><span class="dd-title">${esc2(dow)} · ${esc2(title)}</span>` +
+          `<span class="dd-sleep">Sleep: ${esc2(sleep)}</span><span class="dd-nav">` +
+          `<button type="button" data-dd="${n - 1}"${n === 1 ? ' disabled' : ''}>‹ Prev</button>` +
+          `<button type="button" data-dd="${n + 1}"${n === cards.length ? ' disabled' : ''}>Next ›</button>` +
+          `<button type="button" data-dd="0" aria-label="Close">✕</button></span></div>` +
+          `<div class="dd-key"><span><i class="dd-chip t-anchor">10:20</i> Anchor — booked, fixed time</span><span><i class="dd-chip t-plan">Morning</i> Plan — loose, not booked</span><span><i class="dd-chip t-option">If time</i> Option</span></div>` +
+          `<ol class="dd-steps">` + steps.map(r =>
+            `<li class="dd-step t-${r.type}"><span class="dd-when">${r.type === 'anchor' ? `<span>${esc2(r.when)}</span>` : esc2(r.when)}</span>` +
+            `<span class="dd-what">${esc2(r.what)}${r.about ? `<span class="dd-about">${esc2(r.about)}</span>` : ''}</span>` +
+            `<span class="dd-type">${TYPE[r.type]}</span></li>`).join('') + `</ol>`;
+        panel.hidden = false;
+        if (scroll) panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+      cards.forEach(c => {
+        const go = () => show(open === +c.dataset.day ? 0 : +c.dataset.day, true);
+        c.addEventListener('click', go);
+        c.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
+      });
+      panel.addEventListener('click', e => { const b = e.target.closest('[data-dd]'); if (b) show(+b.dataset.dd, false); });
+    })();
   })();
 </script>
 </body>
