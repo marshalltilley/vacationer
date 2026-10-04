@@ -1,0 +1,3117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Italy — Summer 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Federo&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Chrome — shared across all Vacationer trips */
+  --ink: #1f3050;          /* navy — body text */
+  --paper: #faf6ee;        /* warm cream */
+  --paper-2: #f1ebdf;      /* marble — tricolore white, card paper */
+  --sage-deep: #506850;    /* sage — structural chrome labels */
+  --pink: #c08793;         /* masthead accent */
+  --pink-soft: #e7c4cb;
+  --muted: #75695f;
+  --rule: #d6c8b0;
+  --rule-soft: #e6dccb;
+
+  /* Destination palette — Italy (tricolore + one color per stop) */
+  --verde: #3f6b4c;        /* tricolore green · cypress */
+  --verde-pale: #c3d3c2;
+  --rosso: #b23a3a;        /* tricolore red */
+  --rosso-pale: #ecc6c2;
+  --terracotta: #c45b3c;   /* Florence */
+  --terracotta-pale: #f0cfc2;
+  --ochre: #c9952f;        /* Rome */
+  --ochre-pale: #ecdcb2;
+  --tyrrhenian: #2b6b8f;   /* Amalfi sea */
+  --tyrrhenian-pale: #c6dbe6;
+  --lemon: #e2c044;        /* Amalfi lemons */
+  --lemon-pale: #f4e7b0;
+  --pompeian: #7a2f33;     /* Pompeii → Naples */
+  --pompeian-pale: #dcb8b8;
+
+  /* Type — Italian deco display + Futura-style sans + Bodoni accents */
+  --display: 'Federo', 'Bodoni Moda', Georgia, serif;
+  --serif: 'Bodoni Moda', Georgia, serif;
+  --sans: 'Jost', 'Futura', 'Century Gothic', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.5;
+  font-size: 15px;
+  padding: 40px 24px;
+  -webkit-font-smoothing: antialiased;
+  font-synthesis: none;
+  font-variation-settings: "opsz" 11; /* Bodoni Moda: text cut keeps hairlines (dashes, apostrophes) visible */
+}
+.wrap { max-width: 1180px; margin: 0 auto; }
+
+/* --- HERO --- */
+.hero {
+  border-top: 1.5px solid var(--ink);
+  border-bottom: 1.5px solid var(--pink);
+  padding: 0 0 48px;
+  margin-bottom: 64px;
+  position: relative;
+}
+.tricolore {
+  display: flex;
+  height: 6px;
+  margin-bottom: 38px;
+}
+.tricolore span { flex: 1; }
+.tricolore .v { background: var(--verde); }
+.tricolore .b { background: #ffffff; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.tricolore .r { background: var(--rosso); }
+.hero-eyebrow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: var(--sage-deep);
+}
+.hero-eyebrow span:last-child { color: var(--muted); font-weight: 500; }
+.hero-title {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(64px, 9vw, 112px);
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.hero-dek {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 17px;
+  color: var(--muted);
+  line-height: 1.4;
+  margin-bottom: 32px;
+}
+.hero-meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+}
+.meta-item .label {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--sage-deep);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.meta-item .value {
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+/* --- TAB NAVIGATION (sticky, Amsterdam pattern) --- */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 0 0 56px;
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper);
+  align-items: stretch;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.tab {
+  background: transparent;
+  border: none;
+  padding: 14px 12px 16px;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--sans);
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: border-color 0.18s ease, background 0.18s ease;
+}
+.tab:hover { background: rgba(178,58,58,0.04); }
+.tab.active { border-bottom-color: var(--rosso); }
+.tab-label { font-size: 14px; font-weight: 600; letter-spacing: -0.005em; line-height: 1.2; }
+.tab.active .tab-label { color: var(--rosso); }
+.tab-sub {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--muted);
+}
+.print-btn {
+  margin-left: auto;
+  background: transparent;
+  border: 1px solid var(--rule);
+  color: var(--ink);
+  padding: 8px 14px;
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  align-self: center;
+  transition: border-color 0.18s ease, background 0.18s ease;
+  white-space: nowrap;
+}
+.print-btn:hover { border-color: var(--ink); background: var(--paper-2); }
+.tab-panel { display: block; }
+.tab-panel[hidden] { display: none; }
+
+/* --- SECTION HEADERS --- */
+.section { margin-bottom: 80px; }
+.section-head {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--ink);
+}
+.section-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 34px;
+  color: var(--rosso);
+  letter-spacing: -0.02em;
+}
+.section-title {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 28px;
+  letter-spacing: 0.01em;
+}
+.section-sub {
+  margin-left: auto;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--verde);
+  font-weight: 600;
+}
+
+
+/* --- ROUTE RIBBON + TRANSFERS --- */
+.route { background: var(--paper-2); border: 1px solid var(--rule); padding: 22px 24px; margin-bottom: 16px; }
+.route-ribbon { display: flex; gap: 3px; }
+.rr-seg {
+  min-width: 64px;
+  padding: 10px 12px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--muted);
+}
+.rr-seg.terracotta { background: var(--terracotta); }
+.rr-seg.ochre { background: var(--ochre); color: var(--ink); }
+.rr-seg.tyrrhenian { background: var(--tyrrhenian); }
+.rr-seg.pompeian { background: var(--pompeian); }
+.rr-city { font-family: var(--display); font-size: 18px; line-height: 1.1; }
+.rr-dates { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; opacity: 0.9; white-space: nowrap; }
+.route-transfers { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 16px; }
+.rt-label {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--verde);
+  margin-right: 6px;
+}
+.route-transfers > span:not(.rt-label) {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  background: white;
+  border: 1px solid var(--rule);
+  border-left-width: 3px;
+}
+.route-transfers .terracotta { border-left-color: var(--terracotta); }
+.route-transfers .ochre { border-left-color: var(--ochre); }
+.route-transfers .tyrrhenian { border-left-color: var(--tyrrhenian); }
+.route-transfers .pompeian { border-left-color: var(--pompeian); }
+.route-transfers .transit { border-left-color: var(--muted); }
+
+/* --- PHASE CARDS --- */
+.phases {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.phase {
+  border: 1px solid var(--rule);
+  padding: 20px 16px;
+  background: var(--paper-2);
+  position: relative;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.phase-color { position: absolute; top: 0; left: 0; right: 0; height: 4px; }
+.phase-num {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--verde);
+  margin-bottom: 6px;
+}
+.phase-name {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 1.15;
+  margin-bottom: 4px;
+  letter-spacing: 0.01em;
+}
+.phase-name em { font-family: var(--serif); font-style: italic; font-weight: 300; color: var(--muted); font-size: 0.8em; display: block; }
+.phase-dates {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--verde);
+  font-weight: 600;
+  margin: 8px 0 14px;
+}
+.phase-desc { font-size: 13px; line-height: 1.45; color: #3a322a; flex: 1; }
+.phase-tag {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 12px;
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+/* --- BOOKING PULSE --- */
+.pulse {
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  padding: 24px 28px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.pulse-cell .pulse-num {
+  font-family: var(--serif);
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1;
+  color: var(--verde);
+  margin-bottom: 4px;
+}
+.pulse-cell.todo .pulse-num { color: var(--rosso); }
+.pulse-cell.flights .pulse-num { color: var(--ochre); }
+.pulse-cell .pulse-label {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--sage-deep);
+  margin-bottom: 4px;
+}
+.pulse-cell .pulse-sub { font-size: 13px; color: var(--muted); line-height: 1.4; }
+
+
+/* --- LOCKED EVENTS --- */
+.locked-list { display: grid; border-top: 1px solid var(--rule); }
+.locked-row {
+  display: grid;
+  grid-template-columns: 130px 1fr 110px;
+  gap: 24px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--rule-soft);
+  align-items: baseline;
+}
+.locked-date { font-family: var(--display); font-size: 17px; font-weight: 400; line-height: 1.2; }
+.locked-date .day, .locked-date .time {
+  display: block;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.locked-event-name { font-size: 15px; font-weight: 600; line-height: 1.3; }
+.locked-event-name .sub {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--muted);
+  margin-top: 4px;
+  line-height: 1.4;
+}
+.locked-tag {
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 4px 10px;
+  background: var(--ink);
+  color: var(--paper);
+  text-align: center;
+  justify-self: end;
+  align-self: center;
+}
+.locked-tag.flight { background: var(--ink); }
+.locked-tag.stay { background: var(--verde); }
+.locked-tag.event { background: var(--lemon); color: var(--ink); }
+
+/* --- DAY-BY-DAY CARDS --- */
+.day-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 12px; }
+.day-card {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 16px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  min-height: 230px;
+  position: relative;
+  overflow: hidden;
+}
+.day-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--muted); }
+.day-card.terracotta::before { background: var(--terracotta); }
+.day-card.ochre::before { background: var(--ochre); }
+.day-card.tyrrhenian::before { background: var(--tyrrhenian); }
+.day-card.pompeian::before { background: var(--pompeian); }
+.day-num {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--sage-deep);
+  margin-bottom: 4px;
+}
+.day-date { font-family: var(--display); font-size: 18px; font-weight: 400; margin-bottom: 10px; line-height: 1.1; }
+.day-date .dow { display: block; font-size: 11px; font-style: italic; font-weight: 300; color: var(--muted); margin-top: 2px; }
+.day-anchor { font-size: 12.5px; font-weight: 700; margin-bottom: 6px; line-height: 1.25; }
+.day-notes { font-size: 11.5px; color: var(--muted); line-height: 1.4; margin-bottom: auto; }
+.day-hotel {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--rule-soft);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--sage-deep);
+}
+.day-status {
+  display: inline-block;
+  font-size: 8.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 1px 6px;
+  margin-bottom: 8px;
+  align-self: flex-start;
+}
+.day-status.booked { background: var(--verde); color: white; }
+.day-status.plan { border: 1px solid var(--rule); color: var(--muted); }
+
+/* --- SCOPE BADGES (here: timing / booking constraints) --- */
+.scope-badge {
+  display: inline-block;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 2px 7px;
+  margin-left: 6px;
+  vertical-align: 1px;
+  white-space: nowrap;
+  border-radius: 2px;
+  line-height: 1.4;
+}
+.scope-badge.trip { background: var(--verde); color: white; }
+.scope-badge.swap { background: var(--tyrrhenian); color: white; }
+.scope-badge.nonref { background: var(--rosso); color: white; }
+.scope-badge.opt { background: var(--ochre-pale); color: var(--ink); }
+.day-card .scope-badge { margin-left: 0; margin-right: 4px; margin-bottom: 4px; }
+.scope-legend {
+  font-size: 12px;
+  color: #5a4a3a;
+  margin: -16px 0 24px;
+  padding: 12px 16px;
+  background: rgba(63,107,76,0.06);
+  border-left: 3px solid var(--verde);
+  line-height: 1.8;
+}
+
+/* --- EAT & DO: city jump bar --- */
+.part-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: -24px 0 40px; }
+.part-nav-label {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--muted);
+  margin-right: 4px;
+}
+.part-link {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 16px;
+  cursor: pointer;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--verde);
+  color: var(--ink);
+}
+.part-link.eat { border-left-color: var(--rosso); }
+.part-link:hover { background: var(--paper-2); border-color: var(--ink); }
+.part-link.eat:hover { border-left-color: var(--rosso); }
+.part-link.do:hover { border-left-color: var(--verde); }
+
+/* --- EAT & DO: one section per city, Eat | Do side by side --- */
+.part-link.terracotta { border-left-color: var(--terracotta); }
+.part-link.ochre { border-left-color: var(--ochre); }
+.part-link.tyrrhenian { border-left-color: var(--tyrrhenian); }
+.part-link.pompeian { border-left-color: var(--pompeian); }
+.city-section { scroll-margin-top: 90px; }
+.city-section .section-head { border-bottom-width: 3px; }
+.city-section.terracotta .section-head { border-bottom-color: var(--terracotta); }
+.city-section.ochre .section-head { border-bottom-color: var(--ochre); }
+.city-section.tyrrhenian .section-head { border-bottom-color: var(--tyrrhenian); }
+.city-section.pompeian .section-head { border-bottom-color: var(--pompeian); }
+.eatdo-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
+.pair-col { background: var(--paper-2); border: 1px solid var(--rule); padding: 20px 22px; }
+.pair-head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+  border-bottom: 2px solid var(--rosso);
+}
+.pair-head.do { border-bottom-color: var(--verde); }
+.pair-word { font-family: var(--serif); font-style: italic; font-size: 30px; line-height: 1; color: var(--rosso); }
+.pair-head.do .pair-word { color: var(--verde); }
+.pair-desc { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; color: var(--muted); }
+.pair-col .activity-list { grid-template-columns: 1fr; gap: 0; }
+/* Long food lists flow into two columns (Florence, Rome); Florence's Eat side is also two-thirds wide.
+   Ratios chosen so the Eat and Do columns end at about the same height. */
+.eat-flow { column-count: 2; column-gap: 28px; }
+.eatdo-pair.eat-wide { grid-template-columns: 2fr 1fr; }
+.pair-col .activity-item:last-child { border-bottom: none; }
+
+/* --- ACTIVITY ITEMS --- */
+.activity-list { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px; }
+.activity-item {
+  font-size: 13px;
+  padding: 6px 0 6px 16px;
+  border-bottom: 1px dotted var(--rule);
+  position: relative;
+}
+.activity-item::before { content: '+'; position: absolute; left: 0; color: var(--rosso); font-weight: 700; }
+.activity-item.locked::before { content: '★'; }
+.activity-item strong { font-weight: 700; }
+.activity-item .when {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--verde);
+  margin-left: 4px;
+}
+.activity-item .desc { display: block; font-size: 12px; color: var(--muted); line-height: 1.4; margin-top: 2px; }
+.activity-note {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule);
+  font-size: 12px;
+  font-style: italic;
+  color: #5a4a3a;
+  line-height: 1.5;
+}
+
+/* --- RESTAURANT ITEMS --- */
+.rest-tier { margin-bottom: 14px; }
+.rest-tier-label {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--rosso);
+  margin-bottom: 6px;
+}
+.rest-tier { break-inside: avoid; }
+.rest-item { font-size: 13px; padding: 4px 0; line-height: 1.35; }
+.rest-item .nm { font-weight: 600; }
+.rest-item .desc { display: block; font-size: 12px; color: var(--muted); line-height: 1.4; }
+.rest-item.locked .nm::after { content: '★'; color: var(--rosso); margin-left: 4px; font-size: 11px; }
+
+/* --- RESERVATIONS --- */
+.res-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.res-item {
+  display: grid;
+  grid-template-columns: 32px 1fr auto;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 18px;
+  background: white;
+  border: 1px solid var(--ink);
+}
+.res-check { width: 22px; height: 22px; border: 1.5px solid var(--ink); border-radius: 2px; }
+.res-name { font-family: var(--display); font-size: 16px; font-weight: 400; }
+.res-name .sub {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--muted);
+  display: block;
+  margin-top: 2px;
+}
+.res-urgency {
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 3px 8px;
+}
+.res-urgency.high { background: var(--rosso); color: white; }
+.res-urgency.med { background: var(--ochre); color: var(--ink); }
+.res-urgency.low { background: var(--tyrrhenian-pale); color: var(--tyrrhenian); }
+.res-urgency.confirmed { background: var(--verde); color: white; }
+.res-subhead {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0.01em;
+  margin: 0 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--rule);
+  color: var(--verde);
+}
+.res-subhead:not(:first-of-type) { margin-top: 32px; }
+.res-item.confirmed { background: rgba(63,107,76,0.06); border-color: var(--verde); }
+.res-check.checked {
+  background: var(--verde);
+  border-color: var(--verde);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* --- WHEN TO BOOK (booking-trigger timeline) --- */
+.trigger-list { border-top: 1px solid var(--rule); }
+.trigger-row {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 24px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--rule-soft);
+  align-items: baseline;
+}
+.trigger-when { font-family: var(--display); font-size: 17px; font-weight: 400; line-height: 1.2; }
+.trigger-when .note { display: block; font-size: 11px; font-style: italic; font-weight: 300; color: var(--muted); margin-top: 2px; }
+.trigger-row.hard .trigger-when { color: var(--rosso); }
+.trigger-items { display: flex; flex-wrap: wrap; gap: 8px; }
+.trigger-items span {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  background: white;
+  border: 1px solid var(--rule);
+  border-left-width: 3px;
+}
+.trigger-items .terracotta { border-left-color: var(--terracotta); }
+.trigger-items .ochre { border-left-color: var(--ochre); }
+.trigger-items .tyrrhenian { border-left-color: var(--tyrrhenian); }
+.trigger-items .pompeian { border-left-color: var(--pompeian); }
+.trigger-items .verde { border-left-color: var(--verde); }
+.trigger-items .muted { color: var(--muted); font-weight: 500; }
+
+/* --- LOGISTICS CARDS --- */
+.logistics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.log-card { background: var(--paper-2); padding: 20px; border-left: 4px solid var(--ink); }
+.log-card.terracotta { border-left-color: var(--terracotta); }
+.log-card.ochre { border-left-color: var(--ochre); }
+.log-card.tyrrhenian { border-left-color: var(--tyrrhenian); }
+.log-card.pompeian { border-left-color: var(--pompeian); }
+.log-card.pending { border-left-style: dashed; }
+.log-label {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--verde);
+  margin-bottom: 8px;
+}
+.log-value { font-family: var(--display); font-size: 17px; line-height: 1.35; margin-bottom: 6px; }
+.log-detail { font-size: 12px; color: #5a4a3a; line-height: 1.45; }
+.log-head {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--sage-deep);
+  margin: 0 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--rule);
+}
+.log-head:not(:first-child) { margin-top: 32px; }
+
+/* --- PACKING --- */
+.packing { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.packing-block { background: var(--paper-2); border: 1px solid var(--rule); padding: 20px 22px; }
+.packing-block .packing-cat {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--sage-deep);
+  margin-bottom: 6px;
+}
+.packing-block .packing-name { font-family: var(--display); font-size: 18px; font-weight: 400; margin-bottom: 12px; }
+.packing-block ul { list-style: none; }
+.packing-block li { padding: 4px 0; font-size: 13px; border-bottom: 1px solid var(--rule-soft); line-height: 1.4; }
+.packing-block li:last-child { border-bottom: none; }
+.packing-block li.note { border-bottom: none; font-size: 12px; font-style: italic; color: var(--muted); padding-top: 8px; }
+
+/* --- SUB-TRIPS --- */
+.st-intro {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 24px;
+  align-items: start;
+  margin-bottom: 28px;
+}
+.st-status {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--verde);
+}
+.st-status .small {
+  display: block;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 13px;
+  color: var(--muted);
+  text-transform: none;
+  letter-spacing: 0;
+  margin-top: 6px;
+}
+.st-tone { font-family: var(--serif); font-size: 17px; line-height: 1.45; }
+.decision {
+  background: var(--tyrrhenian-pale);
+  border: 1px solid var(--tyrrhenian);
+  padding: 22px 26px;
+  margin-bottom: 28px;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 24px;
+  align-items: center;
+}
+.decision-label {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--tyrrhenian);
+}
+.decision-label .small {
+  display: block;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 13px;
+  color: var(--ink);
+  text-transform: none;
+  letter-spacing: 0;
+  margin-top: 6px;
+}
+.decision-rules { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.decision-rule { background: var(--paper); padding: 14px 18px; border-left: 3px solid var(--tyrrhenian); }
+.decision-rule.warm { border-left-color: var(--rosso); }
+.decision-rule .when {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--sage-deep);
+  margin-bottom: 4px;
+}
+.decision-rule .then { font-family: var(--display); font-size: 16px; font-weight: 400; line-height: 1.3; }
+.options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.option {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  padding: 26px;
+  position: relative;
+  overflow: hidden;
+}
+.option::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--tyrrhenian); }
+.option.verde::before { background: var(--verde); }
+.option.pompeian::before { background: var(--pompeian); }
+.option.lemon::before { background: var(--lemon); }
+.option-tag {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--sage-deep);
+  margin-bottom: 8px;
+}
+.option-name { font-family: var(--display); font-size: 28px; font-weight: 400; letter-spacing: 0.01em; line-height: 1.05; margin-bottom: 10px; }
+.option-name em { font-family: var(--serif); font-style: italic; font-weight: 300; color: var(--tyrrhenian); }
+.option.verde .option-name em { color: var(--verde); }
+.option.pompeian .option-name em { color: var(--pompeian); }
+.option-when { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--muted); margin-bottom: 14px; }
+.option ul { list-style: none; padding-top: 12px; border-top: 1px solid var(--rule-soft); margin-bottom: 14px; }
+.option li { font-size: 13.5px; padding: 3px 0; display: flex; align-items: baseline; gap: 10px; line-height: 1.4; }
+.option li::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background: var(--tyrrhenian);
+  display: inline-block;
+  flex-shrink: 0;
+  border-radius: 50%;
+  transform: translateY(-2px);
+}
+.option.verde li::before { background: var(--verde); }
+.option.pompeian li::before { background: var(--pompeian); }
+.option-why {
+  padding-top: 12px;
+  border-top: 1px solid var(--rule-soft);
+  font-size: 12px;
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* --- MAPS TAB: drawn (inline SVG) + optional street map (Leaflet, lazy-loaded) --- */
+.map-controls { margin-bottom: 18px; }
+.map-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 10px; }
+.map-row-label {
+  width: 52px;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--muted);
+}
+.map-city, .map-day, .map-mode-btn {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 12px;
+  cursor: pointer;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  color: var(--ink);
+}
+.map-city { border-left: 4px solid var(--muted); }
+.map-city.terracotta { border-left-color: var(--terracotta); }
+.map-city.ochre { border-left-color: var(--ochre); }
+.map-city.tyrrhenian { border-left-color: var(--tyrrhenian); }
+.map-city.pompeian { border-left-color: var(--pompeian); }
+.map-city.active, .map-day.active, .map-mode-btn.active { background: var(--ink); border-color: var(--ink); color: var(--paper); }
+.map-day { font-size: 12px; padding: 5px 10px; }
+.map-day .dow { font-weight: 400; opacity: 0.75; margin-left: 3px; }
+.map-toggle { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; margin-right: 8px; cursor: pointer; }
+.map-mode { margin-left: auto; display: inline-flex; }
+.map-mode-btn + .map-mode-btn { border-left: none; }
+.map-dayline { font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--ink); min-height: 22px; margin-top: 4px; }
+.map-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 18px; align-items: start; }
+.map-stage { position: relative; }
+.map-svg-wrap { position: relative; border: 1px solid var(--ink); background: #fbf8f1; touch-action: none; }
+#map-svg { display: block; width: 100%; height: auto; cursor: grab; }
+#map-svg.dragging { cursor: grabbing; }
+.map-street { height: 560px; border: 1px solid var(--ink); }
+.map-zoom { position: absolute; top: 10px; right: 10px; display: flex; flex-direction: column; gap: 4px; }
+.map-zoom button {
+  width: 30px;
+  height: 30px;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  color: var(--ink);
+}
+/* svg pieces */
+.m-water { fill: #d7e6ee; }
+.m-river { fill: none; stroke: #c7dce7; stroke-linecap: round; stroke-linejoin: round; }
+.m-water-label { font-family: var(--serif); font-style: italic; fill: #5b84a0; }
+.m-zone { fill-opacity: 0.10; stroke-opacity: 0.45; stroke-dasharray: 4 4; }
+.m-zone-label {
+  font-family: var(--display);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  fill: #6b6157;
+  paint-order: stroke;
+  stroke: #fbf8f1;
+  stroke-width: 3px;
+  stroke-linejoin: round;
+  pointer-events: none;
+}
+.m-pin { cursor: pointer; }
+.m-pin text { font-family: var(--sans); font-weight: 700; dominant-baseline: central; pointer-events: none; }
+.m-pin .shape { stroke: #fff; }
+.m-pin.do .shape { fill: var(--verde); }
+.m-pin.eat .shape { fill: var(--rosso); }
+.m-pin.base .shape { fill: var(--ink); }
+.m-pin text { fill: #fff; }
+.m-pin.open { opacity: 0.8; }
+.m-pin.open .shape { fill: #fff; stroke-width: 2; }
+.m-pin.open.do .shape { stroke: var(--verde); }
+.m-pin.open.eat .shape { stroke: var(--rosso); }
+.m-pin.open.do text { fill: var(--verde); }
+.m-pin.open.eat text { fill: var(--rosso); }
+.m-pin .booked-ring { fill: none; stroke: var(--ink); }
+.m-pin .approx-ring { fill: none; stroke: #6b6157; stroke-dasharray: 2 2; }
+.m-pin.hi .shape { stroke: var(--ink); stroke-width: 3; }
+.m-pin text.m-edge { font-family: var(--sans); font-weight: 600; fill: var(--ink); paint-order: stroke; stroke: #fbf8f1; stroke-linejoin: round; dominant-baseline: auto; }
+.m-pin.open text.m-edge { fill: #8c8276; }
+/* legend chips */
+.map-legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 11px; color: var(--muted); margin-top: 10px; }
+.map-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.mk { display: inline-block; width: 12px; height: 12px; border-radius: 50%; border: 2px solid transparent; vertical-align: -2px; }
+.mk.do { background: var(--verde); border-radius: 1px; transform: rotate(45deg) scale(0.85); }
+.mk.eat { background: var(--rosso); }
+.mk.base { background: var(--ink); border-radius: 2px; }
+.mk.planned { background: var(--rosso); }
+.mk.booked { background: var(--rosso); box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--ink); }
+.mk.open { background: #fff; border-color: var(--rosso); opacity: 0.8; }
+.mk.approx { background: transparent; border: 1.5px dashed #6b6157; }
+/* tooltip */
+.map-tip {
+  position: absolute;
+  z-index: 500;
+  max-width: 260px;
+  background: var(--paper);
+  border: 1px solid var(--ink);
+  box-shadow: 0 6px 18px rgba(31,48,80,0.18);
+  padding: 10px 12px;
+  font-size: 12px;
+  line-height: 1.4;
+}
+.map-tip .t-name { font-family: var(--display); font-size: 16px; line-height: 1.15; }
+.map-tip .t-hood { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: var(--verde); margin: 3px 0 5px; }
+.map-tip .t-meta { color: var(--muted); margin-top: 5px; }
+.map-tip a { color: var(--tyrrhenian); font-weight: 600; }
+/* list */
+.map-list { max-height: 640px; overflow-y: auto; background: var(--paper-2); border: 1px solid var(--rule); padding: 14px 16px; }
+.ml-hood {
+  font-family: var(--display);
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 14px 0 6px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--rule);
+}
+.ml-hood:first-child { margin-top: 0; }
+.ml-item {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  gap: 8px;
+  align-items: baseline;
+  width: 100%;
+  text-align: left;
+  font-family: var(--sans);
+  background: none;
+  border: none;
+  padding: 4px 2px;
+  cursor: pointer;
+  color: var(--ink);
+}
+.ml-item:hover, .ml-item.hi { background: rgba(31,48,80,0.06); }
+.ml-num { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; font-size: 10px; font-weight: 700; color: #fff; border-radius: 50%; }
+.ml-item.do .ml-num { background: var(--verde); border-radius: 2px; }
+.ml-item.eat .ml-num { background: var(--rosso); }
+.ml-item.base .ml-num { background: var(--ink); border-radius: 3px; }
+.ml-item.open { opacity: 0.78; }
+.ml-item.open .ml-num { background: #fff; border: 1.5px solid currentColor; }
+.ml-item.open.do .ml-num { color: var(--verde); }
+.ml-item.open.eat .ml-num { color: var(--rosso); }
+.ml-item.booked .ml-num { box-shadow: 0 0 0 1.5px #fff, 0 0 0 3px var(--ink); }
+.ml-chip { display: inline-block; margin-left: 6px; padding: 0 6px; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; background: var(--verde); color: #fff; vertical-align: 1px; }
+.ml-name { font-size: 13px; font-weight: 600; line-height: 1.3; }
+.ml-meta { display: block; font-size: 11px; font-weight: 400; color: var(--muted); }
+.ml-hood.ml-day { color: var(--rosso); border-bottom: 2px solid var(--rosso); }
+.ml-sub { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; color: var(--muted); margin: 18px 0 2px; }
+.ml-empty { font-size: 12px; font-style: italic; color: var(--muted); padding: 4px 2px; }
+.map-note { font-size: 11px; color: var(--muted); font-style: italic; margin-top: 14px; line-height: 1.5; }
+/* leaflet pins + labels */
+.lf-pin { display: flex; align-items: center; justify-content: center; width: 22px; height: 22px; font: 700 10px var(--sans); color: #fff; border: 2px solid #fff; border-radius: 50%; box-shadow: 0 1px 3px rgba(0,0,0,0.35); }
+.lf-pin.do { background: var(--verde); border-radius: 3px; transform: rotate(45deg); }
+.lf-pin.do span { transform: rotate(-45deg); }
+.lf-pin.eat { background: var(--rosso); }
+.lf-pin.base { background: var(--ink); border-radius: 4px; }
+.lf-pin.open { background: #fff; opacity: 0.8; }
+.lf-pin.open.do { color: var(--verde); border-color: var(--verde); }
+.lf-pin.open.eat { color: var(--rosso); border-color: var(--rosso); }
+.lf-pin.booked { box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--ink); }
+.lf-pin.approx { outline: 1.5px dashed #6b6157; outline-offset: 2px; }
+.lf-pin.hi { box-shadow: 0 0 0 3px var(--ink); }
+#map-street .leaflet-tile-pane { filter: saturate(0.55) sepia(0.12) brightness(1.03); }
+.lf-zone { font: 400 11px var(--display); text-transform: uppercase; letter-spacing: 0.12em; color: #5b5249; white-space: nowrap; text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff; transform: translate(-50%, -50%); }
+
+/* --- PHRASES TAB --- */
+.phr-key em { font-style: normal; font-weight: 700; color: var(--ink); }
+.phr-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; align-items: start; }
+.phr-card { background: var(--paper-2); border: 1px solid var(--rule); padding: 16px 18px; }
+.phr-card-title {
+  font-family: var(--display);
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding-bottom: 6px;
+  margin-bottom: 6px;
+  border-bottom: 2px solid var(--rosso);
+}
+.phr-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 10px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--rule-soft);
+  align-items: baseline;
+}
+.phr-row:last-child { border-bottom: none; }
+.phr-it { font-weight: 700; font-size: 14px; }
+.phr-say { font-family: var(--sans); font-size: 14px; color: var(--tyrrhenian); letter-spacing: 0.01em; }
+.phr-say b { font-weight: 700; letter-spacing: 0.03em; }
+.phr-en { font-size: 12.5px; color: var(--muted); line-height: 1.35; }
+.phr-cities { margin-bottom: 16px; }
+.phr-city-name { display: none; }
+.phr-city.terracotta .phr-card-title { border-bottom-color: var(--terracotta); }
+.phr-city.ochre .phr-card-title { border-bottom-color: var(--ochre); }
+.phr-city.tyrrhenian .phr-card-title { border-bottom-color: var(--tyrrhenian); }
+.phr-city.pompeian .phr-card-title { border-bottom-color: var(--pompeian); }
+
+/* --- FOOTER --- */
+.footer {
+  margin-top: 80px;
+  padding-top: 28px;
+  border-top: 1.5px solid var(--ink);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--muted);
+}
+.footer-mark {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 700;
+  color: var(--pink);
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 1000px) {
+  .day-grid { grid-template-columns: repeat(4, 1fr); }
+}
+@media screen and (max-width: 900px) {
+  body { padding: 20px 14px; font-size: 14px; }
+  .hero { padding-bottom: 28px; margin-bottom: 28px; }
+  .tricolore { margin-bottom: 24px; }
+  .hero-eyebrow { font-size: 9px; margin-bottom: 14px; }
+  .hero-title { font-size: 44px; margin-bottom: 12px; }
+  .hero-dek { font-size: 15px; margin-bottom: 22px; }
+  .hero-meta { grid-template-columns: 1fr 1fr; gap: 16px; padding-top: 16px; }
+  .meta-item .label { font-size: 9px; margin-bottom: 4px; }
+  .meta-item .value { font-size: 14px; }
+
+  .tabs { margin: 0 0 28px; position: static; }
+  .tab { padding: 10px 14px 12px; }
+  .tab-label { font-size: 13px; }
+  .tab-sub { display: none; }
+  .print-btn { width: 100%; margin: 8px 0 0; }
+
+  .section { margin-bottom: 36px; }
+  .section-head { margin-bottom: 18px; padding-bottom: 10px; gap: 12px; flex-wrap: wrap; }
+  .section-num { font-size: 24px; }
+  .section-title { font-size: 20px; }
+  .section-sub { font-size: 10px; margin-left: 0; width: 100%; }
+
+
+  .phases { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .route { padding: 14px; }
+  .route-ribbon { flex-wrap: wrap; }
+  .rr-seg { flex: 1 1 40% !important; }
+  .phase { min-height: 0; padding: 14px 12px; }
+
+  .pulse { grid-template-columns: 1fr; gap: 18px; padding: 18px 20px; }
+  .pulse-cell .pulse-num { font-size: 32px; }
+
+
+  .locked-row { grid-template-columns: 110px 1fr; gap: 6px 14px; padding: 14px 0; }
+  .locked-tag { grid-column: 1 / 3; justify-self: start; font-size: 9px; padding: 3px 8px; margin-top: 4px; }
+
+  .day-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .day-card { min-height: 0; }
+
+  .activity-list { grid-template-columns: 1fr; gap: 2px; }
+
+
+  .res-grid { grid-template-columns: 1fr; gap: 8px; }
+  .res-item { padding: 12px 14px; gap: 10px; }
+  .res-name { font-size: 14px; }
+
+  .trigger-row { grid-template-columns: 1fr; gap: 8px; }
+
+  .logistics { grid-template-columns: 1fr; gap: 12px; }
+  .packing { grid-template-columns: 1fr; }
+  .scope-legend { font-size: 11px; padding: 10px 12px; margin-top: -8px; }
+  .part-nav { margin: -8px 0 24px; }
+  .eatdo-pair, .eatdo-pair.eat-wide { grid-template-columns: 1fr; gap: 12px; }
+  .map-layout { grid-template-columns: 1fr; }
+  .phr-grid { grid-template-columns: 1fr; }
+  .phr-row { grid-template-columns: 1fr 1fr; }
+  .phr-en { grid-column: 1 / -1; }
+  .map-list { max-height: 420px; }
+  .map-mode { margin-left: 0; }
+  .map-row-label { width: 100%; }
+  .map-street { height: 420px; }
+  .eat-flow { column-count: 1; }
+  .pair-col { padding: 16px; }
+  .pair-word { font-size: 24px; }
+
+  .st-intro, .decision, .decision-rules, .options-grid { grid-template-columns: 1fr; gap: 14px; }
+  .decision { padding: 16px 18px; }
+
+  .footer { margin-top: 36px; padding-top: 18px; font-size: 10px; flex-wrap: wrap; gap: 10px; }
+}
+@media screen and (max-width: 600px) {
+  body { padding: 16px 12px; }
+  .hero-title { font-size: 38px; }
+  .hero-meta { grid-template-columns: 1fr; gap: 12px; }
+  .phases { grid-template-columns: 1fr; }
+  .day-grid { grid-template-columns: 1fr; }
+}
+
+/* --- PRINT: active tab only, landscape, one section per page --- */
+@page {
+  size: letter landscape;
+  margin: 0.5in 0.6in 0.55in 0.6in;
+  @top-left {
+    content: "Italy Summer 2027  ·  Jul 1 — 14";
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 10pt;
+    color: #1a1612;
+  }
+  @top-right {
+    content: counter(page) " / " counter(pages);
+    font-family: var(--sans);
+    font-size: 9pt;
+    color: #75695f;
+  }
+}
+
+@media print {
+  body {
+    padding: 0;
+    background: white;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    orphans: 3;
+    widows: 3;
+  }
+  .wrap { max-width: 100%; }
+  .phr-cities { display: none !important; }
+  .phr-city[hidden] { display: block !important; }
+  .phr-city { break-inside: auto; margin-bottom: 10px; }
+  .phr-city + .phr-city { break-before: page; page-break-before: always; }
+  .phr-city-name { display: block; font-family: var(--display); font-size: 14pt; margin: 6px 0 4px; }
+  .phr-grid { gap: 8px; grid-template-columns: repeat(3, 1fr); }
+  .phr-card { padding: 7px 9px; break-inside: auto; }
+  .phr-row { break-inside: avoid; }
+  .phr-city-name { break-after: avoid; }
+  .phr-card-title { font-size: 10pt; margin-bottom: 2px; padding-bottom: 3px; }
+  .phr-row { padding: 2px 0; gap: 6px; }
+  .phr-it { font-size: 8pt; }
+  .phr-say { font-size: 8.5pt; }
+  .phr-en { font-size: 7pt; }
+  .hero, .tabs, .print-btn, .footer, .part-nav, .map-controls .map-row, .map-zoom, .map-tip, .map-mode { display: none !important; }
+  .map-layout { grid-template-columns: 1.15fr 1fr; gap: 10px; }
+  #map-svg { max-height: 5.3in; }
+  .map-list { max-height: none; overflow: visible; padding: 8px 10px; column-count: 2; column-gap: 12px; }
+  .ml-hood { break-after: avoid; }
+  .ml-item { break-inside: avoid; }
+  .map-dayline { font-size: 11pt; margin: 0 0 4px; min-height: 0; }
+  .map-controls { margin-bottom: 4px; }
+  .ml-hood { font-size: 9pt; margin: 6px 0 2px; }
+  .ml-item { padding: 1px 0; grid-template-columns: 18px 1fr; gap: 5px; }
+  .ml-num { width: 15px; height: 15px; font-size: 7pt; }
+  .ml-name { font-size: 7.5pt; }
+  .ml-meta { display: none; }
+  .map-street { height: 5.2in; }
+  .map-legend, .map-note { font-size: 7.5pt; }
+  .eatdo-pair { grid-template-columns: 1fr 1fr !important; gap: 10px; }
+  .eatdo-pair.eat-wide { grid-template-columns: 2fr 1fr !important; }
+  .eat-flow { column-count: 2; column-gap: 16px; }
+  .pair-col { padding: 9px 12px; }
+  .pair-head { padding-bottom: 4px; margin-bottom: 6px; }
+  .pair-word { font-size: 16pt; }
+  .pair-desc { font-size: 6.5pt; }
+  .eatdo-intro .scope-legend { margin: 0 0 8px; }
+  .tab-panel[hidden] { display: none !important; }
+
+  .section { margin: 0 !important; }
+  .tab-panel > .section { break-after: page; page-break-after: always; }
+  .tab-panel > .section:last-child { break-after: auto; page-break-after: auto; }
+  .tab-panel > .section.print-keep-with-next { break-after: auto; page-break-after: auto; }
+  .print-keep-with-next + .section { margin-top: 26px !important; }
+
+  .section-head { margin-bottom: 12px; padding-bottom: 7px; break-inside: avoid; break-after: avoid; page-break-after: avoid; }
+  .section-title { font-size: 19pt; }
+  .section-num { font-size: 22pt; }
+
+  .res-subhead, .log-head, .phase-name, .scope-legend, .decision {
+    break-after: avoid;
+    page-break-after: avoid;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+
+  .phases { gap: 8px; }
+  .route { padding: 10px 12px; margin-bottom: 10px; break-inside: avoid; }
+  .rr-city { font-size: 12pt; }
+  .rr-dates { font-size: 7pt; }
+  .rr-seg { padding: 6px 8px; }
+  .route-transfers { margin-top: 8px; gap: 5px; }
+  .route-transfers > span:not(.rt-label) { font-size: 8pt; padding: 2px 7px; }
+  .phase { min-height: 0; padding: 9px 11px 11px; }
+  .phase-num { font-size: 7pt; }
+  .phase-name { font-size: 13pt; }
+  .phase-dates { font-size: 7.5pt; margin: 4px 0 6px; }
+  .phase-desc { font-size: 8.5pt; line-height: 1.35; }
+  .phase-tag { font-size: 6.5pt; margin-top: 7px; }
+
+  .pulse { padding: 12px 18px; gap: 16px; }
+  .pulse-cell .pulse-num { font-size: 20pt; }
+  .pulse-cell .pulse-label { font-size: 7pt; }
+  .pulse-cell .pulse-sub { font-size: 8pt; line-height: 1.3; }
+
+
+  /* Locked events + day-by-day */
+  .locked-row { padding: 8px 0; gap: 14px; grid-template-columns: 110px 1fr 100px; }
+  .locked-date { font-size: 11.5pt; }
+  .locked-date .day, .locked-date .time { font-size: 8.5pt; }
+  .locked-event-name { font-size: 10.5pt; }
+  .locked-event-name .sub { font-size: 8.5pt; line-height: 1.3; }
+  .locked-tag { font-size: 6.5pt; padding: 2px 7px; }
+  .day-grid { grid-template-columns: repeat(7, 1fr); gap: 6px; }
+  .day-card { min-height: 0; padding: 9px 8px 8px; }
+  .day-num { font-size: 6.5pt; }
+  .day-date { font-size: 11pt; margin-bottom: 4px; }
+  .day-date .dow { font-size: 7pt; }
+  .day-status { font-size: 6pt; margin-bottom: 4px; }
+  .day-anchor { font-size: 8pt; margin-bottom: 3px; }
+  .day-notes { font-size: 7pt; line-height: 1.3; }
+  .day-hotel { font-size: 6pt; margin-top: 5px; padding-top: 4px; }
+  .scope-badge { font-size: 6pt; padding: 1px 4px; }
+
+  /* Eat & do */
+  .scope-legend { font-size: 8pt; margin: 0 0 9px; padding: 6px 10px; line-height: 1.5; }
+  .activity-list { gap: 1px 14px; }
+  .activity-item { font-size: 8pt; padding: 2px 0 2px 12px; line-height: 1.3; }
+  .activity-note { font-size: 7.5pt; margin-top: 6px; padding-top: 6px; }
+  .rest-tier { margin-bottom: 6px; break-inside: avoid; }
+  .rest-tier-label { font-size: 6.5pt; margin-bottom: 2px; }
+  .rest-item { font-size: 8pt; padding: 1.5px 0; line-height: 1.3; }
+  .rest-item .desc { font-size: 7.2pt; }
+  .activity-item .desc { font-size: 7.2pt; margin-top: 0; }
+  .activity-item .when { font-size: 6.5pt; }
+
+  /* Logistics */
+  .res-grid { gap: 5px; }
+  .res-item { padding: 5px 11px; gap: 9px; grid-template-columns: 20px 1fr auto; }
+  .res-check { width: 13px; height: 13px; }
+  .res-check.checked { font-size: 8px; }
+  .res-name { font-size: 9.5pt; }
+  .res-name .sub { font-size: 7.2pt; margin-top: 1px; }
+  .res-urgency { font-size: 6.5pt; padding: 2px 6px; }
+  .res-subhead { font-size: 11.5pt; margin-bottom: 7px; padding-bottom: 4px; }
+  .res-subhead:not(:first-of-type) { margin-top: 12px; }
+  .trigger-row { padding: 6px 0; grid-template-columns: 140px 1fr; gap: 14px; }
+  .trigger-when { font-size: 11pt; }
+  .trigger-when .note { font-size: 7.5pt; }
+  .trigger-items span { font-size: 8pt; padding: 2px 7px; }
+  .logistics { gap: 8px; }
+  .log-card { padding: 9px 12px; }
+  .log-label { font-size: 7pt; margin-bottom: 3px; }
+  .log-value { font-size: 10.5pt; margin-bottom: 2px; }
+  .log-detail { font-size: 8pt; }
+  .log-head { font-size: 8pt; margin-bottom: 6px; padding-bottom: 4px; }
+  .log-head:not(:first-child) { margin-top: 12px; }
+  .packing { gap: 10px; }
+  .packing-block { padding: 11px 14px; }
+  .packing-block .packing-name { font-size: 12pt; margin-bottom: 6px; }
+  .packing-block li { font-size: 8.5pt; padding: 2.5px 0; }
+
+  /* Sub-trips */
+  .st-intro { margin-bottom: 12px; gap: 16px; }
+  .st-tone { font-size: 11pt; }
+  .decision { padding: 10px 14px; margin-bottom: 12px; }
+  .decision-rule { padding: 8px 12px; }
+  .decision-rule .then { font-size: 10.5pt; }
+  .options-grid { gap: 10px; }
+  .option { padding: 12px 14px; }
+  .option-name { font-size: 16pt; margin-bottom: 4px; }
+  .option-when { font-size: 9pt; margin-bottom: 6px; }
+  .option ul { padding-top: 6px; margin-bottom: 6px; }
+  .option li { font-size: 8.5pt; padding: 1.5px 0; }
+  .option-why { font-size: 8pt; padding-top: 6px; }
+
+  .locked-row, .phase, .day-card, .res-item, .log-card, .packing-block, .pulse, .option, .trigger-row, .rest-tier {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .print-stamp {
+    display: block !important;
+    position: fixed;
+    bottom: 0.15in;
+    left: 0.6in;
+    font-family: var(--sans);
+    font-size: 8pt;
+    color: var(--muted);
+    letter-spacing: 0.02em;
+  }
+}
+.print-stamp { display: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ===================== HERO ===================== -->
+<header class="hero">
+  <div class="tricolore" aria-hidden="true"><span class="v"></span><span class="b"></span><span class="r"></span></div>
+  <div class="hero-eyebrow">
+    <span>Vacationer · No. 03</span>
+    <span>Summer 2027</span>
+  </div>
+  <h1 class="hero-title">Italy.</h1>
+  <p class="hero-dek">Florence to Naples by rail, sea and road — two weeks of masterpieces, ruins and coastline.</p>
+  <div class="hero-meta">
+    <div class="meta-item">
+      <div class="label">Window</div>
+      <div class="value">July 1 — 14<br>2027</div>
+    </div>
+    <div class="meta-item">
+      <div class="label">Base</div>
+      <div class="value">Florence → Rome →<br>Amalfi → Naples</div>
+    </div>
+    <div class="meta-item">
+      <div class="label">Travelers</div>
+      <div class="value">2 · Marshall<br>&amp; Anna</div>
+    </div>
+    <div class="meta-item">
+      <div class="label">Tone</div>
+      <div class="value">Italian summer —<br>history by day, long tables by night</div>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== TAB NAVIGATION ===================== -->
+<nav class="tabs" role="tablist" aria-label="Itinerary sections">
+  <button class="tab active" role="tab" data-tab="overview">
+    <span class="tab-label">Overview</span>
+    <span class="tab-sub">Days · Route · Pulse</span>
+  </button>
+  <button class="tab" role="tab" data-tab="eatdo">
+    <span class="tab-label">Eat &amp; do</span>
+    <span class="tab-sub">By city · Eat + Do</span>
+  </button>
+  <button class="tab" role="tab" data-tab="maps">
+    <span class="tab-label">Maps</span>
+    <span class="tab-sub">Neighborhoods</span>
+  </button>
+  <button class="tab" role="tab" data-tab="events">
+    <span class="tab-label">Locked events</span>
+    <span class="tab-sub">Booked anchors</span>
+  </button>
+  <button class="tab" role="tab" data-tab="bookings">
+    <span class="tab-label">Bookings</span>
+    <span class="tab-sub">Status · Timing</span>
+  </button>
+  <button class="tab" role="tab" data-tab="logistics">
+    <span class="tab-label">Logistics</span>
+    <span class="tab-sub">Travel · Stays</span>
+  </button>
+  <button class="tab" role="tab" data-tab="subtrips">
+    <span class="tab-label">Sub-trips</span>
+    <span class="tab-sub">Day trips</span>
+  </button>
+  <button class="tab" role="tab" data-tab="phrases">
+    <span class="tab-label">Phrases</span>
+    <span class="tab-sub">Say it right</span>
+  </button>
+  <button class="print-btn" type="button" aria-label="Print this tab">Print this tab</button>
+</nav>
+
+<!-- ===================== OVERVIEW ===================== -->
+<div class="tab-panel" id="overview" role="tabpanel">
+
+<section class="section">
+  <div class="section-head">
+    <span class="section-num">01</span>
+    <h2 class="section-title">Trip at a glance</h2>
+    <span class="section-sub">14 days · day by day</span>
+  </div>
+  <p class="scope-legend">
+    <span class="day-status booked" style="margin:0 4px 0 0;">Booked</span> = flight or stay locked.
+    <span class="day-status plan" style="margin:0 4px 0 0;">Plan</span> = working plan, tickets still to book.
+    <span class="scope-badge trip">Sub-trip</span> = day away from the base (see Sub-trips tab). <span class="scope-badge swap">Wx swap</span> = Jul 11 ↔ 12 weather pair.
+  </p>
+  <div class="day-grid">
+    <div class="day-card">
+      <div class="day-num">Day 1 · Thu</div>
+      <div class="day-date">Jul 1<span class="dow">Depart Raleigh</span></div>
+      <span class="day-status booked">Booked</span>
+      <div class="day-anchor">RDU 6:10 PM → CDG</div>
+      <div class="day-notes">Overnight flight. No sightseeing.</div>
+      <div class="day-hotel">In the air</div>
+    </div>
+    <div class="day-card terracotta">
+      <div class="day-num">Day 2 · Fri</div>
+      <div class="day-date">Jul 2<span class="dow">Arrive Florence</span></div>
+      <span class="day-status booked">Booked</span>
+      <div class="day-anchor">CDG 10:20 → Florence · check-in 2 PM</div>
+      <div class="day-notes">Stay flexible. Signoria wandering. Dome only if the timed slot fits safely.</div>
+      <div class="day-hotel">Signoria apt</div>
+    </div>
+    <div class="day-card terracotta">
+      <div class="day-num">Day 3 · Sat</div>
+      <div class="day-date">Jul 3<span class="dow">Masterpieces</span></div>
+      <span class="day-status plan">Plan</span>
+      <div class="day-anchor">Uffizi ~8:15 · Accademia ~2:30</div>
+      <div class="day-notes">Lunch and rest between. Evening: Oltrarno, food, wine.</div>
+      <div class="day-hotel">Signoria apt</div>
+    </div>
+    <div class="day-card terracotta">
+      <div class="day-num">Day 4 · Sun</div>
+      <div class="day-date">Jul 4<span class="dow">Tuscany</span></div>
+      <span class="day-status plan">Plan</span>
+      <div><span class="scope-badge trip">Sub-trip</span></div>
+      <div class="day-anchor">Fattoria Torre a Cona</div>
+      <div class="day-notes">Winery + countryside (candidate). No other major museum.</div>
+      <div class="day-hotel">Signoria apt</div>
+    </div>
+    <div class="day-card ochre">
+      <div class="day-num">Day 5 · Mon</div>
+      <div class="day-date">Jul 5<span class="dow">To Rome</span></div>
+      <span class="day-status plan">Plan</span>
+      <div class="day-anchor">Train SMN → Termini</div>
+      <div class="day-notes">Trevi · Sant'Ignazio · Pantheon · San Luigi · Navona. Optional: Supplizio, Il Goccetto.</div>
+      <div class="day-hotel">Palazzo Talìa</div>
+    </div>
+    <div class="day-card ochre">
+      <div class="day-num">Day 6 · Tue</div>
+      <div class="day-date">Jul 6<span class="dow">Vatican day</span></div>
+      <span class="day-status plan">Plan</span>
+      <div class="day-anchor">Vatican · Sistine · St. Peter's</div>
+      <div class="day-notes">Castel Sant'Angelo. Hotel rest. Janiculum sunset, Trastevere dinner.</div>
+      <div class="day-hotel">Palazzo Talìa</div>
+    </div>
+    <div class="day-card ochre">
+      <div class="day-num">Day 7 · Wed</div>
+      <div class="day-date">Jul 7<span class="dow">Ancient Rome</span></div>
+      <span class="day-status plan">Plan</span>
+      <div class="day-anchor">Colosseum · Forum · Palatine</div>
+      <div class="day-notes">Monte Tarpeo view · Campidoglio · Ghetto · Boccione / Piperno. Quiet evening.</div>
+      <div class="day-hotel">Palazzo Talìa</div>
+    </div>
+    <div class="day-card ochre">
+      <div class="day-num">Day 8 · Thu</div>
+      <div class="day-date">Jul 8<span class="dow">Borghese</span></div>
+      <span class="day-status plan">Plan</span>
+      <div class="day-anchor">Galleria Borghese · Villa Medici</div>
+      <div class="day-notes">Pincio · Popolo · Palazzo Zuccari · Spanish Steps. Excellent dinner + wine.</div>
+      <div class="day-hotel">Palazzo Talìa</div>
+    </div>
+    <div class="day-card ochre">
+      <div class="day-num">Day 9 · Fri</div>
+      <div class="day-date">Jul 9<span class="dow">Appian Way</span></div>
+      <span class="day-status plan">Plan</span>
+      <div class="day-anchor">San Clemente · e-bike ~2 h</div>
+      <div class="day-notes">Testaccio market · Volpetti · Aventine · Keyhole. Pizzeria Ostiense.</div>
+      <div class="day-hotel">Palazzo Talìa</div>
+    </div>
+    <div class="day-card tyrrhenian">
+      <div class="day-num">Day 10 · Sat</div>
+      <div class="day-date">Jul 10<span class="dow">To the coast</span></div>
+      <span class="day-status booked">Stay booked</span>
+      <div class="day-anchor">Train → Salerno, ferry → Amalfi</div>
+      <div class="day-notes">Cathedral, waterfront, swim. Walk to Atrani. Easy dinner, delizia al limone.</div>
+      <div class="day-hotel">Abbraccio</div>
+    </div>
+    <div class="day-card tyrrhenian">
+      <div class="day-num">Day 11 · Sun</div>
+      <div class="day-date">Jul 11<span class="dow">Boat day</span></div>
+      <span class="day-status plan">Plan</span>
+      <div><span class="scope-badge swap">Wx swap</span><span class="scope-badge trip">Sub-trip</span></div>
+      <div class="day-anchor">Private boat + Positano</div>
+      <div class="day-notes">Coves, swim stops, Positano 2–4 h. Fish + coastal white for dinner.</div>
+      <div class="day-hotel">Abbraccio</div>
+    </div>
+    <div class="day-card tyrrhenian">
+      <div class="day-num">Day 12 · Mon</div>
+      <div class="day-date">Jul 12<span class="dow">Furore + Ravello</span></div>
+      <span class="day-status plan">Plan</span>
+      <div><span class="scope-badge swap">Wx swap</span><span class="scope-badge trip">Sub-trip</span></div>
+      <div class="day-anchor">Marisa Cuomo AM · Ravello PM</div>
+      <div class="day-notes">Villa Cimbrone + Terrace of Infinity. Villa Rufolo if time.</div>
+      <div class="day-hotel">Abbraccio</div>
+    </div>
+    <div class="day-card pompeian">
+      <div class="day-num">Day 13 · Tue</div>
+      <div class="day-date">Jul 13<span class="dow">Pompeii → Naples</span></div>
+      <span class="day-status booked">Stay booked</span>
+      <div><span class="scope-badge trip">Sub-trip</span></div>
+      <div class="day-anchor">Pompeii 3–4 h · Starita (walk-in)</div>
+      <div class="day-notes">Car to Pompeii, bags in storage. Circumvesuviana → Garibaldi → Metro 1 → Toledo. Plebiscito, waterfront, Cup buzz.</div>
+      <div class="day-hotel">Soul Art Hotel</div>
+    </div>
+    <div class="day-card pompeian">
+      <div class="day-num">Day 14 · Wed</div>
+      <div class="day-date">Jul 14<span class="dow">Fly home</span></div>
+      <span class="day-status booked">Booked</span>
+      <div class="day-anchor">5:30 AM car · NAP 9:05</div>
+      <div class="day-notes">NAP → ATL → RDU 9:49 PM. Recheck Cup road closures.</div>
+      <div class="day-hotel">Home</div>
+    </div>
+  </div>
+</section>
+
+<section class="section print-keep-with-next">
+  <div class="section-head">
+    <span class="section-num">02</span>
+    <h2 class="section-title">Booking pulse</h2>
+    <span class="section-sub">Where we stand</span>
+  </div>
+  <div class="pulse">
+    <div class="pulse-cell">
+      <div class="pulse-num">4</div>
+      <div class="pulse-label">Confirmed</div>
+      <div class="pulse-sub">4 stays: Florence apartment, Palazzo Talìa, Abbraccio Amalfi, Soul Art Hotel</div>
+    </div>
+    <div class="pulse-cell todo">
+      <div class="pulse-num">18</div>
+      <div class="pulse-label">Still to book</div>
+      <div class="pulse-sub">4 high (boat, Marisa Cuomo, Colosseum, Villa Medici) · 11 med · 3 low</div>
+    </div>
+    <div class="pulse-cell flights">
+      <div class="pulse-num">4</div>
+      <div class="pulse-label">Flight legs</div>
+      <div class="pulse-sub">Out Jul 1–2 RDU → CDG → Florence · Home Jul 14 NAP → ATL → RDU</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <span class="section-num">03</span>
+    <h2 class="section-title">Route &amp; pace</h2>
+    <span class="section-sub">4 bases · 12 nights in Italy</span>
+  </div>
+  <div class="route">
+    <div class="route-ribbon" aria-label="Nights per base">
+      <div class="rr-seg transit" style="flex:1;"><span class="rr-city">✈</span><span class="rr-dates">Jul 1</span></div>
+      <div class="rr-seg terracotta" style="flex:3;"><span class="rr-city">Florence</span><span class="rr-dates">Jul 2–5 · 3 nights</span></div>
+      <div class="rr-seg ochre" style="flex:5;"><span class="rr-city">Rome</span><span class="rr-dates">Jul 5–10 · 5 nights</span></div>
+      <div class="rr-seg tyrrhenian" style="flex:3;"><span class="rr-city">Amalfi Coast</span><span class="rr-dates">Jul 10–13 · 3 nights</span></div>
+      <div class="rr-seg pompeian" style="flex:1.4;"><span class="rr-city">Naples</span><span class="rr-dates">Jul 13 · 1 nt</span></div>
+    </div>
+    <div class="route-transfers">
+      <span class="rt-label">Transfers</span>
+        <span class="transit">Jul 2 · CDG ✈ Florence → T2 tram</span>
+        <span class="ochre">Jul 5 · Fast train SMN → Termini</span>
+        <span class="tyrrhenian">Jul 10 · Train → Salerno + ferry</span>
+        <span class="pompeian">Jul 13 · Car → Pompeii → Circumvesuviana + Metro 1 → Toledo</span>
+        <span class="transit">Jul 14 · 5:30 AM private car → NAP</span>
+    </div>
+  </div>
+  <div class="phases">
+    <div class="phase">
+      <div class="phase-color" style="background:var(--terracotta);"></div>
+      <div class="phase-num">Phase 1</div>
+      <h3 class="phase-name">Florence<em>The Renaissance, up close</em></h3>
+      <div class="phase-dates">Jul 2 — 5 · 3 nights</div>
+      <p class="phase-desc">Compact museum-and-city mix. Uffizi and Accademia share Saturday; Sunday heads into the Tuscan countryside. Breakfast and quick lunches stay close to Piazza della Signoria.</p>
+      <div class="phase-tag">Uffizi · Accademia · Dome · Torre a Cona</div>
+    </div>
+    <div class="phase">
+      <div class="phase-color" style="background:var(--ochre);"></div>
+      <div class="phase-num">Phase 2</div>
+      <h3 class="phase-name">Rome<em>Ancient, Baroque, going hard</em></h3>
+      <div class="phase-dates">Jul 5 — 10 · 5 nights</div>
+      <p class="phase-desc">Intentionally ambitious. One big theme a day — historic center, Vatican, ancient Rome, Borghese, Appian Way — with hotel rest built in and one neighborhood dinner each night.</p>
+      <div class="phase-tag">Vatican · Colosseum · Borghese · Testaccio</div>
+    </div>
+    <div class="phase">
+      <div class="phase-color" style="background:var(--tyrrhenian);"></div>
+      <div class="phase-num">Phase 3</div>
+      <h3 class="phase-name">Amalfi Coast<em>Deliberate decompression</em></h3>
+      <div class="phase-dates">Jul 10 — 13 · 3 nights</div>
+      <p class="phase-desc">Slower than Rome on purpose. A private boat day and a Furore + Ravello day form a weather swap pair — whichever day the sea is calm gets the boat.</p>
+      <div class="phase-tag">Boat + Positano · Marisa Cuomo · Villa Cimbrone</div>
+    </div>
+    <div class="phase">
+      <div class="phase-color" style="background:var(--pompeian);"></div>
+      <div class="phase-num">Phase 4</div>
+      <h3 class="phase-name">Pompeii → Naples<em>The capstone</em></h3>
+      <div class="phase-dates">Jul 13 — 14 · 1 night</div>
+      <p class="phase-desc">Pompeii on the transfer day, then one night in Naples during the America's Cup. Atmosphere over checklist: a waterfront walk and pizza at Starita. Early flight home.</p>
+      <div class="phase-tag">Pompeii · Soul Art Hotel · Starita</div>
+    </div>
+  </div>
+</section>
+
+</div><!-- /overview -->
+
+<!-- ===================== EAT & DO ===================== -->
+<div class="tab-panel" id="eatdo" role="tabpanel" hidden>
+<div class="eatdo-intro">
+  <nav class="part-nav" aria-label="Jump to a city">
+    <span class="part-nav-label">Jump to</span>
+    <button type="button" class="part-link terracotta" data-jump="city-florence">Florence</button>
+    <button type="button" class="part-link ochre" data-jump="city-rome">Rome</button>
+    <button type="button" class="part-link tyrrhenian" data-jump="city-amalfi">Amalfi Coast</button>
+    <button type="button" class="part-link pompeian" data-jump="city-naples">Pompeii &amp; Naples</button>
+  </nav>
+  <p class="scope-legend">
+    Each city: <strong>Eat</strong> on the left, <strong>Do</strong> on the right. <strong>★ = protected</strong> (make sure it happens). Nothing here is booked — bookable items are on the Bookings tab.
+    <span class="scope-badge trip">Sub-trip</span> = day away from the base.
+    <span class="scope-badge swap">Wx swap</span> = Jul 11 ↔ 12 weather pair.
+    <span class="scope-badge nonref">Non-refundable</span> = can't change or refund once bought.
+    <span class="scope-badge opt">Optional</span> = only if chosen / time allows.
+  </p>
+</div>
+
+<section class="section city-section terracotta" id="city-florence">
+  <div class="section-head">
+    <span class="section-num">04</span>
+    <h2 class="section-title">Florence</h2>
+    <span class="section-sub">Jul 2 — 5 · 3 nights</span>
+  </div>
+  <div class="eatdo-pair eat-wide">
+    <div class="pair-col eat">
+      <div class="pair-head eat"><span class="pair-word">Eat</span><span class="pair-desc">Restaurants · cafés · food shops</span></div>
+      <div class="eat-flow">
+<div class="rest-tier">
+        <div class="rest-tier-label">Trattorias</div>
+        <div class="rest-item"><span class="nm">Vini e Vecchi Sapori</span><span class="desc">Tiny osteria with a handwritten menu, by the apartment — duck pappardelle, peposo stew.</span></div>
+        <div class="rest-item"><span class="nm">Ristorante del Fagioli</span><span class="desc">Old-school rustic trattoria — ribollita, beans, hearty meat.</span></div>
+        <div class="rest-item"><span class="nm">Trattoria La Gratella</span><span class="desc">Family-run Tuscan — wild-boar pappardelle; may serve carabaccia.</span></div>
+        <div class="rest-item"><span class="nm">La Buchetta</span><span class="desc">Small and lively — bistecca, truffle pici, strong wine list.</span></div>
+        <div class="rest-item"><span class="nm">Il Vezzo</span><span class="desc">Tiny, refined modern Tuscan — bistecca and seasonal plates.</span></div>
+      </div>
+<div class="rest-tier">
+        <div class="rest-tier-label">Scenic / polished</div>
+        <div class="rest-item"><span class="nm">Golden View Firenze</span><span class="desc">Romantic dinner looking at the Arno and Ponte Vecchio.</span></div>
+        <div class="rest-item"><span class="nm">COSIMO at The Excelsior</span><span class="desc">Upscale rooftop; sunset aperitivo.</span></div>
+        <div class="rest-item"><span class="nm">B-Roof, Grand Hotel Baglioni</span><span class="desc">Classic hotel rooftop facing the Duomo.</span></div>
+      </div>
+<div class="rest-tier">
+        <div class="rest-tier-label">Quick lunch</div>
+        <div class="rest-item locked"><span class="nm">Sergio Pollini Lampredotto</span><span class="desc">No-frills street stand for the lampredotto sandwich.</span></div>
+        <div class="rest-item"><span class="nm">Da' Vinattieri</span><span class="desc">Hole-in-the-wall — porchetta, and coccoli with prosciutto + stracchino.</span></div>
+        <div class="rest-item"><span class="nm">I Guelfi Tuscany Food</span><span class="desc">Made-to-order schiacciata sandwiches near the apartment.</span></div>
+        <div class="rest-item"><span class="nm">Il Cernacchio</span><span class="desc">Cheap soups, pasta and sandwiches — reliable fallback.</span></div>
+      </div>
+<div class="rest-tier">
+        <div class="rest-tier-label">Breakfast · gelato · wine bar</div>
+        <div class="rest-item"><span class="nm">Antico Forno Sartoni</span><span class="desc">Neighborhood bakery — closest breakfast.</span></div>
+        <div class="rest-item"><span class="nm">Forno Ghibellina</span><span class="desc">Bakery café on the way to Santa Croce.</span></div>
+        <div class="rest-item"><span class="nm">Pasticceria Nencioni</span><span class="desc">Historic pastry shop by Sant'Ambrogio market.</span></div>
+        <div class="rest-item"><span class="nm">Vivoli · Sbrino</span><span class="desc">Historic gelato (long lines) · craft gelato in the Oltrarno.</span></div>
+        <div class="rest-item"><span class="nm">Le Volpi e l'Uva</span><span class="desc">Tiny wine bar by Ponte Vecchio, small producers by the glass.</span></div>
+      </div>
+<div class="rest-tier">
+        <div class="rest-tier-label">Markets &amp; food shops</div>
+        <div class="rest-item"><span class="nm">Pegna dal 1860</span><span class="desc">Historic specialty grocer near the Duomo — cheese, salumi, pantry goods.</span></div>
+        <div class="rest-item"><span class="nm">Mercato di Sant'Ambrogio</span><span class="desc">19th-century neighborhood market — picnic and travel-day snacks.</span></div>
+        <div class="rest-item"><span class="nm">Alimentari Calimaruzza</span><span class="desc">Tiny old-style food shop right by the apartment.</span></div>
+      </div>
+<div class="rest-tier">
+        <div class="rest-tier-label">Try in Florence</div>
+        <div class="rest-item"><span class="nm">Lampredotto</span><span class="desc">Slow-cooked tripe sandwich with green sauce — the street classic.</span></div>
+        <div class="rest-item"><span class="nm">Bistecca alla fiorentina</span><span class="desc">Huge T-bone, served rare, priced by weight.</span></div>
+        <div class="rest-item"><span class="nm">Ribollita · pappa al pomodoro</span><span class="desc">Bread-and-bean soup · tomato-and-bread soup.</span></div>
+        <div class="rest-item"><span class="nm">Carabaccia</span><span class="desc">Old Florentine sweet-onion soup — check menus.</span></div>
+        <div class="rest-item"><span class="nm">Schiacciata · coccoli</span><span class="desc">Tuscan flatbread sandwich · fried dough balls with ham and soft cheese.</span></div>
+      </div>
+      </div>
+    </div>
+    <div class="pair-col do">
+      <div class="pair-head do"><span class="pair-word">Do</span><span class="pair-desc">Sights · tours · wineries</span></div>
+      <div class="activity-list">
+        <div class="activity-item locked"><strong>Uffizi Gallery</strong> <span class="when">Jul 3 AM</span><span class="desc">The great Renaissance collection — Botticelli, Leonardo, Raphael.</span></div>
+        <div class="activity-item locked"><strong>Galleria dell'Accademia</strong> <span class="when">Jul 3 PM</span><span class="desc">Home of Michelangelo's David.</span></div>
+        <div class="activity-item locked"><strong>Brunelleschi's Dome</strong> <span class="when">Jul 2 or 3</span><span class="scope-badge nonref">Non-ref</span><span class="desc">Climb inside the Duomo's dome to the lantern for city views.</span></div>
+        <div class="activity-item"><strong>Piazza della Signoria &amp; Palazzo Vecchio</strong><span class="desc">Our doorstep — the civic square, its statues, and the town-hall fortress.</span></div>
+        <div class="activity-item"><strong>Ponte Vecchio</strong><span class="desc">Medieval bridge lined with goldsmiths' shops.</span></div>
+        <div class="activity-item"><strong>Oltrarno</strong><span class="desc">Artisan-workshop quarter across the river; good for evening wandering.</span></div>
+        <div class="activity-item"><strong>Piazzale Michelangelo</strong><span class="desc">The classic panorama over the city — best near sunset.</span></div>
+        <div class="activity-item"><strong>San Miniato al Monte</strong><span class="desc">Romanesque hilltop church just above Piazzale Michelangelo.</span></div>
+        <div class="activity-item"><strong>Santa Croce</strong><span class="desc">Franciscan basilica with the tombs of Michelangelo and Galileo.</span></div>
+        <div class="activity-item"><strong>Fattoria Torre a Cona</strong> <span class="when">Jul 4</span><span class="scope-badge trip">Sub-trip</span><span class="desc">Historic villa winery in the hills outside Florence.</span></div>
+      </div>
+      <p class="activity-note">Saturday carries both big museums with lunch and rest between. If Torre a Cona takes Sunday, the Dome moves to Jul 2 or 3.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section city-section ochre" id="city-rome">
+  <div class="section-head">
+    <span class="section-num">05</span>
+    <h2 class="section-title">Rome</h2>
+    <span class="section-sub">Jul 5 — 10 · 5 nights</span>
+  </div>
+  <div class="eatdo-pair">
+    <div class="pair-col eat">
+      <div class="pair-head eat"><span class="pair-word">Eat</span><span class="pair-desc">Restaurants · cafés · food shops</span></div>
+      <div class="eat-flow">
+<div class="rest-tier">
+        <div class="rest-tier-label">Protected</div>
+        <div class="rest-item locked"><span class="nm">Piperno / Boccione</span><span class="desc">Jul 7 · historic Jewish-Roman restaurant · tiny old Ghetto bakery.</span></div>
+        <div class="rest-item locked"><span class="nm">Pizzeria Ostiense</span><span class="desc">Jul 9 · thin, crisp Roman pizza in a neighborhood spot.</span></div>
+        <div class="rest-item locked"><span class="nm">Il Goccetto</span><span class="desc">Old wine bar with a huge by-the-glass list.</span></div>
+      </div>
+<div class="rest-tier">
+        <div class="rest-tier-label">Trattorias</div>
+        <div class="rest-item"><span class="nm">L'Osteria della Trippa</span><span class="desc">Trastevere — tripe and Roman specialties.</span></div>
+        <div class="rest-item"><span class="nm">Santo Palato</span><span class="desc">Modern Roman cooking; menu changes daily.</span></div>
+        <div class="rest-item"><span class="nm">Flavio al Velavevodetto</span><span class="desc">Built into Monte Testaccio, the ancient Roman pottery hill.</span></div>
+        <div class="rest-item"><span class="nm">Retrobottega</span><span class="desc">Creative modern Italian, with a terrace.</span></div>
+        <div class="rest-item"><span class="nm">Roscioli Salumeria con Cucina</span><span class="desc">Deli and restaurant in one — salumi, Roman pasta, deep cellar.</span></div>
+        <div class="rest-item"><span class="nm">Armando al Pantheon<span class="scope-badge opt">Optional</span></span><span class="desc">Family-run since 1961, right beside the Pantheon.</span></div>
+      </div>
+<div class="rest-tier">
+        <div class="rest-tier-label">"I know a spot" · outside the center</div>
+        <div class="rest-item"><span class="nm">Trattoria Pennestri</span><span class="desc">Ostiense — Michelin-noted local trattoria.</span></div>
+        <div class="rest-item"><span class="nm">Osteria Bonelli</span><span class="desc">Torpignattara — family-style, daily menu.</span></div>
+        <div class="rest-item"><span class="nm">Tante Care Cose</span><span class="desc">Pigneto — tiny open-kitchen spot, very few tables.</span></div>
+        <div class="rest-item"><span class="nm">Menabò Vino e Cucina</span><span class="desc">Centocelle — seasonal neighborhood cooking.</span></div>
+        <div class="rest-item"><span class="nm">Mazzo</span><span class="desc">San Lorenzo — modern Roman; half portions at its wine bar.</span></div>
+      </div>
+<div class="rest-tier">
+        <div class="rest-tier-label">Quick · coffee · sweets</div>
+        <div class="rest-item"><span class="nm">Supplizio</span><span class="desc">Supplì specialist on Via dei Banchi Vecchi.</span></div>
+        <div class="rest-item"><span class="nm">Antico Forno Roscioli</span><span class="desc">Historic bakery — pizza by weight.</span></div>
+        <div class="rest-item"><span class="nm">Pizzarium Bonci</span><span class="desc">Famed pizza by the slice near the Vatican.</span></div>
+        <div class="rest-item"><span class="nm">Bar San Marcello</span><span class="desc">Local café by the hotel — breakfast and cheap lunch.</span></div>
+        <div class="rest-item"><span class="nm">Regoli</span><span class="desc">Century-old pastry shop; the benchmark maritozzo.</span></div>
+        <div class="rest-item"><span class="nm">Tazza d'Oro</span><span class="desc">Stand-up espresso bar by the Pantheon.</span></div>
+        <div class="rest-item"><span class="nm">Giolitti · Ciampini</span><span class="desc">Historic gelato · old-school café on an elegant piazza.</span></div>
+        <div class="rest-item"><span class="nm">Hotel de Russie garden<span class="scope-badge opt">Optional</span></span><span class="desc">Polished garden aperitivo near Piazza del Popolo.</span></div>
+      </div>
+<div class="rest-tier">
+        <div class="rest-tier-label">Markets &amp; food shops</div>
+        <div class="rest-item locked"><span class="nm">Mercato di Testaccio + Volpetti</span><span class="desc">Jul 9 · working food market · deli since 1973.</span></div>
+        <div class="rest-item"><span class="nm">Paciotti Salumeria</span><span class="desc">Old-school deli near the Vatican.</span></div>
+      </div>
+<div class="rest-tier">
+        <div class="rest-tier-label">Try in Rome</div>
+        <div class="rest-item"><span class="nm">Carbonara · cacio e pepe · amatriciana · gricia</span><span class="desc">The four Roman pastas — spread across meals.</span></div>
+        <div class="rest-item"><span class="nm">Supplì</span><span class="desc">Fried rice ball with a molten mozzarella center.</span></div>
+        <div class="rest-item"><span class="nm">Maritozzo</span><span class="desc">Sweet bun split and filled with whipped cream.</span></div>
+        <div class="rest-item"><span class="nm">Jewish-Roman fried dishes</span><span class="desc">Artichokes only if in season — July is late.</span></div>
+      </div>
+      </div>
+    </div>
+    <div class="pair-col do">
+      <div class="pair-head do"><span class="pair-word">Do</span><span class="pair-desc">Sights · tours · wineries</span></div>
+      <div class="activity-list">
+        <div class="activity-item"><strong>Trevi · Pantheon · Piazza Navona</strong> <span class="when">Jul 5</span><span class="desc">Historic-center walk: the fountain, the 2,000-year-old domed temple, the Baroque piazza.</span></div>
+        <div class="activity-item"><strong>Sant'Ignazio &amp; San Luigi dei Francesi</strong> <span class="when">Jul 5</span><span class="desc">A trompe-l'oeil painted ceiling; three Caravaggio paintings.</span></div>
+        <div class="activity-item locked"><strong>Vatican Museums &amp; Sistine Chapel</strong> <span class="when">Jul 6</span><span class="desc">Papal art collections; Michelangelo's ceiling and Last Judgment.</span></div>
+        <div class="activity-item locked"><strong>St. Peter's Basilica</strong> <span class="when">Jul 6</span><span class="desc">The largest church in Christendom; Michelangelo's Pietà.</span></div>
+        <div class="activity-item"><strong>Castel Sant'Angelo</strong> <span class="when">Jul 6</span><span class="desc">Hadrian's tomb turned papal fortress, on the Tiber.</span></div>
+        <div class="activity-item"><strong>Janiculum Hill → Trastevere</strong> <span class="when">Jul 6</span><span class="desc">Sunset panorama, then down into cobbled Trastevere for dinner.</span></div>
+        <div class="activity-item locked"><strong>Colosseum · Roman Forum · Palatine</strong> <span class="when">Jul 7</span><span class="desc">The amphitheater, the ancient city center, and the emperors' hill.</span></div>
+        <div class="activity-item"><strong>Via di Monte Tarpeo &amp; Campidoglio</strong> <span class="when">Jul 7</span><span class="desc">The best free view over the Forum; Michelangelo's hilltop piazza.</span></div>
+        <div class="activity-item"><strong>Jewish Ghetto</strong> <span class="when">Jul 7</span><span class="desc">One of Europe's oldest Jewish communities, around the Portico d'Ottavia.</span></div>
+        <div class="activity-item locked"><strong>Galleria Borghese</strong> <span class="when">Jul 8</span><span class="desc">Bernini sculptures and Caravaggios in a villa; timed entry.</span></div>
+        <div class="activity-item"><strong>Pincio &amp; Piazza del Popolo</strong> <span class="when">Jul 8</span><span class="desc">Park-terrace overlook; twin-church piazza with Caravaggios in Santa Maria del Popolo.</span></div>
+        <div class="activity-item"><strong>Villa Medici</strong> <span class="when">Jul 8</span><span class="scope-badge nonref">Non-ref</span><span class="desc">Guided tour of the French Academy's Renaissance villa and gardens.</span></div>
+        <div class="activity-item"><strong>Palazzo Zuccari &amp; Spanish Steps</strong> <span class="when">Jul 8</span><span class="desc">The "House of Monsters" doorway shaped like a mouth; the famous steps.</span></div>
+        <div class="activity-item"><strong>Basilica di San Clemente</strong> <span class="when">Jul 9</span><span class="desc">Three layers: a medieval church over an early church over a Roman temple.</span></div>
+        <div class="activity-item"><strong>Appian Way e-bike</strong> <span class="when">Jul 9</span><span class="desc">Ride the ancient Roman road past tombs and aqueducts, ~2–2.5 h.</span></div>
+        <div class="activity-item"><strong>Catacombs</strong><span class="scope-badge opt">Optional</span><span class="desc">Underground early-Christian burial tunnels along the Appian Way.</span></div>
+        <div class="activity-item"><strong>Aventine · Orange Garden · Keyhole</strong> <span class="when">Jul 9</span><span class="desc">Quiet hilltop, orange-tree terrace, and St. Peter's framed through the Knights of Malta keyhole.</span></div>
+      </div>
+      <p class="activity-note">One major ticketed site per day, with a hotel rest in the afternoon. Jul 5 and Jul 9 deliberately add no other big museum or dig.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section city-section tyrrhenian" id="city-amalfi">
+  <div class="section-head">
+    <span class="section-num">06</span>
+    <h2 class="section-title">Amalfi Coast</h2>
+    <span class="section-sub">Jul 10 — 13 · 3 nights</span>
+  </div>
+  <div class="eatdo-pair">
+    <div class="pair-col eat">
+      <div class="pair-head eat"><span class="pair-word">Eat</span><span class="pair-desc">Restaurants · cafés · food shops</span></div>
+<div class="rest-tier">
+        <div class="rest-tier-label">Tables</div>
+        <div class="rest-item"><span class="nm">Baglio Amalfi<span class="scope-badge opt">Optional</span></span><span class="desc">Very few tables, deposit required; needs a car — no walking route.</span></div>
+        <div class="rest-item"><span class="nm">Sensi Amalfi<span class="scope-badge opt">Optional</span></span><span class="desc">Tasting-menu dinner, or a lighter bistro lunch.</span></div>
+        <div class="rest-item"><span class="nm">Da Adolfo, Laurito</span><span class="desc">Boat-day beach lunch, if the boat can stop there.</span></div>
+        <div class="rest-item"><span class="nm">Lo Guarracino, Positano</span><span class="desc">Sit-down lunch in Positano on the boat day.</span></div>
+      </div>
+<div class="rest-tier">
+        <div class="rest-tier-label">Try on the coast</div>
+        <div class="rest-item locked"><span class="nm">Scialatielli ai frutti di mare</span><span class="desc">Thick fresh ribbon pasta with local shellfish.</span></div>
+        <div class="rest-item locked"><span class="nm">Spaghetti with colatura di Cetara</span><span class="desc">Pasta dressed with the coast's famous anchovy essence.</span></div>
+        <div class="rest-item locked"><span class="nm">Whole local fish</span><span class="desc">Let the kitchen pick what's freshest.</span></div>
+        <div class="rest-item locked"><span class="nm">Delizia al limone</span><span class="desc">Small lemon-cream sponge dome — from a serious pastry shop.</span></div>
+        <div class="rest-item"><span class="nm">One local bonus</span><span class="desc">Totani e patate (squid + potatoes) · sfogliatella Santa Rosa (ricotta pastry) · 'ndunderi (ricotta gnocchi) · sarchiapone (stuffed gourd, Atrani).</span></div>
+      </div>
+    </div>
+    <div class="pair-col do">
+      <div class="pair-head do"><span class="pair-word">Do</span><span class="pair-desc">Sights · tours · wineries</span></div>
+      <div class="activity-list">
+        <div class="activity-item locked"><strong>Private boat + Positano</strong> <span class="when">Jul 11</span><span class="scope-badge swap">Wx swap</span><span class="desc">The coast from the water, swim stops in coves, 2–4 h ashore in Positano.</span></div>
+        <div class="activity-item locked"><strong>Marisa Cuomo + Furore</strong> <span class="when">Jul 12</span><span class="scope-badge swap">Wx swap</span><span class="desc">Winery visit among cliff-side vineyard terraces in Furore.</span></div>
+        <div class="activity-item locked"><strong>Ravello · Villa Cimbrone</strong> <span class="when">Jul 12</span><span class="desc">Gardens high above the sea; the Terrace of Infinity viewpoint.</span></div>
+        <div class="activity-item"><strong>Tenuta San Francesco</strong><span class="scope-badge opt">Optional</span><span class="desc">Tramonti winery — a second tasting only if the coast days stay relaxed.</span></div>
+        <div class="activity-item"><strong>Villa Rufolo</strong><span class="scope-badge opt">Optional</span><span class="desc">Ravello's other villa — medieval tower and terraced gardens.</span></div>
+        <div class="activity-item"><strong>Amalfi Cathedral</strong> <span class="when">Jul 10</span><span class="desc">Striped Arab-Norman cathedral at the top of a grand staircase.</span></div>
+        <div class="activity-item"><strong>Atrani</strong> <span class="when">Jul 10</span><span class="desc">Tiny fishing village a short walk from Amalfi, with a small beach.</span></div>
+        <div class="activity-item"><strong>Beach + swim time</strong><span class="desc">Unplanned hours on Amalfi or Atrani beach.</span></div>
+        <div class="activity-item"><strong>Fiordo di Furore</strong><span class="desc">Dramatic narrow sea inlet under a road bridge — a photo stop.</span></div>
+        <div class="activity-item"><strong>Emerald Grotto</strong><span class="scope-badge opt">Optional</span><span class="desc">Sea cave with green-lit water; only if it's on the boat route.</span></div>
+        <div class="activity-item"><strong>Valle delle Ferriere</strong><span class="scope-badge opt">Optional</span><span class="desc">Shaded hike up a green valley behind Amalfi.</span></div>
+      </div>
+      <p class="activity-note">Not planned: Capri, Sorrento, Vesuvius — each would cost a full day.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section city-section pompeian" id="city-naples">
+  <div class="section-head">
+    <span class="section-num">07</span>
+    <h2 class="section-title">Pompeii &amp; Naples</h2>
+    <span class="section-sub">Jul 13 — 14 · 1 night</span>
+  </div>
+  <div class="eatdo-pair">
+    <div class="pair-col eat">
+      <div class="pair-head eat"><span class="pair-word">Eat</span><span class="pair-desc">Restaurants · cafés · food shops</span></div>
+<div class="rest-tier">
+        <div class="rest-tier-label">Final pizza</div>
+        <div class="rest-item locked"><span class="nm">Starita a Materdei</span><span class="desc">Historic family pizzeria in the Materdei quarter — classic and fried pizza. Our Jul 13 dinner. No reservations: walk in and expect a queue.</span></div>
+      </div>
+<div class="rest-tier">
+        <div class="rest-tier-label">Wine bar</div>
+        <div class="rest-item"><span class="nm">Enoteca Belledonne<span class="scope-badge opt">Optional</span></span><span class="desc">Long-running wine shop and bar in Chiaia.</span></div>
+      </div>
+<div class="rest-tier">
+        <div class="rest-tier-label">Try in Naples</div>
+        <div class="rest-item"><span class="nm">Margherita</span><span class="desc">The benchmark Neapolitan pizza — tomato, mozzarella, basil.</span></div>
+        <div class="rest-item"><span class="nm">Frittatina</span><span class="desc">Fried disc of pasta, béchamel and ham — a Neapolitan street snack.</span></div>
+        <div class="rest-item"><span class="nm">Provola e pepe</span><span class="desc">Pizza with smoked mozzarella and black pepper.</span></div>
+        <div class="rest-item"><span class="nm">Sfogliatella</span><span class="desc">Crisp shell-shaped ricotta pastry — compare with Amalfi's Santa Rosa.</span></div>
+      </div>
+    </div>
+    <div class="pair-col do">
+      <div class="pair-head do"><span class="pair-word">Do</span><span class="pair-desc">Sights · tours · wineries</span></div>
+      <div class="activity-list">
+        <div class="activity-item locked"><strong>Pompeii</strong> <span class="when">Jul 13</span><span class="scope-badge trip">Sub-trip</span><span class="desc">Roman town buried by Vesuvius in AD 79 — streets, houses, frescoes. 3–4+ h.</span></div>
+        <div class="activity-item"><strong>Piazza del Plebiscito</strong><span class="desc">Naples' grand central square beside the Royal Palace.</span></div>
+        <div class="activity-item"><strong>Santa Lucia · Castel dell'Ovo · Lungomare</strong><span class="desc">Seafront castle and promenade on the bay.</span></div>
+        <div class="activity-item"><strong>America's Cup atmosphere</strong><span class="desc">The Match is racing on the bay that week.</span></div>
+      </div>
+      <p class="activity-note">Feel Naples, don't "do" it. If time runs short, protect the Starita dinner and one good waterfront walk.</p>
+    </div>
+  </div>
+</section>
+
+</div><!-- /eatdo -->
+
+<!-- ===================== MAPS ===================== -->
+<div class="tab-panel" id="maps" role="tabpanel" hidden>
+
+<section class="section" id="maps-section">
+  <div class="section-head">
+    <span class="section-num">08</span>
+    <h2 class="section-title">City maps</h2>
+    <span class="section-sub" id="map-sub">Learn the neighborhoods</span>
+  </div>
+
+  <div class="map-controls">
+    <div class="map-row" role="group" aria-label="City">
+      <span class="map-row-label">City</span>
+      <button type="button" class="map-city terracotta" data-city="florence">Florence</button>
+      <button type="button" class="map-city ochre" data-city="rome">Rome</button>
+      <button type="button" class="map-city tyrrhenian" data-city="amalfi">Amalfi Coast</button>
+      <button type="button" class="map-city pompeian" data-city="naples">Naples &amp; Pompeii</button>
+    </div>
+    <div class="map-row" role="group" aria-label="Day">
+      <span class="map-row-label">Day</span>
+      <span id="map-days"></span>
+    </div>
+    <div class="map-row">
+      <span class="map-row-label">Show</span>
+      <label class="map-toggle"><input type="checkbox" id="map-show-eat" checked> <span class="mk eat"></span> Eat</label>
+      <label class="map-toggle"><input type="checkbox" id="map-show-do" checked> <span class="mk do"></span> Do</label>
+      <span class="map-mode" role="group" aria-label="Map style">
+        <button type="button" class="map-mode-btn active" data-mode="drawn">Drawn map</button>
+        <button type="button" class="map-mode-btn" data-mode="street">Street map</button>
+      </span>
+    </div>
+    <p class="map-dayline" id="map-dayline"></p>
+  </div>
+
+  <div class="map-layout">
+    <div class="map-stage">
+      <div class="map-svg-wrap" id="map-svg-wrap">
+        <svg id="map-svg" role="img" aria-label="Drawn city map"></svg>
+        <div class="map-zoom">
+          <button type="button" data-zoom="in" aria-label="Zoom in">+</button>
+          <button type="button" data-zoom="out" aria-label="Zoom out">−</button>
+          <button type="button" data-zoom="reset" aria-label="Reset view">⟲</button>
+        </div>
+      </div>
+      <div class="map-street" id="map-street" hidden></div>
+      <div class="map-tip" id="map-tip" hidden></div>
+      <p class="map-legend">
+        <span><i class="mk do"></i> Do</span>
+        <span><i class="mk eat"></i> Eat</span>
+        <span><i class="mk base"></i> Where we sleep</span>
+        <span><i class="mk booked"></i> Booked</span>
+        <span><i class="mk planned"></i> Planned (day plan)</span>
+        <span><i class="mk open"></i> Not slated yet</span>
+        <span><i class="mk approx"></i> Location approximate</span>
+      </p>
+    </div>
+    <div class="map-list" id="map-list" aria-label="Places by neighborhood"></div>
+  </div>
+  <p class="map-note">Drawn map: neighborhood zones, river and coastline are approximate sketches, and pin positions come from the planner's knowledge (dashed ring = verify). Street map needs an internet connection and loads OpenStreetMap map tiles. Tap a pin or list item for details and a Google Maps link.</p>
+</section>
+
+</div><!-- /maps -->
+
+
+<!-- ===================== LOCKED EVENTS ===================== -->
+<div class="tab-panel" id="events" role="tabpanel" hidden>
+
+<section class="section">
+  <div class="section-head">
+    <span class="section-num">09</span>
+    <h2 class="section-title">Locked-in anchors</h2>
+    <span class="section-sub">Booked only</span>
+  </div>
+  <div class="locked-list">
+    <div class="locked-row">
+      <div class="locked-date">Jul 1<span class="day">Thursday</span><span class="time">6:10 PM RDU</span></div>
+      <div class="locked-event-name">Depart Raleigh<span class="sub">Delta 8761* · Economy (X) · RDU → CDG · arrives 7:55 AM Fri Jul 2</span></div>
+      <div class="locked-tag flight">Flight</div>
+    </div>
+    <div class="locked-row">
+      <div class="locked-date">Jul 2<span class="day">Friday</span><span class="time">10:20 AM CDG</span></div>
+      <div class="locked-event-name">Paris → Florence<span class="sub">Delta 8483* · Economy (X) · arrival time not on the booking — check before travel</span></div>
+      <div class="locked-tag flight">Flight</div>
+    </div>
+    <div class="locked-row">
+      <div class="locked-date">Jul 2<span class="day">Friday</span><span class="time">After 2:00 PM</span></div>
+      <div class="locked-event-name">Check in · Piazza Signoria n.1 apartment<span class="sub">3 nights · hosts Lisa &amp; Matilde · checkout by 10:00 AM Mon Jul 5</span></div>
+      <div class="locked-tag stay">Stay</div>
+    </div>
+    <div class="locked-row">
+      <div class="locked-date">Jul 5<span class="day">Monday</span><span class="time">Arrival day</span></div>
+      <div class="locked-event-name">Check in · Palazzo Talìa, Rome<span class="sub">5 nights · Largo del Nazareno 25 · 560,000 Hilton points · check-in time not on the booking</span></div>
+      <div class="locked-tag stay">Stay</div>
+    </div>
+    <div class="locked-row">
+      <div class="locked-date">Jul 10<span class="day">Saturday</span><span class="time">Arrival day</span></div>
+      <div class="locked-event-name">Check in · Abbraccio Amalfi Boutique Retreat<span class="sub">3 nights · res WG3LE5 · deluxe sea-view balcony · €1,038 due, flexible 7-day rate — re-confirm cancel deadline</span></div>
+      <div class="locked-tag stay">Stay</div>
+    </div>
+    <div class="locked-row">
+      <div class="locked-date">Jul 10–19<span class="day">Naples</span><span class="time">Our night: Jul 13</span></div>
+      <div class="locked-event-name">Louis Vuitton 38th America's Cup — the Match<span class="sub">External event, not a booking. High hotel demand, waterfront crowds and road controls — and a great final-night atmosphere.</span></div>
+      <div class="locked-tag event">Event</div>
+    </div>
+    <div class="locked-row">
+      <div class="locked-date">Jul 13<span class="day">Tuesday</span><span class="time">Arrival day</span></div>
+      <div class="locked-event-name">Check in · Soul Art Hotel, Naples<span class="sub">1 night · 2 adults · res 26877NNZ7204 · in via Metro Line 1 to Toledo · 5:30 AM car to NAP next morning</span></div>
+      <div class="locked-tag stay">Stay</div>
+    </div>
+    <div class="locked-row">
+      <div class="locked-date">Jul 14<span class="day">Wednesday</span><span class="time">9:05 AM NAP</span></div>
+      <div class="locked-event-name">Fly home · conf HID4A7<span class="sub">DL0279 NAP 9:05 AM → ATL 2:31 PM · DL2017 ATL 8:25 PM → RDU 9:49 PM</span></div>
+      <div class="locked-tag flight">Flight</div>
+    </div>
+  </div>
+</section>
+
+
+</div><!-- /events -->
+
+<!-- ===================== BOOKINGS ===================== -->
+<div class="tab-panel" id="bookings" role="tabpanel" hidden>
+
+<section class="section">
+  <div class="section-head">
+    <span class="section-num">10</span>
+    <h2 class="section-title">Bookings status</h2>
+    <span class="section-sub">4 confirmed · 18 to book</span>
+  </div>
+
+  <h3 class="res-subhead">Confirmed — no action needed</h3>
+  <div class="res-grid">
+    <div class="res-item confirmed">
+      <div class="res-check checked">✓</div>
+      <div class="res-name">Piazza Signoria n.1 apartment<span class="sub">Florence · Jul 2–5 · 3 nights · in after 2 PM, out by 10 AM</span></div>
+      <span class="res-urgency confirmed">Booked</span>
+    </div>
+    <div class="res-item confirmed">
+      <div class="res-check checked">✓</div>
+      <div class="res-name">Palazzo Talìa<span class="sub">Rome · Jul 5–10 · 5 nights · 560,000 Hilton points</span></div>
+      <span class="res-urgency confirmed">Booked</span>
+    </div>
+    <div class="res-item confirmed">
+      <div class="res-check checked">✓</div>
+      <div class="res-name">Abbraccio Amalfi Boutique Retreat<span class="sub">Jul 10–13 · 3 nights · res WG3LE5 · €1,038 outstanding · re-confirm cancel terms</span></div>
+      <span class="res-urgency confirmed">Booked</span>
+    </div>
+    <div class="res-item confirmed">
+      <div class="res-check checked">✓</div>
+      <div class="res-name">Soul Art Hotel<span class="sub">Naples · Jul 13–14 · 1 night · 2 adults · res 26877NNZ7204</span></div>
+      <span class="res-urgency confirmed">Booked</span>
+    </div>
+  </div>
+
+  <h3 class="res-subhead">Still to book — action needed</h3>
+  <div class="res-grid">
+    <div class="res-item">
+      <div class="res-check"></div>
+      <div class="res-name">Private Amalfi Coast boat<span class="sub">Jul 11 (backup 12) · shortlist Jan–Feb, book Mar–Apr · needs 11↔12 swap terms</span></div>
+      <span class="res-urgency high">High</span>
+    </div>
+    <div class="res-item">
+      <div class="res-check"></div>
+      <div class="res-name">Cantine Marisa Cuomo<span class="sub">Jul 12 · 9 or 10 AM · request Mar–Apr · ask if it can move to Jul 11</span></div>
+      <span class="res-urgency high">High</span>
+    </div>
+    <div class="res-item">
+      <div class="res-check"></div>
+      <div class="res-name">Colosseum · Forum · Palatine<span class="sub">Jul 7 · sales open 30 days out · HARD TRIGGER Jun 7, 2027</span></div>
+      <span class="res-urgency high">High</span>
+    </div>
+    <div class="res-item">
+      <div class="res-check"></div>
+      <div class="res-name">Villa Medici tour (English)<span class="scope-badge nonref">Non-ref</span><span class="sub">Jul 8 · released ~1 month out · book ~Jun 8, 2027</span></div>
+      <span class="res-urgency high">High</span>
+    </div>
+    <div class="res-item">
+      <div class="res-check"></div>
+      <div class="res-name">Fattoria Torre a Cona<span class="sub">Jul 4 · contact by Apr 1, 2027 · secure by early May</span></div>
+      <span class="res-urgency med">Med</span>
+    </div>
+    <div class="res-item">
+      <div class="res-check"></div>
+      <div class="res-name">Uffizi Gallery<span class="sub">Jul 3 morning · monitor from Apr 15, 2027</span></div>
+      <span class="res-urgency med">Med</span>
+    </div>
+    <div class="res-item">
+      <div class="res-check"></div>
+      <div class="res-name">Galleria dell'Accademia<span class="sub">Jul 3 afternoon · monitor from Apr 15, 2027</span></div>
+      <span class="res-urgency med">Med</span>
+    </div>
+    <div class="res-item">
+      <div class="res-check"></div>
+      <div class="res-name">Brunelleschi Dome / Pass<span class="scope-badge nonref">Non-ref</span><span class="sub">Jul 2 or 3 · check Apr 15–May 1 · buy once the plan is safe</span></div>
+      <span class="res-urgency med">Med</span>
+    </div>
+    <div class="res-item">
+      <div class="res-check"></div>
+      <div class="res-name">Train Firenze SMN → Roma Termini<span class="sub">Jul 5 · after 10 AM checkout · check Mar–Apr 2027</span></div>
+      <span class="res-urgency med">Med</span>
+    </div>
+    <div class="res-item">
+      <div class="res-check"></div>
+      <div class="res-name">Vatican Museums<span class="sub">Jul 6 · early entry · monitor Apr 20–May 1, 2027</span></div>
+      <span class="res-urgency med">Med</span>
+    </div>
+    <div class="res-item">
+      <div class="res-check"></div>
+      <div class="res-name">Ristorante Piperno<span class="sub">Jul 7 · Ghetto meal · book early–mid May 2027</span></div>
+      <span class="res-urgency med">Med</span>
+    </div>
+    <div class="res-item">
+      <div class="res-check"></div>
+      <div class="res-name">Galleria Borghese<span class="sub">Jul 8 · reservation compulsory · monitor from May 1, 2027</span></div>
+      <span class="res-urgency med">Med</span>
+    </div>
+    <div class="res-item">
+      <div class="res-check"></div>
+      <div class="res-name">Train Rome → Salerno<span class="sub">Jul 10 · check Mar–Apr 2027</span></div>
+      <span class="res-urgency med">Med</span>
+    </div>
+    <div class="res-item">
+      <div class="res-check"></div>
+      <div class="res-name">Private car Amalfi → Pompeii<span class="sub">Jul 13 · quotes Feb–Mar · book Apr–May · drop-off only</span></div>
+      <span class="res-urgency med">Med</span>
+    </div>
+    <div class="res-item">
+      <div class="res-check"></div>
+      <div class="res-name">Pompeii Archaeological Park<span class="sub">Jul 13 · named, timed tickets · monitor May, buy by early Jun</span></div>
+      <span class="res-urgency med">Med</span>
+    </div>
+    <div class="res-item">
+      <div class="res-check"></div>
+      <div class="res-name">Ferry Salerno → Amalfi<span class="sub">Jul 10 · buy after the train · road transfer as fallback</span></div>
+      <span class="res-urgency low">Low</span>
+    </div>
+    <div class="res-item">
+      <div class="res-check"></div>
+      <div class="res-name">Via Appia e-bike<span class="sub">Jul 9 · ~2–2.5 h · pick operator early Jun, book mid-Jun</span></div>
+      <span class="res-urgency low">Low</span>
+    </div>
+    <div class="res-item">
+      <div class="res-check"></div>
+      <div class="res-name">Private car → NAP<span class="sub">Jul 14 · 5:30 AM pickup at Soul Art · reconfirm night of Jul 13</span></div>
+      <span class="res-urgency low">Low</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <span class="section-num">11</span>
+    <h2 class="section-title">When to book</h2>
+    <span class="section-sub">Action calendar · all 18</span>
+  </div>
+  <p class="scope-legend">
+    Dates are planning triggers, not official release dates — except the <strong style="color:var(--rosso);">red rows</strong>, which follow an official window.
+    Recheck every policy closer to July 2027.
+  </p>
+  <div class="trigger-list">
+    <div class="trigger-row">
+      <div class="trigger-when">Jan – Mar 2027<span class="note">shortlists + quotes</span></div>
+      <div class="trigger-items">
+        <span class="tyrrhenian">Boat · shortlist Jan–Feb → book Mar–Apr</span>
+        <span class="pompeian">Car to Pompeii · quotes Feb–Mar → book Apr–May</span>
+      </div>
+    </div>
+    <div class="trigger-row">
+      <div class="trigger-when">Mar – Apr 2027<span class="note">schedules open</span></div>
+      <div class="trigger-items">
+        <span class="tyrrhenian">Marisa Cuomo</span>
+        <span class="ochre">Train SMN → Termini</span>
+        <span class="tyrrhenian">Train Rome → Salerno</span>
+        <span class="tyrrhenian">Ferry · after the train</span>
+      </div>
+    </div>
+    <div class="trigger-row">
+      <div class="trigger-when">Apr 1, 2027<span class="note">secure by early May</span></div>
+      <div class="trigger-items"><span class="verde">Torre a Cona</span></div>
+    </div>
+    <div class="trigger-row">
+      <div class="trigger-when">Apr 15 – May 1<span class="note">start watching daily</span></div>
+      <div class="trigger-items">
+        <span class="terracotta">Uffizi</span>
+        <span class="terracotta">Accademia</span>
+        <span class="terracotta">Brunelleschi Dome · non-ref</span>
+        <span class="ochre">Vatican · from Apr 20</span>
+      </div>
+    </div>
+    <div class="trigger-row">
+      <div class="trigger-when">May 2027</div>
+      <div class="trigger-items">
+        <span class="ochre">Borghese · from May 1</span>
+        <span class="ochre">Piperno · early–mid May</span>
+        <span class="pompeian">Pompeii · watch May, buy by early Jun</span>
+      </div>
+    </div>
+    <div class="trigger-row hard">
+      <div class="trigger-when">Jun 7, 2027<span class="note">official 30-day window</span></div>
+      <div class="trigger-items"><span class="ochre">Colosseum · Forum · Palatine</span></div>
+    </div>
+    <div class="trigger-row hard">
+      <div class="trigger-when">~Jun 8, 2027<span class="note">official ~1-month release</span></div>
+      <div class="trigger-items"><span class="ochre">Villa Medici · non-ref</span></div>
+    </div>
+    <div class="trigger-row">
+      <div class="trigger-when">Early – mid Jun</div>
+      <div class="trigger-items"><span class="ochre">Appian e-bike</span></div>
+    </div>
+    <div class="trigger-row">
+      <div class="trigger-when">Jul 12 – 13<span class="note">on the trip</span></div>
+      <div class="trigger-items"><span class="pompeian">5:30 AM car to NAP · reconfirm night of Jul 13</span></div>
+    </div>
+  </div>
+  <p style="margin-top:14px; font-size:12px; color:#5a4a3a; font-style:italic;">Optional, book only if chosen: Armando al Pantheon (opens 30 days ahead at midnight Rome time) · Baglio Amalfi (Apr–May, €40 pp deposit) · Sensi Amalfi (30–60 days ahead).</p>
+</section>
+
+</div><!-- /bookings -->
+
+<!-- ===================== LOGISTICS ===================== -->
+<div class="tab-panel" id="logistics" role="tabpanel" hidden>
+
+<section class="section">
+  <div class="section-head">
+    <span class="section-num">12</span>
+    <h2 class="section-title">Getting around</h2>
+    <span class="section-sub">Base to base</span>
+  </div>
+  <div class="logistics">
+    <div class="log-card">
+      <div class="log-label">Flights out · Jul 1–2</div>
+      <div class="log-value">RDU → CDG → Florence</div>
+      <div class="log-detail">Delta 8761* RDU 6:10 PM → CDG 7:55 AM · Delta 8483* CDG 10:20 AM → Florence (arrival time TBC) · Economy (X)</div>
+    </div>
+    <div class="log-card terracotta">
+      <div class="log-label">Airport → apartment · Jul 2</div>
+      <div class="log-value">T2 tram from Peretola</div>
+      <div class="log-detail">Toward Santa Maria Novella / center, then walk to Piazza della Signoria. Taxi only for luggage, weather or disruption.</div>
+    </div>
+    <div class="log-card ochre pending">
+      <div class="log-label">Florence → Rome · Jul 5</div>
+      <div class="log-value">Fast train SMN → Termini</div>
+      <div class="log-detail">Italo ~1 h 25 or Frecciarossa. Morning / midday train after the 10 AM checkout. Not booked.</div>
+    </div>
+    <div class="log-card tyrrhenian pending">
+      <div class="log-label">Rome → Amalfi · Jul 10</div>
+      <div class="log-value">Train to Salerno + ferry</div>
+      <div class="log-detail">Ferry weather / schedule permitting. Fallback: road transfer Salerno → Amalfi. Not booked.</div>
+    </div>
+    <div class="log-card pompeian pending">
+      <div class="log-label">Amalfi → Pompeii → Naples · Jul 13</div>
+      <div class="log-value">Car, then train + metro</div>
+      <div class="log-detail">Private car to Pompeii (not booked) · bags in Pompeii luggage storage · tour · collect bags · Circumvesuviana → Napoli Garibaldi · Metro Line 1 → Toledo · walk to Soul Art.</div>
+    </div>
+    <div class="log-card">
+      <div class="log-label">Flights home · Jul 14 · HID4A7</div>
+      <div class="log-value">NAP → ATL → RDU</div>
+      <div class="log-detail">DL0279 9:05 AM → 2:31 PM · DL2017 8:25 PM → 9:49 PM. 5:30 AM private car from Soul Art (to book); recheck America's Cup road closures.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section print-keep-with-next">
+  <div class="section-head">
+    <span class="section-num">13</span>
+    <h2 class="section-title">Where we sleep</h2>
+    <span class="section-sub">All 4 booked</span>
+  </div>
+  <div class="logistics">
+    <div class="log-card terracotta">
+      <div class="log-label">Florence · Jul 2–5 · 3 nights</div>
+      <div class="log-value">Piazza Signoria n.1</div>
+      <div class="log-detail">Entire apartment on Piazza della Signoria · hosts Lisa &amp; Matilde · in after 2 PM · out by 10 AM</div>
+    </div>
+    <div class="log-card ochre">
+      <div class="log-label">Rome · Jul 5–10 · 5 nights</div>
+      <div class="log-value">Palazzo Talìa</div>
+      <div class="log-detail">Largo del Nazareno 25, 00187 Roma · Trevi / Spanish Steps · 560,000 Hilton points</div>
+    </div>
+    <div class="log-card tyrrhenian">
+      <div class="log-label">Amalfi · Jul 10–13 · 3 nights</div>
+      <div class="log-value">Abbraccio Amalfi</div>
+      <div class="log-detail">Largo Duchi Piccolomini 5 · deluxe double, sea-view balcony · WG3LE5 · €340/nt · €1,038 total, €0 paid · flexible 7-day</div>
+    </div>
+    <div class="log-card pompeian">
+      <div class="log-label">Naples · Jul 13–14 · 1 night</div>
+      <div class="log-value">Soul Art Hotel</div>
+      <div class="log-detail">2 adults · res 26877NNZ7204 · booked via hotel website · nearest metro: Toledo (Line 1) · address and check-in time not on the booking</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <span class="section-num">14</span>
+    <h2 class="section-title">Packing &amp; style</h2>
+    <span class="section-sub">Italian summer · 14 days</span>
+  </div>
+  <div class="packing">
+    <div class="packing-block">
+      <div class="packing-cat">Conditions</div>
+      <div class="packing-name">What to expect</div>
+      <ul>
+        <li>July heat — long walking days on stone</li>
+        <li>Rome is the hard-walking stretch; build in hotel rest</li>
+        <li>Coast days are sea, sun and swimming</li>
+        <li class="note">General guidance — check the forecast the week before.</li>
+      </ul>
+    </div>
+    <div class="packing-block">
+      <div class="packing-cat">Rules to dress for</div>
+      <div class="packing-name">Churches &amp; sites</div>
+      <ul>
+        <li>Covered shoulders and knees for St. Peter's, the Vatican and cathedrals</li>
+        <li>Pompeii: small daypack only (under 30 × 30 × 15 cm)</li>
+        <li>One nicer outfit each for rooftop or polished dinners</li>
+      </ul>
+    </div>
+    <div class="packing-block">
+      <div class="packing-cat">Footwear</div>
+      <div class="packing-name">Shoes</div>
+      <ul>
+        <li>Broken-in walking shoes · primary</li>
+        <li>Sandals for the coast and boat day</li>
+        <li class="note">Cobblestones and ruins — nothing fragile.</li>
+      </ul>
+    </div>
+    <div class="packing-block">
+      <div class="packing-cat">Gear</div>
+      <div class="packing-name">Small kit</div>
+      <ul>
+        <li>Swimwear + quick-dry towel for the boat day</li>
+        <li>Sunscreen, sunglasses, hat</li>
+        <li>Refillable water bottle</li>
+        <li>Light scarf or layer for churches</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</div><!-- /logistics -->
+
+<!-- ===================== SUB-TRIPS ===================== -->
+<div class="tab-panel" id="subtrips" role="tabpanel" hidden>
+
+<section class="section">
+  <div class="section-head">
+    <span class="section-num">15</span>
+    <h2 class="section-title">Tuscany wine country</h2>
+    <span class="section-sub">Sun Jul 4 · from Florence</span>
+  </div>
+  <div class="st-intro">
+    <div class="st-status">Candidate<span class="small">Contact by Apr 1, 2027.</span></div>
+    <p class="st-tone">Trade a third museum day for the countryside — a historic villa estate, Sangiovese in the vineyards, and a long Sunday lunch.</p>
+  </div>
+  <div class="options-grid">
+    <div class="option verde">
+      <div class="option-tag">Leading candidate</div>
+      <h3 class="option-name">Fattoria <em>Torre a Cona</em></h3>
+      <div class="option-when">Outside Florence · bookable wine experiences</div>
+      <ul>
+        <li>Sangiovese-focused · Chianti Colli Fiorentini · Vin Santo</li>
+        <li>Historic estate · villa grounds · vineyards</li>
+        <li>Osteria serves à la carte on Sat/Sun in July</li>
+        <li>Sunday bus is weak → taxi, transfer or private driver</li>
+      </ul>
+      <div class="option-why">2027 July inventory isn't open yet; Sunday slots may be limited. Scenic and authentic rather than cheap or touristy.</div>
+    </div>
+    <div class="option">
+      <div class="option-tag">Knock-on rule</div>
+      <h3 class="option-name">The Dome <em>moves</em></h3>
+      <div class="option-when">If Torre a Cona takes Sunday</div>
+      <ul>
+        <li>Brunelleschi Dome goes to Fri Jul 2 or Sat Jul 3</li>
+        <li>Dome tickets are timed and non-refundable — buy only once the plan is safe</li>
+        <li>Don't add another major museum to Sunday</li>
+      </ul>
+      <div class="option-why">Pick up travel-day snacks for the drive at Pegna or Mercato di Sant'Ambrogio on Saturday.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <span class="section-num">16</span>
+    <h2 class="section-title">Amalfi Coast swap pair</h2>
+    <span class="section-sub">Sun Jul 11 ⇄ Mon Jul 12</span>
+  </div>
+  <div class="decision">
+    <div class="decision-label">Weather call<span class="small">One windy day can cancel a boat even with no rain. Jul 13 is not a third backup.</span></div>
+    <div class="decision-rules">
+      <div class="decision-rule">
+        <div class="when">Sea calm on Jul 11</div>
+        <div class="then">Boat Jul 11 → Furore + Ravello Jul 12</div>
+      </div>
+      <div class="decision-rule warm">
+        <div class="when">Captain calls Jul 11 off</div>
+        <div class="then">Furore + Ravello Jul 11 → boat Jul 12</div>
+      </div>
+    </div>
+  </div>
+  <div class="options-grid">
+    <div class="option">
+      <div class="option-tag">Primary Jul 11 · can't miss</div>
+      <h3 class="option-name">Private boat <em>+ Positano</em></h3>
+      <div class="option-when">Amalfi pickup · ~6–8 useful hours</div>
+      <ul>
+        <li>Small private boat, local skipper — not a big yacht</li>
+        <li>Cruise west: cliffs, coves, caves, swim stops</li>
+        <li>Positano ashore ~2–4 hours (not a separate day)</li>
+        <li>Lunch serves the boat day: Da Adolfo (Laurito) if easy, or Lo Guarracino in Positano</li>
+        <li>Emerald Grotto only if it fits the route</li>
+        <li>Back in Amalfi late afternoon · easy fish dinner</li>
+      </ul>
+      <div class="option-why">Operator must offer explicit weather cancel/refund terms and agree to move Jul 11 → 12 if the captain calls it.</div>
+    </div>
+    <div class="option lemon">
+      <div class="option-tag">Primary Jul 12 · can't miss</div>
+      <h3 class="option-name">Furore <em>+ Ravello</em></h3>
+      <div class="option-when">Winery morning · gardens afternoon</div>
+      <ul>
+        <li>Cantine Marisa Cuomo · visits at 9:00 or 10:00 by reservation</li>
+        <li>Tasting / lunch depends on the package (from €60 pp)</li>
+        <li>Fiordo di Furore on the way</li>
+        <li>Ravello: Villa Cimbrone + Terrace of Infinity (protected)</li>
+        <li>Villa Rufolo if time and energy allow</li>
+        <li>Baglio dinner only if the winery wasn't a big meal</li>
+      </ul>
+      <div class="option-why">Ask the winery up front whether a Jul 12 visit can move to Jul 11 on 24–48 h notice. Don't assume it can.</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <span class="section-num">17</span>
+    <h2 class="section-title">Pompeii → Naples finale</h2>
+    <span class="section-sub">Tue Jul 13 → Wed Jul 14</span>
+  </div>
+  <div class="st-intro">
+    <div class="st-status">Hotel booked<span class="small">Car to Pompeii, Pompeii tickets and the 5:30 AM car still to book. Starita is walk-in only.</span></div>
+    <p class="st-tone">Ruins in the afternoon, the Bay of Naples at night — with the America's Cup in town. Feel the city; don't try to "see Naples."</p>
+  </div>
+  <div class="options-grid">
+    <div class="option pompeian">
+      <div class="option-tag">Afternoon</div>
+      <h3 class="option-name">Pompeii <em>on the way</em></h3>
+      <div class="option-when">Amalfi checkout → private car → Pompeii</div>
+      <ul>
+        <li>Tour ~3–4+ hours · no Vesuvius stop</li>
+        <li>Named, timed-entry tickets · 20,000/day cap</li>
+        <li>Bags over 30 × 30 × 15 cm not allowed inside</li>
+        <li>Bags go into Pompeii luggage storage during the tour</li>
+      </ul>
+      <div class="option-why">Then collect bags → Circumvesuviana to Napoli Garibaldi → Metro Line 1 to Toledo → walk to Soul Art Hotel. The train gets busy in summer; keep bags close.</div>
+    </div>
+    <div class="option pompeian">
+      <div class="option-tag">Evening</div>
+      <h3 class="option-name">Naples <em>by night</em></h3>
+      <div class="option-when">One night at Soul Art Hotel · early flight</div>
+      <ul>
+        <li>Piazza del Plebiscito · monumental center</li>
+        <li>Santa Lucia · Castel dell'Ovo · Lungomare if crowds allow</li>
+        <li>America's Cup energy on the waterfront</li>
+        <li>Dinner: Starita, in the Materdei quarter · walk-in only, expect a queue</li>
+        <li>Optional: Enoteca Belledonne Campanian-white flight</li>
+        <li>Reconfirm the 5:30 AM private car before bed</li>
+      </ul>
+      <div class="option-why">If time is tight, protect the pizza and one good waterfront walk.</div>
+    </div>
+  </div>
+</section>
+
+</div><!-- /subtrips -->
+
+<!-- ===================== PHRASES ===================== -->
+<div class="tab-panel" id="phrases" role="tabpanel" hidden>
+
+<section class="section">
+  <div class="section-head">
+    <span class="section-num">18</span>
+    <h2 class="section-title">Key phrases</h2>
+    <span class="section-sub">Say it like a local</span>
+  </div>
+  <p class="scope-legend phr-key">
+    <strong>How to read it:</strong> <b>CAPITALS</b> = stressed syllable.
+    <em>ci / ce</em> = "ch" (ciao = <b>CHOW</b>) · <em>chi / che</em> = "k" (Vecchio = <b>VEHK</b>-kyoh) · <em>gi / ge</em> = "j" · <em>gn</em> = "ny" (bagno = <b>BAHN</b>-yoh) ·
+    <em>gli</em> = "ly" (biglietto = beel-<b>YEHT</b>-toh) · <em>sci / sce</em> = "sh" · <em>z</em> = "ts" or "dz" · double letters are held a beat · every vowel is spoken (Duomo = <b>DWOH</b>-moh).
+  </p>
+  <div class="phr-grid">
+    <div class="phr-card">
+      <div class="phr-card-title">Basics</div>
+      <div class="phr-row"><span class="phr-it">Buongiorno</span><span class="phr-say">bwon-<b>JOR</b>-noh</span><span class="phr-en">Good morning / hello (until mid-afternoon)</span></div>
+      <div class="phr-row"><span class="phr-it">Buonasera</span><span class="phr-say">bwoh-nah-<b>SEH</b>-rah</span><span class="phr-en">Good evening (from mid-afternoon)</span></div>
+      <div class="phr-row"><span class="phr-it">Ciao</span><span class="phr-say"><b>CHOW</b></span><span class="phr-en">Hi / bye — friends and casual settings only</span></div>
+      <div class="phr-row"><span class="phr-it">Arrivederci</span><span class="phr-say">ah-ree-veh-<b>DEHR</b>-chee</span><span class="phr-en">Goodbye</span></div>
+      <div class="phr-row"><span class="phr-it">Per favore</span><span class="phr-say">pehr fah-<b>VOH</b>-reh</span><span class="phr-en">Please</span></div>
+      <div class="phr-row"><span class="phr-it">Grazie (mille)</span><span class="phr-say"><b>GRAHT</b>-see-eh (<b>MEEL</b>-leh)</span><span class="phr-en">Thank you (very much)</span></div>
+      <div class="phr-row"><span class="phr-it">Prego</span><span class="phr-say"><b>PREH</b>-goh</span><span class="phr-en">You&#x27;re welcome · go ahead · after you</span></div>
+      <div class="phr-row"><span class="phr-it">Scusi</span><span class="phr-say"><b>SKOO</b>-zee</span><span class="phr-en">Excuse me — to get attention</span></div>
+      <div class="phr-row"><span class="phr-it">Permesso</span><span class="phr-say">pehr-<b>MEHS</b>-soh</span><span class="phr-en">Excuse me — to squeeze past</span></div>
+      <div class="phr-row"><span class="phr-it">Mi dispiace</span><span class="phr-say">mee dee-<b>SPYAH</b>-cheh</span><span class="phr-en">I&#x27;m sorry</span></div>
+      <div class="phr-row"><span class="phr-it">Parla inglese?</span><span class="phr-say"><b>PAR</b>-lah een-<b>GLEH</b>-zeh?</span><span class="phr-en">Do you speak English?</span></div>
+      <div class="phr-row"><span class="phr-it">Non capisco</span><span class="phr-say">nohn kah-<b>PEES</b>-koh</span><span class="phr-en">I don&#x27;t understand</span></div>
+      <div class="phr-row"><span class="phr-it">Più piano, per favore</span><span class="phr-say">pyoo <b>PYAH</b>-noh, pehr fah-<b>VOH</b>-reh</span><span class="phr-en">More slowly, please</span></div>
+    </div>
+    <div class="phr-card">
+      <div class="phr-card-title">Eating out</div>
+      <div class="phr-row"><span class="phr-it">Un tavolo per due</span><span class="phr-say">oon <b>TAH</b>-voh-loh pehr <b>DOO</b>-eh</span><span class="phr-en">A table for two</span></div>
+      <div class="phr-row"><span class="phr-it">Abbiamo una prenotazione</span><span class="phr-say">ahb-<b>BYAH</b>-moh <b>OO</b>-nah preh-noh-tah-<b>TSYOH</b>-neh</span><span class="phr-en">We have a reservation</span></div>
+      <div class="phr-row"><span class="phr-it">Cosa ci consiglia?</span><span class="phr-say"><b>KOH</b>-zah chee kohn-<b>SEEL</b>-yah?</span><span class="phr-en">What do you recommend?</span></div>
+      <div class="phr-row"><span class="phr-it">Vorrei…</span><span class="phr-say">vohr-<b>RAY</b>…</span><span class="phr-en">I&#x27;d like…</span></div>
+      <div class="phr-row"><span class="phr-it">Acqua naturale / frizzante</span><span class="phr-say"><b>AHK</b>-kwah nah-too-<b>RAH</b>-leh / freet-<b>TSAHN</b>-teh</span><span class="phr-en">Still / sparkling water</span></div>
+      <div class="phr-row"><span class="phr-it">Un bicchiere di vino bianco</span><span class="phr-say">oon beek-<b>KYEH</b>-reh dee <b>VEE</b>-noh <b>BYAHN</b>-koh</span><span class="phr-en">A glass of white wine</span></div>
+      <div class="phr-row"><span class="phr-it">Un caffè</span><span class="phr-say">oon kahf-<b>FEH</b></span><span class="phr-en">An espresso (just &quot;coffee&quot; in Italy)</span></div>
+      <div class="phr-row"><span class="phr-it">Buonissimo!</span><span class="phr-say">bwoh-<b>NEES</b>-see-moh!</span><span class="phr-en">Delicious!</span></div>
+      <div class="phr-row"><span class="phr-it">Il conto, per favore</span><span class="phr-say">eel <b>KOHN</b>-toh, pehr fah-<b>VOH</b>-reh</span><span class="phr-en">The check, please</span></div>
+      <div class="phr-row"><span class="phr-it">Posso pagare con la carta?</span><span class="phr-say"><b>POHS</b>-soh pah-<b>GAH</b>-reh kohn lah <b>KAR</b>-tah?</span><span class="phr-en">Can I pay by card?</span></div>
+      <div class="phr-row"><span class="phr-it">Il coperto</span><span class="phr-say">eel koh-<b>PEHR</b>-toh</span><span class="phr-en">Cover charge on the bill — normal, not a scam</span></div>
+      <div class="phr-row"><span class="phr-it">Da portare via</span><span class="phr-say">dah por-<b>TAH</b>-reh <b>VEE</b>-ah</span><span class="phr-en">To take away</span></div>
+    </div>
+    <div class="phr-card">
+      <div class="phr-card-title">Getting around</div>
+      <div class="phr-row"><span class="phr-it">Dov&#x27;è…?</span><span class="phr-say">doh-<b>VEH</b>…?</span><span class="phr-en">Where is…?</span></div>
+      <div class="phr-row"><span class="phr-it">Quanto costa?</span><span class="phr-say"><b>KWAHN</b>-toh <b>KOH</b>-stah?</span><span class="phr-en">How much is it?</span></div>
+      <div class="phr-row"><span class="phr-it">La stazione</span><span class="phr-say">lah stah-<b>TSYOH</b>-neh</span><span class="phr-en">The (train) station</span></div>
+      <div class="phr-row"><span class="phr-it">Il binario</span><span class="phr-say">eel bee-<b>NAH</b>-ryoh</span><span class="phr-en">Train platform</span></div>
+      <div class="phr-row"><span class="phr-it">Il biglietto</span><span class="phr-say">eel beel-<b>YEHT</b>-toh</span><span class="phr-en">Ticket</span></div>
+      <div class="phr-row"><span class="phr-it">Convalidare il biglietto</span><span class="phr-say">kohn-vah-lee-<b>DAH</b>-reh eel beel-<b>YEHT</b>-toh</span><span class="phr-en">Validate your ticket (regional trains, buses)</span></div>
+      <div class="phr-row"><span class="phr-it">A che ora parte?</span><span class="phr-say">ah keh <b>OH</b>-rah <b>PAR</b>-teh?</span><span class="phr-en">What time does it leave?</span></div>
+      <div class="phr-row"><span class="phr-it">Il traghetto</span><span class="phr-say">eel trah-<b>GEHT</b>-toh</span><span class="phr-en">The ferry</span></div>
+      <div class="phr-row"><span class="phr-it">Uscita / Entrata</span><span class="phr-say">oo-<b>SHEE</b>-tah / ehn-<b>TRAH</b>-tah</span><span class="phr-en">Exit / Entrance</span></div>
+      <div class="phr-row"><span class="phr-it">Il bagno</span><span class="phr-say">eel <b>BAHN</b>-yoh</span><span class="phr-en">The restroom</span></div>
+      <div class="phr-row"><span class="phr-it">Sciopero</span><span class="phr-say"><b>SHOH</b>-peh-roh</span><span class="phr-en">Strike — check transport before travel days</span></div>
+    </div>
+    <div class="phr-card">
+      <div class="phr-card-title">Shops &amp; markets</div>
+      <div class="phr-row"><span class="phr-it">Un etto di…</span><span class="phr-say">oon <b>EHT</b>-toh dee…</span><span class="phr-en">100 grams of… (deli counter)</span></div>
+      <div class="phr-row"><span class="phr-it">Posso assaggiare?</span><span class="phr-say"><b>POHS</b>-soh ahs-sahd-<b>JAH</b>-reh?</span><span class="phr-en">Can I taste it?</span></div>
+      <div class="phr-row"><span class="phr-it">Guardo solo, grazie</span><span class="phr-say"><b>GWAR</b>-doh <b>SOH</b>-loh, <b>GRAHT</b>-see-eh</span><span class="phr-en">Just looking, thanks</span></div>
+      <div class="phr-row"><span class="phr-it">Aperto / Chiuso</span><span class="phr-say">ah-<b>PEHR</b>-toh / <b>KYOO</b>-zoh</span><span class="phr-en">Open / Closed</span></div>
+    </div>
+    <div class="phr-card">
+      <div class="phr-card-title">Help</div>
+      <div class="phr-row"><span class="phr-it">Aiuto!</span><span class="phr-say">ah-<b>YOO</b>-toh!</span><span class="phr-en">Help!</span></div>
+      <div class="phr-row"><span class="phr-it">La farmacia</span><span class="phr-say">lah far-mah-<b>CHEE</b>-ah</span><span class="phr-en">The pharmacy</span></div>
+      <div class="phr-row"><span class="phr-it">Ho bisogno di un medico</span><span class="phr-say">oh bee-<b>ZOHN</b>-yoh dee oon <b>MEH</b>-dee-koh</span><span class="phr-en">I need a doctor</span></div>
+      <div class="phr-row"><span class="phr-it">Sono allergico / allergica a…</span><span class="phr-say"><b>SOH</b>-noh ahl-<b>LEHR</b>-jee-koh / -kah ah…</span><span class="phr-en">I&#x27;m allergic to… (he / she)</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <span class="section-num">19</span>
+    <h2 class="section-title">City words</h2>
+    <span class="section-sub">Places · neighborhoods · menus</span>
+  </div>
+  <div class="map-row phr-cities" role="group" aria-label="City">
+    <span class="map-row-label">City</span>
+    <button type="button" class="map-city terracotta active" data-phr-city="florence">Florence</button>
+    <button type="button" class="map-city ochre" data-phr-city="rome">Rome</button>
+    <button type="button" class="map-city tyrrhenian" data-phr-city="amalfi">Amalfi Coast</button>
+    <button type="button" class="map-city pompeian" data-phr-city="naples">Naples &amp; Pompeii</button>
+  </div>
+  <div class="phr-city terracotta" data-phr-panel="florence">
+    <div class="phr-city-name">Florence</div>
+    <div class="phr-grid">
+      <div class="phr-card">
+        <div class="phr-card-title">Places</div>
+        <div class="phr-row"><span class="phr-it">Firenze</span><span class="phr-say">fee-<b>REHN</b>-tseh</span><span class="phr-en">Florence</span></div>
+        <div class="phr-row"><span class="phr-it">Piazza della Signoria</span><span class="phr-say"><b>PYAHT</b>-tsah <b>DEHL</b>-lah seen-yoh-<b>REE</b>-ah</span><span class="phr-en">Our square</span></div>
+        <div class="phr-row"><span class="phr-it">Palazzo Vecchio</span><span class="phr-say">pah-<b>LAHT</b>-tsoh <b>VEHK</b>-kyoh</span><span class="phr-en">Town-hall fortress</span></div>
+        <div class="phr-row"><span class="phr-it">Ponte Vecchio</span><span class="phr-say"><b>POHN</b>-teh <b>VEHK</b>-kyoh</span><span class="phr-en">Old bridge</span></div>
+        <div class="phr-row"><span class="phr-it">Uffizi</span><span class="phr-say">oof-<b>FEET</b>-see</span><span class="phr-en">Gallery</span></div>
+        <div class="phr-row"><span class="phr-it">Galleria dell&#x27;Accademia</span><span class="phr-say">gahl-leh-<b>REE</b>-ah dehl-lahk-kah-<b>DEH</b>-myah</span><span class="phr-en">Home of the David</span></div>
+        <div class="phr-row"><span class="phr-it">Duomo</span><span class="phr-say"><b>DWOH</b>-moh</span><span class="phr-en">The cathedral</span></div>
+        <div class="phr-row"><span class="phr-it">Brunelleschi</span><span class="phr-say">broo-nehl-<b>LEHS</b>-kee</span><span class="phr-en">Architect of the dome</span></div>
+        <div class="phr-row"><span class="phr-it">Piazzale Michelangelo</span><span class="phr-say">pyaht-<b>TSAH</b>-leh mee-keh-<b>LAHN</b>-jeh-loh</span><span class="phr-en">Sunset viewpoint</span></div>
+        <div class="phr-row"><span class="phr-it">San Miniato al Monte</span><span class="phr-say">sahn mee-<b>NYAH</b>-toh ahl <b>MOHN</b>-teh</span><span class="phr-en">Hilltop church</span></div>
+        <div class="phr-row"><span class="phr-it">Santa Maria Novella</span><span class="phr-say"><b>SAHN</b>-tah mah-<b>REE</b>-ah noh-<b>VEHL</b>-lah</span><span class="phr-en">Main train station (SMN) and its area</span></div>
+        <div class="phr-row"><span class="phr-it">Peretola</span><span class="phr-say">peh-<b>REH</b>-toh-lah</span><span class="phr-en">Florence airport</span></div>
+        <div class="phr-row"><span class="phr-it">Torre a Cona</span><span class="phr-say"><b>TOHR</b>-reh ah <b>KOH</b>-nah</span><span class="phr-en">Winery (Jul 4)</span></div>
+      </div>
+      <div class="phr-card">
+        <div class="phr-card-title">Neighborhoods</div>
+        <div class="phr-row"><span class="phr-it">Oltrarno</span><span class="phr-say">ohl-<b>TRAR</b>-noh</span><span class="phr-en">&quot;Beyond the Arno&quot; — the south bank</span></div>
+        <div class="phr-row"><span class="phr-it">Santo Spirito</span><span class="phr-say"><b>SAHN</b>-toh <b>SPEE</b>-ree-toh</span><span class="phr-en">Oltrarno piazza and quarter</span></div>
+        <div class="phr-row"><span class="phr-it">San Frediano</span><span class="phr-say">sahn freh-<b>DYAH</b>-noh</span><span class="phr-en">Artisan quarter, west Oltrarno</span></div>
+        <div class="phr-row"><span class="phr-it">San Niccolò</span><span class="phr-say">sahn neek-koh-<b>LOH</b></span><span class="phr-en">Below Piazzale Michelangelo</span></div>
+        <div class="phr-row"><span class="phr-it">Santa Croce</span><span class="phr-say"><b>SAHN</b>-tah <b>KROH</b>-cheh</span><span class="phr-en">Basilica and quarter</span></div>
+        <div class="phr-row"><span class="phr-it">Sant&#x27;Ambrogio</span><span class="phr-say">sahn-tahm-<b>BROH</b>-joh</span><span class="phr-en">Market quarter</span></div>
+        <div class="phr-row"><span class="phr-it">San Lorenzo</span><span class="phr-say">sahn loh-<b>REHN</b>-tsoh</span><span class="phr-en">Market and church north of the Duomo</span></div>
+      </div>
+      <div class="phr-card">
+        <div class="phr-card-title">On the menu</div>
+        <div class="phr-row"><span class="phr-it">Lampredotto</span><span class="phr-say">lahm-preh-<b>DOHT</b>-toh</span><span class="phr-en">Tripe sandwich</span></div>
+        <div class="phr-row"><span class="phr-it">Bistecca alla fiorentina</span><span class="phr-say">bee-<b>STEHK</b>-kah <b>AHL</b>-lah fyoh-rehn-<b>TEE</b>-nah</span><span class="phr-en">Giant T-bone</span></div>
+        <div class="phr-row"><span class="phr-it">Ribollita</span><span class="phr-say">ree-bohl-<b>LEE</b>-tah</span><span class="phr-en">Bread-and-bean soup</span></div>
+        <div class="phr-row"><span class="phr-it">Schiacciata</span><span class="phr-say">skyahch-<b>CHAH</b>-tah</span><span class="phr-en">Tuscan flatbread</span></div>
+        <div class="phr-row"><span class="phr-it">Carabaccia</span><span class="phr-say">kah-rah-<b>BAHCH</b>-chah</span><span class="phr-en">Onion soup</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="phr-city ochre" data-phr-panel="rome" hidden>
+    <div class="phr-city-name">Rome</div>
+    <div class="phr-grid">
+      <div class="phr-card">
+        <div class="phr-card-title">Places</div>
+        <div class="phr-row"><span class="phr-it">Roma</span><span class="phr-say"><b>ROH</b>-mah</span><span class="phr-en">Rome</span></div>
+        <div class="phr-row"><span class="phr-it">Palazzo Talìa</span><span class="phr-say">pah-<b>LAHT</b>-tsoh tah-<b>LEE</b>-ah</span><span class="phr-en">Our hotel</span></div>
+        <div class="phr-row"><span class="phr-it">Fontana di Trevi</span><span class="phr-say">fohn-<b>TAH</b>-nah dee <b>TREH</b>-vee</span><span class="phr-en">Trevi Fountain</span></div>
+        <div class="phr-row"><span class="phr-it">Piazza Navona</span><span class="phr-say"><b>PYAHT</b>-tsah nah-<b>VOH</b>-nah</span><span class="phr-en">Baroque piazza</span></div>
+        <div class="phr-row"><span class="phr-it">Sant&#x27;Ignazio</span><span class="phr-say">sahn-teen-<b>YAHT</b>-syoh</span><span class="phr-en">Painted-ceiling church</span></div>
+        <div class="phr-row"><span class="phr-it">San Luigi dei Francesi</span><span class="phr-say">sahn loo-<b>EE</b>-jee day frahn-<b>CHEH</b>-zee</span><span class="phr-en">Caravaggio church</span></div>
+        <div class="phr-row"><span class="phr-it">Musei Vaticani</span><span class="phr-say">moo-<b>ZAY</b> vah-tee-<b>KAH</b>-nee</span><span class="phr-en">Vatican Museums</span></div>
+        <div class="phr-row"><span class="phr-it">Cappella Sistina</span><span class="phr-say">kahp-<b>PEHL</b>-lah sees-<b>TEE</b>-nah</span><span class="phr-en">Sistine Chapel</span></div>
+        <div class="phr-row"><span class="phr-it">Castel Sant&#x27;Angelo</span><span class="phr-say">kah-<b>STEHL</b> sahn-<b>TAHN</b>-jeh-loh</span><span class="phr-en">Hadrian&#x27;s tomb / fortress</span></div>
+        <div class="phr-row"><span class="phr-it">Colosseo</span><span class="phr-say">koh-lohs-<b>SEH</b>-oh</span><span class="phr-en">Colosseum</span></div>
+        <div class="phr-row"><span class="phr-it">Foro Romano</span><span class="phr-say"><b>FOH</b>-roh roh-<b>MAH</b>-noh</span><span class="phr-en">Roman Forum</span></div>
+        <div class="phr-row"><span class="phr-it">Campidoglio</span><span class="phr-say">kahm-pee-<b>DOHL</b>-yoh</span><span class="phr-en">Capitoline Hill</span></div>
+        <div class="phr-row"><span class="phr-it">Portico d&#x27;Ottavia</span><span class="phr-say"><b>POR</b>-tee-koh doht-<b>TAH</b>-vyah</span><span class="phr-en">Heart of the Ghetto</span></div>
+        <div class="phr-row"><span class="phr-it">Galleria Borghese</span><span class="phr-say">gahl-leh-<b>REE</b>-ah bor-<b>GEH</b>-zeh</span><span class="phr-en">Borghese Gallery</span></div>
+        <div class="phr-row"><span class="phr-it">Pincio</span><span class="phr-say"><b>PEEN</b>-choh</span><span class="phr-en">Park terrace</span></div>
+        <div class="phr-row"><span class="phr-it">Piazza del Popolo</span><span class="phr-say"><b>PYAHT</b>-tsah dehl <b>POH</b>-poh-loh</span><span class="phr-en">Twin-church piazza</span></div>
+        <div class="phr-row"><span class="phr-it">Piazza di Spagna</span><span class="phr-say"><b>PYAHT</b>-tsah dee <b>SPAHN</b>-yah</span><span class="phr-en">Spanish Steps square</span></div>
+        <div class="phr-row"><span class="phr-it">San Clemente</span><span class="phr-say">sahn kleh-<b>MEHN</b>-teh</span><span class="phr-en">Layered basilica</span></div>
+        <div class="phr-row"><span class="phr-it">Via Appia Antica</span><span class="phr-say"><b>VEE</b>-ah <b>AHP</b>-pyah ahn-<b>TEE</b>-kah</span><span class="phr-en">Appian Way</span></div>
+        <div class="phr-row"><span class="phr-it">Termini</span><span class="phr-say"><b>TEHR</b>-mee-nee</span><span class="phr-en">Main train station</span></div>
+      </div>
+      <div class="phr-card">
+        <div class="phr-card-title">Neighborhoods</div>
+        <div class="phr-row"><span class="phr-it">Trastevere</span><span class="phr-say">trah-<b>STEH</b>-veh-reh</span><span class="phr-en">&quot;Across the Tiber&quot;</span></div>
+        <div class="phr-row"><span class="phr-it">Gianicolo</span><span class="phr-say">jah-<b>NEE</b>-koh-loh</span><span class="phr-en">Janiculum Hill</span></div>
+        <div class="phr-row"><span class="phr-it">Testaccio</span><span class="phr-say">tehs-<b>TAHCH</b>-choh</span><span class="phr-en">Market and food quarter</span></div>
+        <div class="phr-row"><span class="phr-it">Aventino</span><span class="phr-say">ah-vehn-<b>TEE</b>-noh</span><span class="phr-en">Aventine Hill</span></div>
+        <div class="phr-row"><span class="phr-it">Monti</span><span class="phr-say"><b>MOHN</b>-tee</span><span class="phr-en">Village-like quarter by the Forum</span></div>
+        <div class="phr-row"><span class="phr-it">Esquilino</span><span class="phr-say">ehs-kwee-<b>LEE</b>-noh</span><span class="phr-en">Near Termini</span></div>
+        <div class="phr-row"><span class="phr-it">Campo de&#x27; Fiori</span><span class="phr-say"><b>KAHM</b>-poh deh <b>FYOH</b>-ree</span><span class="phr-en">Market square</span></div>
+        <div class="phr-row"><span class="phr-it">Prati</span><span class="phr-say"><b>PRAH</b>-tee</span><span class="phr-en">Next to the Vatican</span></div>
+        <div class="phr-row"><span class="phr-it">Ostiense</span><span class="phr-say">oh-<b>STYEHN</b>-seh</span><span class="phr-en">South of Testaccio</span></div>
+      </div>
+      <div class="phr-card">
+        <div class="phr-card-title">On the menu</div>
+        <div class="phr-row"><span class="phr-it">Supplì</span><span class="phr-say">soop-<b>PLEE</b></span><span class="phr-en">Fried rice ball</span></div>
+        <div class="phr-row"><span class="phr-it">Cacio e pepe</span><span class="phr-say"><b>KAH</b>-choh eh <b>PEH</b>-peh</span><span class="phr-en">Cheese-and-pepper pasta</span></div>
+        <div class="phr-row"><span class="phr-it">Gricia</span><span class="phr-say"><b>GREE</b>-chah</span><span class="phr-en">Guanciale-and-pecorino pasta</span></div>
+        <div class="phr-row"><span class="phr-it">Amatriciana</span><span class="phr-say">ah-mah-tree-<b>CHAH</b>-nah</span><span class="phr-en">Tomato-guanciale pasta</span></div>
+        <div class="phr-row"><span class="phr-it">Maritozzo</span><span class="phr-say">mah-ree-<b>TOHT</b>-tsoh</span><span class="phr-en">Cream-filled bun</span></div>
+        <div class="phr-row"><span class="phr-it">Carciofi alla giudia</span><span class="phr-say">kar-<b>CHOH</b>-fee <b>AHL</b>-lah <b>JOO</b>-dyah</span><span class="phr-en">Jewish-style fried artichokes</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="phr-city tyrrhenian" data-phr-panel="amalfi" hidden>
+    <div class="phr-city-name">Amalfi Coast</div>
+    <div class="phr-grid">
+      <div class="phr-card">
+        <div class="phr-card-title">Places</div>
+        <div class="phr-row"><span class="phr-it">Costiera Amalfitana</span><span class="phr-say">koh-<b>STYEH</b>-rah ah-mahl-fee-<b>TAH</b>-nah</span><span class="phr-en">Amalfi Coast</span></div>
+        <div class="phr-row"><span class="phr-it">Abbraccio</span><span class="phr-say">ahb-<b>BRAHCH</b>-choh</span><span class="phr-en">Our hotel</span></div>
+        <div class="phr-row"><span class="phr-it">Salerno</span><span class="phr-say">sah-<b>LEHR</b>-noh</span><span class="phr-en">Train-to-ferry city</span></div>
+        <div class="phr-row"><span class="phr-it">Villa Cimbrone</span><span class="phr-say"><b>VEEL</b>-lah cheem-<b>BROH</b>-neh</span><span class="phr-en">Ravello gardens</span></div>
+        <div class="phr-row"><span class="phr-it">Villa Rufolo</span><span class="phr-say"><b>VEEL</b>-lah <b>ROO</b>-foh-loh</span><span class="phr-en">Ravello villa</span></div>
+        <div class="phr-row"><span class="phr-it">Grotta dello Smeraldo</span><span class="phr-say"><b>GROHT</b>-tah <b>DEHL</b>-loh zmeh-<b>RAHL</b>-doh</span><span class="phr-en">Emerald Grotto</span></div>
+        <div class="phr-row"><span class="phr-it">Fiordo di Furore</span><span class="phr-say"><b>FYOR</b>-doh dee foo-<b>ROH</b>-reh</span><span class="phr-en">Sea inlet</span></div>
+        <div class="phr-row"><span class="phr-it">Valle delle Ferriere</span><span class="phr-say"><b>VAHL</b>-leh <b>DEHL</b>-leh fehr-<b>RYEH</b>-reh</span><span class="phr-en">Valley hike</span></div>
+        <div class="phr-row"><span class="phr-it">Marisa Cuomo</span><span class="phr-say">mah-<b>REE</b>-zah <b>KWOH</b>-moh</span><span class="phr-en">Winery (Jul 12)</span></div>
+      </div>
+      <div class="phr-card">
+        <div class="phr-card-title">Towns</div>
+        <div class="phr-row"><span class="phr-it">Amalfi</span><span class="phr-say">ah-<b>MAHL</b>-fee</span><span class="phr-en">Our base</span></div>
+        <div class="phr-row"><span class="phr-it">Atrani</span><span class="phr-say">ah-<b>TRAH</b>-nee</span><span class="phr-en">Next village east</span></div>
+        <div class="phr-row"><span class="phr-it">Positano</span><span class="phr-say">poh-zee-<b>TAH</b>-noh</span><span class="phr-en">Boat-day stop</span></div>
+        <div class="phr-row"><span class="phr-it">Laurito</span><span class="phr-say">low-<b>REE</b>-toh</span><span class="phr-en">Beach near Positano</span></div>
+        <div class="phr-row"><span class="phr-it">Praiano</span><span class="phr-say">prah-<b>YAH</b>-noh</span><span class="phr-en">Between Positano and Furore</span></div>
+        <div class="phr-row"><span class="phr-it">Furore</span><span class="phr-say">foo-<b>ROH</b>-reh</span><span class="phr-en">Winery village</span></div>
+        <div class="phr-row"><span class="phr-it">Conca dei Marini</span><span class="phr-say"><b>KOHN</b>-kah day mah-<b>REE</b>-nee</span><span class="phr-en">Village by the grotto</span></div>
+        <div class="phr-row"><span class="phr-it">Ravello</span><span class="phr-say">rah-<b>VEHL</b>-loh</span><span class="phr-en">Hilltop town</span></div>
+        <div class="phr-row"><span class="phr-it">Scala · Minori · Tramonti</span><span class="phr-say"><b>SKAH</b>-lah · mee-<b>NOH</b>-ree · trah-<b>MOHN</b>-tee</span><span class="phr-en">Nearby towns</span></div>
+      </div>
+      <div class="phr-card">
+        <div class="phr-card-title">On the menu</div>
+        <div class="phr-row"><span class="phr-it">Scialatielli</span><span class="phr-say">shah-lah-<b>TYEHL</b>-lee</span><span class="phr-en">Thick fresh pasta</span></div>
+        <div class="phr-row"><span class="phr-it">Colatura di alici</span><span class="phr-say">koh-lah-<b>TOO</b>-rah dee ah-<b>LEE</b>-chee</span><span class="phr-en">Anchovy essence</span></div>
+        <div class="phr-row"><span class="phr-it">Delizia al limone</span><span class="phr-say">deh-<b>LEET</b>-tsyah ahl lee-<b>MOH</b>-neh</span><span class="phr-en">Lemon-cream cake</span></div>
+        <div class="phr-row"><span class="phr-it">Sfogliatella Santa Rosa</span><span class="phr-say">sfohl-yah-<b>TEHL</b>-lah <b>SAHN</b>-tah <b>ROH</b>-zah</span><span class="phr-en">Ricotta pastry</span></div>
+        <div class="phr-row"><span class="phr-it">&#x27;Ndunderi</span><span class="phr-say">n-<b>DOON</b>-deh-ree</span><span class="phr-en">Ricotta gnocchi</span></div>
+        <div class="phr-row"><span class="phr-it">Totani e patate</span><span class="phr-say"><b>TOH</b>-tah-nee eh pah-<b>TAH</b>-teh</span><span class="phr-en">Squid and potatoes</span></div>
+        <div class="phr-row"><span class="phr-it">Sarchiapone</span><span class="phr-say">sar-kyah-<b>POH</b>-neh</span><span class="phr-en">Stuffed gourd (Atrani)</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="phr-city pompeian" data-phr-panel="naples" hidden>
+    <div class="phr-city-name">Naples &amp; Pompeii</div>
+    <div class="phr-grid">
+      <div class="phr-card">
+        <div class="phr-card-title">Places</div>
+        <div class="phr-row"><span class="phr-it">Napoli</span><span class="phr-say"><b>NAH</b>-poh-lee</span><span class="phr-en">Naples</span></div>
+        <div class="phr-row"><span class="phr-it">Pompei · Scavi di Pompei</span><span class="phr-say">pohm-<b>PAY</b> · <b>SKAH</b>-vee dee pohm-<b>PAY</b></span><span class="phr-en">Pompeii · the ruins</span></div>
+        <div class="phr-row"><span class="phr-it">Circumvesuviana</span><span class="phr-say">cheer-koom-veh-zoo-<b>VYAH</b>-nah</span><span class="phr-en">Train from Pompeii</span></div>
+        <div class="phr-row"><span class="phr-it">Napoli Garibaldi</span><span class="phr-say"><b>NAH</b>-poh-lee gah-ree-<b>BAHL</b>-dee</span><span class="phr-en">Station where we change</span></div>
+        <div class="phr-row"><span class="phr-it">Toledo</span><span class="phr-say">toh-<b>LEH</b>-doh</span><span class="phr-en">Metro stop by our hotel</span></div>
+        <div class="phr-row"><span class="phr-it">Piazza del Plebiscito</span><span class="phr-say"><b>PYAHT</b>-tsah dehl pleh-bee-<b>SHEE</b>-toh</span><span class="phr-en">Grand square</span></div>
+        <div class="phr-row"><span class="phr-it">Castel dell&#x27;Ovo</span><span class="phr-say">kah-<b>STEHL</b> dehl-<b>LOH</b>-voh</span><span class="phr-en">Seafront castle</span></div>
+        <div class="phr-row"><span class="phr-it">Lungomare</span><span class="phr-say">loon-goh-<b>MAH</b>-reh</span><span class="phr-en">Seafront promenade</span></div>
+        <div class="phr-row"><span class="phr-it">Vesuvio</span><span class="phr-say">veh-<b>ZOO</b>-vyoh</span><span class="phr-en">Vesuvius</span></div>
+        <div class="phr-row"><span class="phr-it">Coppa America</span><span class="phr-say"><b>KOHP</b>-pah ah-<b>MEH</b>-ree-kah</span><span class="phr-en">America&#x27;s Cup</span></div>
+      </div>
+      <div class="phr-card">
+        <div class="phr-card-title">Neighborhoods</div>
+        <div class="phr-row"><span class="phr-it">Quartieri Spagnoli</span><span class="phr-say">kwar-<b>TYEH</b>-ree spahn-<b>YOH</b>-lee</span><span class="phr-en">Spanish Quarter</span></div>
+        <div class="phr-row"><span class="phr-it">Santa Lucia</span><span class="phr-say"><b>SAHN</b>-tah loo-<b>CHEE</b>-ah</span><span class="phr-en">Waterfront by the castle</span></div>
+        <div class="phr-row"><span class="phr-it">Chiaia</span><span class="phr-say"><b>KYAH</b>-yah</span><span class="phr-en">Elegant seafront quarter</span></div>
+        <div class="phr-row"><span class="phr-it">Materdei</span><span class="phr-say">mah-tehr-<b>DAY</b></span><span class="phr-en">Starita&#x27;s neighborhood</span></div>
+        <div class="phr-row"><span class="phr-it">Sanità</span><span class="phr-say">sah-nee-<b>TAH</b></span><span class="phr-en">Old quarter north of the center</span></div>
+        <div class="phr-row"><span class="phr-it">Vomero</span><span class="phr-say"><b>VOH</b>-meh-roh</span><span class="phr-en">Hilltop quarter</span></div>
+      </div>
+      <div class="phr-card">
+        <div class="phr-card-title">On the menu</div>
+        <div class="phr-row"><span class="phr-it">Starita</span><span class="phr-say">stah-<b>REE</b>-tah</span><span class="phr-en">Our pizzeria</span></div>
+        <div class="phr-row"><span class="phr-it">Pizza fritta</span><span class="phr-say"><b>PEET</b>-tsah <b>FREET</b>-tah</span><span class="phr-en">Fried pizza</span></div>
+        <div class="phr-row"><span class="phr-it">Frittatina</span><span class="phr-say">freet-tah-<b>TEE</b>-nah</span><span class="phr-en">Fried pasta bite</span></div>
+        <div class="phr-row"><span class="phr-it">Provola</span><span class="phr-say"><b>PROH</b>-voh-lah</span><span class="phr-en">Smoked mozzarella</span></div>
+        <div class="phr-row"><span class="phr-it">Sfogliatella</span><span class="phr-say">sfohl-yah-<b>TEHL</b>-lah</span><span class="phr-en">Shell-shaped pastry</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div><!-- /phrases -->
+
+<footer class="footer">
+  <span>Italy · Summer 2027</span>
+  <span class="footer-mark">v1</span>
+  <span>14 days · 4 bases · 2 travelers</span>
+</footer>
+
+</div>
+<!-- Print stamp — shows on every printed page bottom-left -->
+<div class="print-stamp" id="printStamp" aria-hidden="true"></div>
+
+<script>
+  (function() {
+    const tabs = document.querySelectorAll('.tab');
+    const panels = document.querySelectorAll('.tab-panel');
+    const stamp = document.getElementById('printStamp');
+
+    function activate(name, writeHash) {
+      tabs.forEach(t => t.classList.toggle('active', t.dataset.tab === name));
+      panels.forEach(p => p.hidden = (p.id !== name));
+      if (!writeHash) return;
+      if (history.replaceState) {
+        history.replaceState(null, '', '#' + name);
+      } else {
+        location.hash = name;
+      }
+    }
+
+    tabs.forEach(t => {
+      t.addEventListener('click', () => {
+        activate(t.dataset.tab, true);
+        const tabBar = document.querySelector('.tabs');
+        if (tabBar.getBoundingClientRect().top < 0) {
+          window.scrollTo({ top: tabBar.offsetTop, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Deep link via URL hash (#eatdo, #maps, #events, #bookings, #logistics, #subtrips, #phrases)
+    function handleHash() {
+      const hash = (location.hash || '').replace('#', '');
+      if (!hash) return;
+      const target = document.querySelector(`.tab[data-tab="${hash}"]`);
+      if (target) activate(hash, false);
+    }
+    handleHash();
+    window.addEventListener('hashchange', handleHash);
+
+    // Print stamp — version comes from .footer-mark, never hardcoded
+    function setStamp() {
+      const d = new Date();
+      const yyyy = d.getFullYear();
+      const mm = String(d.getMonth() + 1).padStart(2, '0');
+      const dd = String(d.getDate()).padStart(2, '0');
+      const active = document.querySelector('.tab.active');
+      const tabName = active ? active.querySelector('.tab-label').textContent : '';
+      const verEl = document.querySelector('.footer-mark');
+      const ver = verEl ? verEl.textContent.trim() : '';
+      stamp.textContent = `${ver}  ·  ${tabName}  ·  printed ${yyyy}-${mm}-${dd}`;
+    }
+    const printBtn = document.querySelector('.print-btn');
+    if (printBtn) {
+      printBtn.addEventListener('click', () => {
+        setStamp();
+        window.print();
+      });
+    }
+    window.addEventListener('beforeprint', setStamp);
+
+    // Eat & do city jump bar — scrolls without touching the tab hash
+    document.querySelectorAll('[data-jump]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const el = document.getElementById(btn.dataset.jump);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // ===================== MAPS TAB =====================
+    /* MAP-DATA:START — generated from fact-sheet.md › Map places; do not hand-edit */
+    const MAP_PLACES = [{"city":"florence","kind":"base","name":"Piazza Signoria n.1 apartment","hood":"Centro Storico","lat":43.7697,"lon":11.2556,"days":[2,3,4],"approx":false,"desc":"Our apartment on Piazza della Signoria","status":"booked"},{"city":"florence","kind":"do","name":"Uffizi Gallery","hood":"Centro Storico","lat":43.7678,"lon":11.2553,"days":[3],"approx":false,"desc":"The great Renaissance collection","status":"planned"},{"city":"florence","kind":"do","name":"Galleria dell'Accademia","hood":"San Marco","lat":43.7768,"lon":11.2589,"days":[3],"approx":false,"desc":"Michelangelo's David","status":"planned"},{"city":"florence","kind":"do","name":"Brunelleschi's Dome","hood":"Duomo","lat":43.7731,"lon":11.256,"days":[2,3],"approx":false,"desc":"Climb inside the cathedral dome","status":"planned"},{"city":"florence","kind":"do","name":"Piazza della Signoria & Palazzo Vecchio","hood":"Centro Storico","lat":43.7694,"lon":11.256,"days":[2],"approx":false,"desc":"Civic square and town-hall fortress","status":"planned"},{"city":"florence","kind":"do","name":"Ponte Vecchio","hood":"Centro Storico","lat":43.768,"lon":11.2531,"days":[],"approx":false,"desc":"Medieval bridge of goldsmiths' shops","status":"open"},{"city":"florence","kind":"do","name":"Piazza Santo Spirito","hood":"Oltrarno – Santo Spirito","lat":43.7665,"lon":11.2475,"days":[3],"approx":false,"desc":"Heart of the Oltrarno; evening wandering","status":"planned"},{"city":"florence","kind":"do","name":"Piazzale Michelangelo","hood":"San Niccolò hills","lat":43.7629,"lon":11.265,"days":[],"approx":false,"desc":"Classic city panorama at sunset","status":"open"},{"city":"florence","kind":"do","name":"San Miniato al Monte","hood":"San Niccolò hills","lat":43.7596,"lon":11.265,"days":[],"approx":false,"desc":"Romanesque hilltop church","status":"open"},{"city":"florence","kind":"do","name":"Santa Croce","hood":"Santa Croce","lat":43.7686,"lon":11.2622,"days":[],"approx":false,"desc":"Basilica with Michelangelo's and Galileo's tombs","status":"open"},{"city":"florence","kind":"do","name":"Fattoria Torre a Cona","hood":"Hills SE of Florence","lat":43.7036,"lon":11.3714,"days":[4],"approx":true,"desc":"Villa winery (sub-trip)","status":"planned"},{"city":"florence","kind":"eat","name":"Vini e Vecchi Sapori","hood":"Centro Storico","lat":43.7703,"lon":11.2568,"days":[],"approx":true,"desc":"Tiny osteria, handwritten menu","status":"open"},{"city":"florence","kind":"eat","name":"Ristorante del Fagioli","hood":"Santa Croce","lat":43.7671,"lon":11.2602,"days":[],"approx":true,"desc":"Old-school rustic trattoria","status":"open"},{"city":"florence","kind":"eat","name":"Trattoria La Gratella","hood":"San Lorenzo","lat":43.7783,"lon":11.2508,"days":[],"approx":true,"desc":"Family-run Tuscan trattoria","status":"open"},{"city":"florence","kind":"eat","name":"La Buchetta","hood":"Santa Croce","lat":43.7666,"lon":11.259,"days":[],"approx":true,"desc":"Lively; bistecca and truffle pici","status":"open"},{"city":"florence","kind":"eat","name":"Golden View Firenze","hood":"Oltrarno","lat":43.767,"lon":11.2541,"days":[],"approx":true,"desc":"Romantic dinner facing Ponte Vecchio","status":"open"},{"city":"florence","kind":"eat","name":"COSIMO at The Excelsior","hood":"Santa Maria Novella","lat":43.7726,"lon":11.2455,"days":[],"approx":true,"desc":"Upscale rooftop; sunset aperitivo","status":"open"},{"city":"florence","kind":"eat","name":"B-Roof, Grand Hotel Baglioni","hood":"Santa Maria Novella","lat":43.7745,"lon":11.251,"days":[],"approx":true,"desc":"Hotel rooftop facing the Duomo","status":"open"},{"city":"florence","kind":"eat","name":"Sergio Pollini Lampredotto","hood":"Sant'Ambrogio","lat":43.7706,"lon":11.2636,"days":[],"approx":true,"desc":"Lampredotto street stand","status":"open"},{"city":"florence","kind":"eat","name":"Da' Vinattieri","hood":"Centro Storico","lat":43.7714,"lon":11.2559,"days":[],"approx":true,"desc":"Hole-in-the-wall sandwiches","status":"open"},{"city":"florence","kind":"eat","name":"I Guelfi Tuscany Food","hood":"Centro Storico","lat":43.7705,"lon":11.2545,"days":[],"approx":true,"desc":"Made-to-order schiacciata","status":"open"},{"city":"florence","kind":"eat","name":"Il Cernacchio","hood":"Centro Storico","lat":43.77,"lon":11.2565,"days":[],"approx":true,"desc":"Cheap soups and pasta","status":"open"},{"city":"florence","kind":"eat","name":"Antico Forno Sartoni","hood":"Centro Storico","lat":43.771,"lon":11.2552,"days":[],"approx":true,"desc":"Closest breakfast bakery","status":"open"},{"city":"florence","kind":"eat","name":"Forno Ghibellina","hood":"Santa Croce","lat":43.7705,"lon":11.2615,"days":[],"approx":true,"desc":"Bakery café","status":"open"},{"city":"florence","kind":"eat","name":"Pasticceria Nencioni","hood":"Sant'Ambrogio","lat":43.7714,"lon":11.2628,"days":[],"approx":true,"desc":"Historic pastry shop","status":"open"},{"city":"florence","kind":"eat","name":"Vivoli","hood":"Santa Croce","lat":43.7697,"lon":11.2591,"days":[],"approx":true,"desc":"Historic gelato","status":"open"},{"city":"florence","kind":"eat","name":"Sbrino","hood":"Oltrarno – Santo Spirito","lat":43.7658,"lon":11.2462,"days":[],"approx":true,"desc":"Craft gelato","status":"open"},{"city":"florence","kind":"eat","name":"Le Volpi e l'Uva","hood":"Oltrarno","lat":43.7673,"lon":11.2524,"days":[],"approx":true,"desc":"Tiny wine bar","status":"open"},{"city":"florence","kind":"eat","name":"Pegna dal 1860","hood":"Duomo","lat":43.7721,"lon":11.2568,"days":[],"approx":true,"desc":"Historic specialty grocer","status":"open"},{"city":"florence","kind":"eat","name":"Mercato di Sant'Ambrogio","hood":"Sant'Ambrogio","lat":43.7699,"lon":11.2645,"days":[],"approx":false,"desc":"Neighborhood food market","status":"open"},{"city":"florence","kind":"eat","name":"Alimentari Calimaruzza","hood":"Centro Storico","lat":43.7697,"lon":11.2543,"days":[],"approx":true,"desc":"Tiny food shop","status":"open"},{"city":"rome","kind":"base","name":"Palazzo Talìa","hood":"Trevi","lat":41.9025,"lon":12.4838,"days":[5,6,7,8,9],"approx":false,"desc":"Our hotel, Largo del Nazareno","status":"booked"},{"city":"rome","kind":"do","name":"Trevi Fountain","hood":"Trevi","lat":41.9009,"lon":12.4833,"days":[5],"approx":false,"desc":"The fountain","status":"planned"},{"city":"rome","kind":"do","name":"Pantheon","hood":"Centro Storico","lat":41.8986,"lon":12.4769,"days":[5],"approx":false,"desc":"2,000-year-old domed temple","status":"planned"},{"city":"rome","kind":"do","name":"Piazza Navona","hood":"Centro Storico","lat":41.8992,"lon":12.4731,"days":[5],"approx":false,"desc":"Baroque piazza and fountains","status":"planned"},{"city":"rome","kind":"do","name":"Sant'Ignazio","hood":"Centro Storico","lat":41.899,"lon":12.4797,"days":[5],"approx":false,"desc":"Trompe-l'oeil painted ceiling","status":"planned"},{"city":"rome","kind":"do","name":"San Luigi dei Francesi","hood":"Centro Storico","lat":41.8996,"lon":12.4746,"days":[5],"approx":false,"desc":"Three Caravaggio paintings","status":"planned"},{"city":"rome","kind":"do","name":"Vatican Museums & Sistine Chapel","hood":"Vatican & Borgo","lat":41.9065,"lon":12.4536,"days":[6],"approx":false,"desc":"Papal collections; Michelangelo's ceiling","status":"planned"},{"city":"rome","kind":"do","name":"St. Peter's Basilica","hood":"Vatican & Borgo","lat":41.9022,"lon":12.4539,"days":[6],"approx":false,"desc":"Largest church in Christendom","status":"planned"},{"city":"rome","kind":"do","name":"Castel Sant'Angelo","hood":"Vatican & Borgo","lat":41.9031,"lon":12.4663,"days":[6],"approx":false,"desc":"Hadrian's tomb, papal fortress","status":"planned"},{"city":"rome","kind":"do","name":"Janiculum terrace","hood":"Gianicolo","lat":41.8913,"lon":12.4613,"days":[6],"approx":false,"desc":"Sunset panorama over Rome","status":"planned"},{"city":"rome","kind":"do","name":"Santa Maria in Trastevere","hood":"Trastevere","lat":41.8894,"lon":12.4701,"days":[6],"approx":false,"desc":"Trastevere's main piazza","status":"planned"},{"city":"rome","kind":"do","name":"Colosseum","hood":"Ancient Rome","lat":41.8902,"lon":12.4922,"days":[7],"approx":false,"desc":"The amphitheater","status":"planned"},{"city":"rome","kind":"do","name":"Roman Forum & Palatine","hood":"Ancient Rome","lat":41.8915,"lon":12.4865,"days":[7],"approx":false,"desc":"Ancient city center and emperors' hill","status":"planned"},{"city":"rome","kind":"do","name":"Via di Monte Tarpeo viewpoint","hood":"Campidoglio","lat":41.892,"lon":12.4824,"days":[7],"approx":true,"desc":"Best free view of the Forum","status":"planned"},{"city":"rome","kind":"do","name":"Campidoglio","hood":"Campidoglio","lat":41.8934,"lon":12.4828,"days":[7],"approx":false,"desc":"Michelangelo's hilltop piazza","status":"planned"},{"city":"rome","kind":"do","name":"Portico d'Ottavia","hood":"Ghetto","lat":41.8927,"lon":12.4772,"days":[7],"approx":false,"desc":"Heart of the Jewish Ghetto","status":"planned"},{"city":"rome","kind":"do","name":"Galleria Borghese","hood":"Villa Borghese","lat":41.9142,"lon":12.4921,"days":[8],"approx":false,"desc":"Bernini and Caravaggio in a villa","status":"planned"},{"city":"rome","kind":"do","name":"Pincio terrace","hood":"Villa Borghese","lat":41.9113,"lon":12.4797,"days":[8],"approx":false,"desc":"Park terrace over Piazza del Popolo","status":"planned"},{"city":"rome","kind":"do","name":"Piazza del Popolo","hood":"Tridente","lat":41.9107,"lon":12.4763,"days":[8],"approx":false,"desc":"Twin-church piazza","status":"planned"},{"city":"rome","kind":"do","name":"Villa Medici","hood":"Tridente","lat":41.9083,"lon":12.483,"days":[8],"approx":false,"desc":"French Academy villa and gardens","status":"planned"},{"city":"rome","kind":"do","name":"Spanish Steps & Palazzo Zuccari","hood":"Tridente","lat":41.9058,"lon":12.4833,"days":[8],"approx":false,"desc":"The steps; \"House of Monsters\" doorway","status":"planned"},{"city":"rome","kind":"do","name":"Basilica di San Clemente","hood":"Celio","lat":41.8893,"lon":12.4977,"days":[9],"approx":false,"desc":"Three churches stacked in layers","status":"planned"},{"city":"rome","kind":"do","name":"Appian Way (Via Appia Antica)","hood":"Appia Antica","lat":41.856,"lon":12.517,"days":[9],"approx":true,"desc":"Ancient road; e-bike ride","status":"planned"},{"city":"rome","kind":"do","name":"Catacombs of San Callisto","hood":"Appia Antica","lat":41.859,"lon":12.511,"days":[9],"approx":true,"desc":"Early-Christian burial tunnels","status":"planned"},{"city":"rome","kind":"do","name":"Aventine & Orange Garden","hood":"Aventino","lat":41.8847,"lon":12.4797,"days":[9],"approx":false,"desc":"Quiet hilltop, orange-tree terrace","status":"planned"},{"city":"rome","kind":"do","name":"Knights of Malta Keyhole","hood":"Aventino","lat":41.883,"lon":12.4785,"days":[9],"approx":false,"desc":"St. Peter's framed through a keyhole","status":"planned"},{"city":"rome","kind":"eat","name":"Piperno","hood":"Ghetto","lat":41.8935,"lon":12.4755,"days":[7],"approx":true,"desc":"Historic Jewish-Roman restaurant","status":"planned"},{"city":"rome","kind":"eat","name":"Boccione","hood":"Ghetto","lat":41.8922,"lon":12.4785,"days":[7],"approx":true,"desc":"Tiny Ghetto bakery","status":"planned"},{"city":"rome","kind":"eat","name":"Pizzeria Ostiense","hood":"Ostiense","lat":41.8722,"lon":12.481,"days":[9],"approx":true,"desc":"Thin, crisp Roman pizza","status":"planned"},{"city":"rome","kind":"eat","name":"Mercato di Testaccio","hood":"Testaccio","lat":41.8768,"lon":12.4743,"days":[9],"approx":false,"desc":"Working food market","status":"planned"},{"city":"rome","kind":"eat","name":"Volpetti","hood":"Testaccio","lat":41.8783,"lon":12.4769,"days":[9],"approx":true,"desc":"Deli since 1973","status":"planned"},{"city":"rome","kind":"eat","name":"Il Goccetto","hood":"Centro Storico","lat":41.8985,"lon":12.4684,"days":[5],"approx":true,"desc":"Old wine bar, Via dei Banchi Vecchi","status":"planned"},{"city":"rome","kind":"eat","name":"Supplizio","hood":"Centro Storico","lat":41.8989,"lon":12.4672,"days":[5],"approx":true,"desc":"Supplì specialist","status":"planned"},{"city":"rome","kind":"eat","name":"L'Osteria della Trippa","hood":"Trastevere","lat":41.8858,"lon":12.4696,"days":[],"approx":true,"desc":"Tripe and Roman specialties","status":"open"},{"city":"rome","kind":"eat","name":"Santo Palato","hood":"San Giovanni","lat":41.8812,"lon":12.517,"days":[],"approx":true,"desc":"Modern Roman cooking","status":"open"},{"city":"rome","kind":"eat","name":"Flavio al Velavevodetto","hood":"Testaccio","lat":41.8758,"lon":12.4757,"days":[],"approx":true,"desc":"Built into Monte Testaccio","status":"open"},{"city":"rome","kind":"eat","name":"Retrobottega","hood":"Ancient Rome","lat":41.8895,"lon":12.483,"days":[],"approx":true,"desc":"Creative modern Italian","status":"open"},{"city":"rome","kind":"eat","name":"Roscioli Salumeria con Cucina","hood":"Campo de' Fiori","lat":41.8937,"lon":12.4737,"days":[],"approx":true,"desc":"Deli and restaurant in one","status":"open"},{"city":"rome","kind":"eat","name":"Antico Forno Roscioli","hood":"Campo de' Fiori","lat":41.8942,"lon":12.4746,"days":[],"approx":true,"desc":"Historic bakery, pizza by weight","status":"open"},{"city":"rome","kind":"eat","name":"Armando al Pantheon","hood":"Centro Storico","lat":41.899,"lon":12.4761,"days":[],"approx":false,"desc":"Family-run since 1961","status":"open"},{"city":"rome","kind":"eat","name":"Tazza d'Oro","hood":"Centro Storico","lat":41.8996,"lon":12.4776,"days":[],"approx":false,"desc":"Stand-up espresso bar","status":"open"},{"city":"rome","kind":"eat","name":"Giolitti","hood":"Centro Storico","lat":41.9008,"lon":12.4774,"days":[],"approx":false,"desc":"Historic gelato","status":"open"},{"city":"rome","kind":"eat","name":"Bar San Marcello","hood":"Trevi","lat":41.8993,"lon":12.4822,"days":[],"approx":true,"desc":"Local café by the hotel","status":"open"},{"city":"rome","kind":"eat","name":"Ciampini","hood":"Tridente","lat":41.9038,"lon":12.479,"days":[],"approx":true,"desc":"Old-school café on a piazza","status":"open"},{"city":"rome","kind":"eat","name":"Hotel de Russie garden","hood":"Tridente","lat":41.9095,"lon":12.4772,"days":[],"approx":false,"desc":"Polished garden aperitivo","status":"open"},{"city":"rome","kind":"eat","name":"Pizzarium Bonci","hood":"Prati","lat":41.9073,"lon":12.4473,"days":[6],"approx":true,"desc":"Famed pizza by the slice","status":"planned"},{"city":"rome","kind":"eat","name":"Paciotti Salumeria","hood":"Prati","lat":41.9075,"lon":12.457,"days":[6],"approx":true,"desc":"Old-school deli","status":"planned"},{"city":"rome","kind":"eat","name":"Regoli Pasticceria","hood":"Esquilino","lat":41.8955,"lon":12.503,"days":[],"approx":true,"desc":"Benchmark maritozzo","status":"open"},{"city":"rome","kind":"eat","name":"Trattoria Pennestri","hood":"Ostiense","lat":41.8685,"lon":12.48,"days":[],"approx":true,"desc":"Michelin-noted local trattoria","status":"open"},{"city":"rome","kind":"eat","name":"Mazzo","hood":"San Lorenzo","lat":41.8968,"lon":12.515,"days":[],"approx":true,"desc":"Modern Roman, wine bar","status":"open"},{"city":"rome","kind":"eat","name":"Tante Care Cose","hood":"Pigneto","lat":41.886,"lon":12.534,"days":[],"approx":true,"desc":"Tiny open-kitchen spot","status":"open"},{"city":"rome","kind":"eat","name":"Osteria Bonelli","hood":"Torpignattara","lat":41.878,"lon":12.548,"days":[],"approx":true,"desc":"Family-style, daily menu","status":"open"},{"city":"rome","kind":"eat","name":"Menabò Vino e Cucina","hood":"Centocelle","lat":41.879,"lon":12.568,"days":[],"approx":true,"desc":"Seasonal neighborhood cooking","status":"open"},{"city":"amalfi","kind":"base","name":"Abbraccio Amalfi","hood":"Amalfi","lat":40.6342,"lon":14.603,"days":[10,11,12],"approx":true,"desc":"Our hotel, Largo Duchi Piccolomini","status":"booked"},{"city":"amalfi","kind":"do","name":"Amalfi Cathedral","hood":"Amalfi","lat":40.6345,"lon":14.6035,"days":[10],"approx":false,"desc":"Striped Arab-Norman cathedral","status":"planned"},{"city":"amalfi","kind":"do","name":"Amalfi beach","hood":"Amalfi","lat":40.6331,"lon":14.602,"days":[],"approx":false,"desc":"Swim time in town","status":"open"},{"city":"amalfi","kind":"do","name":"Atrani","hood":"Atrani","lat":40.636,"lon":14.609,"days":[10],"approx":false,"desc":"Tiny fishing village next door","status":"planned"},{"city":"amalfi","kind":"do","name":"Positano (boat stop)","hood":"Positano","lat":40.6281,"lon":14.485,"days":[11],"approx":false,"desc":"Boat-day stop, 2–4 hours ashore","status":"planned"},{"city":"amalfi","kind":"do","name":"Emerald Grotto","hood":"Conca dei Marini","lat":40.615,"lon":14.572,"days":[11],"approx":true,"desc":"Green-lit sea cave (optional)","status":"planned"},{"city":"amalfi","kind":"do","name":"Cantine Marisa Cuomo","hood":"Furore","lat":40.62,"lon":14.549,"days":[12],"approx":true,"desc":"Cliff-terrace winery","status":"planned"},{"city":"amalfi","kind":"do","name":"Fiordo di Furore","hood":"Furore","lat":40.6188,"lon":14.5545,"days":[12],"approx":false,"desc":"Narrow sea inlet under a bridge","status":"planned"},{"city":"amalfi","kind":"do","name":"Villa Cimbrone","hood":"Ravello","lat":40.644,"lon":14.611,"days":[12],"approx":false,"desc":"Gardens; Terrace of Infinity","status":"planned"},{"city":"amalfi","kind":"do","name":"Villa Rufolo","hood":"Ravello","lat":40.649,"lon":14.6118,"days":[12],"approx":false,"desc":"Medieval tower, terraced gardens","status":"planned"},{"city":"amalfi","kind":"do","name":"Valle delle Ferriere","hood":"Scala","lat":40.644,"lon":14.596,"days":[],"approx":true,"desc":"Shaded valley hike (optional)","status":"open"},{"city":"amalfi","kind":"do","name":"Tenuta San Francesco","hood":"Tramonti","lat":40.692,"lon":14.638,"days":[],"approx":true,"desc":"Second winery (optional)","status":"open"},{"city":"amalfi","kind":"eat","name":"Sensi Amalfi","hood":"Amalfi","lat":40.6348,"lon":14.6025,"days":[],"approx":true,"desc":"Tasting menu or bistro lunch","status":"open"},{"city":"amalfi","kind":"eat","name":"Da Adolfo","hood":"Positano","lat":40.6232,"lon":14.499,"days":[11],"approx":true,"desc":"Boat-day beach lunch at Laurito","status":"planned"},{"city":"amalfi","kind":"eat","name":"Lo Guarracino","hood":"Positano","lat":40.6268,"lon":14.4882,"days":[11],"approx":true,"desc":"Positano sit-down lunch","status":"planned"},{"city":"naples","kind":"base","name":"Soul Art Hotel","hood":"Toledo","lat":40.8432,"lon":14.2485,"days":[13],"approx":true,"desc":"Our hotel, near Toledo metro","status":"booked"},{"city":"naples","kind":"do","name":"Piazza del Plebiscito","hood":"San Ferdinando","lat":40.8359,"lon":14.2488,"days":[13],"approx":false,"desc":"Grand square by the Royal Palace","status":"planned"},{"city":"naples","kind":"do","name":"Castel dell'Ovo","hood":"Santa Lucia","lat":40.8282,"lon":14.2477,"days":[13],"approx":false,"desc":"Seafront castle on the bay","status":"planned"},{"city":"naples","kind":"do","name":"Lungomare (Via Caracciolo)","hood":"Chiaia","lat":40.8305,"lon":14.239,"days":[13],"approx":false,"desc":"Seafront promenade; America's Cup buzz","status":"planned"},{"city":"naples","kind":"do","name":"Pompeii","hood":"Pompei","lat":40.749,"lon":14.4848,"days":[13],"approx":false,"desc":"Roman town buried in AD 79 (sub-trip)","status":"planned"},{"city":"naples","kind":"eat","name":"Starita a Materdei","hood":"Materdei","lat":40.856,"lon":14.247,"days":[13],"approx":true,"desc":"Historic pizzeria; walk-in only","status":"planned"},{"city":"naples","kind":"eat","name":"Enoteca Belledonne","hood":"Chiaia","lat":40.835,"lon":14.241,"days":[13],"approx":true,"desc":"Wine bar (optional)","status":"planned"}];
+    const MAP_ZONES = [{"city":"florence","name":"Duomo","lat":43.7728,"lon":11.256,"r":230},{"city":"florence","name":"Centro Storico","lat":43.7695,"lon":11.255,"r":260},{"city":"florence","name":"San Lorenzo","lat":43.7762,"lon":11.2533,"r":260},{"city":"florence","name":"Santa Maria Novella","lat":43.7742,"lon":11.2472,"r":320},{"city":"florence","name":"San Marco","lat":43.7792,"lon":11.2592,"r":280},{"city":"florence","name":"Santa Croce","lat":43.7684,"lon":11.2615,"r":290},{"city":"florence","name":"Sant'Ambrogio","lat":43.7714,"lon":11.2652,"r":240},{"city":"florence","name":"Oltrarno – Santo Spirito","lat":43.7658,"lon":11.2478,"r":340},{"city":"florence","name":"San Frediano","lat":43.769,"lon":11.241,"r":290},{"city":"florence","name":"San Niccolò","lat":43.7646,"lon":11.2603,"r":240},{"city":"florence","name":"San Niccolò hills","lat":43.761,"lon":11.2655,"r":320},{"city":"rome","name":"Centro Storico","lat":41.8985,"lon":12.4745,"r":430},{"city":"rome","name":"Trevi","lat":41.9012,"lon":12.4838,"r":240},{"city":"rome","name":"Tridente","lat":41.9072,"lon":12.4795,"r":340},{"city":"rome","name":"Villa Borghese","lat":41.9135,"lon":12.488,"r":450},{"city":"rome","name":"Prati","lat":41.9072,"lon":12.4585,"r":400},{"city":"rome","name":"Vatican & Borgo","lat":41.903,"lon":12.4565,"r":380},{"city":"rome","name":"Gianicolo","lat":41.8905,"lon":12.4618,"r":300},{"city":"rome","name":"Trastevere","lat":41.888,"lon":12.47,"r":370},{"city":"rome","name":"Campo de' Fiori","lat":41.8952,"lon":12.4722,"r":200},{"city":"rome","name":"Ghetto","lat":41.8928,"lon":12.4774,"r":170},{"city":"rome","name":"Campidoglio","lat":41.893,"lon":12.4826,"r":150},{"city":"rome","name":"Ancient Rome","lat":41.8912,"lon":12.488,"r":330},{"city":"rome","name":"Monti","lat":41.8952,"lon":12.4932,"r":310},{"city":"rome","name":"Esquilino","lat":41.8965,"lon":12.5022,"r":340},{"city":"rome","name":"Celio","lat":41.8868,"lon":12.4965,"r":290},{"city":"rome","name":"Aventino","lat":41.884,"lon":12.4805,"r":290},{"city":"rome","name":"Testaccio","lat":41.877,"lon":12.4755,"r":290},{"city":"rome","name":"Ostiense","lat":41.87,"lon":12.4812,"r":340},{"city":"rome","name":"San Giovanni","lat":41.8855,"lon":12.508,"r":390},{"city":"rome","name":"San Lorenzo","lat":41.897,"lon":12.5148,"r":340},{"city":"amalfi","name":"Positano","lat":40.6281,"lon":14.4862,"r":650},{"city":"amalfi","name":"Praiano","lat":40.612,"lon":14.53,"r":550},{"city":"amalfi","name":"Furore","lat":40.6195,"lon":14.5505,"r":550},{"city":"amalfi","name":"Conca dei Marini","lat":40.616,"lon":14.573,"r":450},{"city":"amalfi","name":"Amalfi","lat":40.6348,"lon":14.602,"r":420},{"city":"amalfi","name":"Atrani","lat":40.6366,"lon":14.6096,"r":230},{"city":"amalfi","name":"Ravello","lat":40.648,"lon":14.6115,"r":480},{"city":"amalfi","name":"Scala","lat":40.655,"lon":14.605,"r":420},{"city":"amalfi","name":"Minori","lat":40.6505,"lon":14.627,"r":380},{"city":"naples","name":"Centro Storico","lat":40.8505,"lon":14.2572,"r":480},{"city":"naples","name":"Quartieri Spagnoli","lat":40.8405,"lon":14.2455,"r":240},{"city":"naples","name":"Toledo","lat":40.8432,"lon":14.2497,"r":200},{"city":"naples","name":"San Ferdinando","lat":40.8365,"lon":14.2502,"r":210},{"city":"naples","name":"Santa Lucia","lat":40.831,"lon":14.2472,"r":240},{"city":"naples","name":"Chiaia","lat":40.8352,"lon":14.2372,"r":430},{"city":"naples","name":"Vomero","lat":40.8458,"lon":14.2312,"r":430},{"city":"naples","name":"Materdei","lat":40.856,"lon":14.246,"r":240},{"city":"naples","name":"Sanità","lat":40.8597,"lon":14.2516,"r":290},{"city":"naples","name":"Porto / Municipio","lat":40.8396,"lon":14.2548,"r":250}];
+    /* MAP-DATA:END */
+    // Drawing aids (approximate sketches): bounding box, river or coastline, day themes.
+    const MAP_CITIES = {
+      florence: { name: 'Florence', color: '--terracotta', bbox: [43.757, 11.238, 43.781, 11.270], days: [2, 3, 4],
+        river: { name: 'Arno', width: 60, pts: [[43.7618,11.2780],[43.7636,11.2700],[43.7652,11.2635],[43.7661,11.2590],[43.7669,11.2556],[43.7679,11.2531],[43.7690,11.2502],[43.7700,11.2468],[43.7712,11.2430],[43.7730,11.2385],[43.7750,11.2330]] } },
+      rome: { name: 'Rome', color: '--ochre', bbox: [41.866, 12.444, 41.917, 12.520], days: [5, 6, 7, 8, 9],
+        river: { name: 'Tevere', width: 95, pts: [[41.9180,12.4690],[41.9115,12.4706],[41.9065,12.4720],[41.9035,12.4712],[41.9020,12.4665],[41.9005,12.4640],[41.8970,12.4630],[41.8935,12.4680],[41.8918,12.4730],[41.8905,12.4772],[41.8888,12.4797],[41.8840,12.4775],[41.8805,12.4738],[41.8760,12.4700],[41.8720,12.4695],[41.8650,12.4735]] } },
+      amalfi: { name: 'Amalfi Coast', color: '--tyrrhenian', bbox: [40.598, 14.474, 40.662, 14.640], days: [10, 11, 12],
+        sea: { name: 'Golfo di Salerno', pts: [[40.6300,14.4700],[40.6275,14.4850],[40.6225,14.4990],[40.6160,14.5150],[40.6100,14.5300],[40.6150,14.5450],[40.6185,14.5545],[40.6145,14.5720],[40.6200,14.5850],[40.6300,14.5960],[40.6330,14.6020],[40.6355,14.6090],[40.6420,14.6190],[40.6490,14.6270],[40.6480,14.6450]] } },
+      naples: { name: 'Naples & Pompeii', color: '--pompeian', bbox: [40.824, 14.224, 40.862, 14.276], days: [13],
+        sea: { name: 'Golfo di Napoli', pts: [[40.8290,14.2150],[40.8300,14.2300],[40.8298,14.2420],[40.8272,14.2477],[40.8300,14.2492],[40.8335,14.2512],[40.8380,14.2545],[40.8395,14.2580],[40.8420,14.2640],[40.8450,14.2700],[40.8480,14.2790]] } }
+    };
+    const MAP_DAYS = {
+      2: ['Fri', 'Arrive Florence — Signoria and the historic center'],
+      3: ['Sat', 'Florence masterpieces — Uffizi, Accademia, evening in the Oltrarno'],
+      4: ['Sun', 'Tuscany sub-trip — Torre a Cona winery'],
+      5: ['Mon', 'To Rome — Trevi, Pantheon, Navona'],
+      6: ['Tue', 'Vatican, Castel Sant’Angelo, Janiculum sunset, Trastevere'],
+      7: ['Wed', 'Ancient Rome and the Jewish Ghetto'],
+      8: ['Thu', 'Borghese, Pincio, Piazza del Popolo, Spanish Steps'],
+      9: ['Fri', 'San Clemente, Appian Way, Testaccio, the Aventine'],
+      10: ['Sat', 'To the coast — Amalfi and Atrani'],
+      11: ['Sun', 'Boat day + Positano (weather swap with Jul 12)'],
+      12: ['Mon', 'Furore winery + Ravello (weather swap with Jul 11)'],
+      13: ['Tue', 'Pompeii, then a Naples evening and pizza at Starita']
+    };
+    const LEAFLET = {
+      js: 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js',
+      jsSri: 'sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH',
+      css: 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css',
+      cssSri: 'sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H',
+      tiles: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    };
+
+    const mapState = { city: 'florence', day: 'all', eat: true, do: true, mode: 'drawn', zoom: 1, cx: null, cy: null, hi: null };
+    const $ = id => document.getElementById(id);
+    const svg = $('map-svg'), tip = $('map-tip'), list = $('map-list');
+    const NS = 'http://www.w3.org/2000/svg';
+    const esc = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+    function cityPlaces() {
+      const c = mapState.city;
+      const zoneOrder = MAP_ZONES.filter(z => z.city === c).map(z => z.name);
+      const items = MAP_PLACES.filter(p => p.city === c);
+      const hoods = [];
+      items.forEach(p => { if (!hoods.includes(p.hood)) hoods.push(p.hood); });
+      hoods.sort((a, b) => {
+        const ia = zoneOrder.indexOf(a), ib = zoneOrder.indexOf(b);
+        return (ia < 0 ? 999 : ia) - (ib < 0 ? 999 : ib);
+      });
+      const out = [];
+      hoods.forEach(h => items.filter(p => p.hood === h)
+        .sort((a, b) => ({ base: 0, do: 1, eat: 2 }[a.kind] - { base: 0, do: 1, eat: 2 }[b.kind]))
+        .forEach(p => out.push(p)));
+      out.forEach((p, i) => { p.num = i + 1; p.id = c + '-' + p.num; });
+      return out;
+    }
+    // booked / planned / open; on a picked day, other days' booked + planned places are hidden
+    function stateOf(p) {
+      if (mapState.day === 'all' || p.status === 'open') return p.status;
+      return p.days.includes(mapState.day) ? p.status : 'hidden';
+    }
+    function visible(p) {
+      if (stateOf(p) === 'hidden') return false;
+      return p.kind === 'base' || (p.kind === 'eat' ? mapState.eat : mapState.do);
+    }
+    function dayText(p) {
+      const days = p.days.map(d => 'Jul ' + d).join(' / ');
+      if (p.kind === 'base') return 'Booked · where we sleep';
+      if (p.status === 'booked') return 'Booked · ' + days;
+      if (p.status === 'planned') return 'Planned ' + days + ' · not booked yet';
+      return 'Not slated — any day';
+    }
+    function gmaps(p) {
+      return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(p.name + ', ' + MAP_CITIES[p.city].name.replace(' & Pompeii', ''));
+    }
+
+    // ---- projection (metres from the bbox's north-west corner) ----
+    function proj(c) {
+      const [s, w, n, e] = c.bbox, lat0 = (s + n) / 2, kx = 111320 * Math.cos(lat0 * Math.PI / 180), ky = 110540;
+      return { W: (e - w) * kx, H: (n - s) * ky, xy: (lat, lon) => [(lon - w) * kx, (n - lat) * ky] };
+    }
+    function el(tag, attrs, parent) {
+      const e = document.createElementNS(NS, tag);
+      for (const k in attrs) e.setAttribute(k, attrs[k]);
+      if (parent) parent.appendChild(e);
+      return e;
+    }
+
+    function renderSvg(items) {
+      const c = MAP_CITIES[mapState.city], P = proj(c);
+      const z = mapState.zoom, vw = P.W / z, vh = P.H / z;
+      if (mapState.cx === null) { mapState.cx = P.W / 2; mapState.cy = P.H / 2; }
+      mapState.cx = Math.min(Math.max(mapState.cx, vw / 2), P.W - vw / 2);
+      mapState.cy = Math.min(Math.max(mapState.cy, vh / 2), P.H - vh / 2);
+      const x0 = mapState.cx - vw / 2, y0 = mapState.cy - vh / 2;
+      const u = vw / 1000; // one "screen pixel" at 1000px-wide rendering
+      svg.setAttribute('viewBox', [x0, y0, vw, vh].map(v => v.toFixed(1)).join(' '));
+      svg.innerHTML = '';
+      el('rect', { x: 0, y: 0, width: P.W, height: P.H, fill: '#fbf8f1' }, svg);
+      const color = getComputedStyle(document.documentElement).getPropertyValue(c.color).trim();
+      // water
+      if (c.sea) {
+        const pts = c.sea.pts.map(([a, b]) => P.xy(a, b));
+        const d = 'M' + pts.map(p => p.join(',')).join(' L') + ` L${pts[pts.length - 1][0]},${P.H + 500} L${pts[0][0]},${P.H + 500} Z`;
+        el('path', { d, class: 'm-water' }, svg);
+        const lab = el('text', { x: P.W * 0.42, y: P.H - 60 * u * 2, class: 'm-water-label', 'font-size': 18 * u }, svg);
+        lab.textContent = c.sea.name;
+      }
+      if (c.river) {
+        const pts = c.river.pts.map(([a, b]) => P.xy(a, b));
+        el('path', { d: 'M' + pts.map(p => p.join(',')).join(' L'), class: 'm-river', 'stroke-width': c.river.width }, svg);
+        const m = pts[Math.floor(pts.length * 0.75)];
+        const lab = el('text', { x: m[0] + 20 * u, y: m[1] + 26 * u, class: 'm-water-label', 'font-size': 15 * u }, svg);
+        lab.textContent = c.river.name;
+      }
+      // neighborhood zones + labels
+      MAP_ZONES.filter(zn => zn.city === mapState.city).forEach(zn => {
+        const [x, y] = P.xy(zn.lat, zn.lon);
+        el('circle', { cx: x, cy: y, r: zn.r, class: 'm-zone', fill: color, stroke: color, 'stroke-width': 1.2 * u }, svg);
+      });
+      MAP_ZONES.filter(zn => zn.city === mapState.city).forEach(zn => {
+        const [x, y] = P.xy(zn.lat, zn.lon);
+        const ly = Math.min(P.H - 6 * u, Math.max(16 * u, zn.r >= 260 ? y - zn.r + 15 * u : y - zn.r - 5 * u));
+        const t = el('text', { x, y: ly, class: 'm-zone-label', 'text-anchor': 'middle', 'font-size': 11.5 * u, 'stroke-width': 3 * u }, svg);
+        t.textContent = zn.name;
+      });
+      // pins (dimmed first so planned ones sit on top)
+      const order = { open: 0, planned: 1, booked: 2 };
+      const edgeSlots = [];
+      items.filter(visible).sort((a, b) => order[stateOf(a)] - order[stateOf(b)] || (a.kind === 'base') - (b.kind === 'base'))
+        .forEach(p => {
+          let [x, y] = P.xy(p.lat, p.lon);
+          const r = 11 * u, st = stateOf(p);
+          const off = x < 0 || y < 0 || x > P.W || y > P.H;
+          const g = el('g', { class: `m-pin ${p.kind} ${st}${mapState.hi === p.id ? ' hi' : ''}`, 'data-id': p.id, tabindex: 0 }, svg);
+          if (off) { // clamp to the edge with a distance note
+            const [cx, cy] = [P.W / 2, P.H / 2], dx = x - cx, dy = y - cy;
+            const t = Math.min(Math.abs((P.W / 2 - 22 * u) / dx), Math.abs((P.H / 2 - 22 * u) / dy));
+            const km = Math.round(Math.hypot(dx, dy) / 1000);
+            x = cx + dx * t; y = cy + dy * t;
+            let ly = y + (dy < 0 ? 26 * u : -18 * u);
+            while (edgeSlots.some(sl => Math.abs(sl.y - ly) < 14 * u && Math.abs(sl.x - x) < 260 * u)) ly += (dy < 0 ? 14 : -14) * u;
+            edgeSlots.push({ x, y: ly });
+            const lab = el('text', { x: x + (dx < 0 ? 16 * u : -16 * u), y: ly, class: 'm-edge', 'font-size': 11 * u, 'stroke-width': 3 * u, 'text-anchor': dx < 0 ? 'start' : 'end' }, g);
+            lab.textContent = `${p.name} · ${km} km ${Math.abs(dx) > Math.abs(dy) ? (dx > 0 ? '→' : '←') : (dy > 0 ? '↓' : '↑')}`;
+          }
+          if (st === 'booked') el('circle', { cx: x, cy: y, r: r + 4 * u, class: 'booked-ring', 'stroke-width': 2.2 * u }, g);
+          if (p.approx) el('circle', { cx: x, cy: y, r: r + (st === 'booked' ? 7.5 : 3.5) * u, class: 'approx-ring', 'stroke-width': 1.2 * u }, g);
+          if (p.kind === 'do') el('rect', { x: x - r * 0.85, y: y - r * 0.85, width: r * 1.7, height: r * 1.7, transform: `rotate(45 ${x} ${y})`, class: 'shape', 'stroke-width': 1.5 * u }, g);
+          else if (p.kind === 'base') el('rect', { x: x - r, y: y - r, width: r * 2, height: r * 2, rx: 2 * u, class: 'shape', 'stroke-width': 1.5 * u }, g);
+          else el('circle', { cx: x, cy: y, r, class: 'shape', 'stroke-width': 1.5 * u }, g);
+          const t = el('text', { x, y, 'text-anchor': 'middle', 'font-size': (p.kind === 'base' ? 12 : 10) * u }, g);
+          t.textContent = p.kind === 'base' ? '★' : p.num;
+        });
+    }
+
+    function renderList(items) {
+      const row = p => {
+        const st = stateOf(p);
+        return `<button type="button" class="ml-item ${p.kind} ${st}${mapState.hi === p.id ? ' hi' : ''}" data-id="${p.id}">` +
+          `<span class="ml-num">${p.kind === 'base' ? '★' : p.num}</span>` +
+          `<span class="ml-name">${esc(p.name)}${st === 'booked' ? '<span class="ml-chip">Booked</span>' : ''}<span class="ml-meta">${esc(p.desc)} · ${esc(p.hood)} · ${dayText(p)}${p.approx ? ' · ≈' : ''}</span></span></button>`;
+      };
+      const shown = items.filter(visible);
+      let html = '';
+      // On a picked day, that day's booked + planned places lead the list
+      if (mapState.day !== 'all') {
+        const plan = shown.filter(p => p.status !== 'open');
+        html += `<div class="ml-hood ml-day">Jul ${mapState.day} plan</div>` + (plan.length ? plan.map(row).join('') : '<p class="ml-empty">Nothing planned here this day.</p>');
+        html += '<div class="ml-sub">Not slated yet — nearby options</div>';
+      }
+      let hood = null;
+      shown.filter(p => mapState.day === 'all' || p.status === 'open').forEach(p => {
+        if (p.hood !== hood) { hood = p.hood; html += `<div class="ml-hood">${esc(hood)}</div>`; }
+        html += row(p);
+      });
+      list.innerHTML = html;
+    }
+
+    function renderControls() {
+      const c = MAP_CITIES[mapState.city];
+      document.querySelectorAll('.map-city').forEach(b => b.classList.toggle('active', b.dataset.city === mapState.city));
+      $('map-days').innerHTML = `<button type="button" class="map-day${mapState.day === 'all' ? ' active' : ''}" data-day="all">All days</button>` +
+        c.days.map(d => `<button type="button" class="map-day${mapState.day === d ? ' active' : ''}" data-day="${d}">Jul ${d}<span class="dow">${MAP_DAYS[d][0]}</span></button>`).join('');
+      $('map-dayline').textContent = mapState.day === 'all'
+        ? `${c.name}: everything on our list. Pick a day to see just that day's plan, plus places not slated yet.`
+        : `Jul ${mapState.day} · ${MAP_DAYS[mapState.day][1]}`;
+      $('map-sub').textContent = c.name + ' · learn the neighborhoods';
+      document.querySelectorAll('.map-mode-btn').forEach(b => b.classList.toggle('active', b.dataset.mode === mapState.mode));
+      $('map-svg-wrap').hidden = mapState.mode !== 'drawn';
+      $('map-street').hidden = mapState.mode !== 'street';
+    }
+
+    let mapItems = [];
+    function renderMap() {
+      mapItems = cityPlaces();
+      renderControls();
+      renderList(mapItems);
+      if (mapState.mode === 'drawn') renderSvg(mapItems); else renderStreet(mapItems);
+    }
+
+    function showTip(p, anchorEl) {
+      if (!p) { tip.hidden = true; return; }
+      tip.innerHTML = `<div class="t-name">${esc(p.name)}</div><div class="t-hood">${esc(p.hood)}</div>${esc(p.desc)}` +
+        `<div class="t-meta">${dayText(p)}${p.approx ? ' · location approximate' : ''}</div>` +
+        `<div class="t-meta"><a href="${gmaps(p)}" target="_blank" rel="noopener">Open in Google Maps ↗</a></div>`;
+      tip.hidden = false;
+      const stage = tip.parentElement.getBoundingClientRect(), r = anchorEl.getBoundingClientRect();
+      let left = r.left - stage.left + r.width / 2 + 12, top = r.top - stage.top - 10;
+      if (left + 270 > stage.width) left = Math.max(4, r.left - stage.left - 272);
+      tip.style.left = left + 'px'; tip.style.top = Math.max(4, top) + 'px';
+    }
+    function select(id, fromList) {
+      mapState.hi = id;
+      renderMap();
+      const p = mapItems.find(x => x.id === id);
+      if (mapState.mode === 'drawn') {
+        const g = svg.querySelector(`[data-id="${id}"]`);
+        if (g) showTip(p, g.querySelector('.shape'));
+      } else if (streetMap && streetMarkers[id]) {
+        streetMap.panTo(streetMarkers[id].getLatLng());
+        showTip(p, streetMarkers[id].getElement());
+      }
+      if (!fromList) { const li = list.querySelector(`[data-id="${id}"]`); if (li) li.scrollIntoView({ block: 'nearest' }); }
+    }
+
+    // ---- street mode (Leaflet + OpenStreetMap tiles, loaded only when asked for) ----
+    let streetMap = null, streetLayer = null, streetMarkers = {}, leafletLoading = false;
+    function loadLeaflet(done) {
+      if (window.L) return done();
+      if (leafletLoading) return;
+      leafletLoading = true;
+      $('map-street').innerHTML = '<p class="map-note" style="padding:16px">Loading street map…</p>';
+      const css = document.createElement('link');
+      Object.assign(css, { rel: 'stylesheet', href: LEAFLET.css, integrity: LEAFLET.cssSri, crossOrigin: '' });
+      document.head.appendChild(css);
+      const js = document.createElement('script');
+      Object.assign(js, { src: LEAFLET.js, integrity: LEAFLET.jsSri, crossOrigin: '' });
+      js.onload = () => { leafletLoading = false; $('map-street').innerHTML = ''; done(); };
+      js.onerror = () => {
+        leafletLoading = false;
+        $('map-street').innerHTML = '<p class="map-note" style="padding:16px">The street map needs an internet connection. The drawn map works offline.</p>';
+      };
+      document.head.appendChild(js);
+    }
+    function renderStreet(items) {
+      loadLeaflet(() => {
+        const c = MAP_CITIES[mapState.city], [s, w, n, e] = c.bbox;
+        if (!streetMap) {
+          streetMap = L.map('map-street', { scrollWheelZoom: false });
+          L.tileLayer(LEAFLET.tiles, { attribution: LEAFLET.attribution, maxZoom: 19 }).addTo(streetMap);
+          streetMap.on('click', () => { mapState.hi = null; showTip(null); renderMap(); });
+        }
+        if (streetMap._vacCity !== mapState.city) { streetMap.fitBounds([[s, w], [n, e]]); streetMap._vacCity = mapState.city; }
+        if (streetLayer) streetLayer.remove();
+        streetLayer = L.layerGroup().addTo(streetMap);
+        streetMarkers = {};
+        const color = getComputedStyle(document.documentElement).getPropertyValue(c.color).trim();
+        MAP_ZONES.filter(zn => zn.city === mapState.city).forEach(zn => {
+          L.circle([zn.lat, zn.lon], { radius: zn.r, color, weight: 1, dashArray: '4 4', fillOpacity: 0.08, interactive: false }).addTo(streetLayer);
+          L.marker([zn.lat, zn.lon], { interactive: false, icon: L.divIcon({ className: '', html: `<div class="lf-zone">${esc(zn.name)}</div>`, iconSize: [0, 0] }) }).addTo(streetLayer);
+        });
+        const order = { open: 0, planned: 1, booked: 2 };
+        items.filter(visible).sort((a, b) => order[stateOf(a)] - order[stateOf(b)]).forEach(p => {
+          const st = stateOf(p);
+          const cls = `lf-pin ${p.kind} ${st}${p.approx ? ' approx' : ''}${mapState.hi === p.id ? ' hi' : ''}`;
+          const m = L.marker([p.lat, p.lon], { icon: L.divIcon({ className: '', html: `<div class="${cls}"><span>${p.kind === 'base' ? '★' : p.num}</span></div>`, iconSize: [22, 22], iconAnchor: [11, 11] }), zIndexOffset: order[st] * 100 })
+            .addTo(streetLayer);
+          m.on('click', ev => { L.DomEvent.stopPropagation(ev); select(p.id); });
+          streetMarkers[p.id] = m;
+        });
+        setTimeout(() => streetMap.invalidateSize(), 0);
+      });
+    }
+
+    // ---- events ----
+    document.querySelector('#maps .map-controls').addEventListener('click', ev => {
+      const b = ev.target.closest('button');
+      if (!b) return;
+      if (b.dataset.city) { mapState.city = b.dataset.city; mapState.day = 'all'; mapState.zoom = 1; mapState.cx = null; mapState.hi = null; }
+      if (b.dataset.day) mapState.day = b.dataset.day === 'all' ? 'all' : +b.dataset.day;
+      if (b.dataset.mode) mapState.mode = b.dataset.mode;
+      showTip(null);
+      renderMap();
+    });
+    $('map-show-eat').addEventListener('change', e => { mapState.eat = e.target.checked; renderMap(); });
+    $('map-show-do').addEventListener('change', e => { mapState.do = e.target.checked; renderMap(); });
+    list.addEventListener('click', ev => { const b = ev.target.closest('.ml-item'); if (b) select(b.dataset.id, true); });
+    svg.addEventListener('click', ev => {
+      if (svg._dragged) return;
+      const g = ev.target.closest('.m-pin');
+      if (g) select(g.dataset.id); else { mapState.hi = null; showTip(null); renderMap(); }
+    });
+    document.querySelector('#maps .map-zoom').addEventListener('click', ev => {
+      const b = ev.target.closest('button'); if (!b) return;
+      const z = b.dataset.zoom;
+      mapState.zoom = z === 'reset' ? 1 : Math.min(4, Math.max(1, mapState.zoom * (z === 'in' ? 1.5 : 1 / 1.5)));
+      if (z === 'reset') mapState.cx = null;
+      showTip(null); renderMap();
+    });
+    // drag to pan the drawn map when zoomed in
+    let drag = null;
+    svg.addEventListener('pointerdown', ev => { if (mapState.zoom > 1) { drag = { x: ev.clientX, y: ev.clientY, cx: mapState.cx, cy: mapState.cy }; svg._dragged = false; } });
+    window.addEventListener('pointermove', ev => {
+      if (!drag) return;
+      const k = (proj(MAP_CITIES[mapState.city]).W / mapState.zoom) / svg.getBoundingClientRect().width;
+      const dx = ev.clientX - drag.x, dy = ev.clientY - drag.y;
+      if (Math.abs(dx) + Math.abs(dy) > 4) { svg._dragged = true; svg.classList.add('dragging'); showTip(null); }
+      mapState.cx = drag.cx - dx * k; mapState.cy = drag.cy - dy * k;
+      renderSvg(mapItems);
+    });
+    window.addEventListener('pointerup', () => { drag = null; svg.classList.remove('dragging'); setTimeout(() => { svg._dragged = false; }, 0); });
+
+    // render when the Maps tab is first shown (and on deep link)
+    let mapsReady = false;
+    function initMaps() { if (!mapsReady) { mapsReady = true; renderMap(); } else if (mapState.mode === 'street' && streetMap) streetMap.invalidateSize(); }
+    document.querySelector('.tab[data-tab="maps"]').addEventListener('click', initMaps);
+    if (!$('maps').hidden) initMaps();
+    window.addEventListener('hashchange', () => { if (!$('maps').hidden) initMaps(); });
+    window.addEventListener('beforeprint', () => { if (!mapsReady) renderMap(); });
+
+    // Phrases tab — city selector
+    document.querySelectorAll('[data-phr-city]').forEach(b => b.addEventListener('click', () => {
+      document.querySelectorAll('[data-phr-city]').forEach(x => x.classList.toggle('active', x === b));
+      document.querySelectorAll('[data-phr-panel]').forEach(pn => { pn.hidden = pn.dataset.phrPanel !== b.dataset.phrCity; });
+    }));
+  })();
+</script>
+</body>
+</html>
