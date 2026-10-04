@@ -86,6 +86,7 @@ the others. Pick modules for what *this* trip needs; leave out the rest.
 | **Eat & do — Do / Eat by city** | Two headed parts, one-line description per place | Multi-city trips | Italy |
 | **When to book** | Booking triggers sorted by date | Trips booked months ahead | Italy |
 | **City maps** (Maps tab) | Pins per city on a drawn map (neighborhood zones, river/coast), day filter, places listed by neighborhood; optional street-map mode | Unfamiliar or multi-city trips | Italy |
+| **Phrasebook** (Phrases tab) | Key phrases with a say-it respelling (stressed syllable in caps), plus a city selector for place, neighborhood and menu words | Trips where the local language isn't English | Italy |
 | **Hotels / flights cards** | Stays and legs as cards | All trips | Amsterdam, Hawaii, Italy |
 | **Packing & style** | Weather, style, shoes, gear | All trips | All |
 | **Sub-trip panel** | Day trip with phases + alternate; expedition day cards; weather swap decision box | Trips with day trips or side legs | Amsterdam, Hawaii, Italy |

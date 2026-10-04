@@ -143,7 +143,7 @@ body {
 .tab {
   background: transparent;
   border: none;
-  padding: 14px 16px 16px;
+  padding: 14px 12px 16px;
   cursor: pointer;
   text-align: left;
   font-family: var(--sans);
@@ -988,6 +988,39 @@ body {
 #map-street .leaflet-tile-pane { filter: saturate(0.55) sepia(0.12) brightness(1.03); }
 .lf-zone { font: 400 11px var(--display); text-transform: uppercase; letter-spacing: 0.12em; color: #5b5249; white-space: nowrap; text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff; transform: translate(-50%, -50%); }
 
+/* --- PHRASES TAB --- */
+.phr-key em { font-style: normal; font-weight: 700; color: var(--ink); }
+.phr-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; align-items: start; }
+.phr-card { background: var(--paper-2); border: 1px solid var(--rule); padding: 16px 18px; }
+.phr-card-title {
+  font-family: var(--display);
+  font-size: 17px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding-bottom: 6px;
+  margin-bottom: 6px;
+  border-bottom: 2px solid var(--rosso);
+}
+.phr-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 10px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--rule-soft);
+  align-items: baseline;
+}
+.phr-row:last-child { border-bottom: none; }
+.phr-it { font-weight: 700; font-size: 14px; }
+.phr-say { font-family: var(--sans); font-size: 14px; color: var(--tyrrhenian); letter-spacing: 0.01em; }
+.phr-say b { font-weight: 700; letter-spacing: 0.03em; }
+.phr-en { font-size: 12.5px; color: var(--muted); line-height: 1.35; }
+.phr-cities { margin-bottom: 16px; }
+.phr-city-name { display: none; }
+.phr-city.terracotta .phr-card-title { border-bottom-color: var(--terracotta); }
+.phr-city.ochre .phr-card-title { border-bottom-color: var(--ochre); }
+.phr-city.tyrrhenian .phr-card-title { border-bottom-color: var(--tyrrhenian); }
+.phr-city.pompeian .phr-card-title { border-bottom-color: var(--pompeian); }
+
 /* --- FOOTER --- */
 .footer {
   margin-top: 80px;
@@ -1069,6 +1102,9 @@ body {
   .part-nav { margin: -8px 0 24px; }
   .eatdo-pair, .eatdo-pair.eat-wide { grid-template-columns: 1fr; gap: 12px; }
   .map-layout { grid-template-columns: 1fr; }
+  .phr-grid { grid-template-columns: 1fr; }
+  .phr-row { grid-template-columns: 1fr 1fr; }
+  .phr-en { grid-column: 1 / -1; }
   .map-list { max-height: 420px; }
   .map-mode { margin-left: 0; }
   .map-row-label { width: 100%; }
@@ -1119,6 +1155,20 @@ body {
     widows: 3;
   }
   .wrap { max-width: 100%; }
+  .phr-cities { display: none !important; }
+  .phr-city[hidden] { display: block !important; }
+  .phr-city { break-inside: auto; margin-bottom: 10px; }
+  .phr-city + .phr-city { break-before: page; page-break-before: always; }
+  .phr-city-name { display: block; font-family: var(--display); font-size: 14pt; margin: 6px 0 4px; }
+  .phr-grid { gap: 8px; grid-template-columns: repeat(3, 1fr); }
+  .phr-card { padding: 7px 9px; break-inside: auto; }
+  .phr-row { break-inside: avoid; }
+  .phr-city-name { break-after: avoid; }
+  .phr-card-title { font-size: 10pt; margin-bottom: 2px; padding-bottom: 3px; }
+  .phr-row { padding: 2px 0; gap: 6px; }
+  .phr-it { font-size: 8pt; }
+  .phr-say { font-size: 8.5pt; }
+  .phr-en { font-size: 7pt; }
   .hero, .tabs, .print-btn, .footer, .part-nav, .map-controls .map-row, .map-zoom, .map-tip, .map-mode { display: none !important; }
   .map-layout { grid-template-columns: 1.15fr 1fr; gap: 10px; }
   #map-svg { max-height: 5.3in; }
@@ -1332,6 +1382,10 @@ body {
   <button class="tab" role="tab" data-tab="subtrips">
     <span class="tab-label">Sub-trips</span>
     <span class="tab-sub">Day trips</span>
+  </button>
+  <button class="tab" role="tab" data-tab="phrases">
+    <span class="tab-label">Phrases</span>
+    <span class="tab-sub">Say it right</span>
   </button>
   <button class="print-btn" type="button" aria-label="Print this tab">Print this tab</button>
 </nav>
@@ -2393,6 +2447,262 @@ body {
 
 </div><!-- /subtrips -->
 
+<!-- ===================== PHRASES ===================== -->
+<div class="tab-panel" id="phrases" role="tabpanel" hidden>
+
+<section class="section">
+  <div class="section-head">
+    <span class="section-num">18</span>
+    <h2 class="section-title">Key phrases</h2>
+    <span class="section-sub">Say it like a local</span>
+  </div>
+  <p class="scope-legend phr-key">
+    <strong>How to read it:</strong> <b>CAPITALS</b> = stressed syllable.
+    <em>ci / ce</em> = "ch" (ciao = <b>CHOW</b>) · <em>chi / che</em> = "k" (Vecchio = <b>VEHK</b>-kyoh) · <em>gi / ge</em> = "j" · <em>gn</em> = "ny" (bagno = <b>BAHN</b>-yoh) ·
+    <em>gli</em> = "ly" (biglietto = beel-<b>YEHT</b>-toh) · <em>sci / sce</em> = "sh" · <em>z</em> = "ts" or "dz" · double letters are held a beat · every vowel is spoken (Duomo = <b>DWOH</b>-moh).
+  </p>
+  <div class="phr-grid">
+    <div class="phr-card">
+      <div class="phr-card-title">Basics</div>
+      <div class="phr-row"><span class="phr-it">Buongiorno</span><span class="phr-say">bwon-<b>JOR</b>-noh</span><span class="phr-en">Good morning / hello (until mid-afternoon)</span></div>
+      <div class="phr-row"><span class="phr-it">Buonasera</span><span class="phr-say">bwoh-nah-<b>SEH</b>-rah</span><span class="phr-en">Good evening (from mid-afternoon)</span></div>
+      <div class="phr-row"><span class="phr-it">Ciao</span><span class="phr-say"><b>CHOW</b></span><span class="phr-en">Hi / bye — friends and casual settings only</span></div>
+      <div class="phr-row"><span class="phr-it">Arrivederci</span><span class="phr-say">ah-ree-veh-<b>DEHR</b>-chee</span><span class="phr-en">Goodbye</span></div>
+      <div class="phr-row"><span class="phr-it">Per favore</span><span class="phr-say">pehr fah-<b>VOH</b>-reh</span><span class="phr-en">Please</span></div>
+      <div class="phr-row"><span class="phr-it">Grazie (mille)</span><span class="phr-say"><b>GRAHT</b>-see-eh (<b>MEEL</b>-leh)</span><span class="phr-en">Thank you (very much)</span></div>
+      <div class="phr-row"><span class="phr-it">Prego</span><span class="phr-say"><b>PREH</b>-goh</span><span class="phr-en">You&#x27;re welcome · go ahead · after you</span></div>
+      <div class="phr-row"><span class="phr-it">Scusi</span><span class="phr-say"><b>SKOO</b>-zee</span><span class="phr-en">Excuse me — to get attention</span></div>
+      <div class="phr-row"><span class="phr-it">Permesso</span><span class="phr-say">pehr-<b>MEHS</b>-soh</span><span class="phr-en">Excuse me — to squeeze past</span></div>
+      <div class="phr-row"><span class="phr-it">Mi dispiace</span><span class="phr-say">mee dee-<b>SPYAH</b>-cheh</span><span class="phr-en">I&#x27;m sorry</span></div>
+      <div class="phr-row"><span class="phr-it">Parla inglese?</span><span class="phr-say"><b>PAR</b>-lah een-<b>GLEH</b>-zeh?</span><span class="phr-en">Do you speak English?</span></div>
+      <div class="phr-row"><span class="phr-it">Non capisco</span><span class="phr-say">nohn kah-<b>PEES</b>-koh</span><span class="phr-en">I don&#x27;t understand</span></div>
+      <div class="phr-row"><span class="phr-it">Più piano, per favore</span><span class="phr-say">pyoo <b>PYAH</b>-noh, pehr fah-<b>VOH</b>-reh</span><span class="phr-en">More slowly, please</span></div>
+    </div>
+    <div class="phr-card">
+      <div class="phr-card-title">Eating out</div>
+      <div class="phr-row"><span class="phr-it">Un tavolo per due</span><span class="phr-say">oon <b>TAH</b>-voh-loh pehr <b>DOO</b>-eh</span><span class="phr-en">A table for two</span></div>
+      <div class="phr-row"><span class="phr-it">Abbiamo una prenotazione</span><span class="phr-say">ahb-<b>BYAH</b>-moh <b>OO</b>-nah preh-noh-tah-<b>TSYOH</b>-neh</span><span class="phr-en">We have a reservation</span></div>
+      <div class="phr-row"><span class="phr-it">Cosa ci consiglia?</span><span class="phr-say"><b>KOH</b>-zah chee kohn-<b>SEEL</b>-yah?</span><span class="phr-en">What do you recommend?</span></div>
+      <div class="phr-row"><span class="phr-it">Vorrei…</span><span class="phr-say">vohr-<b>RAY</b>…</span><span class="phr-en">I&#x27;d like…</span></div>
+      <div class="phr-row"><span class="phr-it">Acqua naturale / frizzante</span><span class="phr-say"><b>AHK</b>-kwah nah-too-<b>RAH</b>-leh / freet-<b>TSAHN</b>-teh</span><span class="phr-en">Still / sparkling water</span></div>
+      <div class="phr-row"><span class="phr-it">Un bicchiere di vino bianco</span><span class="phr-say">oon beek-<b>KYEH</b>-reh dee <b>VEE</b>-noh <b>BYAHN</b>-koh</span><span class="phr-en">A glass of white wine</span></div>
+      <div class="phr-row"><span class="phr-it">Un caffè</span><span class="phr-say">oon kahf-<b>FEH</b></span><span class="phr-en">An espresso (just &quot;coffee&quot; in Italy)</span></div>
+      <div class="phr-row"><span class="phr-it">Buonissimo!</span><span class="phr-say">bwoh-<b>NEES</b>-see-moh!</span><span class="phr-en">Delicious!</span></div>
+      <div class="phr-row"><span class="phr-it">Il conto, per favore</span><span class="phr-say">eel <b>KOHN</b>-toh, pehr fah-<b>VOH</b>-reh</span><span class="phr-en">The check, please</span></div>
+      <div class="phr-row"><span class="phr-it">Posso pagare con la carta?</span><span class="phr-say"><b>POHS</b>-soh pah-<b>GAH</b>-reh kohn lah <b>KAR</b>-tah?</span><span class="phr-en">Can I pay by card?</span></div>
+      <div class="phr-row"><span class="phr-it">Il coperto</span><span class="phr-say">eel koh-<b>PEHR</b>-toh</span><span class="phr-en">Cover charge on the bill — normal, not a scam</span></div>
+      <div class="phr-row"><span class="phr-it">Da portare via</span><span class="phr-say">dah por-<b>TAH</b>-reh <b>VEE</b>-ah</span><span class="phr-en">To take away</span></div>
+    </div>
+    <div class="phr-card">
+      <div class="phr-card-title">Getting around</div>
+      <div class="phr-row"><span class="phr-it">Dov&#x27;è…?</span><span class="phr-say">doh-<b>VEH</b>…?</span><span class="phr-en">Where is…?</span></div>
+      <div class="phr-row"><span class="phr-it">Quanto costa?</span><span class="phr-say"><b>KWAHN</b>-toh <b>KOH</b>-stah?</span><span class="phr-en">How much is it?</span></div>
+      <div class="phr-row"><span class="phr-it">La stazione</span><span class="phr-say">lah stah-<b>TSYOH</b>-neh</span><span class="phr-en">The (train) station</span></div>
+      <div class="phr-row"><span class="phr-it">Il binario</span><span class="phr-say">eel bee-<b>NAH</b>-ryoh</span><span class="phr-en">Train platform</span></div>
+      <div class="phr-row"><span class="phr-it">Il biglietto</span><span class="phr-say">eel beel-<b>YEHT</b>-toh</span><span class="phr-en">Ticket</span></div>
+      <div class="phr-row"><span class="phr-it">Convalidare il biglietto</span><span class="phr-say">kohn-vah-lee-<b>DAH</b>-reh eel beel-<b>YEHT</b>-toh</span><span class="phr-en">Validate your ticket (regional trains, buses)</span></div>
+      <div class="phr-row"><span class="phr-it">A che ora parte?</span><span class="phr-say">ah keh <b>OH</b>-rah <b>PAR</b>-teh?</span><span class="phr-en">What time does it leave?</span></div>
+      <div class="phr-row"><span class="phr-it">Il traghetto</span><span class="phr-say">eel trah-<b>GEHT</b>-toh</span><span class="phr-en">The ferry</span></div>
+      <div class="phr-row"><span class="phr-it">Uscita / Entrata</span><span class="phr-say">oo-<b>SHEE</b>-tah / ehn-<b>TRAH</b>-tah</span><span class="phr-en">Exit / Entrance</span></div>
+      <div class="phr-row"><span class="phr-it">Il bagno</span><span class="phr-say">eel <b>BAHN</b>-yoh</span><span class="phr-en">The restroom</span></div>
+      <div class="phr-row"><span class="phr-it">Sciopero</span><span class="phr-say"><b>SHOH</b>-peh-roh</span><span class="phr-en">Strike — check transport before travel days</span></div>
+    </div>
+    <div class="phr-card">
+      <div class="phr-card-title">Shops &amp; markets</div>
+      <div class="phr-row"><span class="phr-it">Un etto di…</span><span class="phr-say">oon <b>EHT</b>-toh dee…</span><span class="phr-en">100 grams of… (deli counter)</span></div>
+      <div class="phr-row"><span class="phr-it">Posso assaggiare?</span><span class="phr-say"><b>POHS</b>-soh ahs-sahd-<b>JAH</b>-reh?</span><span class="phr-en">Can I taste it?</span></div>
+      <div class="phr-row"><span class="phr-it">Guardo solo, grazie</span><span class="phr-say"><b>GWAR</b>-doh <b>SOH</b>-loh, <b>GRAHT</b>-see-eh</span><span class="phr-en">Just looking, thanks</span></div>
+      <div class="phr-row"><span class="phr-it">Aperto / Chiuso</span><span class="phr-say">ah-<b>PEHR</b>-toh / <b>KYOO</b>-zoh</span><span class="phr-en">Open / Closed</span></div>
+    </div>
+    <div class="phr-card">
+      <div class="phr-card-title">Help</div>
+      <div class="phr-row"><span class="phr-it">Aiuto!</span><span class="phr-say">ah-<b>YOO</b>-toh!</span><span class="phr-en">Help!</span></div>
+      <div class="phr-row"><span class="phr-it">La farmacia</span><span class="phr-say">lah far-mah-<b>CHEE</b>-ah</span><span class="phr-en">The pharmacy</span></div>
+      <div class="phr-row"><span class="phr-it">Ho bisogno di un medico</span><span class="phr-say">oh bee-<b>ZOHN</b>-yoh dee oon <b>MEH</b>-dee-koh</span><span class="phr-en">I need a doctor</span></div>
+      <div class="phr-row"><span class="phr-it">Sono allergico / allergica a…</span><span class="phr-say"><b>SOH</b>-noh ahl-<b>LEHR</b>-jee-koh / -kah ah…</span><span class="phr-en">I&#x27;m allergic to… (he / she)</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <span class="section-num">19</span>
+    <h2 class="section-title">City words</h2>
+    <span class="section-sub">Places · neighborhoods · menus</span>
+  </div>
+  <div class="map-row phr-cities" role="group" aria-label="City">
+    <span class="map-row-label">City</span>
+    <button type="button" class="map-city terracotta active" data-phr-city="florence">Florence</button>
+    <button type="button" class="map-city ochre" data-phr-city="rome">Rome</button>
+    <button type="button" class="map-city tyrrhenian" data-phr-city="amalfi">Amalfi Coast</button>
+    <button type="button" class="map-city pompeian" data-phr-city="naples">Naples &amp; Pompeii</button>
+  </div>
+  <div class="phr-city terracotta" data-phr-panel="florence">
+    <div class="phr-city-name">Florence</div>
+    <div class="phr-grid">
+      <div class="phr-card">
+        <div class="phr-card-title">Places</div>
+        <div class="phr-row"><span class="phr-it">Firenze</span><span class="phr-say">fee-<b>REHN</b>-tseh</span><span class="phr-en">Florence</span></div>
+        <div class="phr-row"><span class="phr-it">Piazza della Signoria</span><span class="phr-say"><b>PYAHT</b>-tsah <b>DEHL</b>-lah seen-yoh-<b>REE</b>-ah</span><span class="phr-en">Our square</span></div>
+        <div class="phr-row"><span class="phr-it">Palazzo Vecchio</span><span class="phr-say">pah-<b>LAHT</b>-tsoh <b>VEHK</b>-kyoh</span><span class="phr-en">Town-hall fortress</span></div>
+        <div class="phr-row"><span class="phr-it">Ponte Vecchio</span><span class="phr-say"><b>POHN</b>-teh <b>VEHK</b>-kyoh</span><span class="phr-en">Old bridge</span></div>
+        <div class="phr-row"><span class="phr-it">Uffizi</span><span class="phr-say">oof-<b>FEET</b>-see</span><span class="phr-en">Gallery</span></div>
+        <div class="phr-row"><span class="phr-it">Galleria dell&#x27;Accademia</span><span class="phr-say">gahl-leh-<b>REE</b>-ah dehl-lahk-kah-<b>DEH</b>-myah</span><span class="phr-en">Home of the David</span></div>
+        <div class="phr-row"><span class="phr-it">Duomo</span><span class="phr-say"><b>DWOH</b>-moh</span><span class="phr-en">The cathedral</span></div>
+        <div class="phr-row"><span class="phr-it">Brunelleschi</span><span class="phr-say">broo-nehl-<b>LEHS</b>-kee</span><span class="phr-en">Architect of the dome</span></div>
+        <div class="phr-row"><span class="phr-it">Piazzale Michelangelo</span><span class="phr-say">pyaht-<b>TSAH</b>-leh mee-keh-<b>LAHN</b>-jeh-loh</span><span class="phr-en">Sunset viewpoint</span></div>
+        <div class="phr-row"><span class="phr-it">San Miniato al Monte</span><span class="phr-say">sahn mee-<b>NYAH</b>-toh ahl <b>MOHN</b>-teh</span><span class="phr-en">Hilltop church</span></div>
+        <div class="phr-row"><span class="phr-it">Santa Maria Novella</span><span class="phr-say"><b>SAHN</b>-tah mah-<b>REE</b>-ah noh-<b>VEHL</b>-lah</span><span class="phr-en">Main train station (SMN) and its area</span></div>
+        <div class="phr-row"><span class="phr-it">Peretola</span><span class="phr-say">peh-<b>REH</b>-toh-lah</span><span class="phr-en">Florence airport</span></div>
+        <div class="phr-row"><span class="phr-it">Torre a Cona</span><span class="phr-say"><b>TOHR</b>-reh ah <b>KOH</b>-nah</span><span class="phr-en">Winery (Jul 4)</span></div>
+      </div>
+      <div class="phr-card">
+        <div class="phr-card-title">Neighborhoods</div>
+        <div class="phr-row"><span class="phr-it">Oltrarno</span><span class="phr-say">ohl-<b>TRAR</b>-noh</span><span class="phr-en">&quot;Beyond the Arno&quot; — the south bank</span></div>
+        <div class="phr-row"><span class="phr-it">Santo Spirito</span><span class="phr-say"><b>SAHN</b>-toh <b>SPEE</b>-ree-toh</span><span class="phr-en">Oltrarno piazza and quarter</span></div>
+        <div class="phr-row"><span class="phr-it">San Frediano</span><span class="phr-say">sahn freh-<b>DYAH</b>-noh</span><span class="phr-en">Artisan quarter, west Oltrarno</span></div>
+        <div class="phr-row"><span class="phr-it">San Niccolò</span><span class="phr-say">sahn neek-koh-<b>LOH</b></span><span class="phr-en">Below Piazzale Michelangelo</span></div>
+        <div class="phr-row"><span class="phr-it">Santa Croce</span><span class="phr-say"><b>SAHN</b>-tah <b>KROH</b>-cheh</span><span class="phr-en">Basilica and quarter</span></div>
+        <div class="phr-row"><span class="phr-it">Sant&#x27;Ambrogio</span><span class="phr-say">sahn-tahm-<b>BROH</b>-joh</span><span class="phr-en">Market quarter</span></div>
+        <div class="phr-row"><span class="phr-it">San Lorenzo</span><span class="phr-say">sahn loh-<b>REHN</b>-tsoh</span><span class="phr-en">Market and church north of the Duomo</span></div>
+      </div>
+      <div class="phr-card">
+        <div class="phr-card-title">On the menu</div>
+        <div class="phr-row"><span class="phr-it">Lampredotto</span><span class="phr-say">lahm-preh-<b>DOHT</b>-toh</span><span class="phr-en">Tripe sandwich</span></div>
+        <div class="phr-row"><span class="phr-it">Bistecca alla fiorentina</span><span class="phr-say">bee-<b>STEHK</b>-kah <b>AHL</b>-lah fyoh-rehn-<b>TEE</b>-nah</span><span class="phr-en">Giant T-bone</span></div>
+        <div class="phr-row"><span class="phr-it">Ribollita</span><span class="phr-say">ree-bohl-<b>LEE</b>-tah</span><span class="phr-en">Bread-and-bean soup</span></div>
+        <div class="phr-row"><span class="phr-it">Schiacciata</span><span class="phr-say">skyahch-<b>CHAH</b>-tah</span><span class="phr-en">Tuscan flatbread</span></div>
+        <div class="phr-row"><span class="phr-it">Carabaccia</span><span class="phr-say">kah-rah-<b>BAHCH</b>-chah</span><span class="phr-en">Onion soup</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="phr-city ochre" data-phr-panel="rome" hidden>
+    <div class="phr-city-name">Rome</div>
+    <div class="phr-grid">
+      <div class="phr-card">
+        <div class="phr-card-title">Places</div>
+        <div class="phr-row"><span class="phr-it">Roma</span><span class="phr-say"><b>ROH</b>-mah</span><span class="phr-en">Rome</span></div>
+        <div class="phr-row"><span class="phr-it">Palazzo Talìa</span><span class="phr-say">pah-<b>LAHT</b>-tsoh tah-<b>LEE</b>-ah</span><span class="phr-en">Our hotel</span></div>
+        <div class="phr-row"><span class="phr-it">Fontana di Trevi</span><span class="phr-say">fohn-<b>TAH</b>-nah dee <b>TREH</b>-vee</span><span class="phr-en">Trevi Fountain</span></div>
+        <div class="phr-row"><span class="phr-it">Piazza Navona</span><span class="phr-say"><b>PYAHT</b>-tsah nah-<b>VOH</b>-nah</span><span class="phr-en">Baroque piazza</span></div>
+        <div class="phr-row"><span class="phr-it">Sant&#x27;Ignazio</span><span class="phr-say">sahn-teen-<b>YAHT</b>-syoh</span><span class="phr-en">Painted-ceiling church</span></div>
+        <div class="phr-row"><span class="phr-it">San Luigi dei Francesi</span><span class="phr-say">sahn loo-<b>EE</b>-jee day frahn-<b>CHEH</b>-zee</span><span class="phr-en">Caravaggio church</span></div>
+        <div class="phr-row"><span class="phr-it">Musei Vaticani</span><span class="phr-say">moo-<b>ZAY</b> vah-tee-<b>KAH</b>-nee</span><span class="phr-en">Vatican Museums</span></div>
+        <div class="phr-row"><span class="phr-it">Cappella Sistina</span><span class="phr-say">kahp-<b>PEHL</b>-lah sees-<b>TEE</b>-nah</span><span class="phr-en">Sistine Chapel</span></div>
+        <div class="phr-row"><span class="phr-it">Castel Sant&#x27;Angelo</span><span class="phr-say">kah-<b>STEHL</b> sahn-<b>TAHN</b>-jeh-loh</span><span class="phr-en">Hadrian&#x27;s tomb / fortress</span></div>
+        <div class="phr-row"><span class="phr-it">Colosseo</span><span class="phr-say">koh-lohs-<b>SEH</b>-oh</span><span class="phr-en">Colosseum</span></div>
+        <div class="phr-row"><span class="phr-it">Foro Romano</span><span class="phr-say"><b>FOH</b>-roh roh-<b>MAH</b>-noh</span><span class="phr-en">Roman Forum</span></div>
+        <div class="phr-row"><span class="phr-it">Campidoglio</span><span class="phr-say">kahm-pee-<b>DOHL</b>-yoh</span><span class="phr-en">Capitoline Hill</span></div>
+        <div class="phr-row"><span class="phr-it">Portico d&#x27;Ottavia</span><span class="phr-say"><b>POR</b>-tee-koh doht-<b>TAH</b>-vyah</span><span class="phr-en">Heart of the Ghetto</span></div>
+        <div class="phr-row"><span class="phr-it">Galleria Borghese</span><span class="phr-say">gahl-leh-<b>REE</b>-ah bor-<b>GEH</b>-zeh</span><span class="phr-en">Borghese Gallery</span></div>
+        <div class="phr-row"><span class="phr-it">Pincio</span><span class="phr-say"><b>PEEN</b>-choh</span><span class="phr-en">Park terrace</span></div>
+        <div class="phr-row"><span class="phr-it">Piazza del Popolo</span><span class="phr-say"><b>PYAHT</b>-tsah dehl <b>POH</b>-poh-loh</span><span class="phr-en">Twin-church piazza</span></div>
+        <div class="phr-row"><span class="phr-it">Piazza di Spagna</span><span class="phr-say"><b>PYAHT</b>-tsah dee <b>SPAHN</b>-yah</span><span class="phr-en">Spanish Steps square</span></div>
+        <div class="phr-row"><span class="phr-it">San Clemente</span><span class="phr-say">sahn kleh-<b>MEHN</b>-teh</span><span class="phr-en">Layered basilica</span></div>
+        <div class="phr-row"><span class="phr-it">Via Appia Antica</span><span class="phr-say"><b>VEE</b>-ah <b>AHP</b>-pyah ahn-<b>TEE</b>-kah</span><span class="phr-en">Appian Way</span></div>
+        <div class="phr-row"><span class="phr-it">Termini</span><span class="phr-say"><b>TEHR</b>-mee-nee</span><span class="phr-en">Main train station</span></div>
+      </div>
+      <div class="phr-card">
+        <div class="phr-card-title">Neighborhoods</div>
+        <div class="phr-row"><span class="phr-it">Trastevere</span><span class="phr-say">trah-<b>STEH</b>-veh-reh</span><span class="phr-en">&quot;Across the Tiber&quot;</span></div>
+        <div class="phr-row"><span class="phr-it">Gianicolo</span><span class="phr-say">jah-<b>NEE</b>-koh-loh</span><span class="phr-en">Janiculum Hill</span></div>
+        <div class="phr-row"><span class="phr-it">Testaccio</span><span class="phr-say">tehs-<b>TAHCH</b>-choh</span><span class="phr-en">Market and food quarter</span></div>
+        <div class="phr-row"><span class="phr-it">Aventino</span><span class="phr-say">ah-vehn-<b>TEE</b>-noh</span><span class="phr-en">Aventine Hill</span></div>
+        <div class="phr-row"><span class="phr-it">Monti</span><span class="phr-say"><b>MOHN</b>-tee</span><span class="phr-en">Village-like quarter by the Forum</span></div>
+        <div class="phr-row"><span class="phr-it">Esquilino</span><span class="phr-say">ehs-kwee-<b>LEE</b>-noh</span><span class="phr-en">Near Termini</span></div>
+        <div class="phr-row"><span class="phr-it">Campo de&#x27; Fiori</span><span class="phr-say"><b>KAHM</b>-poh deh <b>FYOH</b>-ree</span><span class="phr-en">Market square</span></div>
+        <div class="phr-row"><span class="phr-it">Prati</span><span class="phr-say"><b>PRAH</b>-tee</span><span class="phr-en">Next to the Vatican</span></div>
+        <div class="phr-row"><span class="phr-it">Ostiense</span><span class="phr-say">oh-<b>STYEHN</b>-seh</span><span class="phr-en">South of Testaccio</span></div>
+      </div>
+      <div class="phr-card">
+        <div class="phr-card-title">On the menu</div>
+        <div class="phr-row"><span class="phr-it">Supplì</span><span class="phr-say">soop-<b>PLEE</b></span><span class="phr-en">Fried rice ball</span></div>
+        <div class="phr-row"><span class="phr-it">Cacio e pepe</span><span class="phr-say"><b>KAH</b>-choh eh <b>PEH</b>-peh</span><span class="phr-en">Cheese-and-pepper pasta</span></div>
+        <div class="phr-row"><span class="phr-it">Gricia</span><span class="phr-say"><b>GREE</b>-chah</span><span class="phr-en">Guanciale-and-pecorino pasta</span></div>
+        <div class="phr-row"><span class="phr-it">Amatriciana</span><span class="phr-say">ah-mah-tree-<b>CHAH</b>-nah</span><span class="phr-en">Tomato-guanciale pasta</span></div>
+        <div class="phr-row"><span class="phr-it">Maritozzo</span><span class="phr-say">mah-ree-<b>TOHT</b>-tsoh</span><span class="phr-en">Cream-filled bun</span></div>
+        <div class="phr-row"><span class="phr-it">Carciofi alla giudia</span><span class="phr-say">kar-<b>CHOH</b>-fee <b>AHL</b>-lah <b>JOO</b>-dyah</span><span class="phr-en">Jewish-style fried artichokes</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="phr-city tyrrhenian" data-phr-panel="amalfi" hidden>
+    <div class="phr-city-name">Amalfi Coast</div>
+    <div class="phr-grid">
+      <div class="phr-card">
+        <div class="phr-card-title">Places</div>
+        <div class="phr-row"><span class="phr-it">Costiera Amalfitana</span><span class="phr-say">koh-<b>STYEH</b>-rah ah-mahl-fee-<b>TAH</b>-nah</span><span class="phr-en">Amalfi Coast</span></div>
+        <div class="phr-row"><span class="phr-it">Abbraccio</span><span class="phr-say">ahb-<b>BRAHCH</b>-choh</span><span class="phr-en">Our hotel</span></div>
+        <div class="phr-row"><span class="phr-it">Salerno</span><span class="phr-say">sah-<b>LEHR</b>-noh</span><span class="phr-en">Train-to-ferry city</span></div>
+        <div class="phr-row"><span class="phr-it">Villa Cimbrone</span><span class="phr-say"><b>VEEL</b>-lah cheem-<b>BROH</b>-neh</span><span class="phr-en">Ravello gardens</span></div>
+        <div class="phr-row"><span class="phr-it">Villa Rufolo</span><span class="phr-say"><b>VEEL</b>-lah <b>ROO</b>-foh-loh</span><span class="phr-en">Ravello villa</span></div>
+        <div class="phr-row"><span class="phr-it">Grotta dello Smeraldo</span><span class="phr-say"><b>GROHT</b>-tah <b>DEHL</b>-loh zmeh-<b>RAHL</b>-doh</span><span class="phr-en">Emerald Grotto</span></div>
+        <div class="phr-row"><span class="phr-it">Fiordo di Furore</span><span class="phr-say"><b>FYOR</b>-doh dee foo-<b>ROH</b>-reh</span><span class="phr-en">Sea inlet</span></div>
+        <div class="phr-row"><span class="phr-it">Valle delle Ferriere</span><span class="phr-say"><b>VAHL</b>-leh <b>DEHL</b>-leh fehr-<b>RYEH</b>-reh</span><span class="phr-en">Valley hike</span></div>
+        <div class="phr-row"><span class="phr-it">Marisa Cuomo</span><span class="phr-say">mah-<b>REE</b>-zah <b>KWOH</b>-moh</span><span class="phr-en">Winery (Jul 12)</span></div>
+      </div>
+      <div class="phr-card">
+        <div class="phr-card-title">Towns</div>
+        <div class="phr-row"><span class="phr-it">Amalfi</span><span class="phr-say">ah-<b>MAHL</b>-fee</span><span class="phr-en">Our base</span></div>
+        <div class="phr-row"><span class="phr-it">Atrani</span><span class="phr-say">ah-<b>TRAH</b>-nee</span><span class="phr-en">Next village east</span></div>
+        <div class="phr-row"><span class="phr-it">Positano</span><span class="phr-say">poh-zee-<b>TAH</b>-noh</span><span class="phr-en">Boat-day stop</span></div>
+        <div class="phr-row"><span class="phr-it">Laurito</span><span class="phr-say">low-<b>REE</b>-toh</span><span class="phr-en">Beach near Positano</span></div>
+        <div class="phr-row"><span class="phr-it">Praiano</span><span class="phr-say">prah-<b>YAH</b>-noh</span><span class="phr-en">Between Positano and Furore</span></div>
+        <div class="phr-row"><span class="phr-it">Furore</span><span class="phr-say">foo-<b>ROH</b>-reh</span><span class="phr-en">Winery village</span></div>
+        <div class="phr-row"><span class="phr-it">Conca dei Marini</span><span class="phr-say"><b>KOHN</b>-kah day mah-<b>REE</b>-nee</span><span class="phr-en">Village by the grotto</span></div>
+        <div class="phr-row"><span class="phr-it">Ravello</span><span class="phr-say">rah-<b>VEHL</b>-loh</span><span class="phr-en">Hilltop town</span></div>
+        <div class="phr-row"><span class="phr-it">Scala · Minori · Tramonti</span><span class="phr-say"><b>SKAH</b>-lah · mee-<b>NOH</b>-ree · trah-<b>MOHN</b>-tee</span><span class="phr-en">Nearby towns</span></div>
+      </div>
+      <div class="phr-card">
+        <div class="phr-card-title">On the menu</div>
+        <div class="phr-row"><span class="phr-it">Scialatielli</span><span class="phr-say">shah-lah-<b>TYEHL</b>-lee</span><span class="phr-en">Thick fresh pasta</span></div>
+        <div class="phr-row"><span class="phr-it">Colatura di alici</span><span class="phr-say">koh-lah-<b>TOO</b>-rah dee ah-<b>LEE</b>-chee</span><span class="phr-en">Anchovy essence</span></div>
+        <div class="phr-row"><span class="phr-it">Delizia al limone</span><span class="phr-say">deh-<b>LEET</b>-tsyah ahl lee-<b>MOH</b>-neh</span><span class="phr-en">Lemon-cream cake</span></div>
+        <div class="phr-row"><span class="phr-it">Sfogliatella Santa Rosa</span><span class="phr-say">sfohl-yah-<b>TEHL</b>-lah <b>SAHN</b>-tah <b>ROH</b>-zah</span><span class="phr-en">Ricotta pastry</span></div>
+        <div class="phr-row"><span class="phr-it">&#x27;Ndunderi</span><span class="phr-say">n-<b>DOON</b>-deh-ree</span><span class="phr-en">Ricotta gnocchi</span></div>
+        <div class="phr-row"><span class="phr-it">Totani e patate</span><span class="phr-say"><b>TOH</b>-tah-nee eh pah-<b>TAH</b>-teh</span><span class="phr-en">Squid and potatoes</span></div>
+        <div class="phr-row"><span class="phr-it">Sarchiapone</span><span class="phr-say">sar-kyah-<b>POH</b>-neh</span><span class="phr-en">Stuffed gourd (Atrani)</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="phr-city pompeian" data-phr-panel="naples" hidden>
+    <div class="phr-city-name">Naples &amp; Pompeii</div>
+    <div class="phr-grid">
+      <div class="phr-card">
+        <div class="phr-card-title">Places</div>
+        <div class="phr-row"><span class="phr-it">Napoli</span><span class="phr-say"><b>NAH</b>-poh-lee</span><span class="phr-en">Naples</span></div>
+        <div class="phr-row"><span class="phr-it">Pompei · Scavi di Pompei</span><span class="phr-say">pohm-<b>PAY</b> · <b>SKAH</b>-vee dee pohm-<b>PAY</b></span><span class="phr-en">Pompeii · the ruins</span></div>
+        <div class="phr-row"><span class="phr-it">Circumvesuviana</span><span class="phr-say">cheer-koom-veh-zoo-<b>VYAH</b>-nah</span><span class="phr-en">Train from Pompeii</span></div>
+        <div class="phr-row"><span class="phr-it">Napoli Garibaldi</span><span class="phr-say"><b>NAH</b>-poh-lee gah-ree-<b>BAHL</b>-dee</span><span class="phr-en">Station where we change</span></div>
+        <div class="phr-row"><span class="phr-it">Toledo</span><span class="phr-say">toh-<b>LEH</b>-doh</span><span class="phr-en">Metro stop by our hotel</span></div>
+        <div class="phr-row"><span class="phr-it">Piazza del Plebiscito</span><span class="phr-say"><b>PYAHT</b>-tsah dehl pleh-bee-<b>SHEE</b>-toh</span><span class="phr-en">Grand square</span></div>
+        <div class="phr-row"><span class="phr-it">Castel dell&#x27;Ovo</span><span class="phr-say">kah-<b>STEHL</b> dehl-<b>LOH</b>-voh</span><span class="phr-en">Seafront castle</span></div>
+        <div class="phr-row"><span class="phr-it">Lungomare</span><span class="phr-say">loon-goh-<b>MAH</b>-reh</span><span class="phr-en">Seafront promenade</span></div>
+        <div class="phr-row"><span class="phr-it">Vesuvio</span><span class="phr-say">veh-<b>ZOO</b>-vyoh</span><span class="phr-en">Vesuvius</span></div>
+        <div class="phr-row"><span class="phr-it">Coppa America</span><span class="phr-say"><b>KOHP</b>-pah ah-<b>MEH</b>-ree-kah</span><span class="phr-en">America&#x27;s Cup</span></div>
+      </div>
+      <div class="phr-card">
+        <div class="phr-card-title">Neighborhoods</div>
+        <div class="phr-row"><span class="phr-it">Quartieri Spagnoli</span><span class="phr-say">kwar-<b>TYEH</b>-ree spahn-<b>YOH</b>-lee</span><span class="phr-en">Spanish Quarter</span></div>
+        <div class="phr-row"><span class="phr-it">Santa Lucia</span><span class="phr-say"><b>SAHN</b>-tah loo-<b>CHEE</b>-ah</span><span class="phr-en">Waterfront by the castle</span></div>
+        <div class="phr-row"><span class="phr-it">Chiaia</span><span class="phr-say"><b>KYAH</b>-yah</span><span class="phr-en">Elegant seafront quarter</span></div>
+        <div class="phr-row"><span class="phr-it">Materdei</span><span class="phr-say">mah-tehr-<b>DAY</b></span><span class="phr-en">Starita&#x27;s neighborhood</span></div>
+        <div class="phr-row"><span class="phr-it">Sanità</span><span class="phr-say">sah-nee-<b>TAH</b></span><span class="phr-en">Old quarter north of the center</span></div>
+        <div class="phr-row"><span class="phr-it">Vomero</span><span class="phr-say"><b>VOH</b>-meh-roh</span><span class="phr-en">Hilltop quarter</span></div>
+      </div>
+      <div class="phr-card">
+        <div class="phr-card-title">On the menu</div>
+        <div class="phr-row"><span class="phr-it">Starita</span><span class="phr-say">stah-<b>REE</b>-tah</span><span class="phr-en">Our pizzeria</span></div>
+        <div class="phr-row"><span class="phr-it">Pizza fritta</span><span class="phr-say"><b>PEET</b>-tsah <b>FREET</b>-tah</span><span class="phr-en">Fried pizza</span></div>
+        <div class="phr-row"><span class="phr-it">Frittatina</span><span class="phr-say">freet-tah-<b>TEE</b>-nah</span><span class="phr-en">Fried pasta bite</span></div>
+        <div class="phr-row"><span class="phr-it">Provola</span><span class="phr-say"><b>PROH</b>-voh-lah</span><span class="phr-en">Smoked mozzarella</span></div>
+        <div class="phr-row"><span class="phr-it">Sfogliatella</span><span class="phr-say">sfohl-yah-<b>TEHL</b>-lah</span><span class="phr-en">Shell-shaped pastry</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div><!-- /phrases -->
+
 <footer class="footer">
   <span>Italy · Summer 2027</span>
   <span class="footer-mark">v1</span>
@@ -2430,7 +2740,7 @@ body {
       });
     });
 
-    // Deep link via URL hash (#eatdo, #maps, #events, #bookings, #logistics, #subtrips)
+    // Deep link via URL hash (#eatdo, #maps, #events, #bookings, #logistics, #subtrips, #phrases)
     function handleHash() {
       const hash = (location.hash || '').replace('#', '');
       if (!hash) return;
@@ -2795,6 +3105,12 @@ body {
     if (!$('maps').hidden) initMaps();
     window.addEventListener('hashchange', () => { if (!$('maps').hidden) initMaps(); });
     window.addEventListener('beforeprint', () => { if (!mapsReady) renderMap(); });
+
+    // Phrases tab — city selector
+    document.querySelectorAll('[data-phr-city]').forEach(b => b.addEventListener('click', () => {
+      document.querySelectorAll('[data-phr-city]').forEach(x => x.classList.toggle('active', x === b));
+      document.querySelectorAll('[data-phr-panel]').forEach(pn => { pn.hidden = pn.dataset.phrPanel !== b.dataset.phrCity; });
+    }));
   })();
 </script>
 </body>

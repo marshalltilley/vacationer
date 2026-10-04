@@ -463,11 +463,175 @@ Approximate centers and sizes for the labeled zones on the drawn map — names a
 | naples | Sanità | 40.8597 | 14.2516 | 290 |
 | naples | Porto / Municipio | 40.8396 | 14.2548 | 250 |
 
+## Phrases (Phrases tab)
+Pronunciation is a plain-English respelling. **CAPITALS = stressed syllable.** Key sounds: `c`/`cc` before e or i = "ch" (ciao = CHOW) · `ch` = "k" (Vecchio = VEHK-kyoh) · `g` before e or i = "j" · `gh` = hard "g" · `gn` = "ny" (bagno = BAHN-yoh) · `gli` = "ly" (biglietto = beel-YEHT-toh) · `sc` before e or i = "sh" · `z`/`zz` = "ts" or "dz" · double consonants are held a beat longer · every vowel is spoken (Duomo = DWOH-moh, not "doom").
+
+### Key phrases
+| Group | Italian | Say it | Meaning |
+|---|---|---|---|
+| Basics | Buongiorno | bwon-JOR-noh | Good morning / hello (until mid-afternoon) |
+| Basics | Buonasera | bwoh-nah-SEH-rah | Good evening (from mid-afternoon) |
+| Basics | Ciao | CHOW | Hi / bye — friends and casual settings only |
+| Basics | Arrivederci | ah-ree-veh-DEHR-chee | Goodbye |
+| Basics | Per favore | pehr fah-VOH-reh | Please |
+| Basics | Grazie (mille) | GRAHT-see-eh (MEEL-leh) | Thank you (very much) |
+| Basics | Prego | PREH-goh | You're welcome · go ahead · after you |
+| Basics | Scusi | SKOO-zee | Excuse me — to get attention |
+| Basics | Permesso | pehr-MEHS-soh | Excuse me — to squeeze past |
+| Basics | Mi dispiace | mee dee-SPYAH-cheh | I'm sorry |
+| Basics | Parla inglese? | PAR-lah een-GLEH-zeh? | Do you speak English? |
+| Basics | Non capisco | nohn kah-PEES-koh | I don't understand |
+| Basics | Più piano, per favore | pyoo PYAH-noh, pehr fah-VOH-reh | More slowly, please |
+| Eating out | Un tavolo per due | oon TAH-voh-loh pehr DOO-eh | A table for two |
+| Eating out | Abbiamo una prenotazione | ahb-BYAH-moh OO-nah preh-noh-tah-TSYOH-neh | We have a reservation |
+| Eating out | Cosa ci consiglia? | KOH-zah chee kohn-SEEL-yah? | What do you recommend? |
+| Eating out | Vorrei… | vohr-RAY… | I'd like… |
+| Eating out | Acqua naturale / frizzante | AHK-kwah nah-too-RAH-leh / freet-TSAHN-teh | Still / sparkling water |
+| Eating out | Un bicchiere di vino bianco | oon beek-KYEH-reh dee VEE-noh BYAHN-koh | A glass of white wine |
+| Eating out | Un caffè | oon kahf-FEH | An espresso (just "coffee" in Italy) |
+| Eating out | Buonissimo! | bwoh-NEES-see-moh! | Delicious! |
+| Eating out | Il conto, per favore | eel KOHN-toh, pehr fah-VOH-reh | The check, please |
+| Eating out | Posso pagare con la carta? | POHS-soh pah-GAH-reh kohn lah KAR-tah? | Can I pay by card? |
+| Eating out | Il coperto | eel koh-PEHR-toh | Cover charge on the bill — normal, not a scam |
+| Eating out | Da portare via | dah por-TAH-reh VEE-ah | To take away |
+| Getting around | Dov'è…? | doh-VEH…? | Where is…? |
+| Getting around | Quanto costa? | KWAHN-toh KOH-stah? | How much is it? |
+| Getting around | La stazione | lah stah-TSYOH-neh | The (train) station |
+| Getting around | Il binario | eel bee-NAH-ryoh | Train platform |
+| Getting around | Il biglietto | eel beel-YEHT-toh | Ticket |
+| Getting around | Convalidare il biglietto | kohn-vah-lee-DAH-reh eel beel-YEHT-toh | Validate your ticket (regional trains, buses) |
+| Getting around | A che ora parte? | ah keh OH-rah PAR-teh? | What time does it leave? |
+| Getting around | Il traghetto | eel trah-GEHT-toh | The ferry |
+| Getting around | Uscita / Entrata | oo-SHEE-tah / ehn-TRAH-tah | Exit / Entrance |
+| Getting around | Il bagno | eel BAHN-yoh | The restroom |
+| Getting around | Sciopero | SHOH-peh-roh | Strike — check transport before travel days |
+| Shops & markets | Un etto di… | oon EHT-toh dee… | 100 grams of… (deli counter) |
+| Shops & markets | Posso assaggiare? | POHS-soh ahs-sahd-JAH-reh? | Can I taste it? |
+| Shops & markets | Guardo solo, grazie | GWAR-doh SOH-loh, GRAHT-see-eh | Just looking, thanks |
+| Shops & markets | Aperto / Chiuso | ah-PEHR-toh / KYOO-zoh | Open / Closed |
+| Help | Aiuto! | ah-YOO-toh! | Help! |
+| Help | La farmacia | lah far-mah-CHEE-ah | The pharmacy |
+| Help | Ho bisogno di un medico | oh bee-ZOHN-yoh dee oon MEH-dee-koh | I need a doctor |
+| Help | Sono allergico / allergica a… | SOH-noh ahl-LEHR-jee-koh / -kah ah… | I'm allergic to… (he / she) |
+
+### City words
+Places, neighborhoods and menu words that are easy to mispronounce, by city.
+
+| City | Group | Italian | Say it | What it is |
+|---|---|---|---|---|
+| florence | Places | Firenze | fee-REHN-tseh | Florence |
+| florence | Places | Piazza della Signoria | PYAHT-tsah DEHL-lah seen-yoh-REE-ah | Our square |
+| florence | Places | Palazzo Vecchio | pah-LAHT-tsoh VEHK-kyoh | Town-hall fortress |
+| florence | Places | Ponte Vecchio | POHN-teh VEHK-kyoh | Old bridge |
+| florence | Places | Uffizi | oof-FEET-see | Gallery |
+| florence | Places | Galleria dell'Accademia | gahl-leh-REE-ah dehl-lahk-kah-DEH-myah | Home of the David |
+| florence | Places | Duomo | DWOH-moh | The cathedral |
+| florence | Places | Brunelleschi | broo-nehl-LEHS-kee | Architect of the dome |
+| florence | Places | Piazzale Michelangelo | pyaht-TSAH-leh mee-keh-LAHN-jeh-loh | Sunset viewpoint |
+| florence | Places | San Miniato al Monte | sahn mee-NYAH-toh ahl MOHN-teh | Hilltop church |
+| florence | Places | Santa Maria Novella | SAHN-tah mah-REE-ah noh-VEHL-lah | Main train station (SMN) and its area |
+| florence | Places | Peretola | peh-REH-toh-lah | Florence airport |
+| florence | Places | Torre a Cona | TOHR-reh ah KOH-nah | Winery (Jul 4) |
+| florence | Neighborhoods | Oltrarno | ohl-TRAR-noh | "Beyond the Arno" — the south bank |
+| florence | Neighborhoods | Santo Spirito | SAHN-toh SPEE-ree-toh | Oltrarno piazza and quarter |
+| florence | Neighborhoods | San Frediano | sahn freh-DYAH-noh | Artisan quarter, west Oltrarno |
+| florence | Neighborhoods | San Niccolò | sahn neek-koh-LOH | Below Piazzale Michelangelo |
+| florence | Neighborhoods | Santa Croce | SAHN-tah KROH-cheh | Basilica and quarter |
+| florence | Neighborhoods | Sant'Ambrogio | sahn-tahm-BROH-joh | Market quarter |
+| florence | Neighborhoods | San Lorenzo | sahn loh-REHN-tsoh | Market and church north of the Duomo |
+| florence | On the menu | Lampredotto | lahm-preh-DOHT-toh | Tripe sandwich |
+| florence | On the menu | Bistecca alla fiorentina | bee-STEHK-kah AHL-lah fyoh-rehn-TEE-nah | Giant T-bone |
+| florence | On the menu | Ribollita | ree-bohl-LEE-tah | Bread-and-bean soup |
+| florence | On the menu | Schiacciata | skyahch-CHAH-tah | Tuscan flatbread |
+| florence | On the menu | Carabaccia | kah-rah-BAHCH-chah | Onion soup |
+| rome | Places | Roma | ROH-mah | Rome |
+| rome | Places | Palazzo Talìa | pah-LAHT-tsoh tah-LEE-ah | Our hotel |
+| rome | Places | Fontana di Trevi | fohn-TAH-nah dee TREH-vee | Trevi Fountain |
+| rome | Places | Piazza Navona | PYAHT-tsah nah-VOH-nah | Baroque piazza |
+| rome | Places | Sant'Ignazio | sahn-teen-YAHT-syoh | Painted-ceiling church |
+| rome | Places | San Luigi dei Francesi | sahn loo-EE-jee day frahn-CHEH-zee | Caravaggio church |
+| rome | Places | Musei Vaticani | moo-ZAY vah-tee-KAH-nee | Vatican Museums |
+| rome | Places | Cappella Sistina | kahp-PEHL-lah sees-TEE-nah | Sistine Chapel |
+| rome | Places | Castel Sant'Angelo | kah-STEHL sahn-TAHN-jeh-loh | Hadrian's tomb / fortress |
+| rome | Places | Colosseo | koh-lohs-SEH-oh | Colosseum |
+| rome | Places | Foro Romano | FOH-roh roh-MAH-noh | Roman Forum |
+| rome | Places | Campidoglio | kahm-pee-DOHL-yoh | Capitoline Hill |
+| rome | Places | Portico d'Ottavia | POR-tee-koh doht-TAH-vyah | Heart of the Ghetto |
+| rome | Places | Galleria Borghese | gahl-leh-REE-ah bor-GEH-zeh | Borghese Gallery |
+| rome | Places | Pincio | PEEN-choh | Park terrace |
+| rome | Places | Piazza del Popolo | PYAHT-tsah dehl POH-poh-loh | Twin-church piazza |
+| rome | Places | Piazza di Spagna | PYAHT-tsah dee SPAHN-yah | Spanish Steps square |
+| rome | Places | San Clemente | sahn kleh-MEHN-teh | Layered basilica |
+| rome | Places | Via Appia Antica | VEE-ah AHP-pyah ahn-TEE-kah | Appian Way |
+| rome | Places | Termini | TEHR-mee-nee | Main train station |
+| rome | Neighborhoods | Trastevere | trah-STEH-veh-reh | "Across the Tiber" |
+| rome | Neighborhoods | Gianicolo | jah-NEE-koh-loh | Janiculum Hill |
+| rome | Neighborhoods | Testaccio | tehs-TAHCH-choh | Market and food quarter |
+| rome | Neighborhoods | Aventino | ah-vehn-TEE-noh | Aventine Hill |
+| rome | Neighborhoods | Monti | MOHN-tee | Village-like quarter by the Forum |
+| rome | Neighborhoods | Esquilino | ehs-kwee-LEE-noh | Near Termini |
+| rome | Neighborhoods | Campo de' Fiori | KAHM-poh deh FYOH-ree | Market square |
+| rome | Neighborhoods | Prati | PRAH-tee | Next to the Vatican |
+| rome | Neighborhoods | Ostiense | oh-STYEHN-seh | South of Testaccio |
+| rome | On the menu | Supplì | soop-PLEE | Fried rice ball |
+| rome | On the menu | Cacio e pepe | KAH-choh eh PEH-peh | Cheese-and-pepper pasta |
+| rome | On the menu | Gricia | GREE-chah | Guanciale-and-pecorino pasta |
+| rome | On the menu | Amatriciana | ah-mah-tree-CHAH-nah | Tomato-guanciale pasta |
+| rome | On the menu | Maritozzo | mah-ree-TOHT-tsoh | Cream-filled bun |
+| rome | On the menu | Carciofi alla giudia | kar-CHOH-fee AHL-lah JOO-dyah | Jewish-style fried artichokes |
+| amalfi | Places | Costiera Amalfitana | koh-STYEH-rah ah-mahl-fee-TAH-nah | Amalfi Coast |
+| amalfi | Places | Abbraccio | ahb-BRAHCH-choh | Our hotel |
+| amalfi | Places | Salerno | sah-LEHR-noh | Train-to-ferry city |
+| amalfi | Places | Villa Cimbrone | VEEL-lah cheem-BROH-neh | Ravello gardens |
+| amalfi | Places | Villa Rufolo | VEEL-lah ROO-foh-loh | Ravello villa |
+| amalfi | Places | Grotta dello Smeraldo | GROHT-tah DEHL-loh zmeh-RAHL-doh | Emerald Grotto |
+| amalfi | Places | Fiordo di Furore | FYOR-doh dee foo-ROH-reh | Sea inlet |
+| amalfi | Places | Valle delle Ferriere | VAHL-leh DEHL-leh fehr-RYEH-reh | Valley hike |
+| amalfi | Places | Marisa Cuomo | mah-REE-zah KWOH-moh | Winery (Jul 12) |
+| amalfi | Towns | Amalfi | ah-MAHL-fee | Our base |
+| amalfi | Towns | Atrani | ah-TRAH-nee | Next village east |
+| amalfi | Towns | Positano | poh-zee-TAH-noh | Boat-day stop |
+| amalfi | Towns | Laurito | low-REE-toh | Beach near Positano |
+| amalfi | Towns | Praiano | prah-YAH-noh | Between Positano and Furore |
+| amalfi | Towns | Furore | foo-ROH-reh | Winery village |
+| amalfi | Towns | Conca dei Marini | KOHN-kah day mah-REE-nee | Village by the grotto |
+| amalfi | Towns | Ravello | rah-VEHL-loh | Hilltop town |
+| amalfi | Towns | Scala · Minori · Tramonti | SKAH-lah · mee-NOH-ree · trah-MOHN-tee | Nearby towns |
+| amalfi | On the menu | Scialatielli | shah-lah-TYEHL-lee | Thick fresh pasta |
+| amalfi | On the menu | Colatura di alici | koh-lah-TOO-rah dee ah-LEE-chee | Anchovy essence |
+| amalfi | On the menu | Delizia al limone | deh-LEET-tsyah ahl lee-MOH-neh | Lemon-cream cake |
+| amalfi | On the menu | Sfogliatella Santa Rosa | sfohl-yah-TEHL-lah SAHN-tah ROH-zah | Ricotta pastry |
+| amalfi | On the menu | 'Ndunderi | n-DOON-deh-ree | Ricotta gnocchi |
+| amalfi | On the menu | Totani e patate | TOH-tah-nee eh pah-TAH-teh | Squid and potatoes |
+| amalfi | On the menu | Sarchiapone | sar-kyah-POH-neh | Stuffed gourd (Atrani) |
+| naples | Places | Napoli | NAH-poh-lee | Naples |
+| naples | Places | Pompei · Scavi di Pompei | pohm-PAY · SKAH-vee dee pohm-PAY | Pompeii · the ruins |
+| naples | Places | Circumvesuviana | cheer-koom-veh-zoo-VYAH-nah | Train from Pompeii |
+| naples | Places | Napoli Garibaldi | NAH-poh-lee gah-ree-BAHL-dee | Station where we change |
+| naples | Places | Toledo | toh-LEH-doh | Metro stop by our hotel |
+| naples | Places | Piazza del Plebiscito | PYAHT-tsah dehl pleh-bee-SHEE-toh | Grand square |
+| naples | Places | Castel dell'Ovo | kah-STEHL dehl-LOH-voh | Seafront castle |
+| naples | Places | Lungomare | loon-goh-MAH-reh | Seafront promenade |
+| naples | Places | Vesuvio | veh-ZOO-vyoh | Vesuvius |
+| naples | Places | Coppa America | KOHP-pah ah-MEH-ree-kah | America's Cup |
+| naples | Neighborhoods | Quartieri Spagnoli | kwar-TYEH-ree spahn-YOH-lee | Spanish Quarter |
+| naples | Neighborhoods | Santa Lucia | SAHN-tah loo-CHEE-ah | Waterfront by the castle |
+| naples | Neighborhoods | Chiaia | KYAH-yah | Elegant seafront quarter |
+| naples | Neighborhoods | Materdei | mah-tehr-DAY | Starita's neighborhood |
+| naples | Neighborhoods | Sanità | sah-nee-TAH | Old quarter north of the center |
+| naples | Neighborhoods | Vomero | VOH-meh-roh | Hilltop quarter |
+| naples | On the menu | Starita | stah-REE-tah | Our pizzeria |
+| naples | On the menu | Pizza fritta | PEET-tsah FREET-tah | Fried pizza |
+| naples | On the menu | Frittatina | freet-tah-TEE-nah | Fried pasta bite |
+| naples | On the menu | Provola | PROH-voh-lah | Smoked mozzarella |
+| naples | On the menu | Sfogliatella | sfohl-yah-TEHL-lah | Shell-shaped pastry |
+
 ## Page structure (tabs)
 Overview · Eat & do · Locked events · Bookings · Logistics · Sub-trips.
 - **Overview** (`#overview`) — modelled on Amsterdam: **Trip at a glance** (day cards) → **Booking pulse** → **Route & pace** (route ribbon of nights per base + transfers + the four city phase cards). No presence map, headcount strip or month calendar — those suit big-group, month-long trips like Hawaii.
 - **Maps** (`#maps`) — city map with a city switcher, day filter (that day's booked + planned places shown, other days' places hidden, not-slated places as light outlines; booked pins carry a ring), Eat/Do toggles, and a Drawn / Street mode switch. Places listed by neighborhood beside the map. Data: *Map places* above.
 - **Locked events** (`#events`) — booked anchors only.
+- **Phrases** (`#phrases`, last tab) — key phrases with a say-it guide, plus a city selector for place, neighborhood and menu words. Data: *Phrases* above.
 - **Eat & do** (`#eatdo`) — one section per city in trip order (Florence, Rome, Amalfi Coast, Naples), each with **Eat** on the left and **Do** on the right; a city jump bar at the top. Florence and Rome have long food lists, so their Eat side flows into two columns (Florence's Eat side is also two-thirds wide) to keep both sides about the same height. Stacks Eat-first on phones.
 - **Bookings** (`#bookings`) — Confirmed / Still-to-book grids + "When to book" timeline.
 - **Logistics** (`#logistics`) — getting around, where we sleep, packing.
