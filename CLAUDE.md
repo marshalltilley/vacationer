@@ -115,7 +115,7 @@ tab per person or per sub-trip. There are no per-person pages anywhere.
 - **Relative paths only.** Trip pages link back to the landing page and assets
   with relative hrefs (e.g. `../index.html`, `./index.html`). Nothing assumes a
   domain or absolute path, so it works at the `/vacationer/` Pages subpath.
-- **No external dependencies except Google Fonts** (Fraunces + Manrope). No CDN
+- **No external dependencies except Google Fonts** (see Typography). No CDN
   frameworks, no JS libraries, no build tooling. Everything is inline `<style>`
   and a single inline `<script>`.
 
@@ -126,13 +126,37 @@ Shared `:root` tokens across trips: `--ink` navy `#1f3050`, `--paper` cream
 masthead accent. Each trip then layers a **destination palette** (Hawaii: ocean
 / coral / gold / volcanic / palm / sage; Amsterdam: canal blue / mustard / brick
 / tulip / bottle green) used for the card swatch strip, phase colors, calendar
-phase bars, and tags. Type: **Fraunces** (serif display) + **Manrope** (sans
-body). Keep the palette declared in the trip's `fact-sheet.md`.
+phase bars, and tags. Keep the palette declared in the trip's `fact-sheet.md`.
+
+## Typography
+
+**Default set** — use for the landing page and any new trip unless the trip
+picks its own:
+
+- **Federo** — display: hero title, section titles, card / city names, dates.
+- **Jost** — body, labels, tabs, small caps (free Futura-style geometric sans).
+- **Bodoni Moda** — italics and large numerals (section numbers, pulse counts).
+  Set `font-variation-settings: "opsz" 11` on `body` so its hairlines (em
+  dashes, apostrophes) stay visible at large sizes.
+
+Declare them as `:root` tokens and use the tokens, not family names:
+`--display` (Federo), `--sans` (Jost), `--serif` (Bodoni Moda). Federo has no
+italic or bold, so italic text uses `--serif`; set `font-synthesis: none` to
+avoid faux bold/italic.
+
+**Trip-specific fonts are allowed.** A trip may swap in other free Google Fonts
+that suit the destination. Keep the same three roles (display / sans / serif)
+and the token names, and record the choice in a `## Typography` section of the
+trip's `fact-sheet.md`.
+
+*Legacy:* Amsterdam and Hawaii still use the original Fraunces + Manrope pair.
 
 ## Versioning
 
-Every revision bumps the version (`v1`, `v2`, …) in **three** places that must
-agree:
+Every revision that ships to `main` bumps the version (`v1`, `v2`, …) once.
+Work in progress on a branch does **not** bump it per commit — a new trip stays
+`v1` until it first merges, and an edit batch gets a single bump when it merges.
+The version lives in **three** places that must agree:
 
 1. the footer `<span class="footer-mark">vNN</span>`,
 2. the fact sheet's `HTML version stamp:` line,
@@ -141,4 +165,4 @@ agree:
 
 When adding a new trip, also add its card to the root `index.html` (with
 `trip-num`, dates, base, group, status) and bump the landing page's footer
-version.
+version (once per merge, not per commit).

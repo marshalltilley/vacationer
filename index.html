@@ -6,7 +6,7 @@
 <title>Vacationer — Marshall &amp; Anna</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Federo&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400;1,6..96,500&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {
   --ink:        #1f3050;   /* navy — primary text */
@@ -19,19 +19,26 @@
   --rule:       #c9b8a8;
   --rule-soft:  #e1d6c7;
   --muted:      #75695f;
+
+  /* Type — default Vacationer set (see CLAUDE.md › Typography) */
+  --display: 'Federo', 'Bodoni Moda', Georgia, serif;
+  --serif: 'Bodoni Moda', Georgia, serif;
+  --sans: 'Jost', 'Futura', 'Century Gothic', sans-serif;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Manrope', sans-serif;
+  font-family: var(--sans);
   background: var(--paper);
   color: var(--ink);
   line-height: 1.5;
   font-size: 15px;
   padding: 48px 32px 96px;
   -webkit-font-smoothing: antialiased;
+  font-synthesis: none;
+  font-variation-settings: "opsz" 11;
 }
 .wrap { max-width: 720px; margin: 0 auto; }
 
@@ -54,23 +61,21 @@ body {
 }
 .eyebrow .when { color: var(--muted); font-weight: 500; }
 .title {
-  font-family: 'Fraunces', serif;
+  font-family: var(--display);
   font-weight: 400;
   font-size: clamp(48px, 7vw, 72px);
-  letter-spacing: -0.012em;
-  font-variation-settings: "opsz" 144;
+  letter-spacing: 0.01em;
   line-height: 0.95;
   color: var(--ink);
   margin-bottom: 12px;
 }
 .dek {
-  font-family: 'Fraunces', serif;
+  font-family: var(--serif);
   font-style: italic;
   font-weight: 300;
   font-size: 17px;
   color: var(--muted);
   line-height: 1.4;
-  font-variation-settings: "opsz" 14;
 }
 
 /* ===== TRIPS ===== */
@@ -111,7 +116,7 @@ body {
   flex: 1;
 }
 .trip-num {
-  font-family: 'Manrope', sans-serif;
+  font-family: var(--sans);
   font-size: 10px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -120,22 +125,21 @@ body {
   margin-bottom: 12px;
 }
 .trip-title {
-  font-family: 'Fraunces', serif;
+  font-family: var(--display);
   font-weight: 400;
   font-size: 40px;
-  letter-spacing: -0.018em;
+  letter-spacing: 0.01em;
   line-height: 1.0;
   color: var(--ink);
   margin-bottom: 4px;
 }
 .trip-when {
-  font-family: 'Fraunces', serif;
+  font-family: var(--serif);
   font-style: italic;
   font-weight: 300;
   font-size: 16px;
   color: var(--muted);
   margin-bottom: 24px;
-  font-variation-settings: "opsz" 14;
 }
 
 .trip-meta {
@@ -187,12 +191,11 @@ body {
 /* "More trips" note — replaces the placeholder card */
 .trips-note {
   margin-top: 16px;
-  font-family: 'Fraunces', serif;
+  font-family: var(--serif);
   font-style: italic;
   font-weight: 300;
   font-size: 14px;
   color: var(--muted);
-  font-variation-settings: "opsz" 14;
 }
 
 /* ===== FOOTER ===== */

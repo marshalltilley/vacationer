@@ -326,7 +326,7 @@ Free Google Fonts chosen to echo Italian art-deco and Futura-era travel posters 
 - **Federo** — display: hero title, section titles, card and city names, dates.
 - **Jost** — body, labels, tabs (free Futura-style geometric sans).
 - **Bodoni Moda** — italics and large numerals (section numbers, pulse counts); set to optical size 11 so hairlines stay visible.
-Replaces the shared Fraunces + Manrope pair for this trip only. Landing page keeps the shared fonts.
+This is now the default Vacationer set (see CLAUDE.md › Typography); Italy was the first trip to use it.
 
 ## Landing-page card
 - No. 03 · Italy · Summer 2027 · 14 days
