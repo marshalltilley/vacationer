@@ -980,6 +980,7 @@ body {
 .lf-pin.off { background: #d8d1c6; color: #8c8276; }
 .lf-pin.approx { outline: 1.5px dashed #6b6157; outline-offset: 2px; }
 .lf-pin.hi { box-shadow: 0 0 0 3px var(--ink); }
+#map-street .leaflet-tile-pane { filter: saturate(0.55) sepia(0.12) brightness(1.03); }
 .lf-zone { font: 400 11px var(--display); text-transform: uppercase; letter-spacing: 0.12em; color: #5b5249; white-space: nowrap; text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff; transform: translate(-50%, -50%); }
 
 /* --- FOOTER --- */
@@ -1869,7 +1870,7 @@ body {
     </div>
     <div class="map-list" id="map-list" aria-label="Places by neighborhood"></div>
   </div>
-  <p class="map-note">Drawn map: neighborhood zones, river and coastline are approximate sketches, and pin positions come from the planner's knowledge (dashed ring = verify). Street map needs an internet connection and loads OpenStreetMap / CARTO map tiles. Tap a pin or list item for details and a Google Maps link.</p>
+  <p class="map-note">Drawn map: neighborhood zones, river and coastline are approximate sketches, and pin positions come from the planner's knowledge (dashed ring = verify). Street map needs an internet connection and loads OpenStreetMap map tiles. Tap a pin or list item for details and a Google Maps link.</p>
 </section>
 
 </div><!-- /maps -->
@@ -2497,8 +2498,8 @@ body {
       jsSri: 'sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH',
       css: 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css',
       cssSri: 'sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H',
-      tiles: 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+      tiles: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     };
 
     const mapState = { city: 'florence', day: 'all', eat: true, do: true, mode: 'drawn', zoom: 1, cx: null, cy: null, hi: null };
@@ -2678,7 +2679,7 @@ body {
       if (!fromList) { const li = list.querySelector(`[data-id="${id}"]`); if (li) li.scrollIntoView({ block: 'nearest' }); }
     }
 
-    // ---- street mode (Leaflet + CARTO tiles, loaded only when asked for) ----
+    // ---- street mode (Leaflet + OpenStreetMap tiles, loaded only when asked for) ----
     let streetMap = null, streetLayer = null, streetMarkers = {}, leafletLoading = false;
     function loadLeaflet(done) {
       if (window.L) return done();
@@ -2702,7 +2703,7 @@ body {
         const c = MAP_CITIES[mapState.city], [s, w, n, e] = c.bbox;
         if (!streetMap) {
           streetMap = L.map('map-street', { scrollWheelZoom: false });
-          L.tileLayer(LEAFLET.tiles, { attribution: LEAFLET.attribution, subdomains: 'abcd', maxZoom: 19 }).addTo(streetMap);
+          L.tileLayer(LEAFLET.tiles, { attribution: LEAFLET.attribution, maxZoom: 19 }).addTo(streetMap);
           streetMap.on('click', () => { mapState.hi = null; showTip(null); renderMap(); });
         }
         if (streetMap._vacCity !== mapState.city) { streetMap.fitBounds([[s, w], [n, e]]); streetMap._vacCity = mapState.city; }

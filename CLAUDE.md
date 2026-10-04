@@ -157,8 +157,10 @@ tab per person or per sub-trip. There are no per-person pages anywhere.
 - **One exception — street-map mode on a Maps tab.** The drawn map is inline SVG
   and must work with no outside requests (offline, print). A "Street map" switch
   may then load **Leaflet** (pinned version, with `integrity` hashes) from unpkg
-  and OpenStreetMap-based tiles from CARTO, **only when the reader turns it on**.
-  Keep attribution visible. Map places live in the trip's fact sheet; the page's
+  and standard OpenStreetMap tiles (`tile.openstreetmap.org` — no API key;
+  follow the OSM tile usage policy), **only when the reader turns it on**.
+  Keep the "© OpenStreetMap contributors" attribution visible. (CARTO basemaps
+  now require an API key — don't use them without one.) Map places live in the trip's fact sheet; the page's
   `MAP_PLACES` / `MAP_ZONES` data mirrors those tables.
 
 ## Design system (shared chrome)
