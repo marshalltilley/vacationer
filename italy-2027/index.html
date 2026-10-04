@@ -636,6 +636,52 @@ body {
   line-height: 1.8;
 }
 
+/* --- EAT & DO: part nav + banners --- */
+.part-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: -24px 0 40px; }
+.part-nav-label {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--muted);
+  margin-right: 4px;
+}
+.part-link {
+  font-family: 'Manrope', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 16px;
+  cursor: pointer;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--verde);
+  color: var(--ink);
+}
+.part-link.eat { border-left-color: var(--rosso); }
+.part-link:hover { background: var(--paper-2); border-color: var(--ink); }
+.part-link.eat:hover { border-left-color: var(--rosso); }
+.part-link.do:hover { border-left-color: var(--verde); }
+.part-banner {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  padding: 14px 22px;
+  margin-bottom: 22px;
+  color: white;
+  background: var(--verde);
+}
+.part-banner.eat { background: var(--rosso); }
+.part-word {
+  font-family: 'Fraunces', serif;
+  font-size: 34px;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1;
+}
+.part-desc { font-size: 13px; opacity: 0.92; }
+#part-eat { padding-top: 8px; border-top: 1.5px solid var(--ink); }
+#part-do, #part-eat { scroll-margin-top: 90px; }
+
 /* --- ACTIVITY CARDS (by city) --- */
 .activity-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
 .activity-card {
@@ -1069,6 +1115,10 @@ body {
   .logistics { grid-template-columns: 1fr; gap: 12px; }
   .packing { grid-template-columns: 1fr; }
   .scope-legend { font-size: 11px; padding: 10px 12px; margin-top: -8px; }
+  .part-nav { margin: -8px 0 24px; }
+  .part-banner { padding: 10px 14px; gap: 12px; flex-wrap: wrap; }
+  .part-word { font-size: 26px; }
+  .part-desc { font-size: 12px; }
 
   .st-intro, .decision, .decision-rules, .options-grid { grid-template-columns: 1fr; gap: 14px; }
   .decision { padding: 16px 18px; }
@@ -1112,7 +1162,11 @@ body {
     widows: 3;
   }
   .wrap { max-width: 100%; }
-  .hero, .tabs, .print-btn, .footer { display: none !important; }
+  .hero, .tabs, .print-btn, .footer, .part-nav { display: none !important; }
+  .part-banner { padding: 6px 12px; margin-bottom: 8px; }
+  .part-word { font-size: 18pt; }
+  .part-desc { font-size: 8.5pt; }
+  #part-eat { border-top: 0; padding-top: 0; }
   .tab-panel[hidden] { display: none !important; }
 
   .section { margin: 0 !important; }
@@ -1312,7 +1366,7 @@ body {
   </button>
   <button class="tab" role="tab" data-tab="eatdo">
     <span class="tab-label">Eat &amp; do</span>
-    <span class="tab-sub">Sights · Food · Wine</span>
+    <span class="tab-sub">Things to do · Food</span>
   </button>
   <button class="tab" role="tab" data-tab="events">
     <span class="tab-label">Locked events</span>
@@ -1630,10 +1684,20 @@ body {
 <!-- ===================== EAT & DO ===================== -->
 <div class="tab-panel" id="eatdo" role="tabpanel" hidden>
 
-<section class="section">
+<nav class="part-nav" aria-label="Eat &amp; do parts">
+  <span class="part-nav-label">Jump to</span>
+  <button type="button" class="part-link do" data-jump="part-do">Things to do <span aria-hidden="true">↓</span></button>
+  <button type="button" class="part-link eat" data-jump="part-eat">Where to eat <span aria-hidden="true">↓</span></button>
+</nav>
+
+<section class="section" id="part-do">
+  <div class="part-banner do">
+    <span class="part-word">Do</span>
+    <span class="part-desc">Sights, tours and winery visits — grouped by city. No restaurants here.</span>
+  </div>
   <div class="section-head">
     <span class="section-num">07</span>
-    <h2 class="section-title">Sights by city</h2>
+    <h2 class="section-title">Things to do</h2>
     <span class="section-sub">Menu · not a schedule</span>
   </div>
   <p class="scope-legend">
@@ -1658,9 +1722,6 @@ body {
         <div class="activity-item"><strong>Piazzale Michelangelo</strong><span class="desc">The classic panorama over the city — best near sunset.</span></div>
         <div class="activity-item"><strong>San Miniato al Monte</strong><span class="desc">Romanesque hilltop church just above Piazzale Michelangelo.</span></div>
         <div class="activity-item"><strong>Santa Croce</strong><span class="desc">Franciscan basilica with the tombs of Michelangelo and Galileo.</span></div>
-        <div class="activity-item"><strong>Pegna dal 1860</strong><span class="desc">Historic specialty grocer near the Duomo — cheese, salumi, pantry goods.</span></div>
-        <div class="activity-item"><strong>Mercato di Sant'Ambrogio</strong><span class="desc">19th-century neighborhood market; picnic and travel-day snacks.</span></div>
-        <div class="activity-item"><strong>Alimentari Calimaruzza</strong><span class="desc">Tiny old-style food shop right by the apartment.</span></div>
         <div class="activity-item"><strong>Fattoria Torre a Cona</strong> <span class="when">Jul 4</span><span class="scope-badge trip">Sub-trip</span><span class="desc">Historic villa winery in the hills outside Florence.</span></div>
       </div>
       <p class="activity-note">Saturday carries both big museums with lunch and rest between. If Torre a Cona takes Sunday, the Dome moves to Jul 2 or 3.</p>
@@ -1698,6 +1759,7 @@ body {
         <div class="activity-item locked"><strong>Private boat + Positano</strong> <span class="when">Jul 11</span><span class="scope-badge swap">Wx swap</span><span class="desc">The coast from the water, swim stops in coves, 2–4 h ashore in Positano.</span></div>
         <div class="activity-item locked"><strong>Marisa Cuomo + Furore</strong> <span class="when">Jul 12</span><span class="scope-badge swap">Wx swap</span><span class="desc">Winery visit among cliff-side vineyard terraces in Furore.</span></div>
         <div class="activity-item locked"><strong>Ravello · Villa Cimbrone</strong> <span class="when">Jul 12</span><span class="desc">Gardens high above the sea; the Terrace of Infinity viewpoint.</span></div>
+        <div class="activity-item"><strong>Tenuta San Francesco</strong><span class="scope-badge opt">Optional</span><span class="desc">Tramonti winery — a second tasting only if the coast days stay relaxed.</span></div>
         <div class="activity-item"><strong>Villa Rufolo</strong><span class="scope-badge opt">Optional</span><span class="desc">Ravello's other villa — medieval tower and terraced gardens.</span></div>
         <div class="activity-item"><strong>Amalfi Cathedral</strong> <span class="when">Jul 10</span><span class="desc">Striped Arab-Norman cathedral at the top of a grand staircase.</span></div>
         <div class="activity-item"><strong>Atrani</strong> <span class="when">Jul 10</span><span class="desc">Tiny fishing village a short walk from Amalfi, with a small beach.</span></div>
@@ -1717,7 +1779,6 @@ body {
         <div class="activity-item"><strong>Piazza del Plebiscito</strong><span class="desc">Naples' grand central square beside the Royal Palace.</span></div>
         <div class="activity-item"><strong>Santa Lucia · Castel dell'Ovo · Lungomare</strong><span class="desc">Seafront castle and promenade on the bay.</span></div>
         <div class="activity-item"><strong>America's Cup atmosphere</strong><span class="desc">The Match is racing on the bay that week.</span></div>
-        <div class="activity-item"><strong>Enoteca Belledonne</strong><span class="scope-badge opt">Optional</span><span class="desc">Long-running wine shop and bar in Chiaia.</span></div>
       </div>
       <p class="activity-note">Feel Naples, don't "do" it. If time runs short, protect the 50 Kalò dinner and one good waterfront walk.</p>
     </div>
@@ -1726,7 +1787,11 @@ body {
   <p style="margin-top:18px; font-size:12px; color:#5a4a3a; text-align:right; font-style:italic;">★ = protected / can't-miss &nbsp;&nbsp; + = good if it fits</p>
 </section>
 
-<section class="section">
+<section class="section" id="part-eat">
+  <div class="part-banner eat">
+    <span class="part-word">Eat</span>
+    <span class="part-desc">Restaurants, cafés, wine bars and food shops — grouped by city.</span>
+  </div>
   <div class="section-head">
     <span class="section-num">08</span>
     <h2 class="section-title">Where to eat</h2>
@@ -1772,6 +1837,12 @@ body {
         <div class="rest-item"><span class="nm">Le Volpi e l'Uva</span><span class="desc">Tiny wine bar by Ponte Vecchio, small producers by the glass.</span></div>
       </div>
       <div class="rest-tier">
+        <div class="rest-tier-label">Markets &amp; food shops</div>
+        <div class="rest-item"><span class="nm">Pegna dal 1860</span><span class="desc">Historic specialty grocer near the Duomo — cheese, salumi, pantry goods.</span></div>
+        <div class="rest-item"><span class="nm">Mercato di Sant'Ambrogio</span><span class="desc">19th-century neighborhood market — picnic and travel-day snacks.</span></div>
+        <div class="rest-item"><span class="nm">Alimentari Calimaruzza</span><span class="desc">Tiny old-style food shop right by the apartment.</span></div>
+      </div>
+      <div class="rest-tier">
         <div class="rest-tier-label">Try in Florence</div>
         <div class="rest-item"><span class="nm">Lampredotto</span><span class="desc">Slow-cooked tripe sandwich with green sauce — the street classic.</span></div>
         <div class="rest-item"><span class="nm">Bistecca alla fiorentina</span><span class="desc">Huge T-bone, served rare, priced by weight.</span></div>
@@ -1788,7 +1859,6 @@ body {
         <div class="rest-tier-label">Protected</div>
         <div class="rest-item locked"><span class="nm">Piperno / Boccione</span><span class="desc">Jul 7 · historic Jewish-Roman restaurant · tiny old Ghetto bakery.</span></div>
         <div class="rest-item locked"><span class="nm">Pizzeria Ostiense</span><span class="desc">Jul 9 · thin, crisp Roman pizza in a neighborhood spot.</span></div>
-        <div class="rest-item locked"><span class="nm">Mercato di Testaccio + Volpetti</span><span class="desc">Jul 9 · working food market · deli since 1973.</span></div>
         <div class="rest-item locked"><span class="nm">Il Goccetto</span><span class="desc">Old wine bar with a huge by-the-glass list.</span></div>
       </div>
       <div class="rest-tier">
@@ -1812,12 +1882,17 @@ body {
         <div class="rest-tier-label">Quick · coffee · sweets</div>
         <div class="rest-item"><span class="nm">Supplizio</span><span class="desc">Supplì specialist on Via dei Banchi Vecchi.</span></div>
         <div class="rest-item"><span class="nm">Antico Forno Roscioli</span><span class="desc">Historic bakery — pizza by weight.</span></div>
-        <div class="rest-item"><span class="nm">Pizzarium Bonci · Paciotti</span><span class="desc">Famed pizza by the slice · old-school deli — both near the Vatican.</span></div>
+        <div class="rest-item"><span class="nm">Pizzarium Bonci</span><span class="desc">Famed pizza by the slice near the Vatican.</span></div>
         <div class="rest-item"><span class="nm">Bar San Marcello</span><span class="desc">Local café by the hotel — breakfast and cheap lunch.</span></div>
         <div class="rest-item"><span class="nm">Regoli</span><span class="desc">Century-old pastry shop; the benchmark maritozzo.</span></div>
         <div class="rest-item"><span class="nm">Tazza d'Oro</span><span class="desc">Stand-up espresso bar by the Pantheon.</span></div>
         <div class="rest-item"><span class="nm">Giolitti · Ciampini</span><span class="desc">Historic gelato · old-school café on an elegant piazza.</span></div>
         <div class="rest-item"><span class="nm">Hotel de Russie garden<span class="scope-badge opt">Optional</span></span><span class="desc">Polished garden aperitivo near Piazza del Popolo.</span></div>
+      </div>
+      <div class="rest-tier">
+        <div class="rest-tier-label">Markets &amp; food shops</div>
+        <div class="rest-item locked"><span class="nm">Mercato di Testaccio + Volpetti</span><span class="desc">Jul 9 · working food market · deli since 1973.</span></div>
+        <div class="rest-item"><span class="nm">Paciotti Salumeria</span><span class="desc">Old-school deli near the Vatican.</span></div>
       </div>
       <div class="rest-tier">
         <div class="rest-tier-label">Try in Rome</div>
@@ -1839,11 +1914,6 @@ body {
         <div class="rest-item"><span class="nm">Lo Guarracino, Positano</span><span class="desc">Sit-down lunch in Positano on the boat day.</span></div>
       </div>
       <div class="rest-tier">
-        <div class="rest-tier-label">Wineries</div>
-        <div class="rest-item locked"><span class="nm">Cantine Marisa Cuomo</span><span class="desc">Jul 12 · Furore winery on cliff-side terraces.</span></div>
-        <div class="rest-item"><span class="nm">Tenuta San Francesco<span class="scope-badge opt">Optional</span></span><span class="desc">Tramonti winery — only if the coast days stay relaxed.</span></div>
-      </div>
-      <div class="rest-tier">
         <div class="rest-tier-label">Try on the coast</div>
         <div class="rest-item locked"><span class="nm">Scialatielli ai frutti di mare</span><span class="desc">Thick fresh ribbon pasta with local shellfish.</span></div>
         <div class="rest-item locked"><span class="nm">Spaghetti with colatura di Cetara</span><span class="desc">Pasta dressed with the coast's famous anchovy essence.</span></div>
@@ -1859,6 +1929,10 @@ body {
       <div class="rest-tier">
         <div class="rest-tier-label">Final pizza</div>
         <div class="rest-item locked"><span class="nm">50 Kalò · Piazza della Repubblica 2</span><span class="desc">Reservable branch of a top Neapolitan pizzeria. Order a frittatina, a Margherita, then provola e pepe.</span></div>
+      </div>
+      <div class="rest-tier">
+        <div class="rest-tier-label">Wine bar</div>
+        <div class="rest-item"><span class="nm">Enoteca Belledonne<span class="scope-badge opt">Optional</span></span><span class="desc">Long-running wine shop and bar in Chiaia.</span></div>
       </div>
       <div class="rest-tier">
         <div class="rest-tier-label">Try in Naples</div>
@@ -2522,7 +2596,7 @@ body {
 
 <footer class="footer">
   <span>Italy · Summer 2027</span>
-  <span class="footer-mark">v2</span>
+  <span class="footer-mark">v3</span>
   <span>14 days · 4 bases · 2 travelers</span>
 </footer>
 
@@ -2587,6 +2661,14 @@ body {
       });
     }
     window.addEventListener('beforeprint', setStamp);
+
+    // Eat & do jump bar — scrolls without touching the tab hash
+    document.querySelectorAll('[data-jump]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const el = document.getElementById(btn.dataset.jump);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
   })();
 </script>
 </body>

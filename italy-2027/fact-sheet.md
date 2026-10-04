@@ -1,7 +1,7 @@
 # Italy — Summer 2027 · Fact Sheet (source of truth)
 
 > Build `index.html` from this file. When a date or booking changes, update here first.
-> HTML version stamp: **v2**
+> HTML version stamp: **v3**
 >
 > Distilled from *Italy July 2027 — MASTER TRIP SOURCE* (consolidated 2026-10-03). Where that
 > document's city inventories conflicted with its top-level canonical sections, the canonical
@@ -144,8 +144,8 @@ Both travelers do everything, so no badge means "who". Badges flag timing and bo
 - `nonref` **Non-refundable** — ticket can't be changed or refunded once bought (Brunelleschi Dome, Villa Medici)
 - `opt` **Optional** — only if time, energy, appetite or weather allow
 
-## Sights & experiences (by city)
-One line each so the page explains what a place is. ★ = protected / can't-miss per the planning source.
+## DO — things to do (by city)
+Part 1 of the Eat & do tab. Sights, tours and winery visits only — no restaurants or food shops. One line each so the page explains what a place is. ★ = protected / can't-miss per the planning source.
 
 ### Florence
 - ★ **Uffizi Gallery** — Jul 3 AM · the great Renaissance collection: Botticelli, Leonardo, Raphael
@@ -157,9 +157,6 @@ One line each so the page explains what a place is. ★ = protected / can't-miss
 - **Piazzale Michelangelo** — the classic panorama over the city, best near sunset
 - **San Miniato al Monte** — Romanesque hilltop church just above Piazzale Michelangelo
 - **Santa Croce** — Franciscan basilica with the tombs of Michelangelo and Galileo
-- **Pegna dal 1860** — historic specialty grocer near the Duomo; cheese, salumi, pantry goods
-- **Mercato di Sant'Ambrogio** — 19th-century neighborhood market; picnic and travel-day snacks
-- **Alimentari Calimaruzza** — tiny old-style food shop by the apartment
 - **Fattoria Torre a Cona** — Jul 4 · winery estate outside Florence (sub-trip)
 
 ### Rome
@@ -183,7 +180,8 @@ One line each so the page explains what a place is. ★ = protected / can't-miss
 
 ### Amalfi Coast
 - ★ **Private boat + Positano** — Jul 11 (swap) · coast from the water, swim stops in coves, 2–4 h ashore in Positano
-- ★ **Cantine Marisa Cuomo + Furore** — Jul 12 (swap) · cliff-terrace winery visit in Furore
+- ★ **Cantine Marisa Cuomo + Furore** — Jul 12 (swap) · winery visit among cliff-side vineyard terraces in Furore
+- **Tenuta San Francesco** — Tramonti winery; second tasting only if the coast stays relaxed (optional)
 - ★ **Ravello · Villa Cimbrone** — gardens high above the sea; the Terrace of Infinity viewpoint
 - **Villa Rufolo** — Ravello's other villa: medieval tower, terraced gardens (optional)
 - **Amalfi Cathedral** — striped Arab-Norman cathedral at the top of a grand staircase
@@ -198,12 +196,11 @@ One line each so the page explains what a place is. ★ = protected / can't-miss
 - **Piazza del Plebiscito** — Naples' grand central square by the Royal Palace
 - **Santa Lucia · Castel dell'Ovo · Lungomare** — seafront castle and promenade on the bay
 - **America's Cup atmosphere** — the Match is racing on the bay that week
-- **Enoteca Belledonne** — long-running Chiaia wine shop and bar (optional)
 
 **Not prioritized:** Capri · Mount Vesuvius · Sorrento · Naples as a full sightseeing day.
 
-## Restaurants & food (by city)
-Nothing here is booked. Bookable tables are in the Bookings tab. ★ = protected.
+## EAT — where to eat (by city)
+Part 2 of the Eat & do tab. Restaurants, cafés, wine bars, markets and food shops only. Nothing here is booked. Bookable tables are in the Bookings tab. ★ = protected.
 
 ### Florence (approved list — don't add without asking)
 **Trattorias**
@@ -231,13 +228,17 @@ Nothing here is booked. Bookable tables are in the Bookings tab. ★ = protected
 - **Vivoli** — historic gelato (long lines) · **Sbrino** — craft gelato in the Oltrarno
 - **Le Volpi e l'Uva** — tiny wine bar by Ponte Vecchio
 
+**Markets & food shops**
+- **Pegna dal 1860** — historic specialty grocer near the Duomo; cheese, salumi, pantry goods
+- **Mercato di Sant'Ambrogio** — 19th-century neighborhood market; picnic and travel-day snacks
+- **Alimentari Calimaruzza** — tiny old-style food shop by the apartment
+
 **Try in Florence:** lampredotto (tripe sandwich) · bistecca alla fiorentina (huge T-bone, served rare) · ribollita (bread-and-bean soup) · pappa al pomodoro (tomato-bread soup) · carabaccia (old Florentine onion soup) · schiacciata (Tuscan flatbread) · coccoli (fried dough balls with ham and soft cheese)
 
 ### Rome
 **Protected**
 - ★ **Piperno / Boccione** — Jul 7 · historic Jewish-Roman restaurant; tiny Ghetto bakery
 - ★ **Pizzeria Ostiense** — Jul 9 · thin, crisp Roman pizza in a neighborhood spot
-- ★ **Mercato di Testaccio + Volpetti** — Jul 9 · working food market; deli since 1973
 - ★ **Il Goccetto** — old wine bar with a huge by-the-glass list
 
 **Trattorias**
@@ -259,13 +260,16 @@ Nothing here is booked. Bookable tables are in the Bookings tab. ★ = protected
 - **Supplizio** — supplì specialist on Via dei Banchi Vecchi
 - **Antico Forno Roscioli** — historic bakery; pizza by weight
 - **Pizzarium Bonci** — famed pizza-by-the-slice near the Vatican
-- **Paciotti Salumeria** — old-school deli near the Vatican
 - **Bar San Marcello** — local café by the hotel; breakfast and cheap lunch
 - **Regoli** — century-old pastry shop; benchmark maritozzo
 - **Tazza d'Oro** — standing espresso bar by the Pantheon
 - **Giolitti · Ciampini** — historic gelato; Ciampini on an elegant piazza
 - **Hotel de Russie garden** — polished garden aperitivo (optional)
 - ~~Da Enzo al 29~~ — screened out
+
+**Markets & food shops**
+- ★ **Mercato di Testaccio + Volpetti** — Jul 9 · working food market; deli since 1973
+- **Paciotti Salumeria** — old-school deli near the Vatican
 
 **Try in Rome:** carbonara · cacio e pepe · amatriciana · gricia (the four Roman pastas) · supplì (fried rice ball with mozzarella) · maritozzo (cream-filled bun) · Jewish-Roman fried dishes (artichokes only if in season)
 
@@ -275,10 +279,6 @@ Nothing here is booked. Bookable tables are in the Bookings tab. ★ = protected
 - **Sensi Amalfi** — tasting-menu dinner or lighter bistro lunch (optional)
 - **Da Adolfo, Laurito** — boat-day beach lunch, if the boat can stop
 - **Lo Guarracino, Positano** — sit-down lunch in Positano on the boat day
-
-**Wine**
-- ★ **Cantine Marisa Cuomo** — Furore winery on cliff terraces (Jul 12)
-- **Tenuta San Francesco** — Tramonti winery; only if the coast stays relaxed (optional)
 
 **Try on the coast:** scialatielli ai frutti di mare (thick fresh pasta with seafood) · spaghetti with colatura di Cetara (anchovy essence) · whole local fish · delizia al limone (lemon-cream sponge cake) · one local bonus: totani e patate (squid + potatoes) · sfogliatella Santa Rosa (ricotta pastry) · 'ndunderi (ricotta gnocchi) · sarchiapone (stuffed gourd, Atrani)
 
@@ -292,6 +292,7 @@ Nothing here is booked. Bookable tables are in the Bookings tab. ★ = protected
 
 ## Page structure (tabs)
 Overview · Eat & do · Locked events · Bookings · Logistics · Sub-trips.
+- **Eat & do** (`#eatdo`) — two parts with their own headers and a jump bar: **Things to do** (sights by city) then **Where to eat** (food by city).
 - **Bookings** (`#bookings`) — Confirmed / Still-to-book grids + "When to book" timeline.
 - **Logistics** (`#logistics`) — getting around, where we sleep, packing.
 Bookings is split out of Logistics for this trip because the list is long (23 items + timeline).
