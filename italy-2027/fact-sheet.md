@@ -143,63 +143,8 @@ Both travelers do everything, so no badge means "who". Badges flag timing and bo
 - `nonref` **Non-refundable** — ticket can't be changed or refunded once bought (Brunelleschi Dome, Villa Medici)
 - `opt` **Optional** — only if time, energy, appetite or weather allow
 
-## DO — things to do (by city)
-Part 1 of the Eat & do tab. Sights, tours and winery visits only — no restaurants or food shops. One line each so the page explains what a place is. ★ = protected / can't-miss per the planning source.
-
-### Florence
-- ★ **Uffizi Gallery** — Jul 3 AM · the great Renaissance collection: Botticelli, Leonardo, Raphael
-- ★ **Galleria dell'Accademia** — Jul 3 PM · home of Michelangelo's David
-- ★ **Brunelleschi's Dome** — Jul 2 or 3 · climb inside the Duomo's dome to the lantern; city views (non-refundable)
-- **Piazza della Signoria & Palazzo Vecchio** — our doorstep: the civic square, statues, and the town-hall fortress
-- **Ponte Vecchio** — medieval bridge lined with goldsmiths' shops
-- **Oltrarno** — artisan workshop quarter across the river; evening wandering
-- **Piazzale Michelangelo** — the classic panorama over the city, best near sunset
-- **San Miniato al Monte** — Romanesque hilltop church just above Piazzale Michelangelo
-- **Santa Croce** — Franciscan basilica with the tombs of Michelangelo and Galileo
-- **Fattoria Torre a Cona** — Jul 4 · winery estate outside Florence (sub-trip)
-
-### Rome
-- **Trevi · Pantheon · Piazza Navona** — Jul 5 · the historic-center walk: fountain, 2,000-year-old domed temple, Baroque piazza
-- **Sant'Ignazio & San Luigi dei Francesi** — Jul 5 · trompe-l'oeil ceiling; three Caravaggio paintings
-- ★ **Vatican Museums & Sistine Chapel** — Jul 6 · papal art collections; Michelangelo's ceiling and Last Judgment
-- ★ **St. Peter's Basilica** — Jul 6 · the largest church in Christendom; Michelangelo's Pietà
-- **Castel Sant'Angelo** — Jul 6 · Hadrian's tomb turned papal fortress, on the Tiber
-- **Janiculum Hill → Trastevere** — Jul 6 · sunset panorama, then down into cobbled Trastevere for dinner
-- ★ **Colosseum · Roman Forum · Palatine** — Jul 7 · the amphitheater, the ancient city center, the emperors' hill
-- **Via di Monte Tarpeo & Campidoglio** — Jul 7 · best free Forum view; Michelangelo's hilltop piazza
-- **Jewish Ghetto** — Jul 7 · one of Europe's oldest Jewish communities; Portico d'Ottavia
-- ★ **Galleria Borghese** — Jul 8 · Bernini sculptures and Caravaggios in a villa; timed entry
-- **Pincio & Piazza del Popolo** — Jul 8 · park terrace overlook; twin-church piazza; Caravaggios in Santa Maria del Popolo
-- **Villa Medici** — Jul 8 · guided tour of the French Academy's Renaissance villa and gardens (non-refundable)
-- **Palazzo Zuccari & Spanish Steps** — Jul 8 · "House of Monsters" doorway with a mouth for a door; the famous steps
-- **Basilica di San Clemente** — Jul 9 · three layers: medieval church over an early church over a Roman temple
-- **Appian Way e-bike** — Jul 9 · ride the ancient Roman road past tombs and aqueducts, ~2–2.5 h
-- **Catacombs** — Jul 9 · underground early-Christian burial tunnels (optional)
-- **Aventine · Orange Garden · Knights of Malta Keyhole** — Jul 9 · quiet hilltop, rose-and-orange-tree terrace, St. Peter's framed through a keyhole
-
-### Amalfi Coast
-- ★ **Private boat + Positano** — Jul 11 (swap) · coast from the water, swim stops in coves, 2–4 h ashore in Positano
-- ★ **Cantine Marisa Cuomo + Furore** — Jul 12 (swap) · winery visit among cliff-side vineyard terraces in Furore
-- **Tenuta San Francesco** — Tramonti winery; second tasting only if the coast stays relaxed (optional)
-- ★ **Ravello · Villa Cimbrone** — gardens high above the sea; the Terrace of Infinity viewpoint
-- **Villa Rufolo** — Ravello's other villa: medieval tower, terraced gardens (optional)
-- **Amalfi Cathedral** — striped Arab-Norman cathedral at the top of a grand staircase
-- **Atrani** — tiny fishing village one short walk from Amalfi; small beach
-- **Beach + swim time** — unplanned hours on Amalfi or Atrani beach
-- **Fiordo di Furore** — dramatic narrow inlet under a road bridge; photo stop
-- **Emerald Grotto** — sea cave with green-lit water (optional; only if on the boat route)
-- **Valle delle Ferriere** — shaded hike up a green valley behind Amalfi (optional)
-
-### Pompeii & Naples
-- ★ **Pompeii** — Jul 13 · Roman town buried by Vesuvius in AD 79; streets, houses, frescoes, 3–4+ h
-- **Piazza del Plebiscito** — Naples' grand central square by the Royal Palace
-- **Santa Lucia · Castel dell'Ovo · Lungomare** — seafront castle and promenade on the bay
-- **America's Cup atmosphere** — the Match is racing on the bay that week
-
-**Not prioritized:** Capri · Mount Vesuvius · Sorrento · Naples as a full sightseeing day.
-
 ## EAT — where to eat (by city)
-Part 2 of the Eat & do tab. Restaurants, cafés, wine bars, markets and food shops only. Nothing here is booked. Bookable tables are in the Bookings tab. ★ = protected.
+The **Eat** column (left) of each city in the Eat & do tab. Restaurants, cafés, wine bars, markets and food shops only. Nothing here is booked. Bookable tables are in the Bookings tab. ★ = protected.
 
 ### Florence (approved list — don't add without asking)
 **Trattorias**
@@ -289,11 +234,66 @@ Part 2 of the Eat & do tab. Restaurants, cafés, wine bars, markets and food sho
 
 **Rule everywhere:** don't cross a city for one pastry or snack.
 
+## DO — things to do (by city)
+The **Do** column (right) of each city in the Eat & do tab. Sights, tours and winery visits only — no restaurants or food shops. One line each so the page explains what a place is. ★ = protected / can't-miss per the planning source.
+
+### Florence
+- ★ **Uffizi Gallery** — Jul 3 AM · the great Renaissance collection: Botticelli, Leonardo, Raphael
+- ★ **Galleria dell'Accademia** — Jul 3 PM · home of Michelangelo's David
+- ★ **Brunelleschi's Dome** — Jul 2 or 3 · climb inside the Duomo's dome to the lantern; city views (non-refundable)
+- **Piazza della Signoria & Palazzo Vecchio** — our doorstep: the civic square, statues, and the town-hall fortress
+- **Ponte Vecchio** — medieval bridge lined with goldsmiths' shops
+- **Oltrarno** — artisan workshop quarter across the river; evening wandering
+- **Piazzale Michelangelo** — the classic panorama over the city, best near sunset
+- **San Miniato al Monte** — Romanesque hilltop church just above Piazzale Michelangelo
+- **Santa Croce** — Franciscan basilica with the tombs of Michelangelo and Galileo
+- **Fattoria Torre a Cona** — Jul 4 · winery estate outside Florence (sub-trip)
+
+### Rome
+- **Trevi · Pantheon · Piazza Navona** — Jul 5 · the historic-center walk: fountain, 2,000-year-old domed temple, Baroque piazza
+- **Sant'Ignazio & San Luigi dei Francesi** — Jul 5 · trompe-l'oeil ceiling; three Caravaggio paintings
+- ★ **Vatican Museums & Sistine Chapel** — Jul 6 · papal art collections; Michelangelo's ceiling and Last Judgment
+- ★ **St. Peter's Basilica** — Jul 6 · the largest church in Christendom; Michelangelo's Pietà
+- **Castel Sant'Angelo** — Jul 6 · Hadrian's tomb turned papal fortress, on the Tiber
+- **Janiculum Hill → Trastevere** — Jul 6 · sunset panorama, then down into cobbled Trastevere for dinner
+- ★ **Colosseum · Roman Forum · Palatine** — Jul 7 · the amphitheater, the ancient city center, the emperors' hill
+- **Via di Monte Tarpeo & Campidoglio** — Jul 7 · best free Forum view; Michelangelo's hilltop piazza
+- **Jewish Ghetto** — Jul 7 · one of Europe's oldest Jewish communities; Portico d'Ottavia
+- ★ **Galleria Borghese** — Jul 8 · Bernini sculptures and Caravaggios in a villa; timed entry
+- **Pincio & Piazza del Popolo** — Jul 8 · park terrace overlook; twin-church piazza; Caravaggios in Santa Maria del Popolo
+- **Villa Medici** — Jul 8 · guided tour of the French Academy's Renaissance villa and gardens (non-refundable)
+- **Palazzo Zuccari & Spanish Steps** — Jul 8 · "House of Monsters" doorway with a mouth for a door; the famous steps
+- **Basilica di San Clemente** — Jul 9 · three layers: medieval church over an early church over a Roman temple
+- **Appian Way e-bike** — Jul 9 · ride the ancient Roman road past tombs and aqueducts, ~2–2.5 h
+- **Catacombs** — Jul 9 · underground early-Christian burial tunnels (optional)
+- **Aventine · Orange Garden · Knights of Malta Keyhole** — Jul 9 · quiet hilltop, rose-and-orange-tree terrace, St. Peter's framed through a keyhole
+
+### Amalfi Coast
+- ★ **Private boat + Positano** — Jul 11 (swap) · coast from the water, swim stops in coves, 2–4 h ashore in Positano
+- ★ **Cantine Marisa Cuomo + Furore** — Jul 12 (swap) · winery visit among cliff-side vineyard terraces in Furore
+- **Tenuta San Francesco** — Tramonti winery; second tasting only if the coast stays relaxed (optional)
+- ★ **Ravello · Villa Cimbrone** — gardens high above the sea; the Terrace of Infinity viewpoint
+- **Villa Rufolo** — Ravello's other villa: medieval tower, terraced gardens (optional)
+- **Amalfi Cathedral** — striped Arab-Norman cathedral at the top of a grand staircase
+- **Atrani** — tiny fishing village one short walk from Amalfi; small beach
+- **Beach + swim time** — unplanned hours on Amalfi or Atrani beach
+- **Fiordo di Furore** — dramatic narrow inlet under a road bridge; photo stop
+- **Emerald Grotto** — sea cave with green-lit water (optional; only if on the boat route)
+- **Valle delle Ferriere** — shaded hike up a green valley behind Amalfi (optional)
+
+### Pompeii & Naples
+- ★ **Pompeii** — Jul 13 · Roman town buried by Vesuvius in AD 79; streets, houses, frescoes, 3–4+ h
+- **Piazza del Plebiscito** — Naples' grand central square by the Royal Palace
+- **Santa Lucia · Castel dell'Ovo · Lungomare** — seafront castle and promenade on the bay
+- **America's Cup atmosphere** — the Match is racing on the bay that week
+
+**Not prioritized:** Capri · Mount Vesuvius · Sorrento · Naples as a full sightseeing day.
+
 ## Page structure (tabs)
 Overview · Eat & do · Locked events · Bookings · Logistics · Sub-trips.
 - **Overview** (`#overview`) — modelled on Amsterdam: **Trip at a glance** (day cards) → **Booking pulse** → **Route & pace** (route ribbon of nights per base + transfers + the four city phase cards). No presence map, headcount strip or month calendar — those suit big-group, month-long trips like Hawaii.
 - **Locked events** (`#events`) — booked anchors only.
-- **Eat & do** (`#eatdo`) — two parts with their own headers and a jump bar: **Things to do** (sights by city) then **Where to eat** (food by city).
+- **Eat & do** (`#eatdo`) — one section per city in trip order (Florence, Rome, Amalfi Coast, Naples), each with **Eat** on the left and **Do** on the right; a city jump bar at the top. Stacks Eat-first on phones.
 - **Bookings** (`#bookings`) — Confirmed / Still-to-book grids + "When to book" timeline.
 - **Logistics** (`#logistics`) — getting around, where we sleep, packing.
 Bookings is split out of Logistics for this trip because the list is long (23 items + timeline).
