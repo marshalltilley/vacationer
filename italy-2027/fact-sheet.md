@@ -1,7 +1,7 @@
 # Italy — Summer 2027 · Fact Sheet (source of truth)
 
 > Build `index.html` from this file. When a date or booking changes, update here first.
-> HTML version stamp: **v3**
+> HTML version stamp: **v4**
 >
 > Distilled from *Italy July 2027 — MASTER TRIP SOURCE* (consolidated 2026-10-03). Where that
 > document's city inventories conflicted with its top-level canonical sections, the canonical
@@ -38,14 +38,14 @@ Headcount is 2 every day. The presence map shows **where we sleep** instead of w
 | 1 | Florence | Jul 2 – 5 | 3 | Piazza Signoria n.1 apartment | Confirmed |
 | 2 | Rome | Jul 5 – 10 | 5 | Palazzo Talìa | Confirmed |
 | 3 | Amalfi Coast | Jul 10 – 13 | 3 | Abbraccio Amalfi Boutique Retreat | Confirmed |
-| 4 | Pompeii → Naples | Jul 13 – 14 | 1 | Naples hotel | **Not booked** |
+| 4 | Pompeii → Naples | Jul 13 – 14 | 1 | Soul Art Hotel | Confirmed |
 
 ### Transfers between bases
 - **Jul 2 · into Florence:** Delta CDG → Florence; then T2 tram from Peretola Aeroporto toward the center, walk to Piazza della Signoria (taxi only if luggage/weather/disruption).
 - **Jul 5 · Florence → Rome:** direct high-speed rail, Firenze SMN → Roma Termini (Italo ~1h25; Frecciarossa also runs). Not booked.
 - **Jul 10 · Rome → Amalfi:** high-speed train Rome → Salerno, then Salerno → Amalfi ferry (weather/schedule permitting). Fallback: road transfer Salerno → Amalfi. Not booked.
-- **Jul 13 · Amalfi → Pompeii → Naples:** one private driver all the way; driver holds luggage during Pompeii if agreed. Lower-cost alternative: private Amalfi → Pompeii, luggage storage, rail to Naples. Not booked.
-- **Jul 14 · Naples → NAP:** hotel-arranged fixed taxi; target ~5:30 AM pickup; reconfirm the evening of Jul 13. Not booked.
+- **Jul 13 · Amalfi → Pompeii → Naples (our plan):** private car Amalfi → Pompeii (not booked) · leave bags in Pompeii luggage storage · tour Pompeii · collect bags · Circumvesuviana train → Napoli Garibaldi · Metro Line 1 → Toledo · walk to Soul Art Hotel.
+- **Jul 14 · Naples → NAP:** prearranged private car, 5:30 AM pickup at Soul Art Hotel. Not booked yet.
 
 ## Confirmed — flights
 | Leg | Date | Flight | Depart | Arrive | Notes |
@@ -57,24 +57,25 @@ Headcount is 2 every day. The presence map shows **where we sleep** instead of w
 
 Flight legs = **4**.
 
-## Confirmed — lodging (3)
+## Confirmed — lodging (4)
 1. **Florence — Piazza Signoria n.1 apartment.** Jul 2–5 · 3 nights · entire apartment · hosts Lisa & Matilde · Piazza della Signoria · check-in after 2:00 PM Jul 2 · checkout by 10:00 AM Jul 5.
 2. **Rome — Palazzo Talìa.** Jul 5–10 · 5 nights · 560,000 Hilton points · Largo del Nazareno 25, 00187 Roma · Trevi / Spanish Steps / historic center. (Check-in time not on the booking.)
 3. **Amalfi — Abbraccio Amalfi Boutique Retreat.** Jul 10–13 · 3 nights · 2 guests · Deluxe double room with balcony and sea view · reservation code **WG3LE5** · €340/night · room €1,020 · tourist tax €18 · total €1,038 · paid €0 · outstanding €1,038 · Flexible 7-day rate · Largo Duchi Piccolomini 5, 84010 Amalfi. Stay was shortened from 4 nights to 3; **re-confirm the cancellation deadline and charge timing from the live reservation.**
 
-**Confirmed count = 3** (the three stays). Flights are counted separately as flight legs.
+4. **Naples — Soul Art Hotel.** Jul 13–14 · 1 night · 2 adults · reservation code **26877NNZ7204** · booked Oct 4, 2026 via the hotel website · under Marshall Tilley. (Address and check-in time not on the booking details.)
+
+**Confirmed count = 4** (the four stays). Flights are counted separately as flight legs.
 
 ## Confirmed external event
 - **Louis Vuitton 38th America's Cup — Naples.** Match starts Jul 10, 2027 and can run through Jul 19 depending on score. Our Naples night (Jul 13) lands inside it: expect high hotel demand/prices (Chiaia, Santa Lucia, Lungomare, Piazza del Plebiscito carry the biggest premium), waterfront crowds and road controls — but also great energy for the final evening. Not a booking; not counted in the pulse.
 
-## Still to book — 20 items
+## Still to book — 19 items
 Urgency (high / med / low) is our planning call from each item's booking window and scarcity.
 Target-action dates are planning triggers, not official release dates, unless the rule says *official fixed* or *official rolling*.
 
 | # | Item | Visit date | Urgency | Rule type | Target action |
 |---|---|---|---|---|---|
-| 1 | Naples hotel (1 night) | Jul 13–14 | high | Recommended lead time | **Book a refundable hold now**; keep monitoring through spring 2027 |
-| 2 | 50 Kalò · Piazza della Repubblica (dinner) | Jul 13 | high | Recommended lead time | Check Jan–Mar 2027; reserve as soon as Jul 13 is accepted. Never leave to walk-in |
+| 2 | Starita (Naples pizza dinner) | Jul 13 | high | Recommended lead time | America's Cup week — check how to reserve early (Jan–Mar 2027); don't rely on a walk-in |
 | 3 | Private Amalfi Coast boat | Jul 11 (backup Jul 12) | high | Recommended lead time | Shortlist operators Jan–Feb 2027; book Mar–Apr with explicit Jul 11↔12 weather flexibility |
 | 4 | Cantine Marisa Cuomo (winery visit) | Jul 12 (swap-able) | high | Official — required, no window | Request Mar–Apr 2027; ask if it can move Jul 12↔11 on 24–48 h notice |
 | 5 | Colosseum / Forum / Palatine | Jul 7 | high | **Official fixed window** — sales open 30 days before | **HARD TRIGGER Jun 7, 2027** |
@@ -88,13 +89,13 @@ Target-action dates are planning triggers, not official release dates, unless th
 | 13 | Ristorante Piperno (Ghetto meal) | Jul 7 | med | Official — required, no window | Check / book early–mid May 2027 if it is the chosen Ghetto meal |
 | 14 | Galleria Borghese | Jul 8 | med | Official — required, no window | Monitor from May 1, 2027; buy as soon as Jul 8 appears |
 | 15 | Train Rome → Salerno | Jul 10 | med | Recommended lead time | Check Mar–Apr 2027; book when the schedule opens |
-| 16 | Private driver Amalfi → Pompeii → Naples | Jul 13 | med | Recommended lead time | Quotes Feb–Mar 2027; book Apr–May once Pompeii timing is set |
+| 16 | Private car Amalfi → Pompeii | Jul 13 | med | Recommended lead time | Quotes Feb–Mar 2027; book Apr–May once Pompeii timing is set |
 | 17 | Pompeii Archaeological Park | Jul 13 | med | Official — required, no window | Monitor from May 2027; buy by early June or as soon as Jul 13 appears |
 | 18 | Ferry Salerno → Amalfi | Jul 10 | low | Recommended lead time | Check the 2027 summer timetable in spring; buy once the train is locked. Keep the road fallback |
 | 19 | Via Appia e-bike | Jul 9 | low | Recommended lead time | Pick an operator by early June; book by mid-June |
-| 20 | Airport taxi, Naples hotel → NAP | Jul 14 | low | Recommended lead time | Arrange via hotel by Jul 12–13; reconfirm night of Jul 13; ~5:30 AM pickup |
+| 20 | Private car Soul Art Hotel → NAP | Jul 14 | low | Recommended lead time | Prearrange the 5:30 AM pickup; reconfirm the night of Jul 13 |
 
-Counts: **high 6 · med 11 · low 3 = 20.**
+Counts: **high 5 · med 11 · low 3 = 19.** (Row numbers kept from v1; #1 Naples hotel is now confirmed.)
 
 ### Optional reservations — not in the still-to-book count
 Book only if chosen. Listed in Eat & do; their rules sit under the Bookings timeline.
@@ -103,8 +104,8 @@ Book only if chosen. Listed in Eat & do; their rules sit under the Bookings time
 - **Sensi Amalfi** (optional Jul 10/11/12) — dinner is the full tasting format; lunch is a lighter bistrot. Book 30–60 days ahead if chosen.
 
 ## Booking pulse (Overview) — must equal the Bookings tab
-- **Confirmed: 3** — Florence apartment, Palazzo Talìa, Abbraccio Amalfi
-- **Still to book: 20** — 6 high (Naples hotel, 50 Kalò, boat, Marisa Cuomo, Colosseum, Villa Medici) · 11 med · 3 low
+- **Confirmed: 4** — Florence apartment, Palazzo Talìa, Abbraccio Amalfi, Soul Art Hotel
+- **Still to book: 19** — 5 high (Starita, boat, Marisa Cuomo, Colosseum, Villa Medici) · 11 med · 3 low
 - **Flight legs: 4** — out Jul 1–2 RDU → CDG → Florence · home Jul 14 NAP → ATL → RDU
 
 ## Day-by-day working plan
@@ -122,8 +123,8 @@ All days are `WORKING_PLAN` (not booked) except flights and lodging.
 - **Sat Jul 10 — Rome → Amalfi / Amalfi + Atrani.** Train to Salerno, ferry to Amalfi (road fallback). Check in Abbraccio. Amalfi Cathedral, town, waterfront. Beach or hotel downtime. Walk to Atrani. Easy dinner. Delizia al limone.
 - **Sun Jul 11 — Private boat day (primary; weather swap with Jul 12).** Pickup in Amalfi. Coast cruise, swimming, coves. Positano stop ~2–4 h. Lunch serves the boat day (Da Adolfo / Laurito only if easy; Lo Guarracino as a Positano sit-down). Back late afternoon. Easy dinner: local fish + coastal white.
 - **Mon Jul 12 — Furore winery + Ravello (swap with Jul 11).** Marisa Cuomo morning (standard visits 9:00 and 10:00 by reservation). Tasting / lunch per package. Ravello afternoon: Villa Cimbrone / Terrace of Infinity (protected); Villa Rufolo if time allows. Baglio dinner only if the winery isn't already a big meal.
-- **Tue Jul 13 — Amalfi → Pompeii → Naples.** Checkout. Private driver; luggage stays with the driver. Pompeii ~3–4+ h. Naples hotel check-in. Evening: Piazza del Plebiscito, Santa Lucia / Castel dell'Ovo / waterfront if America's Cup crowds allow, enjoy the Cup atmosphere. Pizza at 50 Kalò. If time is tight, protect the pizza and one good walk.
-- **Wed Jul 14 — Fly home.** ~5:30 AM taxi. NAP 9:05 AM → ATL 2:31 PM → RDU 9:49 PM. Recheck Cup road closures and airport guidance.
+- **Tue Jul 13 — Amalfi → Pompeii → Naples.** Checkout. Private car to Pompeii; bags into Pompeii luggage storage. Pompeii ~3–4+ h. Collect bags → Circumvesuviana to Napoli Garibaldi → Metro Line 1 to Toledo → Soul Art Hotel. Evening: Piazza del Plebiscito, Santa Lucia / Castel dell'Ovo / waterfront if America's Cup crowds allow. Pizza at Starita. If time is tight, protect the pizza and one good walk.
+- **Wed Jul 14 — Fly home.** 5:30 AM private car from Soul Art Hotel. NAP 9:05 AM → ATL 2:31 PM → RDU 9:49 PM. Recheck Cup road closures and airport guidance.
 
 ## Sub-trips (one tab: "Sub-trips")
 1. **Tuscany wine country — Sun Jul 4.** Fattoria Torre a Cona (candidate). Sangiovese-focused, Chianti Colli Fiorentini, Vin Santo; historic villa + vineyards. Osteria serves à la carte Sat/Sun in the July season. Sunday bus service is weak → taxi, arranged transfer or private driver. Booking a Sunday visit moves the Dome to Jul 2 or 3.
@@ -132,10 +133,9 @@ All days are `WORKING_PLAN` (not booked) except flights and lodging.
    - Emerald Grotto only if it fits the boat route naturally.
 3. **Pompeii → Naples — Tue Jul 13 → Wed Jul 14.** Pompeii as a major transfer-day experience (no Vesuvius). Nominative timed-entry tickets; 20,000/day cap; bags over 30 × 30 × 15 cm not allowed inside (storage exists — recheck 2027). Naples evening: atmosphere over checklist; no formal museum.
 
-### Naples hotel logic
-One-night utilitarian stay. Convenience > luxury. Real staffed hotel (ideally 24-h desk), reliable early-taxi help, refundable rate.
-Search priority: 1) Municipio / Toledo · 2) Centro Storico · 3) Chiaia / Santa Lucia only if reasonably priced · 4) Napoli Centrale only if savings are big.
-Candidates: Matilde Lifestyle Hotel · Chiaja Hotel de Charme · Palazzo Alabardieri. Rex Lifestyle Hotel showed unavailable ~Jul 5–20 (possible event hold, not necessarily sold out). An availability watch is active.
+### Naples — confirmed plan
+Hotel booked: Soul Art Hotel (26877NNZ7204). Route in: Pompeii luggage storage → Circumvesuviana → Garibaldi → Metro Line 1 → Toledo. Route out: 5:30 AM private car to NAP.
+Pompeii storage rules and hours must be rechecked for 2027 (bags over 30 × 30 × 15 cm can't go inside the site).
 
 ## Scope badges (page legend)
 Both travelers do everything, so no badge means "who". Badges flag timing and booking constraints instead:
@@ -283,7 +283,7 @@ Part 2 of the Eat & do tab. Restaurants, cafés, wine bars, markets and food sho
 **Try on the coast:** scialatielli ai frutti di mare (thick fresh pasta with seafood) · spaghetti with colatura di Cetara (anchovy essence) · whole local fish · delizia al limone (lemon-cream sponge cake) · one local bonus: totani e patate (squid + potatoes) · sfogliatella Santa Rosa (ricotta pastry) · 'ndunderi (ricotta gnocchi) · sarchiapone (stuffed gourd, Atrani)
 
 ### Naples
-- ★ **50 Kalò · Piazza della Repubblica 2** — reservable branch of a top Neapolitan pizzeria; frittatina → Margherita → provola e pepe
+- ★ **Starita a Materdei** — historic family pizzeria in the Materdei quarter; classic and fried pizza. Our Jul 13 dinner.
 - **Enoteca Belledonne** — Chiaia wine bar (optional)
 
 **Try in Naples:** Margherita · frittatina (fried pasta bite) · sfogliatella (to compare with Amalfi's Santa Rosa)
@@ -326,10 +326,11 @@ Used in the HTML for: card swatch strip, tricolore hero band, phase colors, pres
 - Dates: July 1 — 14
 - Base: Florence → Rome → Amalfi → Naples
 - Group: 2 · Marshall & Anna
-- Status: 3 stays booked · 20 to book
+- Status: 4 stays booked · 19 to book
 
 ## Open items / unknowns (do not fill in until known)
 - CDG → Florence arrival time (Delta 8483) — not on the booking.
 - Palazzo Talìa check-in time — not on the booking.
 - Abbraccio cancellation deadline / charge timing — re-confirm from the live reservation.
-- Naples hotel — not booked (refundable hold recommended now).
+- Soul Art Hotel — address and check-in time not on the booking details.
+- Pompeii luggage storage — recheck 2027 availability and hours.
