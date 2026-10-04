@@ -165,26 +165,25 @@ phase bars, and tags. Keep the palette declared in the trip's `fact-sheet.md`.
 
 ## Typography
 
-**Default set** — use for the landing page and any new trip unless the trip
-picks its own:
+**Default: Fraunces + Manrope.** The landing page and every trip use these
+unless the trip picks its own.
 
-- **Federo** — display: hero title, section titles, card / city names, dates.
-- **Jost** — body, labels, tabs, small caps (free Futura-style geometric sans).
-- **Bodoni Moda** — italics and large numerals (section numbers, pulse counts).
-  Set `font-variation-settings: "opsz" 11` on `body` so its hairlines (em
-  dashes, apostrophes) stay visible at large sizes.
-
-Declare them as `:root` tokens and use the tokens, not family names:
-`--display` (Federo), `--sans` (Jost), `--serif` (Bodoni Moda). Federo has no
-italic or bold, so italic text uses `--serif`; set `font-synthesis: none` to
-avoid faux bold/italic.
+- **Fraunces** — serif display: titles, italic deks and notes, large numerals.
+- **Manrope** — sans body: text, labels, tabs, small caps.
 
 **Trip-specific fonts are allowed.** A trip may swap in other free Google Fonts
-that suit the destination. Keep the same three roles (display / sans / serif)
-and the token names, and record the choice in a `## Typography` section of the
-trip's `fact-sheet.md`.
+that suit the destination — that trip only, never the landing page or other
+trips. When it does:
 
-*Legacy:* Amsterdam and Hawaii still use the original Fraunces + Manrope pair.
+- record the choice in a `## Typography` section of the trip's `fact-sheet.md`;
+- declare `:root` tokens and use them instead of family names — `--display`,
+  `--sans`, `--serif` — so a later swap is one edit;
+- set `font-synthesis: none` if the display face has no italic or bold, and
+  route italic text to a face that has a real italic.
+
+*Example — Italy:* **Federo** (art-deco display), **Jost** (Futura-style sans),
+**Bodoni Moda** (italics and numerals, with `font-variation-settings: "opsz" 11`
+on `body` so its hairlines stay visible at large sizes).
 
 ## Versioning
 
