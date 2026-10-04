@@ -289,9 +289,182 @@ The **Do** column (right) of each city in the Eat & do tab. Sights, tours and wi
 
 **Not prioritized:** Capri · Mount Vesuvius · Sorrento · Naples as a full sightseeing day.
 
+## Map places (Maps tab)
+Pins for the Maps tab. **Coordinates are approximate** — taken from the planner's knowledge, not a live geocoder (OpenStreetMap was unreachable when this was built). `ok` = confident to within about a block; `approx` = verify before relying on it (shown with a dashed ring on the map). Days are July dates from the day-by-day plan; blank = flexible (any day). Kind: `base` (where we sleep), `do`, `eat`.
+
+| City | Kind | Name | Neighborhood | Lat | Lon | Days | Conf | What it is |
+|---|---|---|---|---|---|---|---|---|
+| florence | base | Piazza Signoria n.1 apartment | Centro Storico | 43.7697 | 11.2556 | 2,3,4 | ok | Our apartment on Piazza della Signoria |
+| florence | do | Uffizi Gallery | Centro Storico | 43.7678 | 11.2553 | 3 | ok | The great Renaissance collection |
+| florence | do | Galleria dell'Accademia | San Marco | 43.7768 | 11.2589 | 3 | ok | Michelangelo's David |
+| florence | do | Brunelleschi's Dome | Duomo | 43.7731 | 11.2560 | 2,3 | ok | Climb inside the cathedral dome |
+| florence | do | Piazza della Signoria & Palazzo Vecchio | Centro Storico | 43.7694 | 11.2560 | 2 | ok | Civic square and town-hall fortress |
+| florence | do | Ponte Vecchio | Centro Storico | 43.7680 | 11.2531 | | ok | Medieval bridge of goldsmiths' shops |
+| florence | do | Piazza Santo Spirito | Oltrarno – Santo Spirito | 43.7665 | 11.2475 | 3 | ok | Heart of the Oltrarno; evening wandering |
+| florence | do | Piazzale Michelangelo | San Niccolò hills | 43.7629 | 11.2650 | | ok | Classic city panorama at sunset |
+| florence | do | San Miniato al Monte | San Niccolò hills | 43.7596 | 11.2650 | | ok | Romanesque hilltop church |
+| florence | do | Santa Croce | Santa Croce | 43.7686 | 11.2622 | | ok | Basilica with Michelangelo's and Galileo's tombs |
+| florence | do | Fattoria Torre a Cona | Hills SE of Florence | 43.7036 | 11.3714 | 4 | approx | Villa winery (sub-trip) |
+| florence | eat | Vini e Vecchi Sapori | Centro Storico | 43.7703 | 11.2568 | | approx | Tiny osteria, handwritten menu |
+| florence | eat | Ristorante del Fagioli | Santa Croce | 43.7671 | 11.2602 | | approx | Old-school rustic trattoria |
+| florence | eat | Trattoria La Gratella | San Lorenzo | 43.7783 | 11.2508 | | approx | Family-run Tuscan trattoria |
+| florence | eat | La Buchetta | Santa Croce | 43.7666 | 11.2590 | | approx | Lively; bistecca and truffle pici |
+| florence | eat | Golden View Firenze | Oltrarno | 43.7670 | 11.2541 | | approx | Romantic dinner facing Ponte Vecchio |
+| florence | eat | COSIMO at The Excelsior | Santa Maria Novella | 43.7726 | 11.2455 | | approx | Upscale rooftop; sunset aperitivo |
+| florence | eat | B-Roof, Grand Hotel Baglioni | Santa Maria Novella | 43.7745 | 11.2510 | | approx | Hotel rooftop facing the Duomo |
+| florence | eat | Sergio Pollini Lampredotto | Sant'Ambrogio | 43.7706 | 11.2636 | | approx | Lampredotto street stand |
+| florence | eat | Da' Vinattieri | Centro Storico | 43.7714 | 11.2559 | | approx | Hole-in-the-wall sandwiches |
+| florence | eat | I Guelfi Tuscany Food | Centro Storico | 43.7705 | 11.2545 | | approx | Made-to-order schiacciata |
+| florence | eat | Il Cernacchio | Centro Storico | 43.7700 | 11.2565 | | approx | Cheap soups and pasta |
+| florence | eat | Antico Forno Sartoni | Centro Storico | 43.7710 | 11.2552 | | approx | Closest breakfast bakery |
+| florence | eat | Forno Ghibellina | Santa Croce | 43.7705 | 11.2615 | | approx | Bakery café |
+| florence | eat | Pasticceria Nencioni | Sant'Ambrogio | 43.7714 | 11.2628 | | approx | Historic pastry shop |
+| florence | eat | Vivoli | Santa Croce | 43.7697 | 11.2591 | | approx | Historic gelato |
+| florence | eat | Sbrino | Oltrarno – Santo Spirito | 43.7658 | 11.2462 | | approx | Craft gelato |
+| florence | eat | Le Volpi e l'Uva | Oltrarno | 43.7673 | 11.2524 | | approx | Tiny wine bar |
+| florence | eat | Pegna dal 1860 | Duomo | 43.7721 | 11.2568 | | approx | Historic specialty grocer |
+| florence | eat | Mercato di Sant'Ambrogio | Sant'Ambrogio | 43.7699 | 11.2645 | | ok | Neighborhood food market |
+| florence | eat | Alimentari Calimaruzza | Centro Storico | 43.7697 | 11.2543 | | approx | Tiny food shop |
+| rome | base | Palazzo Talìa | Trevi | 41.9025 | 12.4838 | 5,6,7,8,9 | ok | Our hotel, Largo del Nazareno |
+| rome | do | Trevi Fountain | Trevi | 41.9009 | 12.4833 | 5 | ok | The fountain |
+| rome | do | Pantheon | Centro Storico | 41.8986 | 12.4769 | 5 | ok | 2,000-year-old domed temple |
+| rome | do | Piazza Navona | Centro Storico | 41.8992 | 12.4731 | 5 | ok | Baroque piazza and fountains |
+| rome | do | Sant'Ignazio | Centro Storico | 41.8990 | 12.4797 | 5 | ok | Trompe-l'oeil painted ceiling |
+| rome | do | San Luigi dei Francesi | Centro Storico | 41.8996 | 12.4746 | 5 | ok | Three Caravaggio paintings |
+| rome | do | Vatican Museums & Sistine Chapel | Vatican & Borgo | 41.9065 | 12.4536 | 6 | ok | Papal collections; Michelangelo's ceiling |
+| rome | do | St. Peter's Basilica | Vatican & Borgo | 41.9022 | 12.4539 | 6 | ok | Largest church in Christendom |
+| rome | do | Castel Sant'Angelo | Vatican & Borgo | 41.9031 | 12.4663 | 6 | ok | Hadrian's tomb, papal fortress |
+| rome | do | Janiculum terrace | Gianicolo | 41.8913 | 12.4613 | 6 | ok | Sunset panorama over Rome |
+| rome | do | Santa Maria in Trastevere | Trastevere | 41.8894 | 12.4701 | 6 | ok | Trastevere's main piazza |
+| rome | do | Colosseum | Ancient Rome | 41.8902 | 12.4922 | 7 | ok | The amphitheater |
+| rome | do | Roman Forum & Palatine | Ancient Rome | 41.8915 | 12.4865 | 7 | ok | Ancient city center and emperors' hill |
+| rome | do | Via di Monte Tarpeo viewpoint | Campidoglio | 41.8920 | 12.4824 | 7 | approx | Best free view of the Forum |
+| rome | do | Campidoglio | Campidoglio | 41.8934 | 12.4828 | 7 | ok | Michelangelo's hilltop piazza |
+| rome | do | Portico d'Ottavia | Ghetto | 41.8927 | 12.4772 | 7 | ok | Heart of the Jewish Ghetto |
+| rome | do | Galleria Borghese | Villa Borghese | 41.9142 | 12.4921 | 8 | ok | Bernini and Caravaggio in a villa |
+| rome | do | Pincio terrace | Villa Borghese | 41.9113 | 12.4797 | 8 | ok | Park terrace over Piazza del Popolo |
+| rome | do | Piazza del Popolo | Tridente | 41.9107 | 12.4763 | 8 | ok | Twin-church piazza |
+| rome | do | Villa Medici | Tridente | 41.9083 | 12.4830 | 8 | ok | French Academy villa and gardens |
+| rome | do | Spanish Steps & Palazzo Zuccari | Tridente | 41.9058 | 12.4833 | 8 | ok | The steps; "House of Monsters" doorway |
+| rome | do | Basilica di San Clemente | Celio | 41.8893 | 12.4977 | 9 | ok | Three churches stacked in layers |
+| rome | do | Appian Way (Via Appia Antica) | Appia Antica | 41.8560 | 12.5170 | 9 | approx | Ancient road; e-bike ride |
+| rome | do | Catacombs of San Callisto | Appia Antica | 41.8590 | 12.5110 | 9 | approx | Early-Christian burial tunnels |
+| rome | do | Aventine & Orange Garden | Aventino | 41.8847 | 12.4797 | 9 | ok | Quiet hilltop, orange-tree terrace |
+| rome | do | Knights of Malta Keyhole | Aventino | 41.8830 | 12.4785 | 9 | ok | St. Peter's framed through a keyhole |
+| rome | eat | Piperno | Ghetto | 41.8935 | 12.4755 | 7 | approx | Historic Jewish-Roman restaurant |
+| rome | eat | Boccione | Ghetto | 41.8922 | 12.4785 | 7 | approx | Tiny Ghetto bakery |
+| rome | eat | Pizzeria Ostiense | Ostiense | 41.8722 | 12.4810 | 9 | approx | Thin, crisp Roman pizza |
+| rome | eat | Mercato di Testaccio | Testaccio | 41.8768 | 12.4743 | 9 | ok | Working food market |
+| rome | eat | Volpetti | Testaccio | 41.8783 | 12.4769 | 9 | approx | Deli since 1973 |
+| rome | eat | Il Goccetto | Centro Storico | 41.8985 | 12.4684 | 5 | approx | Old wine bar, Via dei Banchi Vecchi |
+| rome | eat | Supplizio | Centro Storico | 41.8989 | 12.4672 | 5 | approx | Supplì specialist |
+| rome | eat | L'Osteria della Trippa | Trastevere | 41.8858 | 12.4696 | | approx | Tripe and Roman specialties |
+| rome | eat | Santo Palato | San Giovanni | 41.8812 | 12.5170 | | approx | Modern Roman cooking |
+| rome | eat | Flavio al Velavevodetto | Testaccio | 41.8758 | 12.4757 | | approx | Built into Monte Testaccio |
+| rome | eat | Retrobottega | Ancient Rome | 41.8895 | 12.4830 | | approx | Creative modern Italian |
+| rome | eat | Roscioli Salumeria con Cucina | Campo de' Fiori | 41.8937 | 12.4737 | | approx | Deli and restaurant in one |
+| rome | eat | Antico Forno Roscioli | Campo de' Fiori | 41.8942 | 12.4746 | | approx | Historic bakery, pizza by weight |
+| rome | eat | Armando al Pantheon | Centro Storico | 41.8990 | 12.4761 | | ok | Family-run since 1961 |
+| rome | eat | Tazza d'Oro | Centro Storico | 41.8996 | 12.4776 | | ok | Stand-up espresso bar |
+| rome | eat | Giolitti | Centro Storico | 41.9008 | 12.4774 | | ok | Historic gelato |
+| rome | eat | Bar San Marcello | Trevi | 41.8993 | 12.4822 | | approx | Local café by the hotel |
+| rome | eat | Ciampini | Tridente | 41.9038 | 12.4790 | | approx | Old-school café on a piazza |
+| rome | eat | Hotel de Russie garden | Tridente | 41.9095 | 12.4772 | | ok | Polished garden aperitivo |
+| rome | eat | Pizzarium Bonci | Prati | 41.9073 | 12.4473 | 6 | approx | Famed pizza by the slice |
+| rome | eat | Paciotti Salumeria | Prati | 41.9075 | 12.4570 | 6 | approx | Old-school deli |
+| rome | eat | Regoli Pasticceria | Esquilino | 41.8955 | 12.5030 | | approx | Benchmark maritozzo |
+| rome | eat | Trattoria Pennestri | Ostiense | 41.8685 | 12.4800 | | approx | Michelin-noted local trattoria |
+| rome | eat | Mazzo | San Lorenzo | 41.8968 | 12.5150 | | approx | Modern Roman, wine bar |
+| rome | eat | Tante Care Cose | Pigneto | 41.8860 | 12.5340 | | approx | Tiny open-kitchen spot |
+| rome | eat | Osteria Bonelli | Torpignattara | 41.8780 | 12.5480 | | approx | Family-style, daily menu |
+| rome | eat | Menabò Vino e Cucina | Centocelle | 41.8790 | 12.5680 | | approx | Seasonal neighborhood cooking |
+| amalfi | base | Abbraccio Amalfi | Amalfi | 40.6342 | 14.6030 | 10,11,12 | approx | Our hotel, Largo Duchi Piccolomini |
+| amalfi | do | Amalfi Cathedral | Amalfi | 40.6345 | 14.6035 | 10 | ok | Striped Arab-Norman cathedral |
+| amalfi | do | Amalfi beach | Amalfi | 40.6331 | 14.6020 | | ok | Swim time in town |
+| amalfi | do | Atrani | Atrani | 40.6360 | 14.6090 | 10 | ok | Tiny fishing village next door |
+| amalfi | do | Positano (boat stop) | Positano | 40.6281 | 14.4850 | 11 | ok | Boat-day stop, 2–4 hours ashore |
+| amalfi | do | Emerald Grotto | Conca dei Marini | 40.6150 | 14.5720 | 11 | approx | Green-lit sea cave (optional) |
+| amalfi | do | Cantine Marisa Cuomo | Furore | 40.6200 | 14.5490 | 12 | approx | Cliff-terrace winery |
+| amalfi | do | Fiordo di Furore | Furore | 40.6188 | 14.5545 | 12 | ok | Narrow sea inlet under a bridge |
+| amalfi | do | Villa Cimbrone | Ravello | 40.6440 | 14.6110 | 12 | ok | Gardens; Terrace of Infinity |
+| amalfi | do | Villa Rufolo | Ravello | 40.6490 | 14.6118 | 12 | ok | Medieval tower, terraced gardens |
+| amalfi | do | Valle delle Ferriere | Scala | 40.6440 | 14.5960 | | approx | Shaded valley hike (optional) |
+| amalfi | do | Tenuta San Francesco | Tramonti | 40.6920 | 14.6380 | | approx | Second winery (optional) |
+| amalfi | eat | Sensi Amalfi | Amalfi | 40.6348 | 14.6025 | | approx | Tasting menu or bistro lunch |
+| amalfi | eat | Da Adolfo | Positano | 40.6232 | 14.4990 | 11 | approx | Boat-day beach lunch at Laurito |
+| amalfi | eat | Lo Guarracino | Positano | 40.6268 | 14.4882 | 11 | approx | Positano sit-down lunch |
+| naples | base | Soul Art Hotel | Toledo | 40.8432 | 14.2485 | 13 | approx | Our hotel, near Toledo metro |
+| naples | do | Piazza del Plebiscito | San Ferdinando | 40.8359 | 14.2488 | 13 | ok | Grand square by the Royal Palace |
+| naples | do | Castel dell'Ovo | Santa Lucia | 40.8282 | 14.2477 | 13 | ok | Seafront castle on the bay |
+| naples | do | Lungomare (Via Caracciolo) | Chiaia | 40.8305 | 14.2390 | 13 | ok | Seafront promenade; America's Cup buzz |
+| naples | do | Pompeii | Pompei | 40.7490 | 14.4848 | 13 | ok | Roman town buried in AD 79 (sub-trip) |
+| naples | eat | Starita a Materdei | Materdei | 40.8560 | 14.2470 | 13 | approx | Historic pizzeria; walk-in only |
+| naples | eat | Enoteca Belledonne | Chiaia | 40.8350 | 14.2410 | 13 | approx | Wine bar (optional) |
+
+The page's `MAP_PLACES` and `MAP_ZONES` data (between the `MAP-DATA` markers in the script) mirrors the two tables here — update this table first, then the page.
+
+**Not on the map (location not confirmed):** Il Vezzo (Florence) · Baglio Amalfi (Amalfi Coast — reached by car).
+
+### Neighborhood zones
+Approximate centers and sizes for the labeled zones on the drawn map — names as residents and visitors use them.
+
+| City | Zone | Lat | Lon | Radius (m) |
+|---|---|---|---|---|
+| florence | Duomo | 43.7728 | 11.2560 | 230 |
+| florence | Centro Storico | 43.7695 | 11.2550 | 260 |
+| florence | San Lorenzo | 43.7762 | 11.2533 | 260 |
+| florence | Santa Maria Novella | 43.7742 | 11.2472 | 320 |
+| florence | San Marco | 43.7792 | 11.2592 | 280 |
+| florence | Santa Croce | 43.7684 | 11.2615 | 290 |
+| florence | Sant'Ambrogio | 43.7714 | 11.2652 | 240 |
+| florence | Oltrarno – Santo Spirito | 43.7658 | 11.2478 | 340 |
+| florence | San Frediano | 43.7690 | 11.2410 | 290 |
+| florence | San Niccolò | 43.7646 | 11.2603 | 240 |
+| florence | San Niccolò hills | 43.7610 | 11.2655 | 320 |
+| rome | Centro Storico | 41.8985 | 12.4745 | 430 |
+| rome | Trevi | 41.9012 | 12.4838 | 240 |
+| rome | Tridente | 41.9072 | 12.4795 | 340 |
+| rome | Villa Borghese | 41.9135 | 12.4880 | 450 |
+| rome | Prati | 41.9072 | 12.4585 | 400 |
+| rome | Vatican & Borgo | 41.9030 | 12.4565 | 380 |
+| rome | Gianicolo | 41.8905 | 12.4618 | 300 |
+| rome | Trastevere | 41.8880 | 12.4700 | 370 |
+| rome | Campo de' Fiori | 41.8952 | 12.4722 | 200 |
+| rome | Ghetto | 41.8928 | 12.4774 | 170 |
+| rome | Campidoglio | 41.8930 | 12.4826 | 150 |
+| rome | Ancient Rome | 41.8912 | 12.4880 | 330 |
+| rome | Monti | 41.8952 | 12.4932 | 310 |
+| rome | Esquilino | 41.8965 | 12.5022 | 340 |
+| rome | Celio | 41.8868 | 12.4965 | 290 |
+| rome | Aventino | 41.8840 | 12.4805 | 290 |
+| rome | Testaccio | 41.8770 | 12.4755 | 290 |
+| rome | Ostiense | 41.8700 | 12.4812 | 340 |
+| rome | San Giovanni | 41.8855 | 12.5080 | 390 |
+| rome | San Lorenzo | 41.8970 | 12.5148 | 340 |
+| amalfi | Positano | 40.6281 | 14.4862 | 650 |
+| amalfi | Praiano | 40.6120 | 14.5300 | 550 |
+| amalfi | Furore | 40.6195 | 14.5505 | 550 |
+| amalfi | Conca dei Marini | 40.6160 | 14.5730 | 450 |
+| amalfi | Amalfi | 40.6348 | 14.6020 | 420 |
+| amalfi | Atrani | 40.6366 | 14.6096 | 230 |
+| amalfi | Ravello | 40.6480 | 14.6115 | 480 |
+| amalfi | Scala | 40.6550 | 14.6050 | 420 |
+| amalfi | Minori | 40.6505 | 14.6270 | 380 |
+| naples | Centro Storico | 40.8505 | 14.2572 | 480 |
+| naples | Quartieri Spagnoli | 40.8405 | 14.2455 | 240 |
+| naples | Toledo | 40.8432 | 14.2497 | 200 |
+| naples | San Ferdinando | 40.8365 | 14.2502 | 210 |
+| naples | Santa Lucia | 40.8310 | 14.2472 | 240 |
+| naples | Chiaia | 40.8352 | 14.2372 | 430 |
+| naples | Vomero | 40.8458 | 14.2312 | 430 |
+| naples | Materdei | 40.8560 | 14.2460 | 240 |
+| naples | Sanità | 40.8597 | 14.2516 | 290 |
+| naples | Porto / Municipio | 40.8396 | 14.2548 | 250 |
+
 ## Page structure (tabs)
 Overview · Eat & do · Locked events · Bookings · Logistics · Sub-trips.
 - **Overview** (`#overview`) — modelled on Amsterdam: **Trip at a glance** (day cards) → **Booking pulse** → **Route & pace** (route ribbon of nights per base + transfers + the four city phase cards). No presence map, headcount strip or month calendar — those suit big-group, month-long trips like Hawaii.
+- **Maps** (`#maps`) — city map with a city switcher, day filter (that day's plan in color, other days grey, flexible spots as light outlines), Eat/Do toggles, and a Drawn / Street mode switch. Places listed by neighborhood beside the map. Data: *Map places* above.
 - **Locked events** (`#events`) — booked anchors only.
 - **Eat & do** (`#eatdo`) — one section per city in trip order (Florence, Rome, Amalfi Coast, Naples), each with **Eat** on the left and **Do** on the right; a city jump bar at the top. Florence and Rome have long food lists, so their Eat side flows into two columns (Florence's Eat side is also two-thirds wide) to keep both sides about the same height. Stacks Eat-first on phones.
 - **Bookings** (`#bookings`) — Confirmed / Still-to-book grids + "When to book" timeline.

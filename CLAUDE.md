@@ -85,6 +85,7 @@ the others. Pick modules for what *this* trip needs; leave out the rest.
 | **Eat & do — by region** | Region cards with tiered restaurant lists + activity cards | Spread-out bases | Hawaii |
 | **Eat & do — Do / Eat by city** | Two headed parts, one-line description per place | Multi-city trips | Italy |
 | **When to book** | Booking triggers sorted by date | Trips booked months ahead | Italy |
+| **City maps** (Maps tab) | Pins per city on a drawn map (neighborhood zones, river/coast), day filter, places listed by neighborhood; optional street-map mode | Unfamiliar or multi-city trips | Italy |
 | **Hotels / flights cards** | Stays and legs as cards | All trips | Amsterdam, Hawaii, Italy |
 | **Packing & style** | Weather, style, shoes, gear | All trips | All |
 | **Sub-trip panel** | Day trip with phases + alternate; expedition day cards; weather swap decision box | Trips with day trips or side legs | Amsterdam, Hawaii, Italy |
@@ -153,6 +154,12 @@ tab per person or per sub-trip. There are no per-person pages anywhere.
 - **No external dependencies except Google Fonts** (see Typography). No CDN
   frameworks, no JS libraries, no build tooling. Everything is inline `<style>`
   and a single inline `<script>`.
+- **One exception — street-map mode on a Maps tab.** The drawn map is inline SVG
+  and must work with no outside requests (offline, print). A "Street map" switch
+  may then load **Leaflet** (pinned version, with `integrity` hashes) from unpkg
+  and OpenStreetMap-based tiles from CARTO, **only when the reader turns it on**.
+  Keep attribution visible. Map places live in the trip's fact sheet; the page's
+  `MAP_PLACES` / `MAP_ZONES` data mirrors those tables.
 
 ## Design system (shared chrome)
 
