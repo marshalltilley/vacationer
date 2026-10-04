@@ -29,7 +29,7 @@
 |---|---|---|
 | Marshall & Anna | 2 | Jul 1 (depart RDU) – Jul 14 (home RDU) · full trip |
 
-Headcount is 2 every day. The presence map shows **where we sleep** instead of who is present.
+Headcount is 2 every day, so the page has no presence map; the route ribbon shows where we sleep.
 
 ## Route & nights (phases)
 | # | Phase | Dates | Nights | Lodging | Status |
@@ -107,7 +107,7 @@ Book only if chosen. Listed in Eat & do; their rules sit under the Bookings time
 - **Still to book: 18** — 4 high (boat, Marisa Cuomo, Colosseum, Villa Medici) · 11 med · 3 low
 - **Flight legs: 4** — out Jul 1–2 RDU → CDG → Florence · home Jul 14 NAP → ATL → RDU
 
-## Day-by-day working plan (Overview tab)
+## Day-by-day plan (Overview › Trip at a glance)
 All days are `WORKING_PLAN` (not booked) except flights and lodging.
 
 - **Thu Jul 1 — Depart Raleigh.** RDU 6:10 PM → CDG. No sightseeing.
@@ -291,7 +291,7 @@ Part 2 of the Eat & do tab. Restaurants, cafés, wine bars, markets and food sho
 
 ## Page structure (tabs)
 Overview · Eat & do · Locked events · Bookings · Logistics · Sub-trips.
-- **Overview** (`#overview`) — route & presence map, four phases, booking pulse, then the **day-by-day plan**. For this trip the day-by-day plan replaces the master calendar (a 14-day, two-person trip reads better as day cards).
+- **Overview** (`#overview`) — modelled on Amsterdam: **Trip at a glance** (day cards) → **Booking pulse** → **Route & pace** (route ribbon of nights per base + transfers + the four city phase cards). No presence map, headcount strip or month calendar — those suit big-group, month-long trips like Hawaii.
 - **Locked events** (`#events`) — booked anchors only.
 - **Eat & do** (`#eatdo`) — two parts with their own headers and a jump bar: **Things to do** (sights by city) then **Where to eat** (food by city).
 - **Bookings** (`#bookings`) — Confirmed / Still-to-book grids + "When to book" timeline.

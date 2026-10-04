@@ -219,144 +219,47 @@ body {
   font-weight: 600;
 }
 
-/* --- PRESENCE MAP / ROUTE --- */
-.timeline {
-  background: var(--paper-2);
-  border: 1px solid var(--rule);
-  padding: 32px;
-}
-.timeline-grid {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 8px 0;
-}
-.tl-label {
-  font-weight: 600;
-  font-size: 14px;
-  padding: 6px 12px 6px 0;
-  align-self: center;
-  line-height: 1.2;
-}
-.tl-sub {
-  font-size: 10px;
-  font-weight: 400;
-  color: var(--muted);
-  margin-top: 2px;
-  line-height: 1.25;
-}
-.tl-bar-wrap {
-  position: relative;
-  height: 32px;
-  background: rgba(255,255,255,0.5);
-  border-radius: 2px;
-}
-.tl-bar {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  background: var(--ink);
-  border-radius: 2px;
-  display: flex;
-  align-items: center;
-  padding: 0 10px;
-  font-size: 11px;
+
+/* --- ROUTE RIBBON + TRANSFERS --- */
+.route { background: var(--paper-2); border: 1px solid var(--rule); padding: 22px 24px; margin-bottom: 16px; }
+.route-ribbon { display: flex; gap: 3px; }
+.rr-seg {
+  min-width: 64px;
+  padding: 10px 12px;
   color: white;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  white-space: nowrap;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--muted);
 }
-.tl-bar.verde { background: var(--verde); }
-.tl-bar.terracotta { background: var(--terracotta); }
-.tl-bar.ochre { background: var(--ochre); color: var(--ink); }
-.tl-bar.tyrrhenian { background: var(--tyrrhenian); }
-.tl-bar.pompeian { background: var(--pompeian); }
-.tl-bar.transit { background: var(--muted); }
-.tl-bar.pending { background: repeating-linear-gradient(135deg, var(--pompeian) 0 6px, #94474b 6px 12px); }
-.tl-axis {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  margin-top: 12px;
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--verde);
-  font-weight: 600;
-}
-.tl-axis-marks { position: relative; height: 14px; }
-.tl-axis-marks span { position: absolute; top: 0; transform: translateX(-50%); white-space: nowrap; }
-.tl-axis-marks span:first-child { transform: none; }
-.tl-axis-marks span:last-child { transform: translateX(-100%); }
-.tl-headcount, .tl-implications {
-  margin-top: 28px;
-  padding-top: 20px;
-  border-top: 1px solid var(--rule);
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  align-items: center;
-}
-.tl-implications { margin-top: 20px; padding-top: 16px; }
-.tl-headcount-label, .tl-imp-label {
+.rr-seg.terracotta { background: var(--terracotta); }
+.rr-seg.ochre { background: var(--ochre); color: var(--ink); }
+.rr-seg.tyrrhenian { background: var(--tyrrhenian); }
+.rr-seg.pompeian { background: var(--pompeian); }
+.rr-city { font-family: var(--display); font-size: 18px; line-height: 1.1; }
+.rr-dates { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; opacity: 0.9; white-space: nowrap; }
+.route-transfers { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 16px; }
+.rt-label {
   font-size: 10px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-weight: 700;
   color: var(--verde);
+  margin-right: 6px;
 }
-.tl-headcount-bars { display: flex; gap: 2px; height: 44px; }
-.hc-seg {
-  background: rgba(31,48,80,0.06);
-  border-top: 3px solid var(--ink);
-  padding: 4px 6px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-width: 0;
-  overflow: hidden;
-}
-.hc-seg.transit { border-top-color: var(--muted); }
-.hc-seg.terracotta { border-top-color: var(--terracotta); background: rgba(196,91,60,0.10); }
-.hc-seg.ochre { border-top-color: var(--ochre); background: rgba(201,149,47,0.12); }
-.hc-seg.tyrrhenian { border-top-color: var(--tyrrhenian); background: rgba(43,107,143,0.10); }
-.hc-seg.pompeian { border-top-color: var(--pompeian); background: rgba(122,47,51,0.10); }
-.hc-num {
-  font-family: var(--serif);
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1;
-}
-.hc-rng {
-  font-size: 9px;
-  letter-spacing: 0.04em;
-  color: #5a4a3a;
-  font-weight: 600;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.tl-footnote {
-  margin-top: 10px;
-  margin-left: 200px;
-  font-size: 11px;
-  font-style: italic;
-  color: #5a4a3a;
-  line-height: 1.4;
-}
-.tl-imp-list { display: flex; flex-wrap: wrap; gap: 8px; }
-.tl-imp-list span {
+.route-transfers > span:not(.rt-label) {
   font-size: 11px;
   font-weight: 600;
   padding: 4px 10px;
   background: white;
   border: 1px solid var(--rule);
   border-left-width: 3px;
-  color: var(--ink);
 }
-.tl-imp-list .terracotta { border-left-color: var(--terracotta); }
-.tl-imp-list .ochre { border-left-color: var(--ochre); }
-.tl-imp-list .tyrrhenian { border-left-color: var(--tyrrhenian); }
-.tl-imp-list .pompeian { border-left-color: var(--pompeian); }
-.tl-imp-list .transit { border-left-color: var(--muted); }
+.route-transfers .terracotta { border-left-color: var(--terracotta); }
+.route-transfers .ochre { border-left-color: var(--ochre); }
+.route-transfers .tyrrhenian { border-left-color: var(--tyrrhenian); }
+.route-transfers .pompeian { border-left-color: var(--pompeian); }
+.route-transfers .transit { border-left-color: var(--muted); }
 
 /* --- PHASE CARDS --- */
 .phases {
@@ -996,18 +899,11 @@ body {
   .section-title { font-size: 20px; }
   .section-sub { font-size: 10px; margin-left: 0; width: 100%; }
 
-  .timeline { padding: 18px; }
-  .timeline-grid { grid-template-columns: 1fr; gap: 10px; }
-  .tl-label { padding: 0; font-size: 13px; }
-  .tl-bar-wrap { height: 28px; }
-  .tl-bar { font-size: 10px; padding: 0 6px; }
-  .tl-axis { grid-template-columns: 1fr; }
-  .tl-headcount, .tl-implications { grid-template-columns: 1fr; gap: 10px; }
-  .tl-headcount-bars { flex-wrap: wrap; height: auto; gap: 4px; }
-  .hc-seg { flex: 1 1 calc(33.333% - 4px) !important; height: 44px; }
-  .tl-footnote { margin-left: 0; }
 
   .phases { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .route { padding: 14px; }
+  .route-ribbon { flex-wrap: wrap; }
+  .rr-seg { flex: 1 1 40% !important; }
   .phase { min-height: 0; padding: 14px 12px; }
 
   .pulse { grid-template-columns: 1fr; gap: 18px; padding: 18px 20px; }
@@ -1108,22 +1004,14 @@ body {
     page-break-inside: avoid;
   }
 
-  /* Overview */
-  .timeline { padding: 14px; }
-  .tl-label { font-size: 9.5pt; padding: 3px 12px 3px 0; }
-  .tl-sub { font-size: 7.5pt; }
-  .tl-bar-wrap { height: 22pt; }
-  .tl-bar { font-size: 8pt; padding: 0 6px; }
-  .tl-axis { font-size: 8pt; margin-top: 6px; }
-  .tl-headcount { margin-top: 10px; padding-top: 8px; }
-  .tl-headcount-bars { height: 38px; }
-  .hc-num { font-size: 11pt; }
-  .hc-rng { font-size: 7pt; }
-  .tl-footnote { font-size: 7.5pt; margin-top: 6px; }
-  .tl-implications { margin-top: 8px; padding-top: 8px; }
-  .tl-imp-list span { font-size: 8pt; padding: 2px 7px; }
 
   .phases { gap: 8px; }
+  .route { padding: 10px 12px; margin-bottom: 10px; break-inside: avoid; }
+  .rr-city { font-size: 12pt; }
+  .rr-dates { font-size: 7pt; }
+  .rr-seg { padding: 6px 8px; }
+  .route-transfers { margin-top: 8px; gap: 5px; }
+  .route-transfers > span:not(.rt-label) { font-size: 8pt; padding: 2px 7px; }
   .phase { min-height: 0; padding: 9px 11px 11px; }
   .phase-num { font-size: 7pt; }
   .phase-name { font-size: 13pt; }
@@ -1217,7 +1105,6 @@ body {
   .option li { font-size: 8.5pt; padding: 1.5px 0; }
   .option-why { font-size: 8pt; padding-top: 6px; }
 
-  .timeline { break-inside: avoid; page-break-inside: avoid; }
   .locked-row, .phase, .day-card, .res-item, .log-card, .rest-region, .activity-card,
   .packing-block, .pulse, .option, .trigger-row, .rest-tier {
     break-inside: avoid;
@@ -1274,7 +1161,7 @@ body {
 <nav class="tabs" role="tablist" aria-label="Itinerary sections">
   <button class="tab active" role="tab" data-tab="overview">
     <span class="tab-label">Overview</span>
-    <span class="tab-sub">Route · Daily plan</span>
+    <span class="tab-sub">Days · Route · Pulse</span>
   </button>
   <button class="tab" role="tab" data-tab="eatdo">
     <span class="tab-label">Eat &amp; do</span>
@@ -1305,138 +1192,8 @@ body {
 <section class="section">
   <div class="section-head">
     <span class="section-num">01</span>
-    <h2 class="section-title">Route &amp; presence map</h2>
-    <span class="section-sub">Where we sleep</span>
-  </div>
-  <div class="timeline">
-    <div class="timeline-grid">
-      <!-- Axis = 13 days, Jul 1 (0) to Jul 14 (13). left = start/13, width = nights/13 -->
-      <div class="tl-label">Marshall &amp; Anna<div class="tl-sub">2 people · full trip · no split</div></div>
-      <div class="tl-bar-wrap"><div class="tl-bar verde" style="left:0%; width:100%;">Jul 1 — 14 · RDU → Italy → RDU</div></div>
-
-      <div class="tl-label">In transit<div class="tl-sub">RDU → CDG overnight</div></div>
-      <div class="tl-bar-wrap"><div class="tl-bar transit" style="left:0%; width:7.69%;">✈</div></div>
-
-      <div class="tl-label">Florence<div class="tl-sub">Piazza Signoria n.1 apartment</div></div>
-      <div class="tl-bar-wrap"><div class="tl-bar terracotta" style="left:7.69%; width:23.08%;">Jul 2 — 5 · 3 nights</div></div>
-
-      <div class="tl-label">Rome<div class="tl-sub">Palazzo Talìa</div></div>
-      <div class="tl-bar-wrap"><div class="tl-bar ochre" style="left:30.77%; width:38.46%;">Jul 5 — 10 · 5 nights</div></div>
-
-      <div class="tl-label">Amalfi Coast<div class="tl-sub">Abbraccio Amalfi</div></div>
-      <div class="tl-bar-wrap"><div class="tl-bar tyrrhenian" style="left:69.23%; width:23.08%;">Jul 10 — 13 · 3 nights</div></div>
-
-      <div class="tl-label">Pompeii → Naples<div class="tl-sub">Soul Art Hotel</div></div>
-      <div class="tl-bar-wrap"><div class="tl-bar pompeian" style="left:92.31%; width:7.69%;">1 nt</div></div>
-    </div>
-    <div class="tl-axis">
-      <span></span>
-      <div class="tl-axis-marks">
-        <span style="left:0%;">Jul 1</span><span style="left:30.77%;">Jul 5</span><span style="left:69.23%;">Jul 10</span><span style="left:100%;">Jul 14</span>
-      </div>
-    </div>
-
-    <!-- Headcount-by-day strip (segments sized by nights per base) -->
-    <div class="tl-headcount">
-      <div class="tl-headcount-label">Headcount</div>
-      <div class="tl-headcount-bars">
-        <div class="hc-seg transit" style="flex:1;"><span class="hc-num">2</span><span class="hc-rng">Jul 1 · air</span></div>
-        <div class="hc-seg terracotta" style="flex:3;"><span class="hc-num">2</span><span class="hc-rng">Jul 2–4 · Florence</span></div>
-        <div class="hc-seg ochre" style="flex:5;"><span class="hc-num">2</span><span class="hc-rng">Jul 5–9 · Rome</span></div>
-        <div class="hc-seg tyrrhenian" style="flex:3;"><span class="hc-num">2</span><span class="hc-rng">Jul 10–12 · Amalfi</span></div>
-        <div class="hc-seg pompeian" style="flex:1;"><span class="hc-num">2</span><span class="hc-rng">Jul 13 · Naples</span></div>
-      </div>
-    </div>
-    <div class="tl-footnote">
-      Two travelers every day — the strip doubles as the route: one segment per night in each base. All four stays are booked.
-    </div>
-
-    <!-- Transfers strip -->
-    <div class="tl-implications">
-      <div class="tl-imp-label">Transfers</div>
-      <div class="tl-imp-list">
-        <span class="transit">Jul 2 · CDG ✈ Florence → T2 tram</span>
-        <span class="ochre">Jul 5 · Fast train SMN → Termini</span>
-        <span class="tyrrhenian">Jul 10 · Train → Salerno + ferry</span>
-        <span class="pompeian">Jul 13 · Car → Pompeii → Circumvesuviana + Metro 1 → Toledo</span>
-        <span class="transit">Jul 14 · 5:30 AM private car → NAP</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section print-keep-with-next">
-  <div class="section-head">
-    <span class="section-num">02</span>
-    <h2 class="section-title">Four cities, four paces</h2>
-    <span class="section-sub">Pacing architecture</span>
-  </div>
-  <div class="phases">
-    <div class="phase">
-      <div class="phase-color" style="background:var(--terracotta);"></div>
-      <div class="phase-num">Phase 1</div>
-      <h3 class="phase-name">Florence<em>The Renaissance, up close</em></h3>
-      <div class="phase-dates">Jul 2 — 5 · 3 nights</div>
-      <p class="phase-desc">Compact museum-and-city mix. Uffizi and Accademia share Saturday; Sunday heads into the Tuscan countryside. Breakfast and quick lunches stay close to Piazza della Signoria.</p>
-      <div class="phase-tag">Uffizi · Accademia · Dome · Torre a Cona</div>
-    </div>
-    <div class="phase">
-      <div class="phase-color" style="background:var(--ochre);"></div>
-      <div class="phase-num">Phase 2</div>
-      <h3 class="phase-name">Rome<em>Ancient, Baroque, going hard</em></h3>
-      <div class="phase-dates">Jul 5 — 10 · 5 nights</div>
-      <p class="phase-desc">Intentionally ambitious. One big theme a day — historic center, Vatican, ancient Rome, Borghese, Appian Way — with hotel rest built in and one neighborhood dinner each night.</p>
-      <div class="phase-tag">Vatican · Colosseum · Borghese · Testaccio</div>
-    </div>
-    <div class="phase">
-      <div class="phase-color" style="background:var(--tyrrhenian);"></div>
-      <div class="phase-num">Phase 3</div>
-      <h3 class="phase-name">Amalfi Coast<em>Deliberate decompression</em></h3>
-      <div class="phase-dates">Jul 10 — 13 · 3 nights</div>
-      <p class="phase-desc">Slower than Rome on purpose. A private boat day and a Furore + Ravello day form a weather swap pair — whichever day the sea is calm gets the boat.</p>
-      <div class="phase-tag">Boat + Positano · Marisa Cuomo · Villa Cimbrone</div>
-    </div>
-    <div class="phase">
-      <div class="phase-color" style="background:var(--pompeian);"></div>
-      <div class="phase-num">Phase 4</div>
-      <h3 class="phase-name">Pompeii → Naples<em>The capstone</em></h3>
-      <div class="phase-dates">Jul 13 — 14 · 1 night</div>
-      <p class="phase-desc">Pompeii on the transfer day, then one night in Naples during the America's Cup. Atmosphere over checklist: a waterfront walk and pizza at Starita. Early flight home.</p>
-      <div class="phase-tag">Pompeii · Soul Art Hotel · Starita</div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="section-head">
-    <span class="section-num">03</span>
-    <h2 class="section-title">Booking pulse</h2>
-    <span class="section-sub">Where we stand</span>
-  </div>
-  <div class="pulse">
-    <div class="pulse-cell">
-      <div class="pulse-num">4</div>
-      <div class="pulse-label">Confirmed</div>
-      <div class="pulse-sub">4 stays: Florence apartment, Palazzo Talìa, Abbraccio Amalfi, Soul Art Hotel</div>
-    </div>
-    <div class="pulse-cell todo">
-      <div class="pulse-num">18</div>
-      <div class="pulse-label">Still to book</div>
-      <div class="pulse-sub">4 high (boat, Marisa Cuomo, Colosseum, Villa Medici) · 11 med · 3 low</div>
-    </div>
-    <div class="pulse-cell flights">
-      <div class="pulse-num">4</div>
-      <div class="pulse-label">Flight legs</div>
-      <div class="pulse-sub">Out Jul 1–2 RDU → CDG → Florence · Home Jul 14 NAP → ATL → RDU</div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="section-head">
-    <span class="section-num">04</span>
-    <h2 class="section-title">Day-by-day working plan</h2>
-    <span class="section-sub">14 days · not yet booked</span>
+    <h2 class="section-title">Trip at a glance</h2>
+    <span class="section-sub">14 days · day by day</span>
   </div>
   <p class="scope-legend">
     <span class="day-status booked" style="margin:0 4px 0 0;">Booked</span> = flight or stay locked.
@@ -1563,6 +1320,90 @@ body {
   </div>
 </section>
 
+<section class="section print-keep-with-next">
+  <div class="section-head">
+    <span class="section-num">02</span>
+    <h2 class="section-title">Booking pulse</h2>
+    <span class="section-sub">Where we stand</span>
+  </div>
+  <div class="pulse">
+    <div class="pulse-cell">
+      <div class="pulse-num">4</div>
+      <div class="pulse-label">Confirmed</div>
+      <div class="pulse-sub">4 stays: Florence apartment, Palazzo Talìa, Abbraccio Amalfi, Soul Art Hotel</div>
+    </div>
+    <div class="pulse-cell todo">
+      <div class="pulse-num">18</div>
+      <div class="pulse-label">Still to book</div>
+      <div class="pulse-sub">4 high (boat, Marisa Cuomo, Colosseum, Villa Medici) · 11 med · 3 low</div>
+    </div>
+    <div class="pulse-cell flights">
+      <div class="pulse-num">4</div>
+      <div class="pulse-label">Flight legs</div>
+      <div class="pulse-sub">Out Jul 1–2 RDU → CDG → Florence · Home Jul 14 NAP → ATL → RDU</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <span class="section-num">03</span>
+    <h2 class="section-title">Route &amp; pace</h2>
+    <span class="section-sub">4 bases · 12 nights in Italy</span>
+  </div>
+  <div class="route">
+    <div class="route-ribbon" aria-label="Nights per base">
+      <div class="rr-seg transit" style="flex:1;"><span class="rr-city">✈</span><span class="rr-dates">Jul 1</span></div>
+      <div class="rr-seg terracotta" style="flex:3;"><span class="rr-city">Florence</span><span class="rr-dates">Jul 2–5 · 3 nights</span></div>
+      <div class="rr-seg ochre" style="flex:5;"><span class="rr-city">Rome</span><span class="rr-dates">Jul 5–10 · 5 nights</span></div>
+      <div class="rr-seg tyrrhenian" style="flex:3;"><span class="rr-city">Amalfi Coast</span><span class="rr-dates">Jul 10–13 · 3 nights</span></div>
+      <div class="rr-seg pompeian" style="flex:1.4;"><span class="rr-city">Naples</span><span class="rr-dates">Jul 13 · 1 nt</span></div>
+    </div>
+    <div class="route-transfers">
+      <span class="rt-label">Transfers</span>
+        <span class="transit">Jul 2 · CDG ✈ Florence → T2 tram</span>
+        <span class="ochre">Jul 5 · Fast train SMN → Termini</span>
+        <span class="tyrrhenian">Jul 10 · Train → Salerno + ferry</span>
+        <span class="pompeian">Jul 13 · Car → Pompeii → Circumvesuviana + Metro 1 → Toledo</span>
+        <span class="transit">Jul 14 · 5:30 AM private car → NAP</span>
+    </div>
+  </div>
+  <div class="phases">
+    <div class="phase">
+      <div class="phase-color" style="background:var(--terracotta);"></div>
+      <div class="phase-num">Phase 1</div>
+      <h3 class="phase-name">Florence<em>The Renaissance, up close</em></h3>
+      <div class="phase-dates">Jul 2 — 5 · 3 nights</div>
+      <p class="phase-desc">Compact museum-and-city mix. Uffizi and Accademia share Saturday; Sunday heads into the Tuscan countryside. Breakfast and quick lunches stay close to Piazza della Signoria.</p>
+      <div class="phase-tag">Uffizi · Accademia · Dome · Torre a Cona</div>
+    </div>
+    <div class="phase">
+      <div class="phase-color" style="background:var(--ochre);"></div>
+      <div class="phase-num">Phase 2</div>
+      <h3 class="phase-name">Rome<em>Ancient, Baroque, going hard</em></h3>
+      <div class="phase-dates">Jul 5 — 10 · 5 nights</div>
+      <p class="phase-desc">Intentionally ambitious. One big theme a day — historic center, Vatican, ancient Rome, Borghese, Appian Way — with hotel rest built in and one neighborhood dinner each night.</p>
+      <div class="phase-tag">Vatican · Colosseum · Borghese · Testaccio</div>
+    </div>
+    <div class="phase">
+      <div class="phase-color" style="background:var(--tyrrhenian);"></div>
+      <div class="phase-num">Phase 3</div>
+      <h3 class="phase-name">Amalfi Coast<em>Deliberate decompression</em></h3>
+      <div class="phase-dates">Jul 10 — 13 · 3 nights</div>
+      <p class="phase-desc">Slower than Rome on purpose. A private boat day and a Furore + Ravello day form a weather swap pair — whichever day the sea is calm gets the boat.</p>
+      <div class="phase-tag">Boat + Positano · Marisa Cuomo · Villa Cimbrone</div>
+    </div>
+    <div class="phase">
+      <div class="phase-color" style="background:var(--pompeian);"></div>
+      <div class="phase-num">Phase 4</div>
+      <h3 class="phase-name">Pompeii → Naples<em>The capstone</em></h3>
+      <div class="phase-dates">Jul 13 — 14 · 1 night</div>
+      <p class="phase-desc">Pompeii on the transfer day, then one night in Naples during the America's Cup. Atmosphere over checklist: a waterfront walk and pizza at Starita. Early flight home.</p>
+      <div class="phase-tag">Pompeii · Soul Art Hotel · Starita</div>
+    </div>
+  </div>
+</section>
+
 </div><!-- /overview -->
 
 <!-- ===================== EAT & DO ===================== -->
@@ -1580,7 +1421,7 @@ body {
     <span class="part-desc">Sights, tours and winery visits — grouped by city. No restaurants here.</span>
   </div>
   <div class="section-head">
-    <span class="section-num">05</span>
+    <span class="section-num">04</span>
     <h2 class="section-title">Things to do</h2>
     <span class="section-sub">Menu · not a schedule</span>
   </div>
@@ -1677,7 +1518,7 @@ body {
     <span class="part-desc">Restaurants, cafés, wine bars and food shops — grouped by city.</span>
   </div>
   <div class="section-head">
-    <span class="section-num">06</span>
+    <span class="section-num">05</span>
     <h2 class="section-title">Where to eat</h2>
     <span class="section-sub">Food layer · by city</span>
   </div>
@@ -1837,7 +1678,7 @@ body {
 
 <section class="section">
   <div class="section-head">
-    <span class="section-num">07</span>
+    <span class="section-num">06</span>
     <h2 class="section-title">Locked-in anchors</h2>
     <span class="section-sub">Booked only</span>
   </div>
@@ -1893,7 +1734,7 @@ body {
 
 <section class="section">
   <div class="section-head">
-    <span class="section-num">08</span>
+    <span class="section-num">07</span>
     <h2 class="section-title">Bookings status</h2>
     <span class="section-sub">4 confirmed · 18 to book</span>
   </div>
@@ -2019,7 +1860,7 @@ body {
 
 <section class="section">
   <div class="section-head">
-    <span class="section-num">09</span>
+    <span class="section-num">08</span>
     <h2 class="section-title">When to book</h2>
     <span class="section-sub">Action calendar · all 18</span>
   </div>
@@ -2092,7 +1933,7 @@ body {
 
 <section class="section">
   <div class="section-head">
-    <span class="section-num">10</span>
+    <span class="section-num">09</span>
     <h2 class="section-title">Getting around</h2>
     <span class="section-sub">Base to base</span>
   </div>
@@ -2132,7 +1973,7 @@ body {
 
 <section class="section print-keep-with-next">
   <div class="section-head">
-    <span class="section-num">11</span>
+    <span class="section-num">10</span>
     <h2 class="section-title">Where we sleep</h2>
     <span class="section-sub">All 4 booked</span>
   </div>
@@ -2162,7 +2003,7 @@ body {
 
 <section class="section">
   <div class="section-head">
-    <span class="section-num">12</span>
+    <span class="section-num">11</span>
     <h2 class="section-title">Packing &amp; style</h2>
     <span class="section-sub">Italian summer · 14 days</span>
   </div>
@@ -2215,7 +2056,7 @@ body {
 
 <section class="section">
   <div class="section-head">
-    <span class="section-num">13</span>
+    <span class="section-num">12</span>
     <h2 class="section-title">Tuscany wine country</h2>
     <span class="section-sub">Sun Jul 4 · from Florence</span>
   </div>
@@ -2252,7 +2093,7 @@ body {
 
 <section class="section">
   <div class="section-head">
-    <span class="section-num">14</span>
+    <span class="section-num">13</span>
     <h2 class="section-title">Amalfi Coast swap pair</h2>
     <span class="section-sub">Sun Jul 11 ⇄ Mon Jul 12</span>
   </div>
@@ -2303,7 +2144,7 @@ body {
 
 <section class="section">
   <div class="section-head">
-    <span class="section-num">15</span>
+    <span class="section-num">14</span>
     <h2 class="section-title">Pompeii → Naples finale</h2>
     <span class="section-sub">Tue Jul 13 → Wed Jul 14</span>
   </div>
