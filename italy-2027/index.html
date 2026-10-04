@@ -668,6 +668,17 @@ body {
 }
 .activity-item::before { content: '+'; position: absolute; left: 0; color: var(--rosso); font-weight: 700; }
 .activity-item.locked::before { content: '★'; }
+.activity-grid.stacked { grid-template-columns: 1fr; }
+.activity-item strong { font-weight: 700; }
+.activity-item .when {
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--verde);
+  margin-left: 4px;
+}
+.activity-item .desc { display: block; font-size: 12px; color: var(--muted); line-height: 1.4; margin-top: 2px; }
 .activity-note {
   margin-top: 14px;
   padding-top: 14px;
@@ -703,36 +714,15 @@ body {
   color: var(--rosso);
   margin-bottom: 6px;
 }
-.rest-item { font-size: 13px; padding: 3px 0; line-height: 1.35; }
-.rest-item .meta { color: var(--muted); font-size: 11.5px; }
-.rest-item.locked::after { content: '★'; color: var(--rosso); margin-left: 4px; font-size: 11px; }
-.rest-item.struck { text-decoration: line-through; color: var(--muted); }
-
-/* --- FOOD & WINE COMPASS --- */
-.compass { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-.compass-card { background: var(--paper); border: 1px solid var(--rule); padding: 20px 22px; }
-.compass-card .label {
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: var(--verde);
-  margin-bottom: 6px;
-}
-.compass-card .title { font-family: 'Fraunces', serif; font-size: 19px; font-weight: 500; margin-bottom: 10px; }
-.compass-card ul { list-style: none; }
-.compass-card li { font-size: 13px; padding: 3px 0; border-bottom: 1px solid var(--rule-soft); line-height: 1.4; }
-.compass-card li:last-child { border-bottom: none; }
-.compass-card .phrase {
-  font-family: 'Fraunces', serif;
-  font-style: italic;
-  font-size: 15px;
-  line-height: 1.45;
-  margin-top: 10px;
-  padding: 10px 12px;
-  background: var(--paper-2);
-  border-left: 3px solid var(--rosso);
-}
+.rest-grid.stacked { grid-template-columns: 1fr; }
+.rest-grid.stacked .rest-region { column-count: 2; column-gap: 40px; padding: 24px 28px; }
+.rest-grid.stacked .rest-region-sub,
+.rest-grid.stacked .rest-region-name { column-span: all; }
+.rest-tier { break-inside: avoid; }
+.rest-item { font-size: 13px; padding: 4px 0; line-height: 1.35; }
+.rest-item .nm { font-weight: 600; }
+.rest-item .desc { display: block; font-size: 12px; color: var(--muted); line-height: 1.4; }
+.rest-item.locked .nm::after { content: '★'; color: var(--rosso); margin-left: 4px; font-size: 11px; }
 
 /* --- RESERVATIONS --- */
 .res-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
@@ -1006,7 +996,6 @@ body {
 @media screen and (max-width: 1000px) {
   .day-grid { grid-template-columns: repeat(4, 1fr); }
   .rest-grid { grid-template-columns: 1fr 1fr; }
-  .compass { grid-template-columns: 1fr; }
 }
 @media screen and (max-width: 900px) {
   body { padding: 20px 14px; font-size: 14px; }
@@ -1069,6 +1058,7 @@ body {
   .activity-list { grid-template-columns: 1fr; gap: 2px; }
 
   .rest-grid { grid-template-columns: 1fr; gap: 12px; }
+  .rest-grid.stacked .rest-region { column-count: 1; padding: 18px; }
 
   .res-grid { grid-template-columns: 1fr; gap: 8px; }
   .res-item { padding: 12px 14px; gap: 10px; }
@@ -1214,13 +1204,12 @@ body {
   .rest-region-name { font-size: 13pt; margin-bottom: 6px; }
   .rest-tier { margin-bottom: 6px; break-inside: avoid; }
   .rest-tier-label { font-size: 6.5pt; margin-bottom: 2px; }
-  .rest-item { font-size: 7.8pt; padding: 1px 0; line-height: 1.3; }
-  .rest-item .meta { font-size: 7pt; }
-  .compass { grid-template-columns: repeat(3, 1fr); gap: 10px; }
-  .compass-card { padding: 11px 13px; }
-  .compass-card .title { font-size: 12pt; margin-bottom: 6px; }
-  .compass-card li { font-size: 8.5pt; padding: 2px 0; }
-  .compass-card .phrase { font-size: 9.5pt; }
+  .rest-grid.stacked .rest-region { column-count: 3; column-gap: 18px; padding: 10px 14px; }
+  .rest-item { font-size: 8pt; padding: 1.5px 0; line-height: 1.3; }
+  .rest-item .desc { font-size: 7.2pt; }
+  .activity-list { grid-template-columns: 1fr 1fr 1fr; }
+  .activity-item .desc { font-size: 7.2pt; margin-top: 0; }
+  .activity-item .when { font-size: 6.5pt; }
 
   /* Logistics */
   .res-grid { gap: 5px; }
@@ -1264,7 +1253,7 @@ body {
 
   .cal-wrap, .timeline { break-inside: avoid; page-break-inside: avoid; }
   .locked-row, .phase, .day-card, .res-item, .log-card, .rest-region, .activity-card,
-  .packing-block, .pulse, .option, .compass-card, .trigger-row {
+  .packing-block, .pulse, .option, .trigger-row, .rest-tier {
     break-inside: avoid;
     page-break-inside: avoid;
   }
@@ -1329,9 +1318,13 @@ body {
     <span class="tab-label">Locked events</span>
     <span class="tab-sub">Anchors · Daily plan</span>
   </button>
+  <button class="tab" role="tab" data-tab="bookings">
+    <span class="tab-label">Bookings</span>
+    <span class="tab-sub">Status · Timing</span>
+  </button>
   <button class="tab" role="tab" data-tab="logistics">
     <span class="tab-label">Logistics</span>
-    <span class="tab-sub">Bookings · Timing</span>
+    <span class="tab-sub">Travel · Stays</span>
   </button>
   <button class="tab" role="tab" data-tab="subtrips">
     <span class="tab-label">Sub-trips</span>
@@ -1650,52 +1643,50 @@ body {
     <span class="scope-badge nonref">Non-refundable</span> = can't change or refund once bought.
     <span class="scope-badge opt">Optional</span> = only if time, energy or weather allow.
   </p>
-  <div class="activity-grid">
+  <div class="activity-grid stacked">
 
     <div class="activity-card terracotta">
       <div class="activity-cat">Phase 1 · Jul 2 — 5</div>
       <h3 class="activity-title">Florence</h3>
       <div class="activity-list">
-        <div class="activity-item locked">Uffizi · Jul 3 AM</div>
-        <div class="activity-item locked">Accademia · Jul 3 PM</div>
-        <div class="activity-item locked">Brunelleschi Dome · Jul 2/3<span class="scope-badge nonref">Non-ref</span></div>
-        <div class="activity-item">Piazza della Signoria</div>
-        <div class="activity-item">Palazzo Vecchio</div>
-        <div class="activity-item">Ponte Vecchio</div>
-        <div class="activity-item">Oltrarno</div>
-        <div class="activity-item">Piazzale Michelangelo</div>
-        <div class="activity-item">San Miniato al Monte</div>
-        <div class="activity-item">Santa Croce</div>
-        <div class="activity-item">Pegna dal 1860 · food shop</div>
-        <div class="activity-item">Mercato di Sant'Ambrogio</div>
-        <div class="activity-item">Alimentari Calimaruzza</div>
-        <div class="activity-item">Torre a Cona · Jul 4<span class="scope-badge trip">Sub-trip</span></div>
+        <div class="activity-item locked"><strong>Uffizi Gallery</strong> <span class="when">Jul 3 AM</span><span class="desc">The great Renaissance collection — Botticelli, Leonardo, Raphael.</span></div>
+        <div class="activity-item locked"><strong>Galleria dell'Accademia</strong> <span class="when">Jul 3 PM</span><span class="desc">Home of Michelangelo's David.</span></div>
+        <div class="activity-item locked"><strong>Brunelleschi's Dome</strong> <span class="when">Jul 2 or 3</span><span class="scope-badge nonref">Non-ref</span><span class="desc">Climb inside the Duomo's dome to the lantern for city views.</span></div>
+        <div class="activity-item"><strong>Piazza della Signoria &amp; Palazzo Vecchio</strong><span class="desc">Our doorstep — the civic square, its statues, and the town-hall fortress.</span></div>
+        <div class="activity-item"><strong>Ponte Vecchio</strong><span class="desc">Medieval bridge lined with goldsmiths' shops.</span></div>
+        <div class="activity-item"><strong>Oltrarno</strong><span class="desc">Artisan-workshop quarter across the river; good for evening wandering.</span></div>
+        <div class="activity-item"><strong>Piazzale Michelangelo</strong><span class="desc">The classic panorama over the city — best near sunset.</span></div>
+        <div class="activity-item"><strong>San Miniato al Monte</strong><span class="desc">Romanesque hilltop church just above Piazzale Michelangelo.</span></div>
+        <div class="activity-item"><strong>Santa Croce</strong><span class="desc">Franciscan basilica with the tombs of Michelangelo and Galileo.</span></div>
+        <div class="activity-item"><strong>Pegna dal 1860</strong><span class="desc">Historic specialty grocer near the Duomo — cheese, salumi, pantry goods.</span></div>
+        <div class="activity-item"><strong>Mercato di Sant'Ambrogio</strong><span class="desc">19th-century neighborhood market; picnic and travel-day snacks.</span></div>
+        <div class="activity-item"><strong>Alimentari Calimaruzza</strong><span class="desc">Tiny old-style food shop right by the apartment.</span></div>
+        <div class="activity-item"><strong>Fattoria Torre a Cona</strong> <span class="when">Jul 4</span><span class="scope-badge trip">Sub-trip</span><span class="desc">Historic villa winery in the hills outside Florence.</span></div>
       </div>
-      <p class="activity-note">Saturday carries both big museums with lunch and rest between. If Torre a Cona takes Sunday, the Dome moves to Jul 2 or 3. Food shops double as travel-day snack runs.</p>
+      <p class="activity-note">Saturday carries both big museums with lunch and rest between. If Torre a Cona takes Sunday, the Dome moves to Jul 2 or 3.</p>
     </div>
 
     <div class="activity-card ochre">
       <div class="activity-cat">Phase 2 · Jul 5 — 10</div>
       <h3 class="activity-title">Rome</h3>
       <div class="activity-list">
-        <div class="activity-item">Trevi · Pantheon · Navona · Jul 5</div>
-        <div class="activity-item">Sant'Ignazio · San Luigi dei Francesi</div>
-        <div class="activity-item locked">Vatican Museums + Sistine · Jul 6</div>
-        <div class="activity-item locked">St. Peter's Basilica · Jul 6</div>
-        <div class="activity-item">Castel Sant'Angelo · Tiber</div>
-        <div class="activity-item">Janiculum sunset → Trastevere</div>
-        <div class="activity-item locked">Colosseum · Forum · Palatine · Jul 7</div>
-        <div class="activity-item">Monte Tarpeo view · Campidoglio</div>
-        <div class="activity-item">Jewish Ghetto · Portico d'Ottavia</div>
-        <div class="activity-item locked">Galleria Borghese · Jul 8</div>
-        <div class="activity-item">Pincio · Piazza del Popolo</div>
-        <div class="activity-item">Villa Medici tour · Jul 8<span class="scope-badge nonref">Non-ref</span></div>
-        <div class="activity-item">Palazzo Zuccari · Spanish Steps</div>
-        <div class="activity-item">San Clemente · Jul 9</div>
-        <div class="activity-item">Appian Way e-bike · Jul 9</div>
-        <div class="activity-item">Catacomb interior<span class="scope-badge opt">Optional</span></div>
-        <div class="activity-item">Aventine · Orange Garden</div>
-        <div class="activity-item">Knights of Malta Keyhole</div>
+        <div class="activity-item"><strong>Trevi · Pantheon · Piazza Navona</strong> <span class="when">Jul 5</span><span class="desc">Historic-center walk: the fountain, the 2,000-year-old domed temple, the Baroque piazza.</span></div>
+        <div class="activity-item"><strong>Sant'Ignazio &amp; San Luigi dei Francesi</strong> <span class="when">Jul 5</span><span class="desc">A trompe-l'oeil painted ceiling; three Caravaggio paintings.</span></div>
+        <div class="activity-item locked"><strong>Vatican Museums &amp; Sistine Chapel</strong> <span class="when">Jul 6</span><span class="desc">Papal art collections; Michelangelo's ceiling and Last Judgment.</span></div>
+        <div class="activity-item locked"><strong>St. Peter's Basilica</strong> <span class="when">Jul 6</span><span class="desc">The largest church in Christendom; Michelangelo's Pietà.</span></div>
+        <div class="activity-item"><strong>Castel Sant'Angelo</strong> <span class="when">Jul 6</span><span class="desc">Hadrian's tomb turned papal fortress, on the Tiber.</span></div>
+        <div class="activity-item"><strong>Janiculum Hill → Trastevere</strong> <span class="when">Jul 6</span><span class="desc">Sunset panorama, then down into cobbled Trastevere for dinner.</span></div>
+        <div class="activity-item locked"><strong>Colosseum · Roman Forum · Palatine</strong> <span class="when">Jul 7</span><span class="desc">The amphitheater, the ancient city center, and the emperors' hill.</span></div>
+        <div class="activity-item"><strong>Via di Monte Tarpeo &amp; Campidoglio</strong> <span class="when">Jul 7</span><span class="desc">The best free view over the Forum; Michelangelo's hilltop piazza.</span></div>
+        <div class="activity-item"><strong>Jewish Ghetto</strong> <span class="when">Jul 7</span><span class="desc">One of Europe's oldest Jewish communities, around the Portico d'Ottavia.</span></div>
+        <div class="activity-item locked"><strong>Galleria Borghese</strong> <span class="when">Jul 8</span><span class="desc">Bernini sculptures and Caravaggios in a villa; timed entry.</span></div>
+        <div class="activity-item"><strong>Pincio &amp; Piazza del Popolo</strong> <span class="when">Jul 8</span><span class="desc">Park-terrace overlook; twin-church piazza with Caravaggios in Santa Maria del Popolo.</span></div>
+        <div class="activity-item"><strong>Villa Medici</strong> <span class="when">Jul 8</span><span class="scope-badge nonref">Non-ref</span><span class="desc">Guided tour of the French Academy's Renaissance villa and gardens.</span></div>
+        <div class="activity-item"><strong>Palazzo Zuccari &amp; Spanish Steps</strong> <span class="when">Jul 8</span><span class="desc">The "House of Monsters" doorway shaped like a mouth; the famous steps.</span></div>
+        <div class="activity-item"><strong>Basilica di San Clemente</strong> <span class="when">Jul 9</span><span class="desc">Three layers: a medieval church over an early church over a Roman temple.</span></div>
+        <div class="activity-item"><strong>Appian Way e-bike</strong> <span class="when">Jul 9</span><span class="desc">Ride the ancient Roman road past tombs and aqueducts, ~2–2.5 h.</span></div>
+        <div class="activity-item"><strong>Catacombs</strong><span class="scope-badge opt">Optional</span><span class="desc">Underground early-Christian burial tunnels along the Appian Way.</span></div>
+        <div class="activity-item"><strong>Aventine · Orange Garden · Keyhole</strong> <span class="when">Jul 9</span><span class="desc">Quiet hilltop, orange-tree terrace, and St. Peter's framed through the Knights of Malta keyhole.</span></div>
       </div>
       <p class="activity-note">One major ticketed site per day, with a hotel rest in the afternoon. Jul 5 and Jul 9 deliberately add no other big museum or dig.</p>
     </div>
@@ -1704,32 +1695,31 @@ body {
       <div class="activity-cat">Phase 3 · Jul 10 — 13</div>
       <h3 class="activity-title">Amalfi Coast</h3>
       <div class="activity-list">
-        <div class="activity-item locked">Private boat + Positano<span class="scope-badge swap">Wx swap</span></div>
-        <div class="activity-item locked">Marisa Cuomo + Furore<span class="scope-badge swap">Wx swap</span></div>
-        <div class="activity-item locked">Ravello · Villa Cimbrone</div>
-        <div class="activity-item">Villa Rufolo<span class="scope-badge opt">Optional</span></div>
-        <div class="activity-item">Amalfi Cathedral</div>
-        <div class="activity-item">Walk to Atrani</div>
-        <div class="activity-item">Beach + swim time</div>
-        <div class="activity-item">Fiordo di Furore</div>
-        <div class="activity-item">Emerald Grotto<span class="scope-badge opt">Optional</span></div>
-        <div class="activity-item">Valle delle Ferriere<span class="scope-badge opt">Optional</span></div>
+        <div class="activity-item locked"><strong>Private boat + Positano</strong> <span class="when">Jul 11</span><span class="scope-badge swap">Wx swap</span><span class="desc">The coast from the water, swim stops in coves, 2–4 h ashore in Positano.</span></div>
+        <div class="activity-item locked"><strong>Marisa Cuomo + Furore</strong> <span class="when">Jul 12</span><span class="scope-badge swap">Wx swap</span><span class="desc">Winery visit among cliff-side vineyard terraces in Furore.</span></div>
+        <div class="activity-item locked"><strong>Ravello · Villa Cimbrone</strong> <span class="when">Jul 12</span><span class="desc">Gardens high above the sea; the Terrace of Infinity viewpoint.</span></div>
+        <div class="activity-item"><strong>Villa Rufolo</strong><span class="scope-badge opt">Optional</span><span class="desc">Ravello's other villa — medieval tower and terraced gardens.</span></div>
+        <div class="activity-item"><strong>Amalfi Cathedral</strong> <span class="when">Jul 10</span><span class="desc">Striped Arab-Norman cathedral at the top of a grand staircase.</span></div>
+        <div class="activity-item"><strong>Atrani</strong> <span class="when">Jul 10</span><span class="desc">Tiny fishing village a short walk from Amalfi, with a small beach.</span></div>
+        <div class="activity-item"><strong>Beach + swim time</strong><span class="desc">Unplanned hours on Amalfi or Atrani beach.</span></div>
+        <div class="activity-item"><strong>Fiordo di Furore</strong><span class="desc">Dramatic narrow sea inlet under a road bridge — a photo stop.</span></div>
+        <div class="activity-item"><strong>Emerald Grotto</strong><span class="scope-badge opt">Optional</span><span class="desc">Sea cave with green-lit water; only if it's on the boat route.</span></div>
+        <div class="activity-item"><strong>Valle delle Ferriere</strong><span class="scope-badge opt">Optional</span><span class="desc">Shaded hike up a green valley behind Amalfi.</span></div>
       </div>
-      <p class="activity-note">Protected: boat, Ravello + Cimbrone, Marisa Cuomo + Furore, Amalfi itself, Atrani, unplanned swim time. Not planned: Capri, Sorrento, Vesuvius.</p>
+      <p class="activity-note">Not planned: Capri, Sorrento, Vesuvius — each would cost a full day.</p>
     </div>
 
     <div class="activity-card pompeian">
       <div class="activity-cat">Phase 4 · Jul 13 — 14</div>
       <h3 class="activity-title">Pompeii &amp; Naples</h3>
       <div class="activity-list">
-        <div class="activity-item locked">Pompeii · 3–4+ hrs<span class="scope-badge trip">Sub-trip</span></div>
-        <div class="activity-item">Piazza del Plebiscito</div>
-        <div class="activity-item">Santa Lucia · Castel dell'Ovo</div>
-        <div class="activity-item">Lungomare walk</div>
-        <div class="activity-item">America's Cup atmosphere</div>
-        <div class="activity-item">Enoteca Belledonne<span class="scope-badge opt">Optional</span></div>
+        <div class="activity-item locked"><strong>Pompeii</strong> <span class="when">Jul 13</span><span class="scope-badge trip">Sub-trip</span><span class="desc">Roman town buried by Vesuvius in AD 79 — streets, houses, frescoes. 3–4+ h.</span></div>
+        <div class="activity-item"><strong>Piazza del Plebiscito</strong><span class="desc">Naples' grand central square beside the Royal Palace.</span></div>
+        <div class="activity-item"><strong>Santa Lucia · Castel dell'Ovo · Lungomare</strong><span class="desc">Seafront castle and promenade on the bay.</span></div>
+        <div class="activity-item"><strong>America's Cup atmosphere</strong><span class="desc">The Match is racing on the bay that week.</span></div>
+        <div class="activity-item"><strong>Enoteca Belledonne</strong><span class="scope-badge opt">Optional</span><span class="desc">Long-running wine shop and bar in Chiaia.</span></div>
       </div>
-      <p class="activity-note">Feel Naples, don't "do" it — no formal museum. If time runs short, protect the 50 Kalò dinner and one good waterfront walk.</p>
+      <p class="activity-note">Feel Naples, don't "do" it. If time runs short, protect the 50 Kalò dinner and one good waterfront walk.</p>
     </div>
 
   </div>
@@ -1739,47 +1729,55 @@ body {
 <section class="section">
   <div class="section-head">
     <span class="section-num">08</span>
-    <h2 class="section-title">Restaurant geography</h2>
+    <h2 class="section-title">Where to eat</h2>
     <span class="section-sub">Food layer · by city</span>
   </div>
   <p class="scope-legend">
-    <strong>★ = protected</strong> (make sure it happens). Nothing here is booked yet — bookable tables are in Logistics.
+    <strong>★ = protected</strong> (make sure it happens). Nothing here is booked yet — bookable tables are on the Bookings tab.
     <span class="scope-badge opt">Optional</span> = book only if chosen.
     Rule everywhere: don't cross a city for one pastry or snack.
   </p>
-  <div class="rest-grid">
+  <div class="rest-grid stacked">
 
     <div class="rest-region terracotta">
       <div class="rest-region-sub">Jul 2 — 5</div>
       <div class="rest-region-name">Florence</div>
       <div class="rest-tier">
         <div class="rest-tier-label">Trattorias</div>
-        <div class="rest-item">Vini e Vecchi Sapori <span class="meta">· by the apartment</span></div>
-        <div class="rest-item">Ristorante del Fagioli <span class="meta">· ribollita</span></div>
-        <div class="rest-item">Trattoria La Gratella <span class="meta">· carabaccia?</span></div>
-        <div class="rest-item">La Buchetta <span class="meta">· bistecca, pici</span></div>
-        <div class="rest-item">Il Vezzo <span class="meta">· tiny, refined</span></div>
+        <div class="rest-item"><span class="nm">Vini e Vecchi Sapori</span><span class="desc">Tiny osteria with a handwritten menu, by the apartment — duck pappardelle, peposo stew.</span></div>
+        <div class="rest-item"><span class="nm">Ristorante del Fagioli</span><span class="desc">Old-school rustic trattoria — ribollita, beans, hearty meat.</span></div>
+        <div class="rest-item"><span class="nm">Trattoria La Gratella</span><span class="desc">Family-run Tuscan — wild-boar pappardelle; may serve carabaccia.</span></div>
+        <div class="rest-item"><span class="nm">La Buchetta</span><span class="desc">Small and lively — bistecca, truffle pici, strong wine list.</span></div>
+        <div class="rest-item"><span class="nm">Il Vezzo</span><span class="desc">Tiny, refined modern Tuscan — bistecca and seasonal plates.</span></div>
       </div>
       <div class="rest-tier">
         <div class="rest-tier-label">Scenic / polished</div>
-        <div class="rest-item">Golden View Firenze <span class="meta">· Arno view</span></div>
-        <div class="rest-item">COSIMO at The Excelsior <span class="meta">· rooftop</span></div>
-        <div class="rest-item">B-Roof, Grand Hotel Baglioni</div>
+        <div class="rest-item"><span class="nm">Golden View Firenze</span><span class="desc">Romantic dinner looking at the Arno and Ponte Vecchio.</span></div>
+        <div class="rest-item"><span class="nm">COSIMO at The Excelsior</span><span class="desc">Upscale rooftop; sunset aperitivo.</span></div>
+        <div class="rest-item"><span class="nm">B-Roof, Grand Hotel Baglioni</span><span class="desc">Classic hotel rooftop facing the Duomo.</span></div>
       </div>
       <div class="rest-tier">
         <div class="rest-tier-label">Quick lunch</div>
-        <div class="rest-item locked">Sergio Pollini Lampredotto</div>
-        <div class="rest-item">Da' Vinattieri <span class="meta">· coccoli</span></div>
-        <div class="rest-item">I Guelfi <span class="meta">· schiacciata</span></div>
-        <div class="rest-item">Il Cernacchio <span class="meta">· fallback</span></div>
+        <div class="rest-item locked"><span class="nm">Sergio Pollini Lampredotto</span><span class="desc">No-frills street stand for the lampredotto sandwich.</span></div>
+        <div class="rest-item"><span class="nm">Da' Vinattieri</span><span class="desc">Hole-in-the-wall — porchetta, and coccoli with prosciutto + stracchino.</span></div>
+        <div class="rest-item"><span class="nm">I Guelfi Tuscany Food</span><span class="desc">Made-to-order schiacciata sandwiches near the apartment.</span></div>
+        <div class="rest-item"><span class="nm">Il Cernacchio</span><span class="desc">Cheap soups, pasta and sandwiches — reliable fallback.</span></div>
       </div>
       <div class="rest-tier">
-        <div class="rest-tier-label">Breakfast · gelato · wine</div>
-        <div class="rest-item">Antico Forno Sartoni <span class="meta">· closest</span></div>
-        <div class="rest-item">Forno Ghibellina</div>
-        <div class="rest-item">Pasticceria Nencioni</div>
-        <div class="rest-item">Vivoli · Sbrino <span class="meta">· gelato</span></div>
-        <div class="rest-item">Le Volpi e l'Uva <span class="meta">· wine bar</span></div>
+        <div class="rest-tier-label">Breakfast · gelato · wine bar</div>
+        <div class="rest-item"><span class="nm">Antico Forno Sartoni</span><span class="desc">Neighborhood bakery — closest breakfast.</span></div>
+        <div class="rest-item"><span class="nm">Forno Ghibellina</span><span class="desc">Bakery café on the way to Santa Croce.</span></div>
+        <div class="rest-item"><span class="nm">Pasticceria Nencioni</span><span class="desc">Historic pastry shop by Sant'Ambrogio market.</span></div>
+        <div class="rest-item"><span class="nm">Vivoli · Sbrino</span><span class="desc">Historic gelato (long lines) · craft gelato in the Oltrarno.</span></div>
+        <div class="rest-item"><span class="nm">Le Volpi e l'Uva</span><span class="desc">Tiny wine bar by Ponte Vecchio, small producers by the glass.</span></div>
+      </div>
+      <div class="rest-tier">
+        <div class="rest-tier-label">Try in Florence</div>
+        <div class="rest-item"><span class="nm">Lampredotto</span><span class="desc">Slow-cooked tripe sandwich with green sauce — the street classic.</span></div>
+        <div class="rest-item"><span class="nm">Bistecca alla fiorentina</span><span class="desc">Huge T-bone, served rare, priced by weight.</span></div>
+        <div class="rest-item"><span class="nm">Ribollita · pappa al pomodoro</span><span class="desc">Bread-and-bean soup · tomato-and-bread soup.</span></div>
+        <div class="rest-item"><span class="nm">Carabaccia</span><span class="desc">Old Florentine sweet-onion soup — check menus.</span></div>
+        <div class="rest-item"><span class="nm">Schiacciata · coccoli</span><span class="desc">Tuscan flatbread sandwich · fried dough balls with ham and soft cheese.</span></div>
       </div>
     </div>
 
@@ -1788,33 +1786,45 @@ body {
       <div class="rest-region-name">Rome</div>
       <div class="rest-tier">
         <div class="rest-tier-label">Protected</div>
-        <div class="rest-item locked">Piperno / Boccione <span class="meta">· Ghetto, Jul 7</span></div>
-        <div class="rest-item locked">Pizzeria Ostiense <span class="meta">· Jul 9</span></div>
-        <div class="rest-item locked">Mercato di Testaccio + Volpetti</div>
-        <div class="rest-item locked">Il Goccetto <span class="meta">· wine</span></div>
+        <div class="rest-item locked"><span class="nm">Piperno / Boccione</span><span class="desc">Jul 7 · historic Jewish-Roman restaurant · tiny old Ghetto bakery.</span></div>
+        <div class="rest-item locked"><span class="nm">Pizzeria Ostiense</span><span class="desc">Jul 9 · thin, crisp Roman pizza in a neighborhood spot.</span></div>
+        <div class="rest-item locked"><span class="nm">Mercato di Testaccio + Volpetti</span><span class="desc">Jul 9 · working food market · deli since 1973.</span></div>
+        <div class="rest-item locked"><span class="nm">Il Goccetto</span><span class="desc">Old wine bar with a huge by-the-glass list.</span></div>
       </div>
       <div class="rest-tier">
         <div class="rest-tier-label">Trattorias</div>
-        <div class="rest-item">L'Osteria della Trippa <span class="meta">· Trastevere</span></div>
-        <div class="rest-item">Santo Palato</div>
-        <div class="rest-item">Flavio al Velavevodetto</div>
-        <div class="rest-item">Retrobottega <span class="meta">· modern</span></div>
-        <div class="rest-item">Roscioli Salumeria con Cucina</div>
-        <div class="rest-item">Armando al Pantheon<span class="scope-badge opt">Optional</span></div>
+        <div class="rest-item"><span class="nm">L'Osteria della Trippa</span><span class="desc">Trastevere — tripe and Roman specialties.</span></div>
+        <div class="rest-item"><span class="nm">Santo Palato</span><span class="desc">Modern Roman cooking; menu changes daily.</span></div>
+        <div class="rest-item"><span class="nm">Flavio al Velavevodetto</span><span class="desc">Built into Monte Testaccio, the ancient Roman pottery hill.</span></div>
+        <div class="rest-item"><span class="nm">Retrobottega</span><span class="desc">Creative modern Italian, with a terrace.</span></div>
+        <div class="rest-item"><span class="nm">Roscioli Salumeria con Cucina</span><span class="desc">Deli and restaurant in one — salumi, Roman pasta, deep cellar.</span></div>
+        <div class="rest-item"><span class="nm">Armando al Pantheon<span class="scope-badge opt">Optional</span></span><span class="desc">Family-run since 1961, right beside the Pantheon.</span></div>
       </div>
       <div class="rest-tier">
-        <div class="rest-tier-label">"I know a spot"</div>
-        <div class="rest-item">Trattoria Pennestri · Osteria Bonelli</div>
-        <div class="rest-item">Tante Care Cose · Menabò · Mazzo</div>
+        <div class="rest-tier-label">"I know a spot" · outside the center</div>
+        <div class="rest-item"><span class="nm">Trattoria Pennestri</span><span class="desc">Ostiense — Michelin-noted local trattoria.</span></div>
+        <div class="rest-item"><span class="nm">Osteria Bonelli</span><span class="desc">Torpignattara — family-style, daily menu.</span></div>
+        <div class="rest-item"><span class="nm">Tante Care Cose</span><span class="desc">Pigneto — tiny open-kitchen spot, very few tables.</span></div>
+        <div class="rest-item"><span class="nm">Menabò Vino e Cucina</span><span class="desc">Centocelle — seasonal neighborhood cooking.</span></div>
+        <div class="rest-item"><span class="nm">Mazzo</span><span class="desc">San Lorenzo — modern Roman; half portions at its wine bar.</span></div>
       </div>
       <div class="rest-tier">
         <div class="rest-tier-label">Quick · coffee · sweets</div>
-        <div class="rest-item">Supplizio · Antico Forno Roscioli</div>
-        <div class="rest-item">Pizzarium · Paciotti <span class="meta">· Vatican side</span></div>
-        <div class="rest-item">Bar San Marcello <span class="meta">· by hotel</span></div>
-        <div class="rest-item">Regoli · Tazza d'Oro · Giolitti · Ciampini</div>
-        <div class="rest-item">Hotel de Russie garden<span class="scope-badge opt">Optional</span></div>
-        <div class="rest-item struck">Da Enzo al 29 <span class="meta">· screened out</span></div>
+        <div class="rest-item"><span class="nm">Supplizio</span><span class="desc">Supplì specialist on Via dei Banchi Vecchi.</span></div>
+        <div class="rest-item"><span class="nm">Antico Forno Roscioli</span><span class="desc">Historic bakery — pizza by weight.</span></div>
+        <div class="rest-item"><span class="nm">Pizzarium Bonci · Paciotti</span><span class="desc">Famed pizza by the slice · old-school deli — both near the Vatican.</span></div>
+        <div class="rest-item"><span class="nm">Bar San Marcello</span><span class="desc">Local café by the hotel — breakfast and cheap lunch.</span></div>
+        <div class="rest-item"><span class="nm">Regoli</span><span class="desc">Century-old pastry shop; the benchmark maritozzo.</span></div>
+        <div class="rest-item"><span class="nm">Tazza d'Oro</span><span class="desc">Stand-up espresso bar by the Pantheon.</span></div>
+        <div class="rest-item"><span class="nm">Giolitti · Ciampini</span><span class="desc">Historic gelato · old-school café on an elegant piazza.</span></div>
+        <div class="rest-item"><span class="nm">Hotel de Russie garden<span class="scope-badge opt">Optional</span></span><span class="desc">Polished garden aperitivo near Piazza del Popolo.</span></div>
+      </div>
+      <div class="rest-tier">
+        <div class="rest-tier-label">Try in Rome</div>
+        <div class="rest-item"><span class="nm">Carbonara · cacio e pepe · amatriciana · gricia</span><span class="desc">The four Roman pastas — spread across meals.</span></div>
+        <div class="rest-item"><span class="nm">Supplì</span><span class="desc">Fried rice ball with a molten mozzarella center.</span></div>
+        <div class="rest-item"><span class="nm">Maritozzo</span><span class="desc">Sweet bun split and filled with whipped cream.</span></div>
+        <div class="rest-item"><span class="nm">Jewish-Roman fried dishes</span><span class="desc">Artichokes only if in season — July is late.</span></div>
       </div>
     </div>
 
@@ -1822,25 +1832,24 @@ body {
       <div class="rest-region-sub">Jul 10 — 13</div>
       <div class="rest-region-name">Amalfi Coast</div>
       <div class="rest-tier">
-        <div class="rest-tier-label">Scorecard · aim for these</div>
-        <div class="rest-item locked">Scialatielli ai frutti di mare</div>
-        <div class="rest-item locked">Pasta with Cetara colatura</div>
-        <div class="rest-item locked">One excellent local-fish meal</div>
-        <div class="rest-item locked">Delizia al limone</div>
-        <div class="rest-item locked">Coastal white with seafood</div>
-        <div class="rest-item">One local bonus <span class="meta">· totani e patate, Santa Rosa, 'ndunderi, sarchiapone</span></div>
-      </div>
-      <div class="rest-tier">
         <div class="rest-tier-label">Tables</div>
-        <div class="rest-item">Baglio Amalfi<span class="scope-badge opt">Optional</span></div>
-        <div class="rest-item">Sensi Amalfi<span class="scope-badge opt">Optional</span></div>
-        <div class="rest-item">Da Adolfo, Laurito <span class="meta">· boat day</span></div>
-        <div class="rest-item">Lo Guarracino, Positano <span class="meta">· boat day</span></div>
+        <div class="rest-item"><span class="nm">Baglio Amalfi<span class="scope-badge opt">Optional</span></span><span class="desc">Very few tables, deposit required; needs a car — no walking route.</span></div>
+        <div class="rest-item"><span class="nm">Sensi Amalfi<span class="scope-badge opt">Optional</span></span><span class="desc">Tasting-menu dinner, or a lighter bistro lunch.</span></div>
+        <div class="rest-item"><span class="nm">Da Adolfo, Laurito</span><span class="desc">Boat-day beach lunch, if the boat can stop there.</span></div>
+        <div class="rest-item"><span class="nm">Lo Guarracino, Positano</span><span class="desc">Sit-down lunch in Positano on the boat day.</span></div>
       </div>
       <div class="rest-tier">
-        <div class="rest-tier-label">Wine</div>
-        <div class="rest-item locked">Cantine Marisa Cuomo</div>
-        <div class="rest-item">Tenuta San Francesco<span class="scope-badge opt">Optional</span></div>
+        <div class="rest-tier-label">Wineries</div>
+        <div class="rest-item locked"><span class="nm">Cantine Marisa Cuomo</span><span class="desc">Jul 12 · Furore winery on cliff-side terraces.</span></div>
+        <div class="rest-item"><span class="nm">Tenuta San Francesco<span class="scope-badge opt">Optional</span></span><span class="desc">Tramonti winery — only if the coast days stay relaxed.</span></div>
+      </div>
+      <div class="rest-tier">
+        <div class="rest-tier-label">Try on the coast</div>
+        <div class="rest-item locked"><span class="nm">Scialatielli ai frutti di mare</span><span class="desc">Thick fresh ribbon pasta with local shellfish.</span></div>
+        <div class="rest-item locked"><span class="nm">Spaghetti with colatura di Cetara</span><span class="desc">Pasta dressed with the coast's famous anchovy essence.</span></div>
+        <div class="rest-item locked"><span class="nm">Whole local fish</span><span class="desc">Let the kitchen pick what's freshest.</span></div>
+        <div class="rest-item locked"><span class="nm">Delizia al limone</span><span class="desc">Small lemon-cream sponge dome — from a serious pastry shop.</span></div>
+        <div class="rest-item"><span class="nm">One local bonus</span><span class="desc">Totani e patate (squid + potatoes) · sfogliatella Santa Rosa (ricotta pastry) · 'ndunderi (ricotta gnocchi) · sarchiapone (stuffed gourd, Atrani).</span></div>
       </div>
     </div>
 
@@ -1849,63 +1858,17 @@ body {
       <div class="rest-region-name">Naples</div>
       <div class="rest-tier">
         <div class="rest-tier-label">Final pizza</div>
-        <div class="rest-item locked">50 Kalò · Piazza della Repubblica 2</div>
-        <div class="rest-item"><span class="meta">Frittatina → Margherita (benchmark) → provola e pepe or house seasonal · Falanghina by the glass</span></div>
+        <div class="rest-item locked"><span class="nm">50 Kalò · Piazza della Repubblica 2</span><span class="desc">Reservable branch of a top Neapolitan pizzeria. Order a frittatina, a Margherita, then provola e pepe.</span></div>
       </div>
       <div class="rest-tier">
-        <div class="rest-tier-label">Wine stop</div>
-        <div class="rest-item">Enoteca Belledonne <span class="meta">· Chiaia</span><span class="scope-badge opt">Optional</span></div>
-        <div class="rest-item"><span class="meta">Compare Falanghina Campi Flegrei · Greco di Tufo · Fiano di Avellino</span></div>
-      </div>
-      <div class="rest-tier">
-        <div class="rest-tier-label">Compare</div>
-        <div class="rest-item"><span class="meta">Neapolitan sfogliatella vs. Amalfi's Santa Rosa</span></div>
+        <div class="rest-tier-label">Try in Naples</div>
+        <div class="rest-item"><span class="nm">Margherita</span><span class="desc">The benchmark Neapolitan pizza — tomato, mozzarella, basil.</span></div>
+        <div class="rest-item"><span class="nm">Frittatina</span><span class="desc">Fried disc of pasta, béchamel and ham — a Neapolitan street snack.</span></div>
+        <div class="rest-item"><span class="nm">Provola e pepe</span><span class="desc">Pizza with smoked mozzarella and black pepper.</span></div>
+        <div class="rest-item"><span class="nm">Sfogliatella</span><span class="desc">Crisp shell-shaped ricotta pastry — compare with Amalfi's Santa Rosa.</span></div>
       </div>
     </div>
 
-  </div>
-</section>
-
-<section class="section">
-  <div class="section-head">
-    <span class="section-num">09</span>
-    <h2 class="section-title">Food &amp; wine compass</h2>
-    <span class="section-sub">How to order</span>
-  </div>
-  <div class="compass">
-    <div class="compass-card">
-      <div class="label">Dish targets</div>
-      <div class="title">By city</div>
-      <ul>
-        <li><strong>Florence:</strong> lampredotto · carabaccia · bistecca · ribollita · pappa al pomodoro · coccoli · schiacciata</li>
-        <li><strong>Rome:</strong> Jewish-Roman meal · pizza tonda · supplì · maritozzo · one great trattoria pasta</li>
-        <li><strong>Amalfi:</strong> scialatielli · colatura · local fish · delizia al limone</li>
-        <li><strong>Naples:</strong> Margherita · frittatina · sfogliatella</li>
-      </ul>
-    </div>
-    <div class="compass-card">
-      <div class="label">Our white-wine palate</div>
-      <div class="title">Dry, mineral, saline</div>
-      <ul>
-        <li>Fresh, high acid · citrus · little oak</li>
-        <li>Indigenous grapes · small producers</li>
-        <li>Like: Musgo Branco · Alice Verdeca · Gavi di Gavi · Assyrtiko</li>
-        <li>Campania: Furore Bianco · Falanghina · Greco · Fiano</li>
-      </ul>
-      <p class="phrase">"Cerco un bianco secco, molto fresco, minerale e sapido, con agrumi. Non troppo aromatico e senza troppo legno."</p>
-    </div>
-    <div class="compass-card">
-      <div class="label">Tourist-trap veto</div>
-      <div class="title">Walk away if several show</div>
-      <ul>
-        <li>Staff pulling people in from the street</li>
-        <li>Giant photo menu, many languages</li>
-        <li>Generic every-dish Italian menu</li>
-        <li>Tables full of tourists only</li>
-        <li>Faces a landmark, no other reason to trust it</li>
-        <li>Queue for a viral dish, not a meal</li>
-      </ul>
-    </div>
   </div>
 </section>
 
@@ -2092,8 +2055,8 @@ body {
 
 </div><!-- /events -->
 
-<!-- ===================== LOGISTICS ===================== -->
-<div class="tab-panel" id="logistics" role="tabpanel" hidden>
+<!-- ===================== BOOKINGS ===================== -->
+<div class="tab-panel" id="bookings" role="tabpanel" hidden>
 
 <section class="section">
   <div class="section-head">
@@ -2299,13 +2262,17 @@ body {
   <p style="margin-top:14px; font-size:12px; color:#5a4a3a; font-style:italic;">Optional, book only if chosen: Armando al Pantheon (opens 30 days ahead at midnight Rome time) · Baglio Amalfi (Apr–May, €40 pp deposit) · Sensi Amalfi (30–60 days ahead).</p>
 </section>
 
-<section class="section print-keep-with-next">
+</div><!-- /bookings -->
+
+<!-- ===================== LOGISTICS ===================== -->
+<div class="tab-panel" id="logistics" role="tabpanel" hidden>
+
+<section class="section">
   <div class="section-head">
     <span class="section-num">12</span>
-    <h2 class="section-title">Transportation &amp; lodging</h2>
-    <span class="section-sub">Ground layer</span>
+    <h2 class="section-title">Getting around</h2>
+    <span class="section-sub">Base to base</span>
   </div>
-  <div class="log-head">Moving between bases</div>
   <div class="logistics">
     <div class="log-card">
       <div class="log-label">Flights out · Jul 1–2</div>
@@ -2338,8 +2305,14 @@ body {
       <div class="log-detail">DL0279 9:05 AM → 2:31 PM · DL2017 8:25 PM → 9:49 PM. Hotel taxi ~5:30 AM; recheck America's Cup road closures.</div>
     </div>
   </div>
+</section>
 
-  <div class="log-head">Where we sleep</div>
+<section class="section print-keep-with-next">
+  <div class="section-head">
+    <span class="section-num">13</span>
+    <h2 class="section-title">Where we sleep</h2>
+    <span class="section-sub">3 booked · 1 to book</span>
+  </div>
   <div class="logistics">
     <div class="log-card terracotta">
       <div class="log-label">Florence · Jul 2–5 · 3 nights</div>
@@ -2366,7 +2339,7 @@ body {
 
 <section class="section">
   <div class="section-head">
-    <span class="section-num">13</span>
+    <span class="section-num">14</span>
     <h2 class="section-title">Packing &amp; style</h2>
     <span class="section-sub">Italian summer · 14 days</span>
   </div>
@@ -2419,7 +2392,7 @@ body {
 
 <section class="section">
   <div class="section-head">
-    <span class="section-num">14</span>
+    <span class="section-num">15</span>
     <h2 class="section-title">Tuscany wine country</h2>
     <span class="section-sub">Sun Jul 4 · from Florence</span>
   </div>
@@ -2456,7 +2429,7 @@ body {
 
 <section class="section">
   <div class="section-head">
-    <span class="section-num">15</span>
+    <span class="section-num">16</span>
     <h2 class="section-title">Amalfi Coast swap pair</h2>
     <span class="section-sub">Sun Jul 11 ⇄ Mon Jul 12</span>
   </div>
@@ -2507,7 +2480,7 @@ body {
 
 <section class="section">
   <div class="section-head">
-    <span class="section-num">16</span>
+    <span class="section-num">17</span>
     <h2 class="section-title">Pompeii → Naples finale</h2>
     <span class="section-sub">Tue Jul 13 → Wed Jul 14</span>
   </div>
@@ -2549,7 +2522,7 @@ body {
 
 <footer class="footer">
   <span>Italy · Summer 2027</span>
-  <span class="footer-mark">v1</span>
+  <span class="footer-mark">v2</span>
   <span>14 days · 4 bases · 2 travelers</span>
 </footer>
 
@@ -2584,7 +2557,7 @@ body {
       });
     });
 
-    // Deep link via URL hash (#eatdo, #events, #logistics, #subtrips)
+    // Deep link via URL hash (#eatdo, #events, #bookings, #logistics, #subtrips)
     function handleHash() {
       const hash = (location.hash || '').replace('#', '');
       if (!hash) return;

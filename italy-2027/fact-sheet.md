@@ -1,7 +1,7 @@
 # Italy — Summer 2027 · Fact Sheet (source of truth)
 
 > Build `index.html` from this file. When a date or booking changes, update here first.
-> HTML version stamp: **v1**
+> HTML version stamp: **v2**
 >
 > Distilled from *Italy July 2027 — MASTER TRIP SOURCE* (consolidated 2026-10-03). Where that
 > document's city inventories conflicted with its top-level canonical sections, the canonical
@@ -97,12 +97,12 @@ Target-action dates are planning triggers, not official release dates, unless th
 Counts: **high 6 · med 11 · low 3 = 20.**
 
 ### Optional reservations — not in the still-to-book count
-Book only if chosen. Listed in Eat & do with their rules.
+Book only if chosen. Listed in Eat & do; their rules sit under the Bookings timeline.
 - **Armando al Pantheon** — reservations open daily for the next 30 days at midnight (Rome time); tiny inventory. Reminder = meal date − 30 days, 00:00.
 - **Baglio Amalfi** (optional Jul 12 dinner) — very limited tables, €40 pp deposit, cancel up to 48 h before (€10 pp fee kept). No pedestrian route from Amalfi; arrange transport. Skip if the winery is already a big meal. Request Apr–May 2027.
 - **Sensi Amalfi** (optional Jul 10/11/12) — dinner is the full tasting format; lunch is a lighter bistrot. Book 30–60 days ahead if chosen.
 
-## Booking pulse (Overview) — must equal Logistics
+## Booking pulse (Overview) — must equal the Bookings tab
 - **Confirmed: 3** — Florence apartment, Palazzo Talìa, Abbraccio Amalfi
 - **Still to book: 20** — 6 high (Naples hotel, 50 Kalò, boat, Marisa Cuomo, Colosseum, Villa Medici) · 11 med · 3 low
 - **Flight legs: 4** — out Jul 1–2 RDU → CDG → Florence · home Jul 14 NAP → ATL → RDU
@@ -145,53 +145,156 @@ Both travelers do everything, so no badge means "who". Badges flag timing and bo
 - `opt` **Optional** — only if time, energy, appetite or weather allow
 
 ## Sights & experiences (by city)
-**Florence:** Uffizi ★ · Accademia ★ · Brunelleschi Dome ★ (nonref) · Piazza della Signoria · Palazzo Vecchio · Ponte Vecchio · Oltrarno · Piazzale Michelangelo · San Miniato al Monte · Santa Croce. Food shopping: Pegna dal 1860 · Mercato di Sant'Ambrogio · Alimentari Calimaruzza.
-**Rome:** Trevi · Sant'Ignazio · Pantheon · San Luigi dei Francesi · Piazza Navona · Vatican Museums + Sistine ★ · St. Peter's ★ · Castel Sant'Angelo · Janiculum sunset · Trastevere · Colosseum / Forum / Palatine ★ · Via di Monte Tarpeo viewpoint · Campidoglio · Jewish Ghetto · Galleria Borghese ★ · Pincio · Piazza del Popolo · Villa Medici (nonref) · Palazzo Zuccari · Spanish Steps · San Clemente · Appian Way e-bike · catacomb (opt) · Aventine + Orange Garden + Knights of Malta Keyhole.
-**Amalfi Coast:** Private boat + Positano ★ (swap) · Marisa Cuomo + Furore ★ (swap) · Ravello + Villa Cimbrone ★ · Villa Rufolo (opt) · Amalfi Cathedral · Atrani walk · unstructured beach / swim time · Fiordo di Furore · Emerald Grotto (opt) · Valle delle Ferriere (opt).
-**Pompeii & Naples:** Pompeii ★ · Piazza del Plebiscito · Santa Lucia / Castel dell'Ovo / Lungomare · America's Cup atmosphere · Enoteca Belledonne (opt).
-**Not prioritized:** Capri · Mount Vesuvius · Sorrento · Naples as a full sightseeing day.
+One line each so the page explains what a place is. ★ = protected / can't-miss per the planning source.
 
-★ = protected / can't-miss per the planning source.
-
-## Restaurants & food (by city)
-### Florence (approved list — don't add without asking)
-- **Trattorias:** Vini e Vecchi Sapori (tiny handwritten-menu osteria by the apartment) · Ristorante del Fagioli (old-school; ribollita) · Trattoria La Gratella (family-run; carabaccia candidate — recheck menu) · La Buchetta (bistecca, truffle pici) · Il Vezzo (tiny, refined modern Tuscan)
-- **Scenic / polished:** Golden View Firenze (Arno + Ponte Vecchio view) · COSIMO at The Excelsior (rooftop, sunset) · B-Roof at Grand Hotel Baglioni (Duomo view)
-- **Quick lunch:** Sergio Pollini Lampredotto · Da' Vinattieri (coccoli with prosciutto + stracchino) · I Guelfi Tuscany Food (schiacciata) · Il Cernacchio (fallback)
-- **Breakfast / bakery:** Antico Forno Sartoni (closest) · Forno Ghibellina · Pasticceria Nencioni (Sant'Ambrogio)
-- **Gelato:** Vivoli (long lines; flexible only) · Sbrino (Oltrarno)
-- **Wine:** Le Volpi e l'Uva (small producers by the glass)
-- **Dish targets:** lampredotto · carabaccia · bistecca alla fiorentina · ribollita · pappa al pomodoro · coccoli · schiacciata · Sangiovese
+### Florence
+- ★ **Uffizi Gallery** — Jul 3 AM · the great Renaissance collection: Botticelli, Leonardo, Raphael
+- ★ **Galleria dell'Accademia** — Jul 3 PM · home of Michelangelo's David
+- ★ **Brunelleschi's Dome** — Jul 2 or 3 · climb inside the Duomo's dome to the lantern; city views (non-refundable)
+- **Piazza della Signoria & Palazzo Vecchio** — our doorstep: the civic square, statues, and the town-hall fortress
+- **Ponte Vecchio** — medieval bridge lined with goldsmiths' shops
+- **Oltrarno** — artisan workshop quarter across the river; evening wandering
+- **Piazzale Michelangelo** — the classic panorama over the city, best near sunset
+- **San Miniato al Monte** — Romanesque hilltop church just above Piazzale Michelangelo
+- **Santa Croce** — Franciscan basilica with the tombs of Michelangelo and Galileo
+- **Pegna dal 1860** — historic specialty grocer near the Duomo; cheese, salumi, pantry goods
+- **Mercato di Sant'Ambrogio** — 19th-century neighborhood market; picnic and travel-day snacks
+- **Alimentari Calimaruzza** — tiny old-style food shop by the apartment
+- **Fattoria Torre a Cona** — Jul 4 · winery estate outside Florence (sub-trip)
 
 ### Rome
-- **Protected:** Piperno and/or Boccione (Ghetto, Jul 7) · Pizzeria Ostiense (pizza tonda, Jul 9) · Mercato di Testaccio + Volpetti · one excellent trattoria · one "I know a spot" meal · Trastevere dinner (Jul 6)
-- **Trattorias (green flag):** L'Osteria della Trippa (Trastevere) · Santo Palato (San Giovanni) · Flavio al Velavevodetto (Testaccio) · Retrobottega (modern)
-- **Neighborhood picks:** Trattoria Pennestri (Ostiense) · Osteria Bonelli (Torpignattara) · Tante Care Cose (Pigneto) · Menabò Vino e Cucina (Centocelle) · Mazzo (San Lorenzo)
-- **Famous, worth it if intentional:** Roscioli Salumeria con Cucina · Armando al Pantheon (opt; 30-day midnight window)
-- **Quick / street:** Supplizio · Antico Forno Roscioli · Forno Campo de' Fiori · Pizzarium Bonci · Mordi e Vai + CasaManco (Testaccio market) · Paciotti Salumeria
-- **Coffee / pastry / gelato:** Bar San Marcello (by the hotel) · Regoli Pasticceria · Tazza d'Oro · Giolitti · Ciampini
-- **Wine / aperitivo:** Il Goccetto ★ · Hotel de Russie garden (opt, polished)
-- **Shops:** C.U.C.I.N.A. (kitchenware)
-- **Screened out:** Da Enzo al 29 (red flag — downgraded)
-- **Rule:** don't cross Rome 30–45 min for one pastry/snack. Opportunistic only: Pizzarium, Paciotti, Supplizio, Regoli, Tazza d'Oro, Giolitti, Ciampini, Antico Forno Roscioli.
+- **Trevi · Pantheon · Piazza Navona** — Jul 5 · the historic-center walk: fountain, 2,000-year-old domed temple, Baroque piazza
+- **Sant'Ignazio & San Luigi dei Francesi** — Jul 5 · trompe-l'oeil ceiling; three Caravaggio paintings
+- ★ **Vatican Museums & Sistine Chapel** — Jul 6 · papal art collections; Michelangelo's ceiling and Last Judgment
+- ★ **St. Peter's Basilica** — Jul 6 · the largest church in Christendom; Michelangelo's Pietà
+- **Castel Sant'Angelo** — Jul 6 · Hadrian's tomb turned papal fortress, on the Tiber
+- **Janiculum Hill → Trastevere** — Jul 6 · sunset panorama, then down into cobbled Trastevere for dinner
+- ★ **Colosseum · Roman Forum · Palatine** — Jul 7 · the amphitheater, the ancient city center, the emperors' hill
+- **Via di Monte Tarpeo & Campidoglio** — Jul 7 · best free Forum view; Michelangelo's hilltop piazza
+- **Jewish Ghetto** — Jul 7 · one of Europe's oldest Jewish communities; Portico d'Ottavia
+- ★ **Galleria Borghese** — Jul 8 · Bernini sculptures and Caravaggios in a villa; timed entry
+- **Pincio & Piazza del Popolo** — Jul 8 · park terrace overlook; twin-church piazza; Caravaggios in Santa Maria del Popolo
+- **Villa Medici** — Jul 8 · guided tour of the French Academy's Renaissance villa and gardens (non-refundable)
+- **Palazzo Zuccari & Spanish Steps** — Jul 8 · "House of Monsters" doorway with a mouth for a door; the famous steps
+- **Basilica di San Clemente** — Jul 9 · three layers: medieval church over an early church over a Roman temple
+- **Appian Way e-bike** — Jul 9 · ride the ancient Roman road past tombs and aqueducts, ~2–2.5 h
+- **Catacombs** — Jul 9 · underground early-Christian burial tunnels (optional)
+- **Aventine · Orange Garden · Knights of Malta Keyhole** — Jul 9 · quiet hilltop, rose-and-orange-tree terrace, St. Peter's framed through a keyhole
 
 ### Amalfi Coast
-- **Scorecard (success = these 6):** scialatielli ai frutti di mare · spaghetti/linguine with colatura di alici di Cetara · one excellent local-fish meal · delizia al limone · one local bonus (totani e patate · sfogliatella Santa Rosa · 'ndunderi · sarchiapone di Atrani) · coastal white with seafood
-- **Dining candidates:** Baglio Amalfi (opt) · Sensi Amalfi (opt) · Da Adolfo, Laurito (opt, boat day) · Lo Guarracino, Positano (opt, boat day)
-- **Wine:** Cantine Marisa Cuomo ★ · Tenuta San Francesco (opt, second winery only if relaxed)
-- **Not protected:** vongole, octopus, fried calamari, caprese, pizza (save for Naples), limoncello
+- ★ **Private boat + Positano** — Jul 11 (swap) · coast from the water, swim stops in coves, 2–4 h ashore in Positano
+- ★ **Cantine Marisa Cuomo + Furore** — Jul 12 (swap) · cliff-terrace winery visit in Furore
+- ★ **Ravello · Villa Cimbrone** — gardens high above the sea; the Terrace of Infinity viewpoint
+- **Villa Rufolo** — Ravello's other villa: medieval tower, terraced gardens (optional)
+- **Amalfi Cathedral** — striped Arab-Norman cathedral at the top of a grand staircase
+- **Atrani** — tiny fishing village one short walk from Amalfi; small beach
+- **Beach + swim time** — unplanned hours on Amalfi or Atrani beach
+- **Fiordo di Furore** — dramatic narrow inlet under a road bridge; photo stop
+- **Emerald Grotto** — sea cave with green-lit water (optional; only if on the boat route)
+- **Valle delle Ferriere** — shaded hike up a green valley behind Amalfi (optional)
+
+### Pompeii & Naples
+- ★ **Pompeii** — Jul 13 · Roman town buried by Vesuvius in AD 79; streets, houses, frescoes, 3–4+ h
+- **Piazza del Plebiscito** — Naples' grand central square by the Royal Palace
+- **Santa Lucia · Castel dell'Ovo · Lungomare** — seafront castle and promenade on the bay
+- **America's Cup atmosphere** — the Match is racing on the bay that week
+- **Enoteca Belledonne** — long-running Chiaia wine shop and bar (optional)
+
+**Not prioritized:** Capri · Mount Vesuvius · Sorrento · Naples as a full sightseeing day.
+
+## Restaurants & food (by city)
+Nothing here is booked. Bookable tables are in the Bookings tab. ★ = protected.
+
+### Florence (approved list — don't add without asking)
+**Trattorias**
+- **Vini e Vecchi Sapori** — tiny osteria with a handwritten menu, by the apartment; duck pappardelle, peposo
+- **Ristorante del Fagioli** — old-school rustic trattoria; ribollita, beans, hearty meat
+- **Trattoria La Gratella** — family-run Tuscan; pappardelle al cinghiale; may serve carabaccia
+- **La Buchetta** — lively, small; bistecca, truffle pici, strong wine list
+- **Il Vezzo** — tiny, refined modern Tuscan; bistecca, seasonal plates
+
+**Scenic / polished**
+- **Golden View Firenze** — romantic, looks at the Arno and Ponte Vecchio
+- **COSIMO at The Excelsior** — upscale rooftop; sunset aperitivo
+- **B-Roof, Grand Hotel Baglioni** — classic hotel rooftop facing the Duomo
+
+**Quick lunch**
+- ★ **Sergio Pollini Lampredotto** — no-frills stand for the lampredotto sandwich
+- **Da' Vinattieri** — hole-in-the-wall; porchetta, coccoli with prosciutto + stracchino
+- **I Guelfi Tuscany Food** — made-to-order schiacciata sandwiches near the apartment
+- **Il Cernacchio** — cheap soups, pasta, sandwiches; reliable fallback
+
+**Breakfast · gelato · wine**
+- **Antico Forno Sartoni** — neighborhood bakery, closest breakfast
+- **Forno Ghibellina** — bakery café toward Santa Croce
+- **Pasticceria Nencioni** — historic pastry shop by Sant'Ambrogio market
+- **Vivoli** — historic gelato (long lines) · **Sbrino** — craft gelato in the Oltrarno
+- **Le Volpi e l'Uva** — tiny wine bar by Ponte Vecchio
+
+**Try in Florence:** lampredotto (tripe sandwich) · bistecca alla fiorentina (huge T-bone, served rare) · ribollita (bread-and-bean soup) · pappa al pomodoro (tomato-bread soup) · carabaccia (old Florentine onion soup) · schiacciata (Tuscan flatbread) · coccoli (fried dough balls with ham and soft cheese)
+
+### Rome
+**Protected**
+- ★ **Piperno / Boccione** — Jul 7 · historic Jewish-Roman restaurant; tiny Ghetto bakery
+- ★ **Pizzeria Ostiense** — Jul 9 · thin, crisp Roman pizza in a neighborhood spot
+- ★ **Mercato di Testaccio + Volpetti** — Jul 9 · working food market; deli since 1973
+- ★ **Il Goccetto** — old wine bar with a huge by-the-glass list
+
+**Trattorias**
+- **L'Osteria della Trippa** — Trastevere; tripe and Roman specialties
+- **Santo Palato** — modern Roman cooking, daily menu
+- **Flavio al Velavevodetto** — built into Monte Testaccio, the ancient pottery hill
+- **Retrobottega** — creative modern Italian; terrace
+- **Roscioli Salumeria con Cucina** — deli + restaurant; salumi, Roman pasta, deep cellar
+- **Armando al Pantheon** — family-run since 1961, beside the Pantheon (optional)
+
+**"I know a spot" (outside the center)**
+- **Trattoria Pennestri** (Ostiense) — Michelin-noted local trattoria
+- **Osteria Bonelli** (Torpignattara) — family-style, daily menu
+- **Tante Care Cose** (Pigneto) — tiny open-kitchen spot, few tables
+- **Menabò** (Centocelle) — seasonal neighborhood cooking
+- **Mazzo** (San Lorenzo) — modern Roman; half portions at its wine bar
+
+**Quick · coffee · sweets**
+- **Supplizio** — supplì specialist on Via dei Banchi Vecchi
+- **Antico Forno Roscioli** — historic bakery; pizza by weight
+- **Pizzarium Bonci** — famed pizza-by-the-slice near the Vatican
+- **Paciotti Salumeria** — old-school deli near the Vatican
+- **Bar San Marcello** — local café by the hotel; breakfast and cheap lunch
+- **Regoli** — century-old pastry shop; benchmark maritozzo
+- **Tazza d'Oro** — standing espresso bar by the Pantheon
+- **Giolitti · Ciampini** — historic gelato; Ciampini on an elegant piazza
+- **Hotel de Russie garden** — polished garden aperitivo (optional)
+- ~~Da Enzo al 29~~ — screened out
+
+**Try in Rome:** carbonara · cacio e pepe · amatriciana · gricia (the four Roman pastas) · supplì (fried rice ball with mozzarella) · maritozzo (cream-filled bun) · Jewish-Roman fried dishes (artichokes only if in season)
+
+### Amalfi Coast
+**Tables**
+- **Baglio Amalfi** — very few tables; deposit; car needed (optional)
+- **Sensi Amalfi** — tasting-menu dinner or lighter bistro lunch (optional)
+- **Da Adolfo, Laurito** — boat-day beach lunch, if the boat can stop
+- **Lo Guarracino, Positano** — sit-down lunch in Positano on the boat day
+
+**Wine**
+- ★ **Cantine Marisa Cuomo** — Furore winery on cliff terraces (Jul 12)
+- **Tenuta San Francesco** — Tramonti winery; only if the coast stays relaxed (optional)
+
+**Try on the coast:** scialatielli ai frutti di mare (thick fresh pasta with seafood) · spaghetti with colatura di Cetara (anchovy essence) · whole local fish · delizia al limone (lemon-cream sponge cake) · one local bonus: totani e patate (squid + potatoes) · sfogliatella Santa Rosa (ricotta pastry) · 'ndunderi (ricotta gnocchi) · sarchiapone (stuffed gourd, Atrani)
 
 ### Naples
-- **50 Kalò · Piazza della Repubblica 2** ★ — order a frittatina, a Margherita as benchmark, a second pizza (provola e pepe or house seasonal); Falanghina Campi Flegrei by the glass if good.
-- **Enoteca Belledonne** (Chiaia, opt) — compare Falanghina Campi Flegrei · Greco di Tufo · Fiano di Avellino.
+- ★ **50 Kalò · Piazza della Repubblica 2** — reservable branch of a top Neapolitan pizzeria; frittatina → Margherita → provola e pepe
+- **Enoteca Belledonne** — Chiaia wine bar (optional)
 
-### Wine compass
-Dry · fresh / high acid · mineral · saline · citrus · little oak · indigenous grapes, small producers.
-Reference wines: Musgo Branco · Alice Verdeca · Gavi di Gavi · Assyrtiko.
-Phrase: *"Cerco un bianco secco, molto fresco, minerale e sapido, con agrumi. Non troppo aromatico e senza troppo legno."*
+**Try in Naples:** Margherita · frittatina (fried pasta bite) · sfogliatella (to compare with Amalfi's Santa Rosa)
 
-### In-person veto rule
-Walk away from an unplanned restaurant when several show at once: staff pulling people in · giant photo menu · menu in many languages · generic every-dish menu · all-tourist tables · landmark-facing with no other reason to trust it · viral-dish queue.
+**Rule everywhere:** don't cross a city for one pastry or snack.
+
+## Page structure (tabs)
+Overview · Eat & do · Locked events · Bookings · Logistics · Sub-trips.
+- **Bookings** (`#bookings`) — Confirmed / Still-to-book grids + "When to book" timeline.
+- **Logistics** (`#logistics`) — getting around, where we sleep, packing.
+Bookings is split out of Logistics for this trip because the list is long (23 items + timeline).
 
 ## Packing & style (general guidance — not from bookings)
 - July heat; long walking days on stone; swim kit for Amalfi.
