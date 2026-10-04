@@ -107,7 +107,7 @@ Book only if chosen. Listed in Eat & do; their rules sit under the Bookings time
 - **Still to book: 18** — 4 high (boat, Marisa Cuomo, Colosseum, Villa Medici) · 11 med · 3 low
 - **Flight legs: 4** — out Jul 1–2 RDU → CDG → Florence · home Jul 14 NAP → ATL → RDU
 
-## Day-by-day working plan
+## Day-by-day working plan (Overview tab)
 All days are `WORKING_PLAN` (not booked) except flights and lodging.
 
 - **Thu Jul 1 — Depart Raleigh.** RDU 6:10 PM → CDG. No sightseeing.
@@ -291,6 +291,8 @@ Part 2 of the Eat & do tab. Restaurants, cafés, wine bars, markets and food sho
 
 ## Page structure (tabs)
 Overview · Eat & do · Locked events · Bookings · Logistics · Sub-trips.
+- **Overview** (`#overview`) — route & presence map, four phases, booking pulse, then the **day-by-day plan**. For this trip the day-by-day plan replaces the master calendar (a 14-day, two-person trip reads better as day cards).
+- **Locked events** (`#events`) — booked anchors only.
 - **Eat & do** (`#eatdo`) — two parts with their own headers and a jump bar: **Things to do** (sights by city) then **Where to eat** (food by city).
 - **Bookings** (`#bookings`) — Confirmed / Still-to-book grids + "When to book" timeline.
 - **Logistics** (`#logistics`) — getting around, where we sleep, packing.
