@@ -1,7 +1,7 @@
 # Italy — Summer 2027 · Fact Sheet (source of truth)
 
 > Build `index.html` from this file. When a date or booking changes, update here first.
-> HTML version stamp: **v4**
+> HTML version stamp: **v1**
 >
 > Distilled from *Italy July 2027 — MASTER TRIP SOURCE* (consolidated 2026-10-03). Where that
 > document's city inventories conflicted with its top-level canonical sections, the canonical
@@ -75,27 +75,27 @@ Target-action dates are planning triggers, not official release dates, unless th
 
 | # | Item | Visit date | Urgency | Rule type | Target action |
 |---|---|---|---|---|---|
-| 2 | Starita (Naples pizza dinner) | Jul 13 | high | Recommended lead time | America's Cup week — check how to reserve early (Jan–Mar 2027); don't rely on a walk-in |
-| 3 | Private Amalfi Coast boat | Jul 11 (backup Jul 12) | high | Recommended lead time | Shortlist operators Jan–Feb 2027; book Mar–Apr with explicit Jul 11↔12 weather flexibility |
-| 4 | Cantine Marisa Cuomo (winery visit) | Jul 12 (swap-able) | high | Official — required, no window | Request Mar–Apr 2027; ask if it can move Jul 12↔11 on 24–48 h notice |
-| 5 | Colosseum / Forum / Palatine | Jul 7 | high | **Official fixed window** — sales open 30 days before | **HARD TRIGGER Jun 7, 2027** |
-| 6 | Villa Medici guided tour (English) | Jul 8 | high | Official rolling — ~1 month ahead | Book ~Jun 8, 2027 on release. **Non-refundable / non-changeable** |
-| 7 | Fattoria Torre a Cona (winery) | Jul 4 | med | Recommended lead time | Contact/monitor by Apr 1, 2027; secure by early May if selected |
-| 8 | Uffizi Gallery (morning) | Jul 3 | med | Official — required, no window | Monitor from Apr 15, 2027; buy the Jul 3 morning slot as soon as it appears |
-| 9 | Galleria dell'Accademia (afternoon) | Jul 3 | med | Official — required, no window | Monitor from Apr 15, 2027; buy the Jul 3 afternoon slot as soon as it appears |
-| 10 | Brunelleschi Dome / Pass | Jul 2 or 3 | med | Official — required, no window | Check Apr 15–May 1, 2027; buy once the Jul 2/3 plan is safe. **Non-refundable / non-changeable** |
-| 11 | Train Firenze SMN → Roma Termini | Jul 5 | med | Recommended lead time | Check Mar–Apr 2027; book when the schedule opens — morning/midday train after 10 AM checkout |
-| 12 | Vatican Museums (early entry) | Jul 6 | med | Official — required, no window | Monitor Apr 20–May 1, 2027; book as soon as Jul 6 opens |
-| 13 | Ristorante Piperno (Ghetto meal) | Jul 7 | med | Official — required, no window | Check / book early–mid May 2027 if it is the chosen Ghetto meal |
-| 14 | Galleria Borghese | Jul 8 | med | Official — required, no window | Monitor from May 1, 2027; buy as soon as Jul 8 appears |
-| 15 | Train Rome → Salerno | Jul 10 | med | Recommended lead time | Check Mar–Apr 2027; book when the schedule opens |
-| 16 | Private car Amalfi → Pompeii | Jul 13 | med | Recommended lead time | Quotes Feb–Mar 2027; book Apr–May once Pompeii timing is set |
-| 17 | Pompeii Archaeological Park | Jul 13 | med | Official — required, no window | Monitor from May 2027; buy by early June or as soon as Jul 13 appears |
-| 18 | Ferry Salerno → Amalfi | Jul 10 | low | Recommended lead time | Check the 2027 summer timetable in spring; buy once the train is locked. Keep the road fallback |
-| 19 | Via Appia e-bike | Jul 9 | low | Recommended lead time | Pick an operator by early June; book by mid-June |
-| 20 | Private car Soul Art Hotel → NAP | Jul 14 | low | Recommended lead time | Prearrange the 5:30 AM pickup; reconfirm the night of Jul 13 |
+| 1 | Starita (Naples pizza dinner) | Jul 13 | high | Recommended lead time | America's Cup week — check how to reserve early (Jan–Mar 2027); don't rely on a walk-in |
+| 2 | Private Amalfi Coast boat | Jul 11 (backup Jul 12) | high | Recommended lead time | Shortlist operators Jan–Feb 2027; book Mar–Apr with explicit Jul 11↔12 weather flexibility |
+| 3 | Cantine Marisa Cuomo (winery visit) | Jul 12 (swap-able) | high | Official — required, no window | Request Mar–Apr 2027; ask if it can move Jul 12↔11 on 24–48 h notice |
+| 4 | Colosseum / Forum / Palatine | Jul 7 | high | **Official fixed window** — sales open 30 days before | **HARD TRIGGER Jun 7, 2027** |
+| 5 | Villa Medici guided tour (English) | Jul 8 | high | Official rolling — ~1 month ahead | Book ~Jun 8, 2027 on release. **Non-refundable / non-changeable** |
+| 6 | Fattoria Torre a Cona (winery) | Jul 4 | med | Recommended lead time | Contact/monitor by Apr 1, 2027; secure by early May if selected |
+| 7 | Uffizi Gallery (morning) | Jul 3 | med | Official — required, no window | Monitor from Apr 15, 2027; buy the Jul 3 morning slot as soon as it appears |
+| 8 | Galleria dell'Accademia (afternoon) | Jul 3 | med | Official — required, no window | Monitor from Apr 15, 2027; buy the Jul 3 afternoon slot as soon as it appears |
+| 9 | Brunelleschi Dome / Pass | Jul 2 or 3 | med | Official — required, no window | Check Apr 15–May 1, 2027; buy once the Jul 2/3 plan is safe. **Non-refundable / non-changeable** |
+| 10 | Train Firenze SMN → Roma Termini | Jul 5 | med | Recommended lead time | Check Mar–Apr 2027; book when the schedule opens — morning/midday train after 10 AM checkout |
+| 11 | Vatican Museums (early entry) | Jul 6 | med | Official — required, no window | Monitor Apr 20–May 1, 2027; book as soon as Jul 6 opens |
+| 12 | Ristorante Piperno (Ghetto meal) | Jul 7 | med | Official — required, no window | Check / book early–mid May 2027 if it is the chosen Ghetto meal |
+| 13 | Galleria Borghese | Jul 8 | med | Official — required, no window | Monitor from May 1, 2027; buy as soon as Jul 8 appears |
+| 14 | Train Rome → Salerno | Jul 10 | med | Recommended lead time | Check Mar–Apr 2027; book when the schedule opens |
+| 15 | Private car Amalfi → Pompeii | Jul 13 | med | Recommended lead time | Quotes Feb–Mar 2027; book Apr–May once Pompeii timing is set |
+| 16 | Pompeii Archaeological Park | Jul 13 | med | Official — required, no window | Monitor from May 2027; buy by early June or as soon as Jul 13 appears |
+| 17 | Ferry Salerno → Amalfi | Jul 10 | low | Recommended lead time | Check the 2027 summer timetable in spring; buy once the train is locked. Keep the road fallback |
+| 18 | Via Appia e-bike | Jul 9 | low | Recommended lead time | Pick an operator by early June; book by mid-June |
+| 19 | Private car Soul Art Hotel → NAP | Jul 14 | low | Recommended lead time | Prearrange the 5:30 AM pickup; reconfirm the night of Jul 13 |
 
-Counts: **high 5 · med 11 · low 3 = 19.** (Row numbers kept from v1; #1 Naples hotel is now confirmed.)
+Counts: **high 5 · med 11 · low 3 = 19.**
 
 ### Optional reservations — not in the still-to-book count
 Book only if chosen. Listed in Eat & do; their rules sit under the Bookings timeline.
@@ -320,6 +320,13 @@ Tricolore primary, plus one color per stop.
 Shared chrome tokens stay: `--ink` `#1f3050`, `--paper` `#faf6ee`, `--sage-deep` `#506850`, `--pink` `#c08793`.
 
 Used in the HTML for: card swatch strip, tricolore hero band, phase colors, presence-map bars, calendar phase bars, event tags, booking-status chips.
+
+## Typography (Italy-specific)
+Free Google Fonts chosen to echo Italian art-deco and Futura-era travel posters (in the spirit of Fiorent Deco, Rigoletto, Freudian and Futura):
+- **Federo** — display: hero title, section titles, card and city names, dates.
+- **Jost** — body, labels, tabs (free Futura-style geometric sans).
+- **Bodoni Moda** — italics and large numerals (section numbers, pulse counts); set to optical size 11 so hairlines stay visible.
+Replaces the shared Fraunces + Manrope pair for this trip only. Landing page keeps the shared fonts.
 
 ## Landing-page card
 - No. 03 · Italy · Summer 2027 · 14 days
