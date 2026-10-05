@@ -385,7 +385,6 @@ The **Do** column (right) of each city in the Eat & do tab. Sights, tours and wi
 ### Amalfi Coast
 - ★ **Private boat + Positano** — Jul 11 (weather backup: later departure Jul 12) · coast from the water, swim stops in coves, ~2–3 h ashore in Positano
 - ★ **Cantine Marisa Cuomo, upper Furore** — Jul 12, timing TBD (protected) · wine experience among cliff-side vineyard terraces; confirm what the tasting includes
-- **Tenuta San Francesco** — Tramonti winery; second tasting only if the coast stays relaxed (optional)
 - ★ **Ravello · Villa Cimbrone** — Jul 12 if the tasting leaves a comfortable afternoon (or Jul 11 if the boat is cancelled) · gardens high above the sea; the Terrace of Infinity viewpoint
 - **Villa Rufolo** — Ravello's other villa: medieval tower, terraced gardens (optional)
 - **Amalfi Cathedral** — striped Arab-Norman cathedral at the top of a grand staircase
@@ -393,7 +392,6 @@ The **Do** column (right) of each city in the Eat & do tab. Sights, tours and wi
 - **Beach + swim time** — unplanned hours on Amalfi or Atrani beach
 - **Fiordo di Furore** — Jul 11 · dramatic narrow inlet under a road bridge, seen from the water on the boat day
 - **Emerald Grotto** — sea cave with green-lit water (optional; only if on the boat route)
-- **Valle delle Ferriere** — shaded hike up a green valley behind Amalfi (optional)
 
 ### Pompeii & Naples
 - ★ **Pompeii** — Jul 13 · Roman town buried by Vesuvius in AD 79; streets, houses, frescoes, 3–4+ h
@@ -502,8 +500,6 @@ Pins for the Maps tab. **Coordinates are approximate** — taken from the planne
 | amalfi | do | Fiordo di Furore | Furore | 40.6188 | 14.5545 | 11 | ok | Sea inlet under a bridge, seen from the boat | planned |
 | amalfi | do | Villa Cimbrone | Ravello | 40.6440 | 14.6110 | | ok | Gardens; Terrace of Infinity — Jul 12 if time | open |
 | amalfi | do | Villa Rufolo | Ravello | 40.6490 | 14.6118 | | ok | Medieval tower, terraced gardens (optional) | open |
-| amalfi | do | Valle delle Ferriere | Scala | 40.6440 | 14.5960 | | approx | Shaded valley hike (optional) | open |
-| amalfi | do | Tenuta San Francesco | Tramonti | 40.6920 | 14.6380 | | approx | Second winery (optional) | open |
 | amalfi | eat | Sensi Amalfi | Amalfi | 40.6348 | 14.6025 | | approx | Tasting menu or bistro lunch | open |
 | amalfi | eat | Da Adolfo | Positano | 40.6232 | 14.4990 | | approx | Boat-day lunch option on Laurito Beach (either/or) | open |
 | amalfi | eat | Lo Guarracino | Positano | 40.6268 | 14.4882 | | approx | Possible lunch during a longer Positano stop | open |
@@ -699,7 +695,6 @@ Places, neighborhoods and menu words that are easy to mispronounce, by city.
 | amalfi | Places | Villa Rufolo | VEEL-lah ROO-foh-loh | Ravello villa |
 | amalfi | Places | Grotta dello Smeraldo | GROHT-tah DEHL-loh zmeh-RAHL-doh | Emerald Grotto |
 | amalfi | Places | Fiordo di Furore | FYOR-doh dee foo-ROH-reh | Sea inlet |
-| amalfi | Places | Valle delle Ferriere | VAHL-leh DEHL-leh fehr-RYEH-reh | Valley hike |
 | amalfi | Places | Marisa Cuomo | mah-REE-zah KWOH-moh | Winery (Jul 12) |
 | amalfi | Towns | Amalfi | ah-MAHL-fee | Our base |
 | amalfi | Towns | Atrani | ah-TRAH-nee | Next village east |
