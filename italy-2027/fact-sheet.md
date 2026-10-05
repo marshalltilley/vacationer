@@ -79,10 +79,10 @@ Target-action dates are planning triggers, not official release dates, unless th
 | 2 | Cantine Marisa Cuomo (winery visit) | Jul 12, 9:00 AM preferred (swap-able) | high | Official — required, no window | Request the 9:00 AM visit Mar–Apr 2027; ask if it can move Jul 12↔11 on 24–48 h notice |
 | 3 | Colosseum / Forum / Palatine | Jul 7 | high | **Official fixed window** — sales open 30 days before | **HARD TRIGGER Jun 7, 2027** |
 | 4 | Villa Medici guided tour (English) | Jul 8 | high | Official rolling — ~1 month ahead | Book ~Jun 8, 2027 on release. **Non-refundable / non-changeable** |
-| 5 | Fattoria Torre a Cona (winery) | Jul 4, late afternoon | med | Recommended lead time | Contact/monitor by Apr 1, 2027; secure a late-afternoon tasting by early May |
+| 5 | Fattoria Torre a Cona (winery) | Jul 4, late afternoon | med | Recommended lead time | Contact/monitor by Apr 1, 2027; confirm Sunday tasting hours; secure a late-afternoon tasting by early May. Taxi out and back (book the return) |
 | 6 | Uffizi Gallery (morning) | Jul 3 | med | Official — required, no window | Monitor from Apr 15, 2027; buy the Jul 3 morning slot as soon as it appears |
-| 7 | Galleria dell'Accademia (afternoon) | Jul 3 | med | Official — required, no window | Monitor from Apr 15, 2027; buy the Jul 3 afternoon slot as soon as it appears |
-| 8 | Brunelleschi Dome / Pass | Jul 2 or 3 | med | Official — required, no window | Check Apr 15–May 1, 2027; buy once the Jul 2/3 plan is safe. **Non-refundable / non-changeable** |
+| 7 | Galleria dell'Accademia (late afternoon) | Jul 3 | med | Official — required, no window | Monitor from Apr 15, 2027; buy the Jul 3 ~4 PM slot as soon as it appears |
+| 8 | Brunelleschi Dome / Pass | Jul 3, early afternoon | med | Official — required, no window | Check Apr 15–May 1, 2027; buy once the Jul 3 plan is safe. Dome climb is closed Sundays. **Non-refundable / non-changeable** |
 | 9 | Train Firenze SMN → Roma Termini | Jul 5 | med | Recommended lead time | Check Mar–Apr 2027; book when the schedule opens — morning/midday train after 10 AM checkout |
 | 10 | Vatican Museums (early entry) | Jul 6 | med | Official — required, no window | Monitor Apr 20–May 1, 2027; book as soon as Jul 6 opens |
 | 11 | Ristorante Piperno (Ghetto meal) | Jul 7 | med | Official — required, no window | Check / book early–mid May 2027 if it is the chosen Ghetto meal |
@@ -111,9 +111,9 @@ Book only if chosen. Listed in Eat & do; their rules sit under the Bookings time
 All days are `WORKING_PLAN` (not booked) except flights and lodging.
 
 - **Thu Jul 1 — Depart Raleigh.** RDU 6:10 PM → CDG. No sightseeing.
-- **Fri Jul 2 — Arrive Florence.** CDG 10:20 AM → Florence. Apartment check-in after 2 PM. Keep flexible around arrival and fatigue. Piazza della Signoria / historic-center wandering. Dome only if the timed ticket fits safely.
-- **Sat Jul 3 — Florence masterpieces.** Uffizi first thing (~8:15–8:45 AM). Lunch / rest. Accademia mid-afternoon (~2:30–3:30 PM). Dome here if Jul 2 doesn't work. Evening: Oltrarno, food, wine.
-- **Sun Jul 4 — Siena + Torre a Cona.** Morning: Florence → Siena; explore Piazza del Campo, the Duomo and the historic center. Midday: lunch in Siena, then taxi or driver to Fattoria Torre a Cona. Late afternoon: wine tasting / estate experience. Evening: back to Florence by taxi or bus depending on the 2027 Sunday schedule; easy evening. The Dome cannot be Sunday.
+- **Fri Jul 2 — Arrive Florence · the south bank.** CDG 10:20 AM → Florence. Apartment check-in after 2 PM. Ponte Vecchio, an early glass at Le Volpi e l'Uva, Oltrarno wander, San Miniato al Monte, sunset at Piazzale Michelangelo. Late dinner at Vini e Vecchi Sapori. Fatigue fallback: taxi or bus up the hill, walk down.
+- **Sat Jul 3 — The center, full day.** Uffizi first thing (~8:15 AM). Santa Croce late morning. Lunch: Sergio Pollini Lampredotto (must). Brunelleschi Dome early afternoon. Accademia ~4 PM. Evening: Piazza della Signoria on our doorstep; dinner in Santa Croce.
+- **Sun Jul 4 — Center leftovers + Torre a Cona.** Morning: Palazzo Vecchio; Baptistery and Giotto's bell tower if time. Easy lunch near the apartment. Early afternoon: taxi to Fattoria Torre a Cona (~30–40 min). Late afternoon: wine tasting / estate experience. Evening: taxi back; easy evening. The Dome cannot be Sunday.
 - **Mon Jul 5 — Florence → Rome / historic center.** Checkout by 10 AM. Train SMN → Termini. Check in Palazzo Talìa. Trevi Fountain, Sant'Ignazio, Pantheon interior, San Luigi dei Francesi, Piazza Navona, central wandering. Optional if energy remains: Campo de' Fiori, Via dei Banchi Vecchi, Supplizio, Il Goccetto, Tiber. No other major ticketed site.
 - **Tue Jul 6 — Vatican / Tiber / Janiculum / Trastevere.** Vatican Museums, Sistine Chapel, St. Peter's Basilica + Square. Walk to Castel Sant'Angelo / Ponte Sant'Angelo. Hotel rest. Taxi to the Janiculum for sunset. Descend into Trastevere for dinner. Pizzarium / Paciotti only if they fit naturally.
 - **Wed Jul 7 — Ancient Rome / Jewish Ghetto.** Early breakfast. Colosseum, Roman Forum, Palatine. Via di Monte Tarpeo viewpoint. Campidoglio. Teatro di Marcello → Portico d'Ottavia / Ghetto. Boccione and/or Piperno. Quiet evening.
@@ -135,22 +135,25 @@ Each day in order. **Type:** `anchor` = booked with a fixed time (flights, check
 | 2 | 10:20 AM | anchor | Flight CDG → Florence | Delta 8483 · arrival time not on the booking |
 | 2 | On arrival | plan | T2 tram into the center | Tram from Peretola airport toward Santa Maria Novella, then walk to the apartment |
 | 2 | After 2 PM | anchor | Check in · Piazza Signoria n.1 | Our apartment on Florence's main square |
-| 2 | Afternoon | plan | Piazza della Signoria & historic center | The civic square with its statues and the town-hall fortress (Palazzo Vecchio) — an easy first walk |
-| 2 | If it fits | option | Brunelleschi's Dome climb | Climb inside the cathedral dome to the top; timed, non-refundable ticket — only if today's timing is safe |
-| 2 | Evening | option | Easy dinner near the apartment | Options: Vini e Vecchi Sapori (tiny osteria) or Il Cernacchio (cheap and simple) |
+| 2 | Afternoon | plan | Ponte Vecchio | Medieval bridge lined with goldsmiths' shops, a few minutes' walk from the apartment |
+| 2 | ~5 PM | plan | Le Volpi e l'Uva | Tiny wine bar just over Ponte Vecchio; small producers by the glass — an early first glass |
+| 2 | Early evening | plan | Oltrarno wander | "Beyond the Arno": the artisan south bank — Santo Spirito, workshop lanes, gelato at Sbrino |
+| 2 | ~7 PM | plan | San Miniato al Monte | Romanesque hilltop church with a gold-mosaic apse; the monks sing vespers in the late afternoon (check 2027 time) · ~25 min uphill, or taxi/bus up |
+| 2 | Sunset ~8:50 PM | plan | Piazzale Michelangelo | The classic panorama over the Duomo and the river, just below San Miniato; walk down through San Niccolò |
+| 2 | ~9:30 PM | plan | Vini e Vecchi Sapori | Tiny osteria by the apartment with a handwritten menu — duck pappardelle, peposo stew · small room, consider reserving |
 | 3 | ~8:15 AM | plan | Uffizi Gallery | Florence's great Renaissance art museum — Botticelli's Birth of Venus, Leonardo, Raphael; aim for the first slot |
-| 3 | Midday | plan | Quick lunch + rest | Schiacciata (Tuscan flatbread sandwich) at I Guelfi or Da' Vinattieri, then a break at the apartment |
-| 3 | ~2:30 PM | plan | Galleria dell'Accademia | Small museum built around Michelangelo's David |
-| 3 | If it fits | option | Brunelleschi's Dome climb | If it didn't happen on Jul 2 |
-| 3 | Evening | plan | Oltrarno — food and wine | "Beyond the Arno": the artisan south bank around Santo Spirito; Le Volpi e l'Uva wine bar by Ponte Vecchio |
-| 4 | Morning | plan | Florence → Siena | South through Tuscany by train or bus (roughly 1¼–1½ h) — mode not chosen yet |
-| 4 | Morning | plan | Piazza del Campo | Siena's shell-shaped main square, where the Palio horse race is run |
-| 4 | Morning | plan | Siena Duomo | Striped black-and-white marble cathedral with an inlaid marble floor |
-| 4 | Morning | plan | Historic center wander | Steep medieval lanes between the Campo and the Duomo |
-| 4 | Midday | plan | Lunch in Siena |  |
-| 4 | Early afternoon | plan | Taxi or driver to Fattoria Torre a Cona | Back north toward Florence; the estate is in the hills southeast of the city |
+| 3 | Late morning | plan | Santa Croce | Franciscan basilica with the tombs of Michelangelo and Galileo and Giotto frescoes · 10 min east of the Uffizi |
+| 3 | Lunch | plan | Sergio Pollini Lampredotto | Must · no-frills stand by Sant'Ambrogio for Florence's lampredotto sandwich (slow-cooked tripe), with green sauce and the roll dipped in broth |
+| 3 | Early afternoon | plan | Brunelleschi's Dome climb | 463 steps up inside the cathedral dome to the lantern; timed, non-refundable ticket · closed Sundays, so it must be today |
+| 3 | ~4 PM | plan | Galleria dell'Accademia | Small museum built around Michelangelo's David · 5 min north of the Duomo |
+| 3 | Evening | plan | Piazza della Signoria | Our doorstep: the civic square and its open-air statue gallery, at its best after the crowds thin |
+| 3 | Dinner | option | Dinner toward Santa Croce | Options: La Buchetta (lively; bistecca and truffle pici) or Golden View Firenze (romantic, facing Ponte Vecchio) |
+| 4 | Morning | plan | Palazzo Vecchio | The town-hall fortress on our square — the frescoed Hall of the Five Hundred, plus a tower climb |
+| 4 | If time | option | Baptistery & Giotto's bell tower | Bronze "Gates of Paradise" doors and the striped bell tower beside the Duomo; included in the Brunelleschi Pass (recheck for 2027) |
+| 4 | Midday | plan | Easy lunch near the apartment |  |
+| 4 | Early afternoon | plan | Taxi to Fattoria Torre a Cona | About 30–40 min southeast into the hills |
 | 4 | Late afternoon | plan | Fattoria Torre a Cona | Historic villa winery — Chianti Colli Fiorentini, Sangiovese, Vin Santo · wine tasting / estate experience |
-| 4 | Evening | plan | Back to Florence by taxi or bus | Depends on the 2027 Sunday bus schedule · easy evening in Florence |
+| 4 | Evening | plan | Taxi back to Florence | Book the return before the tasting — Sunday taxis in the hills are scarce · easy evening |
 | 5 | By 10 AM | anchor | Check out of the Florence apartment |  |
 | 5 | Morning | plan | Fast train Firenze SMN → Roma Termini | About 1 h 25 on Italo or Frecciarossa |
 | 5 | Arrival | anchor | Check in · Palazzo Talìa | Our hotel between Trevi and the Spanish Steps |
@@ -220,7 +223,7 @@ Each day in order. **Type:** `anchor` = booked with a fixed time (flights, check
 | 14 | 8:25 PM | anchor | Flight Atlanta → Raleigh-Durham | DL2017 · home 9:49 PM |
 
 ## Sub-trips (one tab: "Sub-trips")
-1. **Siena + Torre a Cona — Sun Jul 4.** Morning in Siena (Piazza del Campo, the Duomo, historic center) and lunch there; then taxi or driver to Fattoria Torre a Cona for a late-afternoon tasting (Sangiovese-focused, Chianti Colli Fiorentini, Vin Santo; historic villa + vineyards). Back to Florence by taxi or bus depending on the 2027 Sunday schedule. Florence → Siena transport not chosen yet. The Dome moves to Jul 2 or 3.
+1. **Torre a Cona wine afternoon — Sun Jul 4.** Morning stays in Florence (Palazzo Vecchio). Early afternoon taxi out (~30–40 min) for a late-afternoon tasting at Fattoria Torre a Cona (Sangiovese-focused, Chianti Colli Fiorentini, Vin Santo; historic villa + vineyards); taxi back, booked before the tasting. Confirm Sunday tasting hours. The Dome is Jul 3 (the climb is closed Sundays).
 2. **Amalfi Coast swap pair — Jul 11 & 12.** Boat day (primary Jul 11 — the coast from the water: Fiordo di Furore, coves, swimming, Positano) and upper-Furore winery + Ravello (primary Jul 12 — the coast from above) must be able to swap if sea conditions threaten the boat. Jul 13 is **not** a third backup (Pompeii + Naples before the flight).
    - Boat operator criteria: Amalfi pickup · small private boat (not a big yacht) · ~6–8 useful hours · flexible swim stops · Positano stop · lunch coordination · explicit weather cancel/refund terms · willing to move Jul 11 → 12 if the captain calls it.
    - Emerald Grotto only if it fits the boat route naturally. Fiordo di Furore is seen from the water on the boat day.
@@ -243,7 +246,7 @@ The **Eat** column (left) of each city in the Eat & do tab. Restaurants, cafés,
 
 ### Florence (approved list — don't add without asking)
 **Trattorias**
-- **Vini e Vecchi Sapori** — tiny osteria with a handwritten menu, by the apartment; duck pappardelle, peposo
+- **Vini e Vecchi Sapori** — Jul 2 dinner · tiny osteria with a handwritten menu, by the apartment; duck pappardelle, peposo
 - **Ristorante del Fagioli** — old-school rustic trattoria; ribollita, beans, hearty meat
 - **Trattoria La Gratella** — family-run Tuscan; pappardelle al cinghiale; may serve carabaccia
 - **La Buchetta** — lively, small; bistecca, truffle pici, strong wine list
@@ -255,7 +258,7 @@ The **Eat** column (left) of each city in the Eat & do tab. Restaurants, cafés,
 - **B-Roof, Grand Hotel Baglioni** — classic hotel rooftop facing the Duomo
 
 **Quick lunch**
-- ★ **Sergio Pollini Lampredotto** — no-frills stand for the lampredotto sandwich
+- ★ **Sergio Pollini Lampredotto** — Jul 3 lunch (must) · no-frills stand for the lampredotto sandwich
 - **Da' Vinattieri** — hole-in-the-wall; porchetta, coccoli with prosciutto + stracchino
 - **I Guelfi Tuscany Food** — made-to-order schiacciata sandwiches near the apartment
 - **Il Cernacchio** — cheap soups, pasta, sandwiches; reliable fallback
@@ -265,7 +268,7 @@ The **Eat** column (left) of each city in the Eat & do tab. Restaurants, cafés,
 - **Forno Ghibellina** — bakery café toward Santa Croce
 - **Pasticceria Nencioni** — historic pastry shop by Sant'Ambrogio market
 - **Vivoli** — historic gelato (long lines) · **Sbrino** — craft gelato in the Oltrarno
-- **Le Volpi e l'Uva** — tiny wine bar by Ponte Vecchio
+- **Le Volpi e l'Uva** — Jul 2, early · tiny wine bar by Ponte Vecchio
 
 **Markets & food shops**
 - **Pegna dal 1860** — historic specialty grocer near the Duomo; cheese, salumi, pantry goods
@@ -334,16 +337,15 @@ The **Do** column (right) of each city in the Eat & do tab. Sights, tours and wi
 
 ### Florence
 - ★ **Uffizi Gallery** — Jul 3 AM · the great Renaissance collection: Botticelli, Leonardo, Raphael
-- ★ **Galleria dell'Accademia** — Jul 3 PM · home of Michelangelo's David
-- ★ **Brunelleschi's Dome** — Jul 2 or 3 · climb inside the Duomo's dome to the lantern; city views (non-refundable)
-- **Piazza della Signoria & Palazzo Vecchio** — our doorstep: the civic square, statues, and the town-hall fortress
-- **Ponte Vecchio** — medieval bridge lined with goldsmiths' shops
-- **Oltrarno** — artisan workshop quarter across the river; evening wandering
-- **Piazzale Michelangelo** — the classic panorama over the city, best near sunset
-- **San Miniato al Monte** — Romanesque hilltop church just above Piazzale Michelangelo
-- **Santa Croce** — Franciscan basilica with the tombs of Michelangelo and Galileo
-- **Siena · Piazza del Campo & Duomo** — Jul 4 · morning day trip: shell-shaped main square and striped marble cathedral (sub-trip)
-- **Fattoria Torre a Cona** — Jul 4 · late-afternoon tasting at a villa winery outside Florence (sub-trip)
+- ★ **Galleria dell'Accademia** — Jul 3, ~4 PM · home of Michelangelo's David
+- ★ **Brunelleschi's Dome** — Jul 3, early afternoon · climb inside the Duomo's dome to the lantern; city views (non-refundable)
+- **Piazza della Signoria & Palazzo Vecchio** — Jul 3 evening · Palazzo Vecchio Jul 4 AM · our doorstep: the civic square, statues, and the town-hall fortress
+- **Ponte Vecchio** — Jul 2 · medieval bridge lined with goldsmiths' shops
+- **Oltrarno** — Jul 2 · artisan workshop quarter across the river; evening wandering
+- **Piazzale Michelangelo** — Jul 2 sunset · the classic panorama over the city, best near sunset
+- **San Miniato al Monte** — Jul 2 · Romanesque hilltop church just above Piazzale Michelangelo
+- **Santa Croce** — Jul 3 · Franciscan basilica with the tombs of Michelangelo and Galileo
+- **Fattoria Torre a Cona** — Jul 4 · late-afternoon tasting at a villa winery outside Florence; taxi out and back (sub-trip)
 
 ### Rome
 - **Trevi · Pantheon · Piazza Navona** — Jul 5 · the historic-center walk: fountain, 2,000-year-old domed temple, Baroque piazza
@@ -395,24 +397,22 @@ Pins for the Maps tab. **Coordinates are approximate** — taken from the planne
 | florence | base | Piazza Signoria n.1 apartment | Centro Storico | 43.7697 | 11.2556 | 2,3,4 | ok | Our apartment on Piazza della Signoria | booked |
 | florence | do | Uffizi Gallery | Centro Storico | 43.7678 | 11.2553 | 3 | ok | The great Renaissance collection | planned |
 | florence | do | Galleria dell'Accademia | San Marco | 43.7768 | 11.2589 | 3 | ok | Michelangelo's David | planned |
-| florence | do | Brunelleschi's Dome | Duomo | 43.7731 | 11.2560 | 2,3 | ok | Climb inside the cathedral dome | planned |
-| florence | do | Piazza della Signoria & Palazzo Vecchio | Centro Storico | 43.7694 | 11.2560 | 2 | ok | Civic square and town-hall fortress | planned |
-| florence | do | Ponte Vecchio | Centro Storico | 43.7680 | 11.2531 | | ok | Medieval bridge of goldsmiths' shops | open |
-| florence | do | Piazza Santo Spirito | Oltrarno – Santo Spirito | 43.7665 | 11.2475 | 3 | ok | Heart of the Oltrarno; evening wandering | planned |
-| florence | do | Piazzale Michelangelo | San Niccolò hills | 43.7629 | 11.2650 | | ok | Classic city panorama at sunset | open |
-| florence | do | San Miniato al Monte | San Niccolò hills | 43.7596 | 11.2650 | | ok | Romanesque hilltop church | open |
-| florence | do | Santa Croce | Santa Croce | 43.7686 | 11.2622 | | ok | Basilica with Michelangelo's and Galileo's tombs | open |
+| florence | do | Brunelleschi's Dome | Duomo | 43.7731 | 11.2560 | 3 | ok | Climb inside the cathedral dome | planned |
+| florence | do | Piazza della Signoria & Palazzo Vecchio | Centro Storico | 43.7694 | 11.2560 | 3,4 | ok | Civic square and town-hall fortress | planned |
+| florence | do | Ponte Vecchio | Centro Storico | 43.7680 | 11.2531 | 2 | ok | Medieval bridge of goldsmiths' shops | planned |
+| florence | do | Piazza Santo Spirito | Oltrarno – Santo Spirito | 43.7665 | 11.2475 | 2 | ok | Heart of the Oltrarno; evening wandering | planned |
+| florence | do | Piazzale Michelangelo | San Niccolò hills | 43.7629 | 11.2650 | 2 | ok | Classic city panorama at sunset | planned |
+| florence | do | San Miniato al Monte | San Niccolò hills | 43.7596 | 11.2650 | 2 | ok | Romanesque hilltop church | planned |
+| florence | do | Santa Croce | Santa Croce | 43.7686 | 11.2622 | 3 | ok | Basilica with Michelangelo's and Galileo's tombs | planned |
 | florence | do | Fattoria Torre a Cona | Hills SE of Florence | 43.7036 | 11.3714 | 4 | approx | Villa winery; late-afternoon tasting (sub-trip) | planned |
-| florence | do | Piazza del Campo | Siena | 43.3184 | 11.3317 | 4 | ok | Siena's shell-shaped main square (day trip) | planned |
-| florence | do | Siena Duomo | Siena | 43.3177 | 11.3289 | 4 | ok | Striped marble cathedral (day trip) | planned |
-| florence | eat | Vini e Vecchi Sapori | Centro Storico | 43.7703 | 11.2568 | | approx | Tiny osteria, handwritten menu | open |
+| florence | eat | Vini e Vecchi Sapori | Centro Storico | 43.7703 | 11.2568 | 2 | approx | Tiny osteria, handwritten menu | planned |
 | florence | eat | Ristorante del Fagioli | Santa Croce | 43.7671 | 11.2602 | | approx | Old-school rustic trattoria | open |
 | florence | eat | Trattoria La Gratella | San Lorenzo | 43.7783 | 11.2508 | | approx | Family-run Tuscan trattoria | open |
 | florence | eat | La Buchetta | Santa Croce | 43.7666 | 11.2590 | | approx | Lively; bistecca and truffle pici | open |
 | florence | eat | Golden View Firenze | Oltrarno | 43.7670 | 11.2541 | | approx | Romantic dinner facing Ponte Vecchio | open |
 | florence | eat | COSIMO at The Excelsior | Santa Maria Novella | 43.7726 | 11.2455 | | approx | Upscale rooftop; sunset aperitivo | open |
 | florence | eat | B-Roof, Grand Hotel Baglioni | Santa Maria Novella | 43.7745 | 11.2510 | | approx | Hotel rooftop facing the Duomo | open |
-| florence | eat | Sergio Pollini Lampredotto | Sant'Ambrogio | 43.7706 | 11.2636 | | approx | Lampredotto street stand | open |
+| florence | eat | Sergio Pollini Lampredotto | Sant'Ambrogio | 43.7706 | 11.2636 | 3 | approx | Lampredotto street stand | planned |
 | florence | eat | Da' Vinattieri | Centro Storico | 43.7714 | 11.2559 | | approx | Hole-in-the-wall sandwiches | open |
 | florence | eat | I Guelfi Tuscany Food | Centro Storico | 43.7705 | 11.2545 | | approx | Made-to-order schiacciata | open |
 | florence | eat | Il Cernacchio | Centro Storico | 43.7700 | 11.2565 | | approx | Cheap soups and pasta | open |
@@ -421,7 +421,7 @@ Pins for the Maps tab. **Coordinates are approximate** — taken from the planne
 | florence | eat | Pasticceria Nencioni | Sant'Ambrogio | 43.7714 | 11.2628 | | approx | Historic pastry shop | open |
 | florence | eat | Vivoli | Santa Croce | 43.7697 | 11.2591 | | approx | Historic gelato | open |
 | florence | eat | Sbrino | Oltrarno – Santo Spirito | 43.7658 | 11.2462 | | approx | Craft gelato | open |
-| florence | eat | Le Volpi e l'Uva | Oltrarno | 43.7673 | 11.2524 | | approx | Tiny wine bar | open |
+| florence | eat | Le Volpi e l'Uva | Oltrarno | 43.7673 | 11.2524 | 2 | approx | Tiny wine bar | planned |
 | florence | eat | Pegna dal 1860 | Duomo | 43.7721 | 11.2568 | | approx | Historic specialty grocer | open |
 | florence | eat | Mercato di Sant'Ambrogio | Sant'Ambrogio | 43.7699 | 11.2645 | | ok | Neighborhood food market | open |
 | florence | eat | Alimentari Calimaruzza | Centro Storico | 43.7697 | 11.2543 | | approx | Tiny food shop | open |
@@ -630,8 +630,6 @@ Places, neighborhoods and menu words that are easy to mispronounce, by city.
 | florence | Places | Santa Maria Novella | SAHN-tah mah-REE-ah noh-VEHL-lah | Main train station (SMN) and its area |
 | florence | Places | Peretola | peh-REH-toh-lah | Florence airport |
 | florence | Places | Torre a Cona | TOHR-reh ah KOH-nah | Winery (Jul 4) |
-| florence | Places | Siena | SYEH-nah | Jul 4 day trip |
-| florence | Places | Piazza del Campo | PYAHT-tsah dehl KAHM-poh | Siena's main square |
 | florence | Neighborhoods | Oltrarno | ohl-TRAR-noh | "Beyond the Arno" — the south bank |
 | florence | Neighborhoods | Santo Spirito | SAHN-toh SPEE-ree-toh | Oltrarno piazza and quarter |
 | florence | Neighborhoods | San Frediano | sahn freh-DYAH-noh | Artisan quarter, west Oltrarno |
