@@ -79,7 +79,7 @@ Target-action dates are planning triggers, not official release dates, unless th
 | 2 | Cantine Marisa Cuomo (winery visit) | Jul 12, 9:00 AM preferred (swap-able) | high | Official — required, no window | Request the 9:00 AM visit Mar–Apr 2027; ask if it can move Jul 12↔11 on 24–48 h notice |
 | 3 | Colosseum / Forum / Palatine | Jul 7 | high | **Official fixed window** — sales open 30 days before | **HARD TRIGGER Jun 7, 2027** |
 | 4 | Villa Medici guided tour (English) | Jul 8 | high | Official rolling — ~1 month ahead | Book ~Jun 8, 2027 on release. **Non-refundable / non-changeable** |
-| 5 | Fattoria Torre a Cona (winery) | Jul 4 | med | Recommended lead time | Contact/monitor by Apr 1, 2027; secure by early May if selected |
+| 5 | Fattoria Torre a Cona (winery) | Jul 4, late afternoon | med | Recommended lead time | Contact/monitor by Apr 1, 2027; secure a late-afternoon tasting by early May |
 | 6 | Uffizi Gallery (morning) | Jul 3 | med | Official — required, no window | Monitor from Apr 15, 2027; buy the Jul 3 morning slot as soon as it appears |
 | 7 | Galleria dell'Accademia (afternoon) | Jul 3 | med | Official — required, no window | Monitor from Apr 15, 2027; buy the Jul 3 afternoon slot as soon as it appears |
 | 8 | Brunelleschi Dome / Pass | Jul 2 or 3 | med | Official — required, no window | Check Apr 15–May 1, 2027; buy once the Jul 2/3 plan is safe. **Non-refundable / non-changeable** |
@@ -113,7 +113,7 @@ All days are `WORKING_PLAN` (not booked) except flights and lodging.
 - **Thu Jul 1 — Depart Raleigh.** RDU 6:10 PM → CDG. No sightseeing.
 - **Fri Jul 2 — Arrive Florence.** CDG 10:20 AM → Florence. Apartment check-in after 2 PM. Keep flexible around arrival and fatigue. Piazza della Signoria / historic-center wandering. Dome only if the timed ticket fits safely.
 - **Sat Jul 3 — Florence masterpieces.** Uffizi first thing (~8:15–8:45 AM). Lunch / rest. Accademia mid-afternoon (~2:30–3:30 PM). Dome here if Jul 2 doesn't work. Evening: Oltrarno, food, wine.
-- **Sun Jul 4 — Tuscany sub-trip (candidate).** Fattoria Torre a Cona winery / countryside. If confirmed, the Dome cannot be Sunday. Don't add another major museum.
+- **Sun Jul 4 — Siena + Torre a Cona.** Morning: Florence → Siena; explore Piazza del Campo, the Duomo and the historic center. Midday: lunch in Siena, then taxi or driver to Fattoria Torre a Cona. Late afternoon: wine tasting / estate experience. Evening: back to Florence by taxi or bus depending on the 2027 Sunday schedule; easy evening. The Dome cannot be Sunday.
 - **Mon Jul 5 — Florence → Rome / historic center.** Checkout by 10 AM. Train SMN → Termini. Check in Palazzo Talìa. Trevi Fountain, Sant'Ignazio, Pantheon interior, San Luigi dei Francesi, Piazza Navona, central wandering. Optional if energy remains: Campo de' Fiori, Via dei Banchi Vecchi, Supplizio, Il Goccetto, Tiber. No other major ticketed site.
 - **Tue Jul 6 — Vatican / Tiber / Janiculum / Trastevere.** Vatican Museums, Sistine Chapel, St. Peter's Basilica + Square. Walk to Castel Sant'Angelo / Ponte Sant'Angelo. Hotel rest. Taxi to the Janiculum for sunset. Descend into Trastevere for dinner. Pizzarium / Paciotti only if they fit naturally.
 - **Wed Jul 7 — Ancient Rome / Jewish Ghetto.** Early breakfast. Colosseum, Roman Forum, Palatine. Via di Monte Tarpeo viewpoint. Campidoglio. Teatro di Marcello → Portico d'Ottavia / Ghetto. Boccione and/or Piperno. Quiet evening.
@@ -143,9 +143,14 @@ Each day in order. **Type:** `anchor` = booked with a fixed time (flights, check
 | 3 | ~2:30 PM | plan | Galleria dell'Accademia | Small museum built around Michelangelo's David |
 | 3 | If it fits | option | Brunelleschi's Dome climb | If it didn't happen on Jul 2 |
 | 3 | Evening | plan | Oltrarno — food and wine | "Beyond the Arno": the artisan south bank around Santo Spirito; Le Volpi e l'Uva wine bar by Ponte Vecchio |
-| 4 | Morning | plan | Taxi or driver to Torre a Cona | Sunday buses are poor; the estate is in the hills southeast of Florence |
-| 4 | Midday | plan | Fattoria Torre a Cona | Historic villa winery — Chianti Colli Fiorentini, Sangiovese, Vin Santo; the osteria serves lunch on weekends |
-| 4 | Afternoon | plan | Back to Florence, easy evening | No other big museum today |
+| 4 | Morning | plan | Florence → Siena | South through Tuscany by train or bus (roughly 1¼–1½ h) — mode not chosen yet |
+| 4 | Morning | plan | Piazza del Campo | Siena's shell-shaped main square, where the Palio horse race is run |
+| 4 | Morning | plan | Siena Duomo | Striped black-and-white marble cathedral with an inlaid marble floor |
+| 4 | Morning | plan | Historic center wander | Steep medieval lanes between the Campo and the Duomo |
+| 4 | Midday | plan | Lunch in Siena |  |
+| 4 | Early afternoon | plan | Taxi or driver to Fattoria Torre a Cona | Back north toward Florence; the estate is in the hills southeast of the city |
+| 4 | Late afternoon | plan | Fattoria Torre a Cona | Historic villa winery — Chianti Colli Fiorentini, Sangiovese, Vin Santo · wine tasting / estate experience |
+| 4 | Evening | plan | Back to Florence by taxi or bus | Depends on the 2027 Sunday bus schedule · easy evening in Florence |
 | 5 | By 10 AM | anchor | Check out of the Florence apartment |  |
 | 5 | Morning | plan | Fast train Firenze SMN → Roma Termini | About 1 h 25 on Italo or Frecciarossa |
 | 5 | Arrival | anchor | Check in · Palazzo Talìa | Our hotel between Trevi and the Spanish Steps |
@@ -215,7 +220,7 @@ Each day in order. **Type:** `anchor` = booked with a fixed time (flights, check
 | 14 | 8:25 PM | anchor | Flight Atlanta → Raleigh-Durham | DL2017 · home 9:49 PM |
 
 ## Sub-trips (one tab: "Sub-trips")
-1. **Tuscany wine country — Sun Jul 4.** Fattoria Torre a Cona (candidate). Sangiovese-focused, Chianti Colli Fiorentini, Vin Santo; historic villa + vineyards. Osteria serves à la carte Sat/Sun in the July season. Sunday bus service is weak → taxi, arranged transfer or private driver. Booking a Sunday visit moves the Dome to Jul 2 or 3.
+1. **Siena + Torre a Cona — Sun Jul 4.** Morning in Siena (Piazza del Campo, the Duomo, historic center) and lunch there; then taxi or driver to Fattoria Torre a Cona for a late-afternoon tasting (Sangiovese-focused, Chianti Colli Fiorentini, Vin Santo; historic villa + vineyards). Back to Florence by taxi or bus depending on the 2027 Sunday schedule. Florence → Siena transport not chosen yet. The Dome moves to Jul 2 or 3.
 2. **Amalfi Coast swap pair — Jul 11 & 12.** Boat day (primary Jul 11 — the coast from the water: Fiordo di Furore, coves, swimming, Positano) and upper-Furore winery + Ravello (primary Jul 12 — the coast from above) must be able to swap if sea conditions threaten the boat. Jul 13 is **not** a third backup (Pompeii + Naples before the flight).
    - Boat operator criteria: Amalfi pickup · small private boat (not a big yacht) · ~6–8 useful hours · flexible swim stops · Positano stop · lunch coordination · explicit weather cancel/refund terms · willing to move Jul 11 → 12 if the captain calls it.
    - Emerald Grotto only if it fits the boat route naturally. Fiordo di Furore is seen from the water on the boat day.
@@ -337,7 +342,8 @@ The **Do** column (right) of each city in the Eat & do tab. Sights, tours and wi
 - **Piazzale Michelangelo** — the classic panorama over the city, best near sunset
 - **San Miniato al Monte** — Romanesque hilltop church just above Piazzale Michelangelo
 - **Santa Croce** — Franciscan basilica with the tombs of Michelangelo and Galileo
-- **Fattoria Torre a Cona** — Jul 4 · winery estate outside Florence (sub-trip)
+- **Siena · Piazza del Campo & Duomo** — Jul 4 · morning day trip: shell-shaped main square and striped marble cathedral (sub-trip)
+- **Fattoria Torre a Cona** — Jul 4 · late-afternoon tasting at a villa winery outside Florence (sub-trip)
 
 ### Rome
 - **Trevi · Pantheon · Piazza Navona** — Jul 5 · the historic-center walk: fountain, 2,000-year-old domed temple, Baroque piazza
@@ -396,7 +402,9 @@ Pins for the Maps tab. **Coordinates are approximate** — taken from the planne
 | florence | do | Piazzale Michelangelo | San Niccolò hills | 43.7629 | 11.2650 | | ok | Classic city panorama at sunset | open |
 | florence | do | San Miniato al Monte | San Niccolò hills | 43.7596 | 11.2650 | | ok | Romanesque hilltop church | open |
 | florence | do | Santa Croce | Santa Croce | 43.7686 | 11.2622 | | ok | Basilica with Michelangelo's and Galileo's tombs | open |
-| florence | do | Fattoria Torre a Cona | Hills SE of Florence | 43.7036 | 11.3714 | 4 | approx | Villa winery (sub-trip) | planned |
+| florence | do | Fattoria Torre a Cona | Hills SE of Florence | 43.7036 | 11.3714 | 4 | approx | Villa winery; late-afternoon tasting (sub-trip) | planned |
+| florence | do | Piazza del Campo | Siena | 43.3184 | 11.3317 | 4 | ok | Siena's shell-shaped main square (day trip) | planned |
+| florence | do | Siena Duomo | Siena | 43.3177 | 11.3289 | 4 | ok | Striped marble cathedral (day trip) | planned |
 | florence | eat | Vini e Vecchi Sapori | Centro Storico | 43.7703 | 11.2568 | | approx | Tiny osteria, handwritten menu | open |
 | florence | eat | Ristorante del Fagioli | Santa Croce | 43.7671 | 11.2602 | | approx | Old-school rustic trattoria | open |
 | florence | eat | Trattoria La Gratella | San Lorenzo | 43.7783 | 11.2508 | | approx | Family-run Tuscan trattoria | open |
@@ -622,6 +630,8 @@ Places, neighborhoods and menu words that are easy to mispronounce, by city.
 | florence | Places | Santa Maria Novella | SAHN-tah mah-REE-ah noh-VEHL-lah | Main train station (SMN) and its area |
 | florence | Places | Peretola | peh-REH-toh-lah | Florence airport |
 | florence | Places | Torre a Cona | TOHR-reh ah KOH-nah | Winery (Jul 4) |
+| florence | Places | Siena | SYEH-nah | Jul 4 day trip |
+| florence | Places | Piazza del Campo | PYAHT-tsah dehl KAHM-poh | Siena's main square |
 | florence | Neighborhoods | Oltrarno | ohl-TRAR-noh | "Beyond the Arno" — the south bank |
 | florence | Neighborhoods | Santo Spirito | SAHN-toh SPEE-ree-toh | Oltrarno piazza and quarter |
 | florence | Neighborhoods | San Frediano | sahn freh-DYAH-noh | Artisan quarter, west Oltrarno |
