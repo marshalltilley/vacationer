@@ -1014,6 +1014,8 @@ body {
 .day-card.open { border-color: var(--ink); box-shadow: 0 0 0 2px var(--ink); }
 .day-card .day-hotel::after { content: 'Details ›'; float: right; color: var(--rosso); letter-spacing: 0.08em; }
 .day-card.open .day-hotel::after { content: 'Open ▾'; }
+.day-grid > .day-detail { grid-column: 1 / -1; margin-top: 0; }
+.day-card { scroll-margin-top: 84px; }
 .day-detail { margin-top: 18px; background: var(--paper-2); border: 1px solid var(--ink); padding: 22px 26px; scroll-margin-top: 90px; }
 .dd-head { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; padding-bottom: 12px; border-bottom: 2px solid var(--rosso); margin-bottom: 6px; }
 .dd-date { font-family: var(--serif); font-style: italic; font-size: 30px; line-height: 1; color: var(--rosso); }
@@ -1142,6 +1144,7 @@ body {
   .footer { margin-top: 36px; padding-top: 18px; font-size: 10px; flex-wrap: wrap; gap: 10px; }
 }
 @media screen and (max-width: 600px) {
+  .day-card { scroll-margin-top: 12px; }
   body { padding: 16px 12px; }
   .hero-title { font-size: 38px; }
   .hero-meta { grid-template-columns: 1fr; gap: 12px; }
@@ -3160,10 +3163,20 @@ body {
       const TYPE = { anchor: 'Anchor', plan: 'Plan', option: 'Option' };
       const esc2 = t => String(t).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
       let open = null;
+      // Phones (one card per row): open the panel right under the tapped day. Wider layouts keep it under the grid.
+      const grid = document.querySelector('.day-grid');
+      const inline = window.matchMedia('screen and (max-width: 600px)');
+      function place() {
+        if (inline.matches && open) cards[open - 1].after(panel);
+        else if (panel.previousElementSibling !== grid) grid.after(panel);
+      }
+      inline.addEventListener('change', place);
+      window.addEventListener('beforeprint', () => { if (panel.previousElementSibling !== grid) grid.after(panel); });
+      window.addEventListener('afterprint', place);
       function show(n, scroll) {
         open = n;
         cards.forEach(c => { const on = +c.dataset.day === n; c.classList.toggle('open', on); c.setAttribute('aria-expanded', on); });
-        if (!n) { panel.hidden = true; panel.innerHTML = ''; return; }
+        if (!n) { panel.hidden = true; panel.innerHTML = ''; place(); return; }
         const card = cards[n - 1];
         const date = card.querySelector('.day-date').firstChild.textContent.trim();
         const title = card.querySelector('.dow').textContent;
@@ -3182,14 +3195,16 @@ body {
             `<span class="dd-what">${esc2(r.what)}${r.about ? `<span class="dd-about">${esc2(r.about)}</span>` : ''}</span>` +
             `<span class="dd-type">${TYPE[r.type]}</span></li>`).join('') + `</ol>`;
         panel.hidden = false;
-        if (scroll) panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        place();
+        if (inline.matches && scroll !== false) card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        else if (scroll) panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
       cards.forEach(c => {
         const go = () => show(open === +c.dataset.day ? 0 : +c.dataset.day, true);
         c.addEventListener('click', go);
         c.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } });
       });
-      panel.addEventListener('click', e => { const b = e.target.closest('[data-dd]'); if (b) show(+b.dataset.dd, false); });
+      panel.addEventListener('click', e => { const b = e.target.closest('[data-dd]'); if (b) show(+b.dataset.dd, inline.matches ? true : false); });
     })();
   })();
 </script>
