@@ -82,7 +82,7 @@ Target-action dates are planning triggers, not official release dates, unless th
 | 5 | Fattoria Torre a Cona (winery) | Jul 4, late afternoon | med | Recommended lead time | Contact/monitor by Apr 1, 2027; confirm Sunday tasting hours; secure a late-afternoon tasting by early May. Taxi out and back (book the return) |
 | 6 | Uffizi Gallery (morning) | Jul 3 | med | Official — required, no window | Monitor from Apr 15, 2027; buy the Jul 3 morning slot as soon as it appears |
 | 7 | Galleria dell'Accademia (late afternoon) | Jul 3 | med | Official — required, no window | Monitor from Apr 15, 2027; buy the Jul 3 ~4 PM slot as soon as it appears |
-| 8 | Brunelleschi Dome / Pass | Jul 3, early afternoon | med | Official — required, no window | Check Apr 15–May 1, 2027; buy once the Jul 3 plan is safe. Dome climb is closed Sundays. **Non-refundable / non-changeable** |
+| 8 | Brunelleschi Dome / Pass | Jul 3, early afternoon | med | Official — required, no window | Check Apr 15–May 1, 2027; buy once the Jul 3 plan is safe. Sunday access is afternoon-only (currently 12:45–4:30 PM) and would clash with the winery. **Non-refundable / non-changeable** |
 | 9 | Vini e Vecchi Sapori (dinner) | Jul 2, ~9:30 PM | med | Recommended lead time | Reserve ~1 month ahead (early Jun 2027) — tiny room; late table after the Piazzale sunset |
 | 10 | Il Vezzo (dinner) | Jul 3 | med | Recommended lead time | Reserve ~1 month ahead (early Jun 2027) — tiny room |
 | 11 | La Buchetta (dinner) | Jul 4 | med | Recommended lead time | Reserve ~1 month ahead (early Jun 2027) — evening after the winery |
@@ -93,7 +93,7 @@ Target-action dates are planning triggers, not official release dates, unless th
 | 16 | Train Rome → Salerno | Jul 10 | med | Recommended lead time | Check Mar–Apr 2027; book when the schedule opens |
 | 17 | Private car Amalfi → Pompeii | Jul 13 | med | Recommended lead time | Quotes Feb–Mar 2027; book Apr–May once Pompeii timing is set |
 | 18 | Pompeii Archaeological Park | Jul 13 | med | Official — required, no window | Monitor from May 2027; buy by early June or as soon as Jul 13 appears |
-| 19 | Ristorante del Fagioli (lunch) | Jul 2, ~1 PM | low | Recommended lead time | Reserve ~1 month ahead (early Jun 2027); confirm Friday lunch hours — closed weekends. Arrival day, so keep it movable to dinner |
+| 19 | Ristorante del Fagioli (lunch) | Jul 2, late lunch (time TBD) | low | Recommended lead time | Reserve ~1 month ahead (early Jun 2027); ask for their latest lunch slot and don't lock a time until the Florence arrival time is known; closed weekends. Arrival day, so keep it movable to dinner |
 | 20 | Ferry Salerno → Amalfi | Jul 10 | low | Recommended lead time | Check the 2027 summer timetable in spring; buy once the train is locked. Keep the road fallback |
 | 21 | Via Appia e-bike | Jul 9 | low | Recommended lead time | Pick an operator by early June; book by mid-June |
 | 22 | Private car Soul Art Hotel → NAP | Jul 14 | low | Recommended lead time | Prearrange the 5:30 AM pickup; reconfirm the night of Jul 13 |
@@ -115,9 +115,9 @@ Book only if chosen. Listed in Eat & do; their rules sit under the Bookings time
 All days are `WORKING_PLAN` (not booked) except flights and lodging.
 
 - **Thu Jul 1 — Depart Raleigh.** RDU 6:10 PM → CDG. No sightseeing.
-- **Fri Jul 2 — Arrive Florence · the south bank.** CDG 10:20 AM → Florence. Lunch at Ristorante del Fagioli (weekdays only). Apartment check-in after 2 PM. Ponte Vecchio, an early glass at Le Volpi e l'Uva, Oltrarno wander, San Miniato al Monte, sunset at Piazzale Michelangelo. Late dinner at Vini e Vecchi Sapori. Fatigue fallback: taxi or bus up the hill, walk down.
-- **Sat Jul 3 — The center, full day.** Breakfast at Antico Forno Sartoni. Uffizi first thing (~8:15 AM). Santa Croce late morning. Lunch: Sergio Pollini Lampredotto (must), option Mercato di Sant'Ambrogio; dessert at Pasticceria Nencioni. Brunelleschi Dome early afternoon; Pegna dal 1860 on the way to the Accademia ~4 PM. Evening: Piazza della Signoria on our doorstep; dinner at Il Vezzo.
-- **Sun Jul 4 — Center leftovers + Torre a Cona.** Breakfast at Forno Ghibellina. Morning: Palazzo Vecchio; Baptistery and Giotto's bell tower if time. Lunch at Alimentari Calimaruzza (options: Da' Vinattieri, I Guelfi). Early afternoon: taxi to Fattoria Torre a Cona (~30–40 min). Late afternoon: wine tasting / estate experience. Evening: taxi back; dinner at La Buchetta, gelato at Vivoli. The Dome cannot be Sunday.
+- **Fri Jul 2 — Arrive Florence · the south bank.** CDG 10:20 AM → Florence. Lunch at Ristorante del Fagioli (weekdays only). Apartment check-in after 2 PM. Ponte Vecchio, an early glass at Le Volpi e l'Uva, Oltrarno wander, San Miniato al Monte for 6:30 PM vespers, sunset at Piazzale Michelangelo. Late dinner at Vini e Vecchi Sapori. Fatigue fallback: taxi or bus up the hill, walk down.
+- **Sat Jul 3 — The center, full day.** Breakfast at Antico Forno Sartoni. Uffizi first thing (~8:15 AM, allow 2½–3 h). Santa Croce only if the Uffizi doesn't run long. Protected: Uffizi → lampredotto → Dome → Accademia. Lunch: Sergio Pollini Lampredotto (must), option Mercato di Sant'Ambrogio; dessert at Pasticceria Nencioni. Brunelleschi Dome early afternoon; Pegna dal 1860 on the way to the Accademia ~4 PM. Evening: Piazza della Signoria on our doorstep; dinner at Il Vezzo.
+- **Sun Jul 4 — Center leftovers + Torre a Cona.** Breakfast at Forno Ghibellina. Morning: Palazzo Vecchio; optional Baptistery before lunch (closes 1:30 PM on first Sundays). No bell-tower climb. Lunch at Alimentari Calimaruzza (options: Da' Vinattieri, I Guelfi). Early afternoon: taxi to Fattoria Torre a Cona (~30–40 min). Late afternoon: wine tasting / estate experience. Evening: taxi back; dinner at La Buchetta, gelato at Vivoli. Dome stays Saturday: Sunday access is afternoon-only and would clash with the winery.
 - **Mon Jul 5 — Florence → Rome / historic center.** Checkout by 10 AM. Train SMN → Termini. Check in Palazzo Talìa. Trevi Fountain, Sant'Ignazio, Pantheon interior, San Luigi dei Francesi, Piazza Navona, central wandering. Optional if energy remains: Campo de' Fiori, Via dei Banchi Vecchi, Supplizio, Il Goccetto, Tiber. No other major ticketed site.
 - **Tue Jul 6 — Vatican / Tiber / Janiculum / Trastevere.** Vatican Museums, Sistine Chapel, St. Peter's Basilica + Square. Walk to Castel Sant'Angelo / Ponte Sant'Angelo. Hotel rest. Taxi to the Janiculum for sunset. Descend into Trastevere for dinner. Pizzarium / Paciotti only if they fit naturally.
 - **Wed Jul 7 — Ancient Rome / Jewish Ghetto.** Early breakfast. Colosseum, Roman Forum, Palatine. Via di Monte Tarpeo viewpoint. Campidoglio. Teatro di Marcello → Portico d'Ottavia / Ghetto. Boccione and/or Piperno. Quiet evening.
@@ -138,28 +138,29 @@ Each day in order. **Type:** `anchor` = booked with a fixed time (flights, check
 | 2 | 7:55 AM | anchor | Land at Paris CDG | Connect to the Florence flight |
 | 2 | 10:20 AM | anchor | Flight CDG → Florence | Delta 8483 · arrival time not on the booking |
 | 2 | On arrival | plan | T2 tram into the center | Tram from Peretola airport toward Santa Maria Novella, then walk to the apartment |
-| 2 | ~1 PM | plan | Lunch · Ristorante del Fagioli | Old-school rustic trattoria by Santa Croce — ribollita, beans, hearty meat · closed weekends (recheck 2027), so arrival day is the one slot · ask the hosts about an early bag drop · if the flight runs late, swap it with tonight's dinner · still to book |
+| 2 | Late lunch | plan | Lunch · Ristorante del Fagioli | Old-school rustic trattoria by Santa Croce — ribollita, beans, hearty meat · closed weekends (recheck 2027), so arrival day is the one slot · take their latest lunch slot; set the time once the arrival time is known · ask the hosts about an early bag drop · if the flight runs late, swap it with tonight's dinner · still to book |
 | 2 | After 2 PM | anchor | Check in · Piazza Signoria n.1 | Our apartment on Florence's main square |
 | 2 | Afternoon | plan | Ponte Vecchio | Medieval bridge lined with goldsmiths' shops, a few minutes' walk from the apartment |
-| 2 | ~5 PM | plan | Le Volpi e l'Uva | Tiny wine bar just over Ponte Vecchio; small producers by the glass — an early first glass |
-| 2 | Early evening | plan | Oltrarno wander | "Beyond the Arno": the artisan south bank — Santo Spirito, workshop lanes, gelato at Sbrino |
-| 2 | ~7 PM | plan | San Miniato al Monte | Romanesque hilltop church with a gold-mosaic apse; the monks sing vespers in the late afternoon (check 2027 time) · ~25 min uphill, or taxi/bus up |
+| 2 | ~4:30 PM | plan | Le Volpi e l'Uva | Tiny wine bar just over Ponte Vecchio; small producers by the glass — an early first glass |
+| 2 | ~5:15 PM | plan | Oltrarno wander | "Beyond the Arno": the artisan south bank — Santo Spirito, workshop lanes, gelato at Sbrino |
+| 2 | ~6:15 PM | plan | San Miniato al Monte | Romanesque hilltop church with a gold-mosaic apse · ~25 min uphill, or taxi/bus up |
+| 2 | 6:30 PM | plan | Vespers at San Miniato | The monks sing vespers daily in Latin and Gregorian chant (recheck 2027 time); linger for the view after |
 | 2 | Sunset ~8:50 PM | plan | Piazzale Michelangelo | The classic panorama over the Duomo and the river, just below San Miniato; walk down through San Niccolò |
 | 2 | ~9:30 PM | plan | Vini e Vecchi Sapori | Tiny osteria by the apartment with a handwritten menu — duck pappardelle, peposo stew · still to book |
 | 3 | ~7:45 AM | plan | Breakfast · Antico Forno Sartoni | Neighborhood bakery, the closest to the apartment — pastry and coffee before the Uffizi |
-| 3 | ~8:15 AM | plan | Uffizi Gallery | Florence's great Renaissance art museum — Botticelli's Birth of Venus, Leonardo, Raphael; aim for the first slot |
-| 3 | Late morning | plan | Santa Croce | Franciscan basilica with the tombs of Michelangelo and Galileo and Giotto frescoes · 10 min east of the Uffizi |
+| 3 | ~8:15 AM | plan | Uffizi Gallery | Florence's great Renaissance art museum — Botticelli's Birth of Venus, Leonardo, Raphael; aim for the first slot · allow 2½–3 hours, don't rush it |
+| 3 | Late morning | option | Santa Croce | Franciscan basilica with the tombs of Michelangelo and Galileo and Giotto frescoes · 10 min east of the Uffizi · skip if the Uffizi runs long — don't rush lunch to keep it |
 | 3 | Lunch | plan | Sergio Pollini Lampredotto | Must · no-frills stand by Sant'Ambrogio for Florence's lampredotto sandwich (slow-cooked tripe), with green sauce and the roll dipped in broth |
 | 3 | Lunch | option | Mercato di Sant'Ambrogio | 19th-century neighborhood market right beside the lampredotto stand — browse the stalls; mornings only, closed Sundays |
 | 3 | After lunch | plan | Pasticceria Nencioni | Historic pastry shop by Sant'Ambrogio market, a few steps from Pollini — dessert and coffee |
-| 3 | Early afternoon | plan | Brunelleschi's Dome climb | 463 steps up inside the cathedral dome to the lantern; timed, non-refundable ticket · closed Sundays, so it must be today |
+| 3 | Early afternoon | plan | Brunelleschi's Dome climb | 463 steps up inside the cathedral dome to the lantern; timed, non-refundable ticket · Sunday afternoon access would conflict with the winery, so Saturday is the preferred day |
 | 3 | On the way | plan | Pegna dal 1860 | Historic specialty grocer just off Piazza del Duomo — cheese, salumi, pantry goods; on the walk from the Dome to the Accademia |
 | 3 | ~4 PM | plan | Galleria dell'Accademia | Small museum built around Michelangelo's David · 5 min north of the Duomo |
 | 3 | Evening | plan | Piazza della Signoria | Our doorstep: the civic square and its open-air statue gallery, at its best after the crowds thin |
 | 3 | Dinner | plan | Il Vezzo | Tiny, refined modern Tuscan — bistecca and seasonal plates · still to book |
 | 4 | Breakfast | plan | Forno Ghibellina | Bakery café toward Santa Croce · check Sunday hours |
 | 4 | Morning | plan | Palazzo Vecchio | The town-hall fortress on our square — the frescoed Hall of the Five Hundred, plus a tower climb |
-| 4 | If time | option | Baptistery & Giotto's bell tower | Bronze "Gates of Paradise" doors and the striped bell tower beside the Duomo; included in the Brunelleschi Pass (recheck for 2027) |
+| 4 | Before lunch | option | Baptistery | The octagonal baptistery with bronze "Gates of Paradise" doors and a mosaic ceiling; on the Brunelleschi Pass · Jul 4 is the first Sunday of the month, when it currently closes at 1:30 PM |
 | 4 | Midday | plan | Lunch · Alimentari Calimaruzza | Tiny old-style food shop right by the apartment — a panino to eat there or take away · check Sunday hours |
 | 4 | Midday | option | Da' Vinattieri | Hole-in-the-wall sandwich counter — porchetta, and coccoli with prosciutto and stracchino |
 | 4 | Midday | option | I Guelfi Tuscany Food | Made-to-order schiacciata (Tuscan flatbread) sandwiches near the apartment |
@@ -237,7 +238,7 @@ Each day in order. **Type:** `anchor` = booked with a fixed time (flights, check
 | 14 | 8:25 PM | anchor | Flight Atlanta → Raleigh-Durham | DL2017 · home 9:49 PM |
 
 ## Sub-trips (one tab: "Sub-trips")
-1. **Torre a Cona wine afternoon — Sun Jul 4.** Morning stays in Florence (Palazzo Vecchio). Early afternoon taxi out (~30–40 min) for a late-afternoon tasting at Fattoria Torre a Cona (Sangiovese-focused, Chianti Colli Fiorentini, Vin Santo; historic villa + vineyards); taxi back, booked before the tasting. Confirm Sunday tasting hours. The Dome is Jul 3 (the climb is closed Sundays).
+1. **Torre a Cona wine afternoon — Sun Jul 4.** Morning stays in Florence (Palazzo Vecchio). Early afternoon taxi out (~30–40 min) for a late-afternoon tasting at Fattoria Torre a Cona (Sangiovese-focused, Chianti Colli Fiorentini, Vin Santo; historic villa + vineyards); taxi back, booked before the tasting. Confirm Sunday tasting hours. The Dome is Jul 3: Sunday access is afternoon-only (currently 12:45–4:30 PM) and would clash with the tasting.
 2. **Amalfi Coast swap pair — Jul 11 & 12.** Boat day (primary Jul 11 — the coast from the water: Fiordo di Furore, coves, swimming, Positano) and upper-Furore winery + Ravello (primary Jul 12 — the coast from above) must be able to swap if sea conditions threaten the boat. Jul 13 is **not** a third backup (Pompeii + Naples before the flight).
    - Boat operator criteria: Amalfi pickup · small private boat (not a big yacht) · ~6–8 useful hours · flexible swim stops · Positano stop · lunch coordination · explicit weather cancel/refund terms · willing to move Jul 11 → 12 if the captain calls it.
    - Emerald Grotto only if it fits the boat route naturally. Fiordo di Furore is seen from the water on the boat day.
@@ -352,7 +353,7 @@ The **Do** column (right) of each city in the Eat & do tab. Sights, tours and wi
 - **Oltrarno** — Jul 2 · artisan workshop quarter across the river; evening wandering
 - **Piazzale Michelangelo** — Jul 2 sunset · the classic panorama over the city, best near sunset
 - **San Miniato al Monte** — Jul 2 · Romanesque hilltop church just above Piazzale Michelangelo
-- **Santa Croce** — Jul 3 · Franciscan basilica with the tombs of Michelangelo and Galileo
+- **Santa Croce** — Jul 3, optional (if the Uffizi doesn't run long) · Franciscan basilica with the tombs of Michelangelo and Galileo
 - **Fattoria Torre a Cona** — Jul 4 · late-afternoon tasting at a villa winery outside Florence; taxi out and back (sub-trip)
 
 ### Rome
@@ -411,7 +412,7 @@ Pins for the Maps tab. **Coordinates are approximate** — taken from the planne
 | florence | do | Piazza Santo Spirito | Oltrarno – Santo Spirito | 43.7665 | 11.2475 | 2 | ok | Heart of the Oltrarno; evening wandering | planned |
 | florence | do | Piazzale Michelangelo | San Niccolò hills | 43.7629 | 11.2650 | 2 | ok | Classic city panorama at sunset | planned |
 | florence | do | San Miniato al Monte | San Niccolò hills | 43.7596 | 11.2650 | 2 | ok | Romanesque hilltop church | planned |
-| florence | do | Santa Croce | Santa Croce | 43.7686 | 11.2622 | 3 | ok | Basilica with Michelangelo's and Galileo's tombs | planned |
+| florence | do | Santa Croce | Santa Croce | 43.7686 | 11.2622 | | ok | Basilica with Michelangelo's and Galileo's tombs | open |
 | florence | do | Fattoria Torre a Cona | Hills SE of Florence | 43.7036 | 11.3714 | 4 | approx | Villa winery; late-afternoon tasting (sub-trip) | planned |
 | florence | eat | Vini e Vecchi Sapori | Centro Storico | 43.7703 | 11.2568 | 2 | approx | Tiny osteria, handwritten menu | planned |
 | florence | eat | Ristorante del Fagioli | Santa Croce | 43.7671 | 11.2602 | 2 | approx | Old-school rustic trattoria | planned |
