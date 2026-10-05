@@ -76,7 +76,7 @@ Target-action dates are planning triggers, not official release dates, unless th
 | # | Item | Visit date | Urgency | Rule type | Target action |
 |---|---|---|---|---|---|
 | 1 | Private Amalfi Coast boat | Jul 11 (backup Jul 12) | high | Recommended lead time | Shortlist operators Jan–Feb 2027; book Mar–Apr with explicit Jul 11↔12 weather flexibility |
-| 2 | Cantine Marisa Cuomo (winery visit) | Jul 12 (swap-able) | high | Official — required, no window | Request Mar–Apr 2027; ask if it can move Jul 12↔11 on 24–48 h notice |
+| 2 | Cantine Marisa Cuomo (winery visit) | Jul 12, 9:00 AM preferred (swap-able) | high | Official — required, no window | Request the 9:00 AM visit Mar–Apr 2027; ask if it can move Jul 12↔11 on 24–48 h notice |
 | 3 | Colosseum / Forum / Palatine | Jul 7 | high | **Official fixed window** — sales open 30 days before | **HARD TRIGGER Jun 7, 2027** |
 | 4 | Villa Medici guided tour (English) | Jul 8 | high | Official rolling — ~1 month ahead | Book ~Jun 8, 2027 on release. **Non-refundable / non-changeable** |
 | 5 | Fattoria Torre a Cona (winery) | Jul 4 | med | Recommended lead time | Contact/monitor by Apr 1, 2027; secure by early May if selected |
@@ -99,7 +99,7 @@ Counts: **high 4 · med 11 · low 3 = 18.**
 ### Optional reservations — not in the still-to-book count
 Book only if chosen. Listed in Eat & do; their rules sit under the Bookings timeline.
 - **Armando al Pantheon** — reservations open daily for the next 30 days at midnight (Rome time); tiny inventory. Reminder = meal date − 30 days, 00:00.
-- **Baglio Amalfi** (optional Jul 12 dinner) — very limited tables, €40 pp deposit, cancel up to 48 h before (€10 pp fee kept). No pedestrian route from Amalfi; arrange transport. Skip if the winery is already a big meal. Request Apr–May 2027.
+- **Baglio Amalfi** (optional Jul 12 dinner) — very limited tables, €40 pp deposit, cancel up to 48 h before (€10 pp fee kept). No pedestrian route from Amalfi; arrange transport. Optional depending on appetite and timing after Ravello. Request Apr–May 2027.
 - **Sensi Amalfi** (optional Jul 10/11/12) — dinner is the full tasting format; lunch is a lighter bistrot. Book 30–60 days ahead if chosen.
 
 ## Booking pulse (Overview) — must equal the Bookings tab
@@ -120,8 +120,8 @@ All days are `WORKING_PLAN` (not booked) except flights and lodging.
 - **Thu Jul 8 — Borghese / Pincio / Popolo / Villa Medici.** Galleria Borghese, Villa Borghese, Pincio, Piazza del Popolo, Santa Maria del Popolo. Lunch / break. Villa Medici guided visit (good English slot). Palazzo Zuccari (House of Monsters). Spanish Steps. Excellent dinner + wine.
 - **Fri Jul 9 — San Clemente / Appian Way / Testaccio / Aventine.** Basilica di San Clemente. Via Appia Antica e-bike ~2–2.5 h; catacomb optional. Mercato di Testaccio (Mordi e Vai / CasaManco as appetite allows). Volpetti. Aventine, Orange Garden, Santa Sabina if convenient, Knights of Malta Keyhole. Hotel rest. Pizzeria Ostiense. No other major site.
 - **Sat Jul 10 — Rome → Amalfi / Amalfi + Atrani.** Train to Salerno, ferry to Amalfi (road fallback). Check in Abbraccio. Amalfi Cathedral, town, waterfront. Beach or hotel downtime. Walk to Atrani. Easy dinner. Delizia al limone.
-- **Sun Jul 11 — Private boat day (primary; weather swap with Jul 12).** Pickup in Amalfi. Coast cruise, swimming, coves. Positano stop ~2–4 h. Lunch serves the boat day (Da Adolfo / Laurito only if easy; Lo Guarracino as a Positano sit-down). Back late afternoon. Easy dinner: local fish + coastal white.
-- **Mon Jul 12 — Furore winery + Ravello (swap with Jul 11).** Marisa Cuomo morning (standard visits 9:00 and 10:00 by reservation). Tasting / lunch per package. Ravello afternoon: Villa Cimbrone / Terrace of Infinity (protected); Villa Rufolo if time allows. Baglio dinner only if the winery isn't already a big meal.
+- **Sun Jul 11 — Private boat day (primary; weather swap with Jul 12). The coast from the water.** Pickup in Amalfi. Morning cruise west: Fiordo di Furore seen from the water, coves, caves and swim stops. Positano ashore ~2–4 h, with Lo Guarracino as a possible lunch there. Alternative: lunch at Da Adolfo on Laurito Beach — a separate beach-restaurant experience reached by boat, not part of the Positano town stop. Back to Amalfi by sea in the late afternoon. Easy, flexible dinner.
+- **Mon Jul 12 — Upper Furore winery + Ravello (swap with Jul 11). The coast from above.** Cantine Marisa Cuomo, 9:00 AM visit preferred (visit and tasting; not a meal). Bus back toward Amalfi, then connect to Ravello. Ravello afternoon: Villa Cimbrone + Terrace of Infinity (main activity); Villa Rufolo optional if time and energy allow. Baglio dinner optional depending on appetite and timing after Ravello.
 - **Tue Jul 13 — Amalfi → Pompeii → Naples.** Checkout. Private car to Pompeii; bags into Pompeii luggage storage. Pompeii ~3–4+ h. Collect bags → Circumvesuviana to Napoli Garibaldi → Metro Line 1 to Toledo → Soul Art Hotel. Evening: Piazza del Plebiscito, Santa Lucia / Castel dell'Ovo / waterfront if America's Cup crowds allow. Pizza at Starita (walk-in, no reservations). If time is tight, protect the pizza and one good walk.
 - **Wed Jul 14 — Fly home.** 5:30 AM private car from Soul Art Hotel. NAP 9:05 AM → ATL 2:31 PM → RDU 9:49 PM. Recheck Cup road closures and airport guidance.
 
@@ -191,15 +191,17 @@ Each day in order. **Type:** `anchor` = booked with a fixed time (flights, check
 | 10 | Afternoon | plan | Beach or hotel downtime |  |
 | 10 | Evening | plan | Walk to Atrani; easy dinner | Tiny fishing village next door · try delizia al limone (lemon-cream cake) |
 | 11 | Morning | plan | Private boat from Amalfi | Small boat with a local skipper · may swap with Jul 12 if the sea is rough |
+| 11 | Morning | plan | Fiordo di Furore from the water | A narrow sea inlet under a road bridge, seen from the boat |
 | 11 | Morning | plan | Coves, caves and swim stops | Cruising west under the cliffs; Emerald Grotto only if it's on the way |
-| 11 | Midday | plan | Positano ashore (2–4 h) | The pastel cliff town · lunch at Da Adolfo (Laurito beach) or Lo Guarracino |
+| 11 | Midday | plan | Positano ashore (2–4 h) | The pastel cliff town · Lo Guarracino is a possible lunch here |
+| 11 | Lunch | option | Da Adolfo, Laurito Beach (alternative) | A separate beach-restaurant lunch reached by boat — instead of eating in Positano town, not part of the town stop |
 | 11 | Late afternoon | plan | Back to Amalfi by sea |  |
-| 11 | Evening | plan | Easy dinner: local fish and a coastal white |  |
-| 12 | 9 or 10 AM | plan | Cantine Marisa Cuomo, Furore | Winery with vineyards on cliff terraces · visits at 9:00 or 10:00 by reservation · may swap with Jul 11 |
-| 12 | Late morning | plan | Fiordo di Furore | A narrow sea inlet under a road bridge |
-| 12 | Afternoon | plan | Ravello · Villa Cimbrone | Hilltop town; gardens ending at the Terrace of Infinity |
-| 12 | If time | option | Villa Rufolo | Medieval tower and terraced gardens in Ravello |
-| 12 | Evening | option | Baglio dinner | Only if the winery wasn't a big meal |
+| 11 | Evening | plan | Easy, flexible dinner | e.g. local fish and a coastal white |
+| 12 | 9:00 AM | plan | Cantine Marisa Cuomo, upper Furore | Winery with vineyards on cliff terraces · visit and tasting, 9:00 preferred · may swap with Jul 11 |
+| 12 | Late morning | plan | Bus back toward Amalfi, then on to Ravello | Down the coast road toward Amalfi, then connect to the Ravello bus up the hill |
+| 12 | Afternoon | plan | Ravello · Villa Cimbrone + Terrace of Infinity | Main activity: hilltop gardens ending at a balcony of statues over the sea |
+| 12 | If time | option | Villa Rufolo | Medieval tower and terraced gardens in Ravello — if time and energy allow |
+| 12 | Evening | option | Baglio dinner | Optional depending on appetite and timing after Ravello |
 | 13 | Morning | plan | Check out; private car to Pompeii |  |
 | 13 | Late morning | plan | Bags into Pompeii luggage storage | Bags over 30 × 30 × 15 cm can't go inside the site |
 | 13 | Midday | plan | Pompeii (3–4+ h) | Roman town buried by Vesuvius in AD 79 — streets, houses, frescoes |
@@ -214,9 +216,10 @@ Each day in order. **Type:** `anchor` = booked with a fixed time (flights, check
 
 ## Sub-trips (one tab: "Sub-trips")
 1. **Tuscany wine country — Sun Jul 4.** Fattoria Torre a Cona (candidate). Sangiovese-focused, Chianti Colli Fiorentini, Vin Santo; historic villa + vineyards. Osteria serves à la carte Sat/Sun in the July season. Sunday bus service is weak → taxi, arranged transfer or private driver. Booking a Sunday visit moves the Dome to Jul 2 or 3.
-2. **Amalfi Coast swap pair — Jul 11 & 12.** Boat day (primary Jul 11) and Furore + Ravello (primary Jul 12) must be able to swap if sea conditions threaten the boat. Jul 13 is **not** a third backup (Pompeii + Naples before the flight).
+2. **Amalfi Coast swap pair — Jul 11 & 12.** Boat day (primary Jul 11 — the coast from the water: Fiordo di Furore, coves, swimming, Positano) and upper-Furore winery + Ravello (primary Jul 12 — the coast from above) must be able to swap if sea conditions threaten the boat. Jul 13 is **not** a third backup (Pompeii + Naples before the flight).
    - Boat operator criteria: Amalfi pickup · small private boat (not a big yacht) · ~6–8 useful hours · flexible swim stops · Positano stop · lunch coordination · explicit weather cancel/refund terms · willing to move Jul 11 → 12 if the captain calls it.
-   - Emerald Grotto only if it fits the boat route naturally.
+   - Emerald Grotto only if it fits the boat route naturally. Fiordo di Furore is seen from the water on the boat day.
+   - Winery day route: Marisa Cuomo 9:00 AM → bus back toward Amalfi → connect to Ravello.
 3. **Pompeii → Naples — Tue Jul 13 → Wed Jul 14.** Pompeii as a major transfer-day experience (no Vesuvius). Nominative timed-entry tickets; 20,000/day cap; bags over 30 × 30 × 15 cm not allowed inside (storage exists — recheck 2027). Naples evening: atmosphere over checklist; no formal museum.
 
 ### Naples — confirmed plan
@@ -308,8 +311,8 @@ The **Eat** column (left) of each city in the Eat & do tab. Restaurants, cafés,
 **Tables**
 - **Baglio Amalfi** — very few tables; deposit; car needed (optional)
 - **Sensi Amalfi** — tasting-menu dinner or lighter bistro lunch (optional)
-- **Da Adolfo, Laurito** — boat-day beach lunch, if the boat can stop
-- **Lo Guarracino, Positano** — sit-down lunch in Positano on the boat day
+- **Da Adolfo, Laurito Beach** — alternative boat-day lunch: a separate beach restaurant reached by boat, not part of the Positano town stop
+- **Lo Guarracino, Positano** — possible sit-down lunch during the Positano stop
 
 **Try on the coast:** scialatielli ai frutti di mare (thick fresh pasta with seafood) · spaghetti with colatura di Cetara (anchovy essence) · whole local fish · delizia al limone (lemon-cream sponge cake) · one local bonus: totani e patate (squid + potatoes) · sfogliatella Santa Rosa (ricotta pastry) · 'ndunderi (ricotta gnocchi) · sarchiapone (stuffed gourd, Atrani)
 
@@ -357,14 +360,14 @@ The **Do** column (right) of each city in the Eat & do tab. Sights, tours and wi
 
 ### Amalfi Coast
 - ★ **Private boat + Positano** — Jul 11 (swap) · coast from the water, swim stops in coves, 2–4 h ashore in Positano
-- ★ **Cantine Marisa Cuomo + Furore** — Jul 12 (swap) · winery visit among cliff-side vineyard terraces in Furore
+- ★ **Cantine Marisa Cuomo, upper Furore** — Jul 12 (swap) · 9:00 AM visit and tasting among cliff-side vineyard terraces
 - **Tenuta San Francesco** — Tramonti winery; second tasting only if the coast stays relaxed (optional)
 - ★ **Ravello · Villa Cimbrone** — gardens high above the sea; the Terrace of Infinity viewpoint
 - **Villa Rufolo** — Ravello's other villa: medieval tower, terraced gardens (optional)
 - **Amalfi Cathedral** — striped Arab-Norman cathedral at the top of a grand staircase
 - **Atrani** — tiny fishing village one short walk from Amalfi; small beach
 - **Beach + swim time** — unplanned hours on Amalfi or Atrani beach
-- **Fiordo di Furore** — dramatic narrow inlet under a road bridge; photo stop
+- **Fiordo di Furore** — Jul 11 (swap) · dramatic narrow inlet under a road bridge, seen from the water on the boat day
 - **Emerald Grotto** — sea cave with green-lit water (optional; only if on the boat route)
 - **Valle delle Ferriere** — shaded hike up a green valley behind Amalfi (optional)
 
@@ -473,15 +476,15 @@ Pins for the Maps tab. **Coordinates are approximate** — taken from the planne
 | amalfi | do | Atrani | Atrani | 40.6360 | 14.6090 | 10 | ok | Tiny fishing village next door | planned |
 | amalfi | do | Positano (boat stop) | Positano | 40.6281 | 14.4850 | 11 | ok | Boat-day stop, 2–4 hours ashore | planned |
 | amalfi | do | Emerald Grotto | Conca dei Marini | 40.6150 | 14.5720 | 11 | approx | Green-lit sea cave (optional) | planned |
-| amalfi | do | Cantine Marisa Cuomo | Furore | 40.6200 | 14.5490 | 12 | approx | Cliff-terrace winery | planned |
-| amalfi | do | Fiordo di Furore | Furore | 40.6188 | 14.5545 | 12 | ok | Narrow sea inlet under a bridge | planned |
+| amalfi | do | Cantine Marisa Cuomo | Furore | 40.6200 | 14.5490 | 12 | approx | Cliff-terrace winery; 9:00 AM visit | planned |
+| amalfi | do | Fiordo di Furore | Furore | 40.6188 | 14.5545 | 11 | ok | Sea inlet under a bridge, seen from the boat | planned |
 | amalfi | do | Villa Cimbrone | Ravello | 40.6440 | 14.6110 | 12 | ok | Gardens; Terrace of Infinity | planned |
 | amalfi | do | Villa Rufolo | Ravello | 40.6490 | 14.6118 | 12 | ok | Medieval tower, terraced gardens | planned |
 | amalfi | do | Valle delle Ferriere | Scala | 40.6440 | 14.5960 | | approx | Shaded valley hike (optional) | open |
 | amalfi | do | Tenuta San Francesco | Tramonti | 40.6920 | 14.6380 | | approx | Second winery (optional) | open |
 | amalfi | eat | Sensi Amalfi | Amalfi | 40.6348 | 14.6025 | | approx | Tasting menu or bistro lunch | open |
-| amalfi | eat | Da Adolfo | Positano | 40.6232 | 14.4990 | 11 | approx | Boat-day beach lunch at Laurito | planned |
-| amalfi | eat | Lo Guarracino | Positano | 40.6268 | 14.4882 | 11 | approx | Positano sit-down lunch | planned |
+| amalfi | eat | Da Adolfo | Positano | 40.6232 | 14.4990 | 11 | approx | Alternative boat-day lunch on Laurito Beach | planned |
+| amalfi | eat | Lo Guarracino | Positano | 40.6268 | 14.4882 | 11 | approx | Possible lunch during the Positano stop | planned |
 | naples | base | Soul Art Hotel | Toledo | 40.8432 | 14.2485 | 13 | approx | Our hotel, near Toledo metro | booked |
 | naples | do | Piazza del Plebiscito | San Ferdinando | 40.8359 | 14.2488 | 13 | ok | Grand square by the Royal Palace | planned |
 | naples | do | Castel dell'Ovo | Santa Lucia | 40.8282 | 14.2477 | 13 | ok | Seafront castle on the bay | planned |
