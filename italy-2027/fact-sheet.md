@@ -111,9 +111,9 @@ Book only if chosen. Listed in Eat & do; their rules sit under the Bookings time
 All days are `WORKING_PLAN` (not booked) except flights and lodging.
 
 - **Thu Jul 1 — Depart Raleigh.** RDU 6:10 PM → CDG. No sightseeing.
-- **Fri Jul 2 — Arrive Florence · the south bank.** CDG 10:20 AM → Florence. Apartment check-in after 2 PM. Ponte Vecchio, an early glass at Le Volpi e l'Uva, Oltrarno wander, San Miniato al Monte, sunset at Piazzale Michelangelo. Late dinner at Vini e Vecchi Sapori. Fatigue fallback: taxi or bus up the hill, walk down.
+- **Fri Jul 2 — Arrive Florence · the south bank.** CDG 10:20 AM → Florence. Lunch at Ristorante del Fagioli (weekdays only). Apartment check-in after 2 PM. Ponte Vecchio, an early glass at Le Volpi e l'Uva, Oltrarno wander, San Miniato al Monte, sunset at Piazzale Michelangelo. Late dinner at Vini e Vecchi Sapori. Fatigue fallback: taxi or bus up the hill, walk down.
 - **Sat Jul 3 — The center, full day.** Uffizi first thing (~8:15 AM). Santa Croce late morning. Lunch: Sergio Pollini Lampredotto (must). Brunelleschi Dome early afternoon. Accademia ~4 PM. Evening: Piazza della Signoria on our doorstep; dinner at Il Vezzo.
-- **Sun Jul 4 — Center leftovers + Torre a Cona.** Morning: Palazzo Vecchio; Baptistery and Giotto's bell tower if time. Easy lunch near the apartment. Early afternoon: taxi to Fattoria Torre a Cona (~30–40 min). Late afternoon: wine tasting / estate experience. Evening: taxi back; easy evening. The Dome cannot be Sunday.
+- **Sun Jul 4 — Center leftovers + Torre a Cona.** Morning: Palazzo Vecchio; Baptistery and Giotto's bell tower if time. Easy lunch near the apartment. Early afternoon: taxi to Fattoria Torre a Cona (~30–40 min). Late afternoon: wine tasting / estate experience. Evening: taxi back; dinner at La Buchetta. The Dome cannot be Sunday.
 - **Mon Jul 5 — Florence → Rome / historic center.** Checkout by 10 AM. Train SMN → Termini. Check in Palazzo Talìa. Trevi Fountain, Sant'Ignazio, Pantheon interior, San Luigi dei Francesi, Piazza Navona, central wandering. Optional if energy remains: Campo de' Fiori, Via dei Banchi Vecchi, Supplizio, Il Goccetto, Tiber. No other major ticketed site.
 - **Tue Jul 6 — Vatican / Tiber / Janiculum / Trastevere.** Vatican Museums, Sistine Chapel, St. Peter's Basilica + Square. Walk to Castel Sant'Angelo / Ponte Sant'Angelo. Hotel rest. Taxi to the Janiculum for sunset. Descend into Trastevere for dinner. Pizzarium / Paciotti only if they fit naturally.
 - **Wed Jul 7 — Ancient Rome / Jewish Ghetto.** Early breakfast. Colosseum, Roman Forum, Palatine. Via di Monte Tarpeo viewpoint. Campidoglio. Teatro di Marcello → Portico d'Ottavia / Ghetto. Boccione and/or Piperno. Quiet evening.
@@ -134,6 +134,7 @@ Each day in order. **Type:** `anchor` = booked with a fixed time (flights, check
 | 2 | 7:55 AM | anchor | Land at Paris CDG | Connect to the Florence flight |
 | 2 | 10:20 AM | anchor | Flight CDG → Florence | Delta 8483 · arrival time not on the booking |
 | 2 | On arrival | plan | T2 tram into the center | Tram from Peretola airport toward Santa Maria Novella, then walk to the apartment |
+| 2 | ~1 PM | plan | Lunch · Ristorante del Fagioli | Old-school rustic trattoria by Santa Croce — ribollita, beans, hearty meat · closed weekends (recheck 2027), so arrival day is the one slot · ask the hosts about an early bag drop · if the flight runs late, swap it with tonight's dinner |
 | 2 | After 2 PM | anchor | Check in · Piazza Signoria n.1 | Our apartment on Florence's main square |
 | 2 | Afternoon | plan | Ponte Vecchio | Medieval bridge lined with goldsmiths' shops, a few minutes' walk from the apartment |
 | 2 | ~5 PM | plan | Le Volpi e l'Uva | Tiny wine bar just over Ponte Vecchio; small producers by the glass — an early first glass |
@@ -153,7 +154,8 @@ Each day in order. **Type:** `anchor` = booked with a fixed time (flights, check
 | 4 | Midday | plan | Easy lunch near the apartment |  |
 | 4 | Early afternoon | plan | Taxi to Fattoria Torre a Cona | About 30–40 min southeast into the hills |
 | 4 | Late afternoon | plan | Fattoria Torre a Cona | Historic villa winery — Chianti Colli Fiorentini, Sangiovese, Vin Santo · wine tasting / estate experience |
-| 4 | Evening | plan | Taxi back to Florence | Book the return before the tasting — Sunday taxis in the hills are scarce · easy evening |
+| 4 | Evening | plan | Taxi back to Florence | Book the return before the tasting — Sunday taxis in the hills are scarce |
+| 4 | Dinner | plan | La Buchetta | Small and lively, near Santa Croce — bistecca, truffle pici, strong wine list · reserve ahead |
 | 5 | By 10 AM | anchor | Check out of the Florence apartment |  |
 | 5 | Morning | plan | Fast train Firenze SMN → Roma Termini | About 1 h 25 on Italo or Frecciarossa |
 | 5 | Arrival | anchor | Check in · Palazzo Talìa | Our hotel between Trevi and the Spanish Steps |
@@ -247,9 +249,9 @@ The **Eat** column (left) of each city in the Eat & do tab. Restaurants, cafés,
 ### Florence (approved list — don't add without asking)
 **Trattorias**
 - **Vini e Vecchi Sapori** — Jul 2 dinner · tiny osteria with a handwritten menu, by the apartment; duck pappardelle, peposo
-- **Ristorante del Fagioli** — old-school rustic trattoria; ribollita, beans, hearty meat
+- **Ristorante del Fagioli** — Jul 2 lunch · old-school rustic trattoria; ribollita, beans, hearty meat
 - **Trattoria La Gratella** — family-run Tuscan; pappardelle al cinghiale; may serve carabaccia
-- **La Buchetta** — lively, small; bistecca, truffle pici, strong wine list
+- **La Buchetta** — Jul 4 dinner · lively, small; bistecca, truffle pici, strong wine list
 - **Il Vezzo** — Jul 3 dinner · tiny, refined modern Tuscan; bistecca, seasonal plates
 
 **Scenic / polished**
@@ -406,9 +408,9 @@ Pins for the Maps tab. **Coordinates are approximate** — taken from the planne
 | florence | do | Santa Croce | Santa Croce | 43.7686 | 11.2622 | 3 | ok | Basilica with Michelangelo's and Galileo's tombs | planned |
 | florence | do | Fattoria Torre a Cona | Hills SE of Florence | 43.7036 | 11.3714 | 4 | approx | Villa winery; late-afternoon tasting (sub-trip) | planned |
 | florence | eat | Vini e Vecchi Sapori | Centro Storico | 43.7703 | 11.2568 | 2 | approx | Tiny osteria, handwritten menu | planned |
-| florence | eat | Ristorante del Fagioli | Santa Croce | 43.7671 | 11.2602 | | approx | Old-school rustic trattoria | open |
+| florence | eat | Ristorante del Fagioli | Santa Croce | 43.7671 | 11.2602 | 2 | approx | Old-school rustic trattoria | planned |
 | florence | eat | Trattoria La Gratella | San Lorenzo | 43.7783 | 11.2508 | | approx | Family-run Tuscan trattoria | open |
-| florence | eat | La Buchetta | Santa Croce | 43.7666 | 11.2590 | | approx | Lively; bistecca and truffle pici | open |
+| florence | eat | La Buchetta | Santa Croce | 43.7666 | 11.2590 | 4 | approx | Lively; bistecca and truffle pici | planned |
 | florence | eat | Golden View Firenze | Oltrarno | 43.7670 | 11.2541 | | approx | Romantic dinner facing Ponte Vecchio | open |
 | florence | eat | COSIMO at The Excelsior | Santa Maria Novella | 43.7726 | 11.2455 | | approx | Upscale rooftop; sunset aperitivo | open |
 | florence | eat | B-Roof, Grand Hotel Baglioni | Santa Maria Novella | 43.7745 | 11.2510 | | approx | Hotel rooftop facing the Duomo | open |
