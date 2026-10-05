@@ -116,8 +116,8 @@ All days are `WORKING_PLAN` (not booked) except flights and lodging.
 
 - **Thu Jul 1 — Depart Raleigh.** RDU 6:10 PM → CDG. No sightseeing.
 - **Fri Jul 2 — Arrive Florence · the south bank.** CDG 10:20 AM → Florence. Lunch at Ristorante del Fagioli (weekdays only). Apartment check-in after 2 PM. Ponte Vecchio, an early glass at Le Volpi e l'Uva, Oltrarno wander, San Miniato al Monte, sunset at Piazzale Michelangelo. Late dinner at Vini e Vecchi Sapori. Fatigue fallback: taxi or bus up the hill, walk down.
-- **Sat Jul 3 — The center, full day.** Uffizi first thing (~8:15 AM). Santa Croce late morning. Lunch: Sergio Pollini Lampredotto (must). Brunelleschi Dome early afternoon. Accademia ~4 PM. Evening: Piazza della Signoria on our doorstep; dinner at Il Vezzo.
-- **Sun Jul 4 — Center leftovers + Torre a Cona.** Morning: Palazzo Vecchio; Baptistery and Giotto's bell tower if time. Easy lunch near the apartment. Early afternoon: taxi to Fattoria Torre a Cona (~30–40 min). Late afternoon: wine tasting / estate experience. Evening: taxi back; dinner at La Buchetta. The Dome cannot be Sunday.
+- **Sat Jul 3 — The center, full day.** Breakfast at Antico Forno Sartoni. Uffizi first thing (~8:15 AM). Santa Croce late morning. Lunch: Sergio Pollini Lampredotto (must), option Mercato di Sant'Ambrogio; dessert at Pasticceria Nencioni. Brunelleschi Dome early afternoon; Pegna dal 1860 on the way to the Accademia ~4 PM. Evening: Piazza della Signoria on our doorstep; dinner at Il Vezzo.
+- **Sun Jul 4 — Center leftovers + Torre a Cona.** Breakfast at Forno Ghibellina. Morning: Palazzo Vecchio; Baptistery and Giotto's bell tower if time. Lunch at Alimentari Calimaruzza (options: Da' Vinattieri, I Guelfi). Early afternoon: taxi to Fattoria Torre a Cona (~30–40 min). Late afternoon: wine tasting / estate experience. Evening: taxi back; dinner at La Buchetta, gelato at Vivoli. The Dome cannot be Sunday.
 - **Mon Jul 5 — Florence → Rome / historic center.** Checkout by 10 AM. Train SMN → Termini. Check in Palazzo Talìa. Trevi Fountain, Sant'Ignazio, Pantheon interior, San Luigi dei Francesi, Piazza Navona, central wandering. Optional if energy remains: Campo de' Fiori, Via dei Banchi Vecchi, Supplizio, Il Goccetto, Tiber. No other major ticketed site.
 - **Tue Jul 6 — Vatican / Tiber / Janiculum / Trastevere.** Vatican Museums, Sistine Chapel, St. Peter's Basilica + Square. Walk to Castel Sant'Angelo / Ponte Sant'Angelo. Hotel rest. Taxi to the Janiculum for sunset. Descend into Trastevere for dinner. Pizzarium / Paciotti only if they fit naturally.
 - **Wed Jul 7 — Ancient Rome / Jewish Ghetto.** Early breakfast. Colosseum, Roman Forum, Palatine. Via di Monte Tarpeo viewpoint. Campidoglio. Teatro di Marcello → Portico d'Ottavia / Ghetto. Boccione and/or Piperno. Quiet evening.
@@ -146,20 +146,28 @@ Each day in order. **Type:** `anchor` = booked with a fixed time (flights, check
 | 2 | ~7 PM | plan | San Miniato al Monte | Romanesque hilltop church with a gold-mosaic apse; the monks sing vespers in the late afternoon (check 2027 time) · ~25 min uphill, or taxi/bus up |
 | 2 | Sunset ~8:50 PM | plan | Piazzale Michelangelo | The classic panorama over the Duomo and the river, just below San Miniato; walk down through San Niccolò |
 | 2 | ~9:30 PM | plan | Vini e Vecchi Sapori | Tiny osteria by the apartment with a handwritten menu — duck pappardelle, peposo stew · still to book |
+| 3 | ~7:45 AM | plan | Breakfast · Antico Forno Sartoni | Neighborhood bakery, the closest to the apartment — pastry and coffee before the Uffizi |
 | 3 | ~8:15 AM | plan | Uffizi Gallery | Florence's great Renaissance art museum — Botticelli's Birth of Venus, Leonardo, Raphael; aim for the first slot |
 | 3 | Late morning | plan | Santa Croce | Franciscan basilica with the tombs of Michelangelo and Galileo and Giotto frescoes · 10 min east of the Uffizi |
 | 3 | Lunch | plan | Sergio Pollini Lampredotto | Must · no-frills stand by Sant'Ambrogio for Florence's lampredotto sandwich (slow-cooked tripe), with green sauce and the roll dipped in broth |
+| 3 | Lunch | option | Mercato di Sant'Ambrogio | 19th-century neighborhood market right beside the lampredotto stand — browse the stalls; mornings only, closed Sundays |
+| 3 | After lunch | plan | Pasticceria Nencioni | Historic pastry shop by Sant'Ambrogio market, a few steps from Pollini — dessert and coffee |
 | 3 | Early afternoon | plan | Brunelleschi's Dome climb | 463 steps up inside the cathedral dome to the lantern; timed, non-refundable ticket · closed Sundays, so it must be today |
+| 3 | On the way | plan | Pegna dal 1860 | Historic specialty grocer just off Piazza del Duomo — cheese, salumi, pantry goods; on the walk from the Dome to the Accademia |
 | 3 | ~4 PM | plan | Galleria dell'Accademia | Small museum built around Michelangelo's David · 5 min north of the Duomo |
 | 3 | Evening | plan | Piazza della Signoria | Our doorstep: the civic square and its open-air statue gallery, at its best after the crowds thin |
 | 3 | Dinner | plan | Il Vezzo | Tiny, refined modern Tuscan — bistecca and seasonal plates · still to book |
+| 4 | Breakfast | plan | Forno Ghibellina | Bakery café toward Santa Croce · check Sunday hours |
 | 4 | Morning | plan | Palazzo Vecchio | The town-hall fortress on our square — the frescoed Hall of the Five Hundred, plus a tower climb |
 | 4 | If time | option | Baptistery & Giotto's bell tower | Bronze "Gates of Paradise" doors and the striped bell tower beside the Duomo; included in the Brunelleschi Pass (recheck for 2027) |
-| 4 | Midday | plan | Easy lunch near the apartment |  |
+| 4 | Midday | plan | Lunch · Alimentari Calimaruzza | Tiny old-style food shop right by the apartment — a panino to eat there or take away · check Sunday hours |
+| 4 | Midday | option | Da' Vinattieri | Hole-in-the-wall sandwich counter — porchetta, and coccoli with prosciutto and stracchino |
+| 4 | Midday | option | I Guelfi Tuscany Food | Made-to-order schiacciata (Tuscan flatbread) sandwiches near the apartment |
 | 4 | Early afternoon | plan | Taxi to Fattoria Torre a Cona | About 30–40 min southeast into the hills |
 | 4 | Late afternoon | plan | Fattoria Torre a Cona | Historic villa winery — Chianti Colli Fiorentini, Sangiovese, Vin Santo · wine tasting / estate experience |
 | 4 | Evening | plan | Taxi back to Florence | Book the return before the tasting — Sunday taxis in the hills are scarce |
 | 4 | Dinner | plan | La Buchetta | Small and lively, near Santa Croce — bistecca, truffle pici, strong wine list · still to book |
+| 4 | After dinner | plan | Vivoli | Historic gelato a few steps from La Buchetta · long lines |
 | 5 | By 10 AM | anchor | Check out of the Florence apartment |  |
 | 5 | Morning | plan | Fast train Firenze SMN → Roma Termini | About 1 h 25 on Italo or Frecciarossa |
 | 5 | Arrival | anchor | Check in · Palazzo Talìa | Our hotel between Trevi and the Spanish Steps |
@@ -259,21 +267,21 @@ The **Eat** column (left) of each city in the Eat & do tab. Restaurants, cafés,
 
 **Quick lunch**
 - ★ **Sergio Pollini Lampredotto** — Jul 3 lunch (must) · no-frills stand for the lampredotto sandwich
-- **Da' Vinattieri** — hole-in-the-wall; porchetta, coccoli with prosciutto + stracchino
-- **I Guelfi Tuscany Food** — made-to-order schiacciata sandwiches near the apartment
+- **Da' Vinattieri** — option, Jul 4 lunch · hole-in-the-wall; porchetta, coccoli with prosciutto + stracchino
+- **I Guelfi Tuscany Food** — option, Jul 4 lunch · made-to-order schiacciata sandwiches near the apartment
 - **Il Cernacchio** — cheap soups, pasta, sandwiches; reliable fallback
 
 **Breakfast · gelato · wine**
-- **Antico Forno Sartoni** — neighborhood bakery, closest breakfast
-- **Forno Ghibellina** — bakery café toward Santa Croce
-- **Pasticceria Nencioni** — historic pastry shop by Sant'Ambrogio market
-- **Vivoli** — historic gelato (long lines) · **Sbrino** — craft gelato in the Oltrarno
+- **Antico Forno Sartoni** — Jul 3 breakfast · neighborhood bakery, closest breakfast
+- **Forno Ghibellina** — Jul 4 breakfast · bakery café toward Santa Croce
+- **Pasticceria Nencioni** — Jul 3 after lunch · historic pastry shop by Sant'Ambrogio market
+- **Vivoli** — Jul 4 after dinner · historic gelato (long lines) · **Sbrino** — craft gelato in the Oltrarno
 - **Le Volpi e l'Uva** — Jul 2, early · tiny wine bar by Ponte Vecchio
 
 **Markets & food shops**
-- **Pegna dal 1860** — historic specialty grocer near the Duomo; cheese, salumi, pantry goods
-- **Mercato di Sant'Ambrogio** — 19th-century neighborhood market; picnic and travel-day snacks
-- **Alimentari Calimaruzza** — tiny old-style food shop by the apartment
+- **Pegna dal 1860** — Jul 3 afternoon · historic specialty grocer near the Duomo; cheese, salumi, pantry goods
+- **Mercato di Sant'Ambrogio** — option, Jul 3 lunch · 19th-century neighborhood market; picnic and travel-day snacks
+- **Alimentari Calimaruzza** — Jul 4 lunch · tiny old-style food shop by the apartment
 
 **Try in Florence:** lampredotto (tripe sandwich) · bistecca alla fiorentina (huge T-bone, served rare) · ribollita (bread-and-bean soup) · pappa al pomodoro (tomato-bread soup) · carabaccia (old Florentine onion soup) · schiacciata (Tuscan flatbread) · coccoli (fried dough balls with ham and soft cheese)
 
@@ -412,15 +420,15 @@ Pins for the Maps tab. **Coordinates are approximate** — taken from the planne
 | florence | eat | Da' Vinattieri | Centro Storico | 43.7714 | 11.2559 | | approx | Hole-in-the-wall sandwiches | open |
 | florence | eat | I Guelfi Tuscany Food | Centro Storico | 43.7705 | 11.2545 | | approx | Made-to-order schiacciata | open |
 | florence | eat | Il Cernacchio | Centro Storico | 43.7700 | 11.2565 | | approx | Cheap soups and pasta | open |
-| florence | eat | Antico Forno Sartoni | Centro Storico | 43.7710 | 11.2552 | | approx | Closest breakfast bakery | open |
-| florence | eat | Forno Ghibellina | Santa Croce | 43.7705 | 11.2615 | | approx | Bakery café | open |
-| florence | eat | Pasticceria Nencioni | Sant'Ambrogio | 43.7714 | 11.2628 | | approx | Historic pastry shop | open |
-| florence | eat | Vivoli | Santa Croce | 43.7697 | 11.2591 | | approx | Historic gelato | open |
+| florence | eat | Antico Forno Sartoni | Centro Storico | 43.7710 | 11.2552 | 3 | approx | Closest breakfast bakery | planned |
+| florence | eat | Forno Ghibellina | Santa Croce | 43.7705 | 11.2615 | 4 | approx | Bakery café | planned |
+| florence | eat | Pasticceria Nencioni | Sant'Ambrogio | 43.7714 | 11.2628 | 3 | approx | Historic pastry shop | planned |
+| florence | eat | Vivoli | Santa Croce | 43.7697 | 11.2591 | 4 | approx | Historic gelato | planned |
 | florence | eat | Sbrino | Oltrarno – Santo Spirito | 43.7658 | 11.2462 | | approx | Craft gelato | open |
 | florence | eat | Le Volpi e l'Uva | Oltrarno | 43.7673 | 11.2524 | 2 | approx | Tiny wine bar | planned |
-| florence | eat | Pegna dal 1860 | Duomo | 43.7721 | 11.2568 | | approx | Historic specialty grocer | open |
+| florence | eat | Pegna dal 1860 | Duomo | 43.7721 | 11.2568 | 3 | approx | Historic specialty grocer | planned |
 | florence | eat | Mercato di Sant'Ambrogio | Sant'Ambrogio | 43.7699 | 11.2645 | | ok | Neighborhood food market | open |
-| florence | eat | Alimentari Calimaruzza | Centro Storico | 43.7697 | 11.2543 | | approx | Tiny food shop | open |
+| florence | eat | Alimentari Calimaruzza | Centro Storico | 43.7697 | 11.2543 | 4 | approx | Tiny food shop | planned |
 | rome | base | Palazzo Talìa | Trevi | 41.9025 | 12.4838 | 5,6,7,8,9 | ok | Our hotel, Largo del Nazareno | booked |
 | rome | do | Trevi Fountain | Trevi | 41.9009 | 12.4833 | 5 | ok | The fountain | planned |
 | rome | do | Pantheon | Centro Storico | 41.8986 | 12.4769 | 5 | ok | 2,000-year-old domed temple | planned |
