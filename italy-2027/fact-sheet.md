@@ -69,7 +69,7 @@ Flight legs = **4**.
 ## Confirmed external event
 - **Louis Vuitton 38th America's Cup — Naples.** Match starts Jul 10, 2027 and can run through Jul 19 depending on score. Our Naples night (Jul 13) lands inside it: expect high hotel demand/prices (Chiaia, Santa Lucia, Lungomare, Piazza del Plebiscito carry the biggest premium), waterfront crowds and road controls — but also great energy for the final evening. Not a booking; not counted in the pulse.
 
-## Still to book — 18 items
+## Still to book — 22 items
 Urgency (high / med / low) is our planning call from each item's booking window and scarcity.
 Target-action dates are planning triggers, not official release dates, unless the rule says *official fixed* or *official rolling*.
 
@@ -83,18 +83,22 @@ Target-action dates are planning triggers, not official release dates, unless th
 | 6 | Uffizi Gallery (morning) | Jul 3 | med | Official — required, no window | Monitor from Apr 15, 2027; buy the Jul 3 morning slot as soon as it appears |
 | 7 | Galleria dell'Accademia (late afternoon) | Jul 3 | med | Official — required, no window | Monitor from Apr 15, 2027; buy the Jul 3 ~4 PM slot as soon as it appears |
 | 8 | Brunelleschi Dome / Pass | Jul 3, early afternoon | med | Official — required, no window | Check Apr 15–May 1, 2027; buy once the Jul 3 plan is safe. Dome climb is closed Sundays. **Non-refundable / non-changeable** |
-| 9 | Train Firenze SMN → Roma Termini | Jul 5 | med | Recommended lead time | Check Mar–Apr 2027; book when the schedule opens — morning/midday train after 10 AM checkout |
-| 10 | Vatican Museums (early entry) | Jul 6 | med | Official — required, no window | Monitor Apr 20–May 1, 2027; book as soon as Jul 6 opens |
-| 11 | Ristorante Piperno (Ghetto meal) | Jul 7 | med | Official — required, no window | Check / book early–mid May 2027 if it is the chosen Ghetto meal |
-| 12 | Galleria Borghese | Jul 8 | med | Official — required, no window | Monitor from May 1, 2027; buy as soon as Jul 8 appears |
-| 13 | Train Rome → Salerno | Jul 10 | med | Recommended lead time | Check Mar–Apr 2027; book when the schedule opens |
-| 14 | Private car Amalfi → Pompeii | Jul 13 | med | Recommended lead time | Quotes Feb–Mar 2027; book Apr–May once Pompeii timing is set |
-| 15 | Pompeii Archaeological Park | Jul 13 | med | Official — required, no window | Monitor from May 2027; buy by early June or as soon as Jul 13 appears |
-| 16 | Ferry Salerno → Amalfi | Jul 10 | low | Recommended lead time | Check the 2027 summer timetable in spring; buy once the train is locked. Keep the road fallback |
-| 17 | Via Appia e-bike | Jul 9 | low | Recommended lead time | Pick an operator by early June; book by mid-June |
-| 18 | Private car Soul Art Hotel → NAP | Jul 14 | low | Recommended lead time | Prearrange the 5:30 AM pickup; reconfirm the night of Jul 13 |
+| 9 | Vini e Vecchi Sapori (dinner) | Jul 2, ~9:30 PM | med | Recommended lead time | Reserve ~1 month ahead (early Jun 2027) — tiny room; late table after the Piazzale sunset |
+| 10 | Il Vezzo (dinner) | Jul 3 | med | Recommended lead time | Reserve ~1 month ahead (early Jun 2027) — tiny room |
+| 11 | La Buchetta (dinner) | Jul 4 | med | Recommended lead time | Reserve ~1 month ahead (early Jun 2027) — evening after the winery |
+| 12 | Train Firenze SMN → Roma Termini | Jul 5 | med | Recommended lead time | Check Mar–Apr 2027; book when the schedule opens — morning/midday train after 10 AM checkout |
+| 13 | Vatican Museums (early entry) | Jul 6 | med | Official — required, no window | Monitor Apr 20–May 1, 2027; book as soon as Jul 6 opens |
+| 14 | Ristorante Piperno (Ghetto meal) | Jul 7 | med | Official — required, no window | Check / book early–mid May 2027 if it is the chosen Ghetto meal |
+| 15 | Galleria Borghese | Jul 8 | med | Official — required, no window | Monitor from May 1, 2027; buy as soon as Jul 8 appears |
+| 16 | Train Rome → Salerno | Jul 10 | med | Recommended lead time | Check Mar–Apr 2027; book when the schedule opens |
+| 17 | Private car Amalfi → Pompeii | Jul 13 | med | Recommended lead time | Quotes Feb–Mar 2027; book Apr–May once Pompeii timing is set |
+| 18 | Pompeii Archaeological Park | Jul 13 | med | Official — required, no window | Monitor from May 2027; buy by early June or as soon as Jul 13 appears |
+| 19 | Ristorante del Fagioli (lunch) | Jul 2, ~1 PM | low | Recommended lead time | Reserve ~1 month ahead (early Jun 2027); confirm Friday lunch hours — closed weekends. Arrival day, so keep it movable to dinner |
+| 20 | Ferry Salerno → Amalfi | Jul 10 | low | Recommended lead time | Check the 2027 summer timetable in spring; buy once the train is locked. Keep the road fallback |
+| 21 | Via Appia e-bike | Jul 9 | low | Recommended lead time | Pick an operator by early June; book by mid-June |
+| 22 | Private car Soul Art Hotel → NAP | Jul 14 | low | Recommended lead time | Prearrange the 5:30 AM pickup; reconfirm the night of Jul 13 |
 
-Counts: **high 4 · med 11 · low 3 = 18.**
+Counts: **high 4 · med 14 · low 4 = 22.**
 
 ### Optional reservations — not in the still-to-book count
 Book only if chosen. Listed in Eat & do; their rules sit under the Bookings timeline.
@@ -104,7 +108,7 @@ Book only if chosen. Listed in Eat & do; their rules sit under the Bookings time
 
 ## Booking pulse (Overview) — must equal the Bookings tab
 - **Confirmed: 4** — Florence apartment, Palazzo Talìa, Abbraccio Amalfi, Soul Art Hotel
-- **Still to book: 18** — 4 high (boat, Marisa Cuomo, Colosseum, Villa Medici) · 11 med · 3 low
+- **Still to book: 22** — 4 high (boat, Marisa Cuomo, Colosseum, Villa Medici) · 14 med · 4 low
 - **Flight legs: 4** — out Jul 1–2 RDU → CDG → Florence · home Jul 14 NAP → ATL → RDU
 
 ## Day-by-day plan (Overview › Trip at a glance)
@@ -134,28 +138,28 @@ Each day in order. **Type:** `anchor` = booked with a fixed time (flights, check
 | 2 | 7:55 AM | anchor | Land at Paris CDG | Connect to the Florence flight |
 | 2 | 10:20 AM | anchor | Flight CDG → Florence | Delta 8483 · arrival time not on the booking |
 | 2 | On arrival | plan | T2 tram into the center | Tram from Peretola airport toward Santa Maria Novella, then walk to the apartment |
-| 2 | ~1 PM | plan | Lunch · Ristorante del Fagioli | Old-school rustic trattoria by Santa Croce — ribollita, beans, hearty meat · closed weekends (recheck 2027), so arrival day is the one slot · ask the hosts about an early bag drop · if the flight runs late, swap it with tonight's dinner |
+| 2 | ~1 PM | plan | Lunch · Ristorante del Fagioli | Old-school rustic trattoria by Santa Croce — ribollita, beans, hearty meat · closed weekends (recheck 2027), so arrival day is the one slot · ask the hosts about an early bag drop · if the flight runs late, swap it with tonight's dinner · still to book |
 | 2 | After 2 PM | anchor | Check in · Piazza Signoria n.1 | Our apartment on Florence's main square |
 | 2 | Afternoon | plan | Ponte Vecchio | Medieval bridge lined with goldsmiths' shops, a few minutes' walk from the apartment |
 | 2 | ~5 PM | plan | Le Volpi e l'Uva | Tiny wine bar just over Ponte Vecchio; small producers by the glass — an early first glass |
 | 2 | Early evening | plan | Oltrarno wander | "Beyond the Arno": the artisan south bank — Santo Spirito, workshop lanes, gelato at Sbrino |
 | 2 | ~7 PM | plan | San Miniato al Monte | Romanesque hilltop church with a gold-mosaic apse; the monks sing vespers in the late afternoon (check 2027 time) · ~25 min uphill, or taxi/bus up |
 | 2 | Sunset ~8:50 PM | plan | Piazzale Michelangelo | The classic panorama over the Duomo and the river, just below San Miniato; walk down through San Niccolò |
-| 2 | ~9:30 PM | plan | Vini e Vecchi Sapori | Tiny osteria by the apartment with a handwritten menu — duck pappardelle, peposo stew · small room, consider reserving |
+| 2 | ~9:30 PM | plan | Vini e Vecchi Sapori | Tiny osteria by the apartment with a handwritten menu — duck pappardelle, peposo stew · still to book |
 | 3 | ~8:15 AM | plan | Uffizi Gallery | Florence's great Renaissance art museum — Botticelli's Birth of Venus, Leonardo, Raphael; aim for the first slot |
 | 3 | Late morning | plan | Santa Croce | Franciscan basilica with the tombs of Michelangelo and Galileo and Giotto frescoes · 10 min east of the Uffizi |
 | 3 | Lunch | plan | Sergio Pollini Lampredotto | Must · no-frills stand by Sant'Ambrogio for Florence's lampredotto sandwich (slow-cooked tripe), with green sauce and the roll dipped in broth |
 | 3 | Early afternoon | plan | Brunelleschi's Dome climb | 463 steps up inside the cathedral dome to the lantern; timed, non-refundable ticket · closed Sundays, so it must be today |
 | 3 | ~4 PM | plan | Galleria dell'Accademia | Small museum built around Michelangelo's David · 5 min north of the Duomo |
 | 3 | Evening | plan | Piazza della Signoria | Our doorstep: the civic square and its open-air statue gallery, at its best after the crowds thin |
-| 3 | Dinner | plan | Il Vezzo | Tiny, refined modern Tuscan — bistecca and seasonal plates · small room, reserve ahead |
+| 3 | Dinner | plan | Il Vezzo | Tiny, refined modern Tuscan — bistecca and seasonal plates · still to book |
 | 4 | Morning | plan | Palazzo Vecchio | The town-hall fortress on our square — the frescoed Hall of the Five Hundred, plus a tower climb |
 | 4 | If time | option | Baptistery & Giotto's bell tower | Bronze "Gates of Paradise" doors and the striped bell tower beside the Duomo; included in the Brunelleschi Pass (recheck for 2027) |
 | 4 | Midday | plan | Easy lunch near the apartment |  |
 | 4 | Early afternoon | plan | Taxi to Fattoria Torre a Cona | About 30–40 min southeast into the hills |
 | 4 | Late afternoon | plan | Fattoria Torre a Cona | Historic villa winery — Chianti Colli Fiorentini, Sangiovese, Vin Santo · wine tasting / estate experience |
 | 4 | Evening | plan | Taxi back to Florence | Book the return before the tasting — Sunday taxis in the hills are scarce |
-| 4 | Dinner | plan | La Buchetta | Small and lively, near Santa Croce — bistecca, truffle pici, strong wine list · reserve ahead |
+| 4 | Dinner | plan | La Buchetta | Small and lively, near Santa Croce — bistecca, truffle pici, strong wine list · still to book |
 | 5 | By 10 AM | anchor | Check out of the Florence apartment |  |
 | 5 | Morning | plan | Fast train Firenze SMN → Roma Termini | About 1 h 25 on Italo or Frecciarossa |
 | 5 | Arrival | anchor | Check in · Palazzo Talìa | Our hotel between Trevi and the Spanish Steps |
@@ -763,7 +767,7 @@ Italy only. The landing page and other trips keep the default Fraunces + Manrope
 - Dates: July 1 — 14
 - Base: Florence → Rome → Amalfi → Naples
 - Group: 2 · Marshall & Anna
-- Status: 4 stays booked · 18 to book
+- Status: 4 stays booked · 22 to book
 
 ## Open items / unknowns (do not fill in until known)
 - CDG → Florence arrival time (Delta 8483) — not on the booking.
