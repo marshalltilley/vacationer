@@ -250,14 +250,8 @@ The **Eat** column (left) of each city in the Eat & do tab. Restaurants, cafés,
 **Trattorias**
 - **Vini e Vecchi Sapori** — Jul 2 dinner · tiny osteria with a handwritten menu, by the apartment; duck pappardelle, peposo
 - **Ristorante del Fagioli** — Jul 2 lunch · old-school rustic trattoria; ribollita, beans, hearty meat
-- **Trattoria La Gratella** — family-run Tuscan; pappardelle al cinghiale; may serve carabaccia
 - **La Buchetta** — Jul 4 dinner · lively, small; bistecca, truffle pici, strong wine list
 - **Il Vezzo** — Jul 3 dinner · tiny, refined modern Tuscan; bistecca, seasonal plates
-
-**Scenic / polished**
-- **Golden View Firenze** — romantic, looks at the Arno and Ponte Vecchio
-- **COSIMO at The Excelsior** — upscale rooftop; sunset aperitivo
-- **B-Roof, Grand Hotel Baglioni** — classic hotel rooftop facing the Duomo
 
 **Quick lunch**
 - ★ **Sergio Pollini Lampredotto** — Jul 3 lunch (must) · no-frills stand for the lampredotto sandwich
@@ -409,11 +403,7 @@ Pins for the Maps tab. **Coordinates are approximate** — taken from the planne
 | florence | do | Fattoria Torre a Cona | Hills SE of Florence | 43.7036 | 11.3714 | 4 | approx | Villa winery; late-afternoon tasting (sub-trip) | planned |
 | florence | eat | Vini e Vecchi Sapori | Centro Storico | 43.7703 | 11.2568 | 2 | approx | Tiny osteria, handwritten menu | planned |
 | florence | eat | Ristorante del Fagioli | Santa Croce | 43.7671 | 11.2602 | 2 | approx | Old-school rustic trattoria | planned |
-| florence | eat | Trattoria La Gratella | San Lorenzo | 43.7783 | 11.2508 | | approx | Family-run Tuscan trattoria | open |
 | florence | eat | La Buchetta | Santa Croce | 43.7666 | 11.2590 | 4 | approx | Lively; bistecca and truffle pici | planned |
-| florence | eat | Golden View Firenze | Oltrarno | 43.7670 | 11.2541 | | approx | Romantic dinner facing Ponte Vecchio | open |
-| florence | eat | COSIMO at The Excelsior | Santa Maria Novella | 43.7726 | 11.2455 | | approx | Upscale rooftop; sunset aperitivo | open |
-| florence | eat | B-Roof, Grand Hotel Baglioni | Santa Maria Novella | 43.7745 | 11.2510 | | approx | Hotel rooftop facing the Duomo | open |
 | florence | eat | Sergio Pollini Lampredotto | Sant'Ambrogio | 43.7706 | 11.2636 | 3 | approx | Lampredotto street stand | planned |
 | florence | eat | Da' Vinattieri | Centro Storico | 43.7714 | 11.2559 | | approx | Hole-in-the-wall sandwiches | open |
 | florence | eat | I Guelfi Tuscany Food | Centro Storico | 43.7705 | 11.2545 | | approx | Made-to-order schiacciata | open |
