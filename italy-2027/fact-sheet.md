@@ -112,7 +112,7 @@ All days are `WORKING_PLAN` (not booked) except flights and lodging.
 
 - **Thu Jul 1 — Depart Raleigh.** RDU 6:10 PM → CDG. No sightseeing.
 - **Fri Jul 2 — Arrive Florence · the south bank.** CDG 10:20 AM → Florence. Apartment check-in after 2 PM. Ponte Vecchio, an early glass at Le Volpi e l'Uva, Oltrarno wander, San Miniato al Monte, sunset at Piazzale Michelangelo. Late dinner at Vini e Vecchi Sapori. Fatigue fallback: taxi or bus up the hill, walk down.
-- **Sat Jul 3 — The center, full day.** Uffizi first thing (~8:15 AM). Santa Croce late morning. Lunch: Sergio Pollini Lampredotto (must). Brunelleschi Dome early afternoon. Accademia ~4 PM. Evening: Piazza della Signoria on our doorstep; dinner in Santa Croce.
+- **Sat Jul 3 — The center, full day.** Uffizi first thing (~8:15 AM). Santa Croce late morning. Lunch: Sergio Pollini Lampredotto (must). Brunelleschi Dome early afternoon. Accademia ~4 PM. Evening: Piazza della Signoria on our doorstep; dinner at Il Vezzo.
 - **Sun Jul 4 — Center leftovers + Torre a Cona.** Morning: Palazzo Vecchio; Baptistery and Giotto's bell tower if time. Easy lunch near the apartment. Early afternoon: taxi to Fattoria Torre a Cona (~30–40 min). Late afternoon: wine tasting / estate experience. Evening: taxi back; easy evening. The Dome cannot be Sunday.
 - **Mon Jul 5 — Florence → Rome / historic center.** Checkout by 10 AM. Train SMN → Termini. Check in Palazzo Talìa. Trevi Fountain, Sant'Ignazio, Pantheon interior, San Luigi dei Francesi, Piazza Navona, central wandering. Optional if energy remains: Campo de' Fiori, Via dei Banchi Vecchi, Supplizio, Il Goccetto, Tiber. No other major ticketed site.
 - **Tue Jul 6 — Vatican / Tiber / Janiculum / Trastevere.** Vatican Museums, Sistine Chapel, St. Peter's Basilica + Square. Walk to Castel Sant'Angelo / Ponte Sant'Angelo. Hotel rest. Taxi to the Janiculum for sunset. Descend into Trastevere for dinner. Pizzarium / Paciotti only if they fit naturally.
@@ -147,7 +147,7 @@ Each day in order. **Type:** `anchor` = booked with a fixed time (flights, check
 | 3 | Early afternoon | plan | Brunelleschi's Dome climb | 463 steps up inside the cathedral dome to the lantern; timed, non-refundable ticket · closed Sundays, so it must be today |
 | 3 | ~4 PM | plan | Galleria dell'Accademia | Small museum built around Michelangelo's David · 5 min north of the Duomo |
 | 3 | Evening | plan | Piazza della Signoria | Our doorstep: the civic square and its open-air statue gallery, at its best after the crowds thin |
-| 3 | Dinner | option | Dinner toward Santa Croce | Options: La Buchetta (lively; bistecca and truffle pici) or Golden View Firenze (romantic, facing Ponte Vecchio) |
+| 3 | Dinner | plan | Il Vezzo | Tiny, refined modern Tuscan — bistecca and seasonal plates · small room, reserve ahead |
 | 4 | Morning | plan | Palazzo Vecchio | The town-hall fortress on our square — the frescoed Hall of the Five Hundred, plus a tower climb |
 | 4 | If time | option | Baptistery & Giotto's bell tower | Bronze "Gates of Paradise" doors and the striped bell tower beside the Duomo; included in the Brunelleschi Pass (recheck for 2027) |
 | 4 | Midday | plan | Easy lunch near the apartment |  |
@@ -250,7 +250,7 @@ The **Eat** column (left) of each city in the Eat & do tab. Restaurants, cafés,
 - **Ristorante del Fagioli** — old-school rustic trattoria; ribollita, beans, hearty meat
 - **Trattoria La Gratella** — family-run Tuscan; pappardelle al cinghiale; may serve carabaccia
 - **La Buchetta** — lively, small; bistecca, truffle pici, strong wine list
-- **Il Vezzo** — tiny, refined modern Tuscan; bistecca, seasonal plates
+- **Il Vezzo** — Jul 3 dinner · tiny, refined modern Tuscan; bistecca, seasonal plates
 
 **Scenic / polished**
 - **Golden View Firenze** — romantic, looks at the Arno and Ponte Vecchio
